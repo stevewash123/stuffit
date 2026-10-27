@@ -1,0 +1,80 @@
+From: Harbor Ceramics <store+0000000@shopify-mail.invalid>
+To: Sam Sample <sam.sample@example.com>
+Subject: A shipment from order #1042 is on the way
+Date: Thu, 07 May 2026 09:00:00 -0500
+Message-ID: <shopify-ceramics-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Harbor Ceramics
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============4806110334412100698=="
+
+--===============4806110334412100698==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your order is on the way
+
+Your order #1042 is on the way. Track your shipment to see the delivery statu=
+s.
+
+Carrier / Tracking
+USPS
+Tracking #: 9400111899223000000001
+
+Estimated delivery
+Estimated delivery: May 12, 2026
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Stoneware Mug - Speckled
+    SKU: MUG-SPK-01  Qty: 2   $56.00
+  Pour-over Dripper
+    SKU: DRP-BLK  Qty: 1   $42.00
+
+
+
+
+--===============4806110334412100698==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Harbor Ceramics layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Harbor Ceramics</ti=
+tle></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#3a5a40;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Harbor Ceramics</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your order is on =
+the way</h2><p style=3D"font-size:14px">Your order #1042 is on the way. Track=
+ your shipment to see the delivery status.</p><h3 style=3D"margin:18px 0 4px;=
+font-size:15px">Carrier / Tracking</h3><div style=3D"font-size:14px;line-heig=
+ht:1.5">USPS<br>Tracking #: <b>9400111899223000000001</b></div><h3 style=3D"m=
+argin:18px 0 4px;font-size:15px">Estimated delivery</h3><div style=3D"font-si=
+ze:14px;line-height:1.5">Estimated delivery: May 12, 2026</div><h3 style=3D"m=
+argin:18px 0 4px;font-size:15px">Shipping to</h3><div style=3D"font-size:14px=
+;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</div>=
+<h3 style=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><t=
+d style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-wei=
+ght:bold">Stoneware Mug - Speckled</div><div style=3D"font-size:12px;color:#6=
+66">SKU: MUG-SPK-01</div></td><td align=3D"center" style=3D"border-bottom:1px=
+ solid #eee">Qty 2</td><td align=3D"right" style=3D"border-bottom:1px solid #=
+eee">$56.00</td></tr><tr><td style=3D"padding:8px 0;border-bottom:1px solid #=
+eee"><div style=3D"font-weight:bold">Pour-over Dripper</div><div style=3D"fon=
+t-size:12px;color:#666">SKU: DRP-BLK</div></td><td align=3D"center" style=3D"=
+border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-b=
+ottom:1px solid #eee">$42.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============4806110334412100698==--

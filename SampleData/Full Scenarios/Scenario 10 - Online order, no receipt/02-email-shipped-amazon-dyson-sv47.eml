@@ -1,0 +1,38 @@
+From: Amazon.com <auto-confirm@amazon.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Tue, 06 Oct 2026 13:05:00 -0500
+Message-ID: <full-scenario-10-shipped@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Amazon.com
+Subject: Your order has shipped - 113-4471209-3380912
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7583517718036613697=="
+
+--===============7583517718036613697==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order has shipped
+
+Good news, your order has shipped. Order Number: 113-4471209-3380912
+
+Shipped to
+Sam Sample
+12 Sample Lane, Testville, ME 04000
+
+Estimated delivery: Oct 09, 2026
+Tracking number: 1Z999AA10123456784
+
+  Dyson V15 Detect Cordless Vacuum
+    Qty: 1
+
+--===============7583517718036613697==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!doctype html><html><body><h2>Your order has shipped</h2><p>Order Number: <b=
+>113-4471209-3380912</b></p><p>Estimated delivery: Oct 09, 2026</p><p>Dyson V=
+15 Detect Cordless Vacuum</p></body></html>
+
+--===============7583517718036613697==--

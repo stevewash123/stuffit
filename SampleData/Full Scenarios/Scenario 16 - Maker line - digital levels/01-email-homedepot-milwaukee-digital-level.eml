@@ -1,0 +1,60 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <stevewash123.test@gmail.com>
+Subject: Your order is confirmed - Pick Up In Store - H23100-51602
+Date: Tue, 20 Oct 2026 08:20:00 -0500
+Message-ID: <full-scenario-16-homedepot-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on The Home Depot
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============3524653392027267220=="
+
+--===============3524653392027267220==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your order is on its way to the store
+
+We'll email you when your order is ready for pickup. Order Number: H23100-516=
+02
+
+Pick Up In Store
+The Home Depot #2310 - Testville
+300 Hardware Blvd, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  Milwaukee 48 in. Digital Level
+    Model # MLDIG48  |  Internet # 305112602  |  Store SKU # 1005550016  Qty:=
+ 1   $119.00
+
+Subtotal: $119.00
+Tax: $6.55
+Total: $125.55
+
+--===============3524653392027267220==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on The Home Depot layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600p=
+x;margin:auto"><tr><td style=3D"background:#f96302;color:#fff;padding:18px 24=
+px;font-size:22px;font-weight:bold">THE HOME DEPOT</td></tr><tr><td style=3D"=
+padding:24px"><h2 style=3D"margin:0 0 8px">Your order is on its way to the st=
+ore</h2><p style=3D"font-size:14px">We'll email you when your order is ready =
+for pickup. Order Number: <b>H23100-51602</b></p><div style=3D"font-size:14px=
+;line-height:1.5">Pick Up In Store<br>The Home Depot #2310 - Testville<br>300=
+ Hardware Blvd, Testville, ME 04000<br><br>Pickup person<br>Sam Sample</div><=
+h3>Order details</h3><table width=3D"100%" style=3D"font-size:14px"><tr><td>M=
+ilwaukee 48 in. Digital Level<br><span style=3D"color:#666">Model # MLDIG48 |=
+ Internet # 305112602 | Store SKU # 1005550016 Qty: 1</span></td><td align=3D=
+"right" valign=3D"top">$119.00</td></tr></table><p style=3D"font-size:14px;ma=
+rgin-top:16px">Subtotal: $119.00<br>Tax: $6.55<br><b>Total: $125.55</b></p></=
+td></tr></table></body></html>
+
+--===============3524653392027267220==--

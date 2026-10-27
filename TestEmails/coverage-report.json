@@ -1,0 +1,1554 @@
+{
+  "stores": [
+    {
+      "name": "Abt Electronics",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Academy Sports",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Ace Hardware",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Adorama",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Amazon",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Apple",
+      "state": "verified",
+      "isBrandToo": true
+    },
+    {
+      "name": "Appliances Connection",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Ashley",
+      "state": "unverified",
+      "isBrandToo": true
+    },
+    {
+      "name": "B\u0026H Photo",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Bass Pro Shops",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Best Buy",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "BJ\u0027s Wholesale Club",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Cabela\u0027s",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Costco",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Crutchfield",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Dick\u0027s Sporting Goods",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Ferguson",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Guitar Center",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Harbor Freight",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Home Depot",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "IKEA",
+      "state": "unverified",
+      "isBrandToo": true
+    },
+    {
+      "name": "Kohl\u0027s",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "La-Z-Boy",
+      "state": "unverified",
+      "isBrandToo": true
+    },
+    {
+      "name": "Lowe\u0027s",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Macy\u0027s",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Mattress Firm",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Menards",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Micro Center",
+      "state": "none",
+      "isBrandToo": false
+    },
+    {
+      "name": "New Balance",
+      "state": "unverified",
+      "isBrandToo": true
+    },
+    {
+      "name": "Newegg",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Nordstrom",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "REI",
+      "state": "unverified",
+      "isBrandToo": true
+    },
+    {
+      "name": "Sam\u0027s Club",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Sleep Number",
+      "state": "unverified",
+      "isBrandToo": true
+    },
+    {
+      "name": "Sweetwater",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Target",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Tractor Supply",
+      "state": "none",
+      "isBrandToo": false
+    },
+    {
+      "name": "Walmart",
+      "state": "verified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Wayfair",
+      "state": "unverified",
+      "isBrandToo": false
+    },
+    {
+      "name": "Zappos",
+      "state": "none",
+      "isBrandToo": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "A. O. Smith",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Abu Garcia",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Acer",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Adidas",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "American Standard",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Apple",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Ariens",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Arlo",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Ashley",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "ASUS",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Big Agnes",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Bissell",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Black Diamond",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Black\u002BDecker",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Bosch",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Bose",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Bradford White",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Breville",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Brooks",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Brother",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Bryant",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Cannondale",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Canon",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Carhartt",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Carrier",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Casper",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Coleman",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Columbia",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Craftsman",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Cub Cadet",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Cuisinart",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Daikin",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Daiwa",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Dell",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "DeWalt",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Dyson",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Ecobee",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "EGO",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Electrolux",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Epiphone",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Epson",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Eufy",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Fender",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Fisher \u0026 Paykel",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Fitbit",
+      "state": "none",
+      "models": []
+    },
+    {
+      "name": "Frigidaire",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Garmin",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "GE Appliances",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Generac",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Giant",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Gibson",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Goodman",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Google",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "GoPro",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Greenworks",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Haier",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Hamilton Beach",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Hisense",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Hoka",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Honda",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Honeywell",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Hoover",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "HP",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Husqvarna",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Hydro Flask",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Ibanez",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "IKEA",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Instant Pot",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "iRobot",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "JBL",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Kenmore",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Keurig",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "KitchenAid",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Korg",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "La-Z-Boy",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Lennox",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Lenovo",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "LG",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Logitech",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Makita",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Martin",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Maytag",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Microsoft",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Miele",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Milwaukee",
+      "state": "verified",
+      "models": [
+        "Job Site Radios",
+        "M12 Power Port",
+        "M18 Power Source",
+        "Jobsite Fan",
+        "Trade Titan Industrial Work Carts",
+        "M18 FUEL 1\u0022 D-Handle High Torque Impact Wrench",
+        "Drain Cleaning Cables",
+        "AIRSNAKE Drain Cleaning Air Gun Accessories",
+        "REDLITHIUM USB Laser Levels",
+        "M18 Compact Heat Gun",
+        "8 Gallon Dust Extractor",
+        "M18 Framing Nailers"
+      ]
+    },
+    {
+      "name": "Mitsubishi Electric",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Navien",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Nespresso",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "New Balance",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Nike",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Nikon",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Ninja",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Nintendo",
+      "state": "none",
+      "models": []
+    },
+    {
+      "name": "Noritz",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Okuma",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Osprey",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Oster",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Panasonic",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Patagonia",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Penn",
+      "state": "verified",
+      "models": [
+        "Battle IV",
+        "1000",
+        "2000",
+        "2500",
+        "3000",
+        "4000",
+        "4000HS",
+        "5000",
+        "6000",
+        "6000HS",
+        "8000",
+        "8000HS"
+      ]
+    },
+    {
+      "name": "Pflueger",
+      "state": "verified",
+      "models": [
+        "President 1500",
+        "President 2500",
+        "Medalist",
+        "President 3500",
+        "Patriarch",
+        "Trion",
+        "President XT",
+        "President 4500",
+        "Supreme XT"
+      ]
+    },
+    {
+      "name": "Purple",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "REI",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Rheem",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Ring",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Rinnai",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Roku",
+      "state": "none",
+      "models": []
+    },
+    {
+      "name": "Roland",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Ryobi",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Saatva",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Samsung",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Sealy",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Serta",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Shark",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Sharp",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Shimano",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "SimpliSafe",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Sleep Number",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Sonos",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Sony",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Specialized",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Speed Queen",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "St. Croix",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Stanley",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "State Water Heaters",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Stihl",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Sub-Zero",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Taylor Guitars",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "TCL",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Tempur-Pedic",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "The North Face",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Thermador",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Toro",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Traeger",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Trane",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Trek",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Troy-Bilt",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Viking",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Vitamix",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Vizio",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Weber",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Whirlpool",
+      "state": "verified",
+      "models": []
+    },
+    {
+      "name": "Yamaha",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Yeti",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "York",
+      "state": "unverified",
+      "models": []
+    },
+    {
+      "name": "Zebco",
+      "state": "unverified",
+      "models": []
+    }
+  ],
+  "cards": [
+    {
+      "name": "AAdvantage Aviator Red World Elite Mastercard",
+      "issuer": "Barclays",
+      "state": "none"
+    },
+    {
+      "name": "AAdvantage Executive World Elite Mastercard",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "AAdvantage Platinum Select World Elite Mastercard",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Aeroplan Credit Card",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Alaska Airlines Visa Signature",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "Amazon Prime Rewards Visa Signature",
+      "issuer": "Chase",
+      "state": "verified"
+    },
+    {
+      "name": "Amazon Visa",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "American Express Gold Card",
+      "issuer": "American Express",
+      "state": "verified"
+    },
+    {
+      "name": "American Express Green Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "American Express Platinum Card",
+      "issuer": "American Express",
+      "state": "verified"
+    },
+    {
+      "name": "Amex EveryDay Credit Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Bank of America Customized Cash Rewards",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "Bank of America Premium Rewards",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "Bank of America Premium Rewards Elite",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "Bank of America Travel Rewards",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "Bank of America Unlimited Cash Rewards",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "BankAmericard",
+      "issuer": "Bank of America",
+      "state": "none"
+    },
+    {
+      "name": "Best Buy Credit Card",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Blue Business Plus Credit Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Blue Cash Everyday Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Blue Cash Preferred Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Business Gold Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Business Platinum Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Platinum",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Quicksilver",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One QuicksilverOne",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Savor Cash Rewards",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One SavorOne",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Spark Cash",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Spark Miles",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Venture Rewards",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Capital One Venture X",
+      "issuer": "Capital One",
+      "state": "verified"
+    },
+    {
+      "name": "Capital One VentureOne",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Chase Freedom Flex",
+      "issuer": "Chase",
+      "state": "verified"
+    },
+    {
+      "name": "Chase Freedom Rise",
+      "issuer": "Chase",
+      "state": "verified"
+    },
+    {
+      "name": "Chase Freedom Unlimited",
+      "issuer": "Chase",
+      "state": "verified"
+    },
+    {
+      "name": "Chase Sapphire Preferred",
+      "issuer": "Chase",
+      "state": "verified"
+    },
+    {
+      "name": "Chase Sapphire Reserve",
+      "issuer": "Chase",
+      "state": "verified"
+    },
+    {
+      "name": "Chase Slate Edge",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Citi Custom Cash",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Diamond Preferred",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Double Cash",
+      "issuer": "Citi",
+      "state": "verified"
+    },
+    {
+      "name": "Citi Premier",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Prestige",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Rewards\u002B",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Simplicity",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Strata Card",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Strata Elite",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "Citi Strata Premier",
+      "issuer": "Citi",
+      "state": "verified"
+    },
+    {
+      "name": "Costco Anywhere Visa Card by Citi",
+      "issuer": "Citi",
+      "state": "verified"
+    },
+    {
+      "name": "Delta SkyMiles Gold Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Delta SkyMiles Platinum Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Delta SkyMiles Reserve Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Discover it Cash Back",
+      "issuer": "Discover",
+      "state": "unverified"
+    },
+    {
+      "name": "Discover it Chrome",
+      "issuer": "Discover",
+      "state": "none"
+    },
+    {
+      "name": "Discover it Miles",
+      "issuer": "Discover",
+      "state": "none"
+    },
+    {
+      "name": "Discover it Secured",
+      "issuer": "Discover",
+      "state": "none"
+    },
+    {
+      "name": "Discover it Student Cash Back",
+      "issuer": "Discover",
+      "state": "none"
+    },
+    {
+      "name": "Disney Premier Visa",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Fidelity Rewards Visa Signature",
+      "issuer": "Elan Financial Services",
+      "state": "none"
+    },
+    {
+      "name": "Hilton Honors American Express Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Hilton Honors Aspire Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Hilton Honors Surpass Card",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Home Depot Consumer Credit Card",
+      "issuer": "Citi",
+      "state": "none"
+    },
+    {
+      "name": "IHG One Rewards Premier",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "IHG One Rewards Traveler",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Ink Business Cash",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Ink Business Preferred",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Ink Business Unlimited",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "JetBlue Card",
+      "issuer": "Barclays",
+      "state": "none"
+    },
+    {
+      "name": "JetBlue Plus Card",
+      "issuer": "Barclays",
+      "state": "none"
+    },
+    {
+      "name": "Lowe\u0027s Advantage Card",
+      "issuer": "Synchrony",
+      "state": "none"
+    },
+    {
+      "name": "Marriott Bonvoy Bold",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Marriott Bonvoy Boundless",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Marriott Bonvoy Brilliant",
+      "issuer": "American Express",
+      "state": "none"
+    },
+    {
+      "name": "Navy Federal cashRewards",
+      "issuer": "Navy Federal Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "Navy Federal Flagship Rewards",
+      "issuer": "Navy Federal Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "Navy Federal More Rewards",
+      "issuer": "Navy Federal Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "Navy Federal Platinum",
+      "issuer": "Navy Federal Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "PayPal Cashback Mastercard",
+      "issuer": "Synchrony",
+      "state": "none"
+    },
+    {
+      "name": "PenFed Pathfinder Rewards",
+      "issuer": "PenFed Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "PenFed Platinum Rewards",
+      "issuer": "PenFed Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "PenFed Power Cash Rewards",
+      "issuer": "PenFed Credit Union",
+      "state": "none"
+    },
+    {
+      "name": "PNC Cash Rewards",
+      "issuer": "PNC",
+      "state": "none"
+    },
+    {
+      "name": "PNC Cash Unlimited",
+      "issuer": "PNC",
+      "state": "none"
+    },
+    {
+      "name": "PNC Points",
+      "issuer": "PNC",
+      "state": "none"
+    },
+    {
+      "name": "Sam\u0027s Club Mastercard",
+      "issuer": "Synchrony",
+      "state": "none"
+    },
+    {
+      "name": "Southwest Rapid Rewards Plus",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Southwest Rapid Rewards Premier",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Southwest Rapid Rewards Priority",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Target Circle Card",
+      "issuer": "TD Bank",
+      "state": "none"
+    },
+    {
+      "name": "Target Circle Mastercard",
+      "issuer": "TD Bank",
+      "state": "none"
+    },
+    {
+      "name": "TD Cash Credit Card",
+      "issuer": "TD Bank",
+      "state": "none"
+    },
+    {
+      "name": "TD Double Up Credit Card",
+      "issuer": "TD Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Altitude Connect",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Altitude Go",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Altitude Reserve",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Cash\u002B",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Shopper Cash Rewards",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Smartly",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "U.S. Bank Visa Platinum",
+      "issuer": "U.S. Bank",
+      "state": "none"
+    },
+    {
+      "name": "United Club Infinite Card",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "United Explorer Card",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "United Quest Card",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "USAA Eagle Navigator",
+      "issuer": "USAA",
+      "state": "none"
+    },
+    {
+      "name": "USAA Preferred Cash Rewards",
+      "issuer": "USAA",
+      "state": "none"
+    },
+    {
+      "name": "USAA Rewards Visa Signature",
+      "issuer": "USAA",
+      "state": "none"
+    },
+    {
+      "name": "Venmo Visa Card",
+      "issuer": "Synchrony",
+      "state": "none"
+    },
+    {
+      "name": "Verizon Visa Card",
+      "issuer": "Synchrony",
+      "state": "none"
+    },
+    {
+      "name": "Walmart Rewards Card",
+      "issuer": "Capital One",
+      "state": "none"
+    },
+    {
+      "name": "Wells Fargo Active Cash",
+      "issuer": "Wells Fargo",
+      "state": "unverified"
+    },
+    {
+      "name": "Wells Fargo Autograph",
+      "issuer": "Wells Fargo",
+      "state": "none"
+    },
+    {
+      "name": "Wells Fargo Autograph Journey",
+      "issuer": "Wells Fargo",
+      "state": "none"
+    },
+    {
+      "name": "Wells Fargo Reflect",
+      "issuer": "Wells Fargo",
+      "state": "none"
+    },
+    {
+      "name": "World of Hyatt Credit Card",
+      "issuer": "Chase",
+      "state": "none"
+    },
+    {
+      "name": "Wyndham Rewards Earner Card",
+      "issuer": "Barclays",
+      "state": "none"
+    }
+  ]
+}

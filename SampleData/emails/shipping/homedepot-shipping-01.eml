@@ -1,0 +1,73 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Home Depot order W123456781 has shipped
+Date: Wed, 08 Apr 2026 11:05:00 -0500
+Message-ID: <homedepot-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on The Home Depot
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============0203875445305893844=="
+
+--===============0203875445305893844==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order has shipped
+
+Order # W123456781 shipped from our distribution center.
+
+Carrier / Tracking
+UPS
+Tracking #: 1Z999AA10123456784
+
+Estimated delivery
+Fri, Apr 10
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Milwaukee M18 Hammer Drill Kit
+    Model # 2904-22 | Internet # 304111222  Qty: 1   $199.00
+
+
+
+
+--===============0203875445305893844==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on The Home Depot layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#f96302;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">THE HOME DEPOT</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your order has sh=
+ipped</h2><p style=3D"font-size:14px">Order # W123456781 shipped from our dis=
+tribution center.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Carrier /=
+ Tracking</h3><div style=3D"font-size:14px;line-height:1.5">UPS<br>Tracking #=
+: <b>1Z999AA10123456784</b></div><h3 style=3D"margin:18px 0 4px;font-size:15p=
+x">Estimated delivery</h3><div style=3D"font-size:14px;line-height:1.5">Fri, =
+Apr 10</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Shipping to</h3><d=
+iv style=3D"font-size:14px;line-height:1.5">Sam Sample<br>100 Example Lane<br=
+>Testville, ME 04000</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Orde=
+r details</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid #e=
+ee"><div style=3D"font-weight:bold">Milwaukee M18 Hammer Drill Kit</div><div =
+style=3D"font-size:12px;color:#666">Model # 2904-22 | Internet # 304111222</d=
+iv></td><td align=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td=
+><td align=3D"right" style=3D"border-bottom:1px solid #eee">$199.00</td></tr>=
+</table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============0203875445305893844==--

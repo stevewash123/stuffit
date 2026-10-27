@@ -1,0 +1,75 @@
+From: Lakeside Cycles <store+0000000@shopify-mail.invalid>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your receipt from Lakeside Cycles #P1088
+Date: Fri, 03 Jul 2026 10:00:00 -0500
+Message-ID: <shopify-pos-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Lakeside Cycles
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5774625485027465387=="
+
+--===============5774625485027465387==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for shopping with us
+
+Lakeside Cycles
+1 Example Way, Testville, ME 04000
+Receipt #P1088  -  POS: Front Counter
+----------------------------------------
+Gravel Bike Frame Set 56cm     $1,250.00
+   GRV-FR-56  (Lifetime frame warranty)
+Bell Compact                      $14.00
+   BEL-CMP
+
+SUBTOTAL                       $1,264.00
+SALES TAX (5.500%)                $69.52
+TOTAL                          $1,333.52
+
+Visa ending 4242 (tap)   $1,333.52
+Staff: Pat T.
+----------------------------------------
+Order #3107 fulfilled in store 07/03/2026
+Returns accepted within 30 days with receipt
+
+--===============5774625485027465387==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Lakeside Cycles layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Lakeside Cycles</ti=
+tle></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#c8553d;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Lakeside Cycles</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Thank you for sh=
+opping with us</h3><pre style=3D"font-family:Courier New,monospace;font-size:=
+13px;line-height:1.35;margin:0">Lakeside Cycles
+1 Example Way, Testville, ME 04000
+Receipt #P1088  -  POS: Front Counter
+----------------------------------------
+Gravel Bike Frame Set 56cm     $1,250.00
+   GRV-FR-56  (Lifetime frame warranty)
+Bell Compact                      $14.00
+   BEL-CMP
+
+SUBTOTAL                       $1,264.00
+SALES TAX (5.500%)                $69.52
+TOTAL                          $1,333.52
+
+Visa ending 4242 (tap)   $1,333.52
+Staff: Pat T.
+----------------------------------------
+Order #3107 fulfilled in store 07/03/2026
+Returns accepted within 30 days with receipt</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============5774625485027465387==--

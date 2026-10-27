@@ -1,0 +1,34 @@
+From: Amazon.com <auto-confirm@amazon.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Fri, 09 Oct 2026 15:48:00 -0500
+Message-ID: <full-scenario-10-delivered@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Amazon.com
+Subject: Your package was delivered - 113-4471209-3380912
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============0015598779247164478=="
+
+--===============0015598779247164478==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your package has been delivered
+
+Your order was delivered. Order Number: 113-4471209-3380912
+
+Delivered: Oct 09, 2026
+Left at: Front door
+
+  Dyson V15 Detect Cordless Vacuum
+    Qty: 1
+
+--===============0015598779247164478==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!doctype html><html><body><h2>Your package has been delivered</h2><p>Order N=
+umber: <b>113-4471209-3380912</b></p><p>Delivered: Oct 09, 2026</p><p>Dyson V=
+15 Detect Cordless Vacuum</p></body></html>
+
+--===============0015598779247164478==--

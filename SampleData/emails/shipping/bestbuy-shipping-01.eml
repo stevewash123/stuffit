@@ -1,0 +1,73 @@
+From: Best Buy <BestBuyInfo@emailinfo.bestbuy.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your order BBY01-806000000001 has shipped
+Date: Wed, 10 Jun 2026 09:45:00 -0500
+Message-ID: <bestbuy-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Best Buy
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8610474701137357215=="
+
+--===============8610474701137357215==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your items have shipped!
+
+Order Number: BBY01-806000000001. Items are shipping separately.
+
+Carrier / Tracking
+FedEx Ground
+Tracking #: 794600000001
+
+Estimated delivery
+Mon, Jun 15
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Insignia - 6' HDMI Cable
+    SKU: 5001122  Qty: 2   $39.98
+
+
+
+
+--===============8610474701137357215==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Best Buy layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Best Buy</title></h=
+ead>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0046be;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Best Buy</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your items have s=
+hipped!</h2><p style=3D"font-size:14px">Order Number: BBY01-806000000001. Ite=
+ms are shipping separately.</p><h3 style=3D"margin:18px 0 4px;font-size:15px"=
+>Carrier / Tracking</h3><div style=3D"font-size:14px;line-height:1.5">FedEx G=
+round<br>Tracking #: <b>794600000001</b></div><h3 style=3D"margin:18px 0 4px;=
+font-size:15px">Estimated delivery</h3><div style=3D"font-size:14px;line-heig=
+ht:1.5">Mon, Jun 15</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Shipp=
+ing to</h3><div style=3D"font-size:14px;line-height:1.5">Sam Sample<br>100 Ex=
+ample Lane<br>Testville, ME 04000</div><h3 style=3D"margin:18px 0 4px;font-si=
+ze:15px">Order details</h3><table width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-bottom=
+:1px solid #eee"><div style=3D"font-weight:bold">Insignia - 6&#x27; HDMI Cabl=
+e</div><div style=3D"font-size:12px;color:#666">SKU: 5001122</div></td><td al=
+ign=3D"center" style=3D"border-bottom:1px solid #eee">Qty 2</td><td align=3D"=
+right" style=3D"border-bottom:1px solid #eee">$39.98</td></tr></table></td></=
+tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============8610474701137357215==--

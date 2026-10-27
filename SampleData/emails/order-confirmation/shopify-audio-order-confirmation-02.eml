@@ -1,0 +1,83 @@
+From: Northline Audio <store+0000000@shopify-mail.invalid>
+To: Sam Sample <sam.sample@example.com>
+Subject: Order #NL-20931 confirmed
+Date: Thu, 18 Jun 2026 19:44:00 -0500
+Message-ID: <shopify-audio-order-confirmation-02@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Northline Audio
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2218484786875422842=="
+
+--===============2218484786875422842==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for your purchase!
+
+Order summary - Order #NL-20931
+
+Tube Preamp Kit (Assembled) x 1  $389.00
+Replacement Tube Set x 1  $64.00
+
+Subtotal: $453.00
+Discount (WELCOME10): -$45.30
+Shipping: Free
+Taxes: $0.00
+Total: $407.70 USD
+
+Shipping address
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Shipping method
+Free Shipping (UPS Ground)
+
+Payment method
+Shop Pay - Visa ending in 8081
+
+--===============2218484786875422842==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Northline Audio layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Northline Audio</ti=
+tle></head>
+<body style=3D"margin:0;background:#ffffff;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#1b1b3a;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Northline Audio</td></tr>
+<tr><td style=3D"padding:24px"><h1 style=3D"font-size:20px">Thank you for you=
+r purchase!</h1><p>Hi Sam, we're getting your order ready to be shipped. We w=
+ill notify you when it has been sent.</p>
+<p style=3D"background:#f5f5f5;padding:12px">Order summary &mdash; Order #NL-=
+20931</p><table width=3D"100%" style=3D"font-size:14px"><tr><td style=3D"padd=
+ing:10px 0;border-bottom:1px solid #e5e5e5"><b>Tube Preamp Kit (Assembled)</b=
+> &times; 1<br><span style=3D"color:#777;font-size:12px">Warranty: 1 year par=
+ts and labor</span><br><span style=3D"color:#777;font-size:12px">SKU: TPK-ASM=
+</span></td><td align=3D"right" style=3D"border-bottom:1px solid #e5e5e5">$38=
+9.00</td></tr><tr><td style=3D"padding:10px 0;border-bottom:1px solid #e5e5e5=
+"><b>Replacement Tube Set</b> &times; 1<br><span style=3D"color:#777;font-siz=
+e:12px"></span><br><span style=3D"color:#777;font-size:12px">SKU: TUB-SET</sp=
+an></td><td align=3D"right" style=3D"border-bottom:1px solid #e5e5e5">$64.00<=
+/td></tr></table>
+<table width=3D"100%" style=3D"font-size:14px;margin-top:12px"><tr><td>Subtot=
+al</td><td align=3D"right">$453.00</td></tr><tr><td>Discount (WELCOME10)</td>=
+<td align=3D"right">-$45.30</td></tr><tr><td>Shipping</td><td align=3D"right"=
+>Free</td></tr><tr><td>Taxes</td><td align=3D"right">$0.00</td></tr><tr><td s=
+tyle=3D"font-size:16px;padding-top:8px"><b>Total</b></td><td align=3D"right" =
+style=3D"font-size:16px"><b>$407.70 USD</b></td></tr></table>
+<h3>Customer information</h3><h3>Shipping address</h3><p>Sam Sample<br>100 Ex=
+ample Lane<br>Testville, ME 04000</p><h3>Shipping method</h3><p>Free Shipping=
+ (UPS Ground)</p><h3>Payment method</h3><p>Shop Pay - Visa ending in 8081</p>=
+</td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">If you have any questions, reply to this email or contact us at su=
+pport@example.com</td></tr>
+</table></td></tr></table></body></html>
+
+--===============2218484786875422842==--

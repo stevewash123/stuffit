@@ -1,0 +1,95 @@
+From: Costco Wholesale <customerservice@online.costco.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Thank you for your Costco.com order 1234567890
+Date: Mon, 02 Nov 2026 14:00:00 -0500
+Message-ID: <costco-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Costco
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2996186312764892198=="
+
+--===============2996186312764892198==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Thank you for your order
+
+Order Number: 1234567890   Membership: ****1234 (Executive)
+
+Delivery
+TV: Estimated delivery 11/10/2026 - 11/17/2026 (third-party carrier, scheduli=
+ng call).
+Paper towels: ships separately from a Costco warehouse.
+
+Shipping Address
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Payment
+Costco Anywhere Visa ending in 2468
+
+Order details
+  Samsung 75" Class - QN90D Neo QLED 4K
+    Item # 1234567  Qty: 1   $1,599.99
+  Kirkland Signature Paper Towels, 12 Rolls
+    Item # 7654321  Qty: 2   $49.98
+
+Merchandise Total: $1,649.97
+Instant Rebate: -$200.00
+Shipping & Handling: $0.00
+Tax: $79.75
+Order Total: $1,529.72
+
+
+
+--===============2996186312764892198==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Costco layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>COSTCO WHOLESALE</t=
+itle></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#e31837;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">COSTCO WHOLESALE</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thank you for you=
+r order</h2><p style=3D"font-size:14px">Order Number: <b>1234567890</b> &nbsp=
+; Membership: ****1234 (Executive)</p><h3 style=3D"margin:18px 0 4px;font-siz=
+e:15px">Delivery</h3><div style=3D"font-size:14px;line-height:1.5">TV: Estima=
+ted delivery 11/10/2026 - 11/17/2026 (third-party carrier, scheduling call).<=
+br>Paper towels: ships separately from a Costco warehouse.</div><h3 style=3D"=
+margin:18px 0 4px;font-size:15px">Shipping Address</h3><div style=3D"font-siz=
+e:14px;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000=
+</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Payment</h3><div style=
+=3D"font-size:14px;line-height:1.5">Costco Anywhere Visa ending in 2468</div>=
+<h3 style=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><t=
+d style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-wei=
+ght:bold">Samsung 75&quot; Class - QN90D Neo QLED 4K</div><div style=3D"font-=
+size:12px;color:#666">Item # 1234567</div><div style=3D"font-size:12px;color:=
+#666">Includes Concierge Services (free tech support)</div></td><td align=3D"=
+center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" =
+style=3D"border-bottom:1px solid #eee">$1,599.99</td></tr><tr><td style=3D"pa=
+dding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Kir=
+kland Signature Paper Towels, 12 Rolls</div><div style=3D"font-size:12px;colo=
+r:#666">Item # 7654321</div></td><td align=3D"center" style=3D"border-bottom:=
+1px solid #eee">Qty 2</td><td align=3D"right" style=3D"border-bottom:1px soli=
+d #eee">$49.98</td></tr></table><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"font-size:14px;margin-top:10px"><tr><td style=3D"paddin=
+g:3px 0">Merchandise Total</td><td align=3D"right">$1,649.97</td></tr><tr><td=
+ style=3D"padding:3px 0">Instant Rebate</td><td align=3D"right">-$200.00</td>=
+</tr><tr><td style=3D"padding:3px 0">Shipping &amp; Handling</td><td align=3D=
+"right">$0.00</td></tr><tr><td style=3D"padding:3px 0">Tax</td><td align=3D"r=
+ight">$79.75</td></tr><tr><td style=3D"padding:3px 0">Order Total</td><td ali=
+gn=3D"right">$1,529.72</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============2996186312764892198==--

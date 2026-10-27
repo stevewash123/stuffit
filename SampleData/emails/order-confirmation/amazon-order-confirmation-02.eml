@@ -1,0 +1,75 @@
+From: Amazon.com <auto-confirm@amazon.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Ordered: "Sony WH-1000XM5 Wireless Noise Canceling..."
+Date: Sat, 02 May 2026 21:40:00 -0500
+Message-ID: <amazon-order-confirmation-02@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Amazon
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2246441083536299384=="
+
+--===============2246441083536299384==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Ordered: Sony WH-1000XM5...
+
+Hi Sam, your order has been placed. Expected delivery: Tuesday, May 5 - Wedne=
+sday, May 6.
+
+Order #
+114-0000002-0000002
+
+Deliver to
+Sam - TESTVILLE, ME
+
+Payment
+Amazon Visa ending in 1111, Gift card balance applied: $20.00
+
+Order details
+  Sony WH-1000XM5 Wireless Noise Canceling Headphones, Black
+      Qty: 1   $328.00
+
+Order Total: $328.00
+
+Prime free delivery
+
+--===============2246441083536299384==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Amazon layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>amazon.com</title><=
+/head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#232f3e;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">amazon.com</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Ordered: Sony WH-=
+1000XM5...</h2><p style=3D"font-size:14px">Hi Sam, your order has been placed=
+. Expected delivery: <b>Tuesday, May 5 - Wednesday, May 6</b>.</p><h3 style=
+=3D"margin:18px 0 4px;font-size:15px">Order #</h3><div style=3D"font-size:14p=
+x;line-height:1.5">114-0000002-0000002</div><h3 style=3D"margin:18px 0 4px;fo=
+nt-size:15px">Deliver to</h3><div style=3D"font-size:14px;line-height:1.5">Sa=
+m - TESTVILLE, ME</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Payment=
+</h3><div style=3D"font-size:14px;line-height:1.5">Amazon Visa ending in 1111=
+, Gift card balance applied: $20.00</div><h3 style=3D"margin:18px 0 4px;font-=
+size:15px">Order details</h3><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-bott=
+om:1px solid #eee"><div style=3D"font-weight:bold">Sony WH-1000XM5 Wireless N=
+oise Canceling Headphones, Black</div><div style=3D"font-size:12px;color:#666=
+">Sold by: Amazon.com</div></td><td align=3D"center" style=3D"border-bottom:1=
+px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid=
+ #eee">$328.00</td></tr></table><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"font-size:14px;margin-top:10px"><tr><td style=3D"paddin=
+g:3px 0">Order Total</td><td align=3D"right">$328.00</td></tr></table></td></=
+tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">Prime free delivery</td></tr>
+</table></td></tr></table></body></html>
+
+--===============2246441083536299384==--

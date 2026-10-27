@@ -1,0 +1,29 @@
+1. Press the Windows key, type PowerShell, and open it.
+  2. Go to the API folder:
+  cd C:\Projects\StuffIt\StuffIt_API
+  3. Set three values for this window only. They vanish when you close it. Replace the one in capitals with the string copied from Cloudinary, keeping the quotes:
+  $env:Storage__Provider = "cloudinary"
+  $env:Cloudinary__Url = "PASTE-THE-WHOLE-cloudinary://-STRING-HERE"
+  $env:ASPNETCORE_ENVIRONMENT = "Development"
+  4. Run the check:
+  dotnet run --project src/StuffIt.Api -- --storage-check
+
+  
+
+
+  $env:Storage__Provider = "cloudinary"
+  $env:Cloudinary__Url = "cloudinary://112657816852871:FWjXJKaDSb_HbAtpzjK3Mpk3vYk@dtetjk79w"
+  $env:ASPNETCORE_ENVIRONMENT = "Development"
+
+
+Building...
+07:16:36 info: Hangfire.PostgreSql.PostgreSqlStorage[0] Start installing Hangfire SQL objects...
+07:16:36 info: Hangfire.PostgreSql.PostgreSqlStorage[0] Hangfire SQL objects installed.
+Store: CloudinaryFileStore
+  saved
+  read back: identical
+  FAILED: still there after delete
+PS C:\Projects\StuffIt\StuffIt_API>
+
+
+wvEDGoaPezX1dpN8UCin3lbgsWrKM0xS452tTAIjJfuYkZ6q

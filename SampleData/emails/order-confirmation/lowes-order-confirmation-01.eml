@@ -1,0 +1,98 @@
+From: Lowe's <lowes@mail.lowes.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Lowe's Order #123456789 Confirmation
+Date: Fri, 27 Feb 2026 17:05:00 -0500
+Message-ID: <lowes-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Lowe's
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6954115365624668015=="
+
+--===============6954115365624668015==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Thanks for your order!
+
+Order #: 123456789 - Placed 02/27/2026
+
+Delivery
+Estimated delivery: 03/06/2026. The carrier will call to schedule a 4-hour wi=
+ndow.
+
+Ship to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Payment
+MasterCard ****5454
+
+Order details
+  Whirlpool 4.5-cu ft Front Load Washer (White)
+    Item #1234567 | Model #WFW5605MW  Qty: 1   $899.00
+  Whirlpool 7.4-cu ft Electric Dryer (White)
+    Item #1234568 | Model #WED5605MW  Qty: 1   $849.00
+  Lowe's Installation & Haul-away
+    Item #5550001  Qty: 1   $169.00
+
+Subtotal: $1,917.00
+Appliance bundle savings: -$150.00
+Delivery: $0.00
+Tax: $97.19
+Total: $1,864.19
+
+
+
+--===============6954115365624668015==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Lowe's layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Lowe&#x27;s</title>=
+</head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#004990;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Lowe&#x27;s</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thanks for your o=
+rder!</h2><p style=3D"font-size:14px">Order #: <b>123456789</b> &middot; Plac=
+ed 02/27/2026</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Delivery</h3>=
+<div style=3D"font-size:14px;line-height:1.5">Estimated delivery: 03/06/2026.=
+ The carrier will call to schedule a 4-hour window.</div><h3 style=3D"margin:=
+18px 0 4px;font-size:15px">Ship to</h3><div style=3D"font-size:14px;line-heig=
+ht:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</div><h3 style=
+=3D"margin:18px 0 4px;font-size:15px">Payment</h3><div style=3D"font-size:14p=
+x;line-height:1.5">MasterCard ****5454</div><h3 style=3D"margin:18px 0 4px;fo=
+nt-size:15px">Order details</h3><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-b=
+ottom:1px solid #eee"><div style=3D"font-weight:bold">Whirlpool 4.5-cu ft Fro=
+nt Load Washer (White)</div><div style=3D"font-size:12px;color:#666">Item #12=
+34567 | Model #WFW5605MW</div></td><td align=3D"center" style=3D"border-botto=
+m:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px so=
+lid #eee">$899.00</td></tr><tr><td style=3D"padding:8px 0;border-bottom:1px s=
+olid #eee"><div style=3D"font-weight:bold">Whirlpool 7.4-cu ft Electric Dryer=
+ (White)</div><div style=3D"font-size:12px;color:#666">Item #1234568 | Model =
+#WED5605MW</div></td><td align=3D"center" style=3D"border-bottom:1px solid #e=
+ee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid #eee">$849=
+.00</td></tr><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><di=
+v style=3D"font-weight:bold">Lowe&#x27;s Installation &amp; Haul-away</div><d=
+iv style=3D"font-size:12px;color:#666">Item #5550001</div></td><td align=3D"c=
+enter" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" s=
+tyle=3D"border-bottom:1px solid #eee">$169.00</td></tr></table><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px;margin-=
+top:10px"><tr><td style=3D"padding:3px 0">Subtotal</td><td align=3D"right">$1=
+,917.00</td></tr><tr><td style=3D"padding:3px 0">Appliance bundle savings</td=
+><td align=3D"right">-$150.00</td></tr><tr><td style=3D"padding:3px 0">Delive=
+ry</td><td align=3D"right">$0.00</td></tr><tr><td style=3D"padding:3px 0">Tax=
+</td><td align=3D"right">$97.19</td></tr><tr><td style=3D"padding:3px 0">Tota=
+l</td><td align=3D"right">$1,864.19</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============6954115365624668015==--

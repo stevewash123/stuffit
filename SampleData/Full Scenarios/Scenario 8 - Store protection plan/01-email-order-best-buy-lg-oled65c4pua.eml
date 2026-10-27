@@ -1,0 +1,60 @@
+From: Best Buy <orders@e.bestbuy.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Sat, 10 Oct 2026 08:30:00 -0500
+Message-ID: <full-scenario-8-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Best Buy
+Subject: Your order is confirmed - Store Pickup - BBY01-806771
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7718399666804459071=="
+
+--===============7718399666804459071==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: BBY01-806771
+
+Pick Up In Store
+Best Buy #0123 - Testville
+55 Commerce Blvd, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  LG 65-inch OLED evo C4 4K Smart TV
+    Model # OLED65C4PUA  |  Qty: 1   $1,496.99
+  Geek Squad Protection, 4 years (OLED65C4PUA)
+    Qty: 1   $299.99
+
+Subtotal: $1,796.98
+Tax: $82.33
+Total: $1,879.31
+
+--===============7718399666804459071==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Best Buy layout --><!doctyp=
+e html><html><head><meta charset=3D"utf-8"><title>Best Buy</title></head><bod=
+y style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif=
+;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600px;ma=
+rgin:auto"><tr><td style=3D"background:#0046be;color:#fff;padding:18px 24px;f=
+ont-size:22px;font-weight:bold">BEST BUY</td></tr><tr><td style=3D"padding:24=
+px"><h2 style=3D"margin:0 0 8px">Your order is on its way to the store</h2><p=
+ style=3D"font-size:14px">We'll email you when your order is ready. Order Num=
+ber: <b>BBY01-806771</b></p><div style=3D"font-size:14px;line-height:1.5">Pic=
+k Up In Store<br>Best Buy #0123 - Testville<br>55 Commerce Blvd, Testville, M=
+E 04000<br><br>Pickup person<br>Sam Sample</div><h3>Order details</h3><table =
+width=3D"100%" style=3D"font-size:14px"><tr><td>LG 65-inch OLED evo C4 4K Sma=
+rt TV<br><span style=3D"color:#666">Model # OLED65C4PUA | Qty: 1</span></td><=
+td align=3D"right" valign=3D"top">$1,496.99</td></tr><tr><td>Geek Squad Prote=
+ction, 4 years (OLED65C4PUA)<br><span style=3D"color:#666">Qty: 1</span></td>=
+<td align=3D"right" valign=3D"top">$299.99</td></tr></table><p style=3D"font-=
+size:14px;margin-top:16px">Subtotal: $1,796.98<br>Tax: $82.33<br><b>Total: $1=
+,879.31</b></p></td></tr></table></body></html>
+
+--===============7718399666804459071==--

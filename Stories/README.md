@@ -1,0 +1,319 @@
+# StuffIt Stories
+
+Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, future.
+
+## E1 Account & Membership (MVP)
+- F1.1 Signup & authentication (MVP)
+  - S1.1.1 Sign up and log in with email
+  - S1.1.2 Reset a forgotten password
+- F1.2 Subscription billing (Stripe) (MVP)
+  - S1.2.1 Upgrade to paid via Stripe Checkout
+  - S1.2.2 Manage billing in Stripe Customer Portal
+  - S1.2.3 Stripe webhooks keep account status in step
+  - S1.2.4 Plan and billing page
+  - S1.2.5 Founder pricing and trial
+  - S1.2.6 Past-due and canceled handling
+  - S1.2.7 Feature and limit gating
+  - S1.2.8 Add a payment method before the trial ends
+  - S1.2.9 Paid add-ons
+- F1.3 Household sharing (v2; the owner and item-people data is MVP)
+  - S1.3.1 Every item has an owner
+  - S1.3.2 Add and remove people on an item
+  - S1.3.3 Reminders go to the people on the item
+  - S1.3.4 Invite a person to my account
+  - S1.3.5 Remove a person or leave an account
+  - S1.3.6 A forwarded receipt belongs to the person who sent it
+  - S1.3.7 Whose items I see, and private items (draft)
+- F1.4 Data export & account deletion (v2)
+  - S1.4.1 Export everything
+  - S1.4.2 Delete my account
+  - S1.4.3 Canceled accounts: 90 days, then purge
+
+## E2 Capture: getting purchases in (MVP)
+- F2.1 Manual purchase entry (MVP)
+  - S2.1.1 Add a purchase with one or more items
+  - S2.1.2 Attach receipts, manuals, photos
+- F2.2 Email-in capture (v2 (first big feature))
+  - S2.2.1 Unique inbound address per user
+  - S2.2.2 Extract purchase details from email
+  - S2.2.3 Needs-info review queue
+  - S2.2.4 De-duplicate forwarded receipts
+  - S2.2.5 Pending items and their API
+  - S2.2.6 A receipt upload becomes a pending item
+  - S2.2.7 Suggest skipping receipts that do not need tracking (future)
+  - S2.2.12 Leave out services and subscriptions, and notice the repeaters (v2)
+  - S2.2.8 Connect an inbox (read-only, order mail only) (future)
+  - S2.2.9 Guided forwarding setup (v2)
+  - S2.2.11 Capture from the phone: camera first, and the share sheet (v2)
+  - S2.2.10 Connect a mailbox with an app password (IMAP) (built, Gmail and iCloud)
+- F2.3 Amazon history import (v2)
+- F2.4 Photo receipt capture (v2)
+  - S2.4.1 Document reader: find a list of properties in a scanned document
+  - S2.4.3 Measure how well documents are read
+  - S2.4.4 Check what was read against itself
+  - S2.4.5 Keep what the person corrected
+  - S2.4.6 Read a PDF from its text, not its page images
+  - S2.4.7 Read a protection plan on a receipt, and keep it out of the item
+  - S2.4.8 Read a warranty the receipt only states, and map it to a policy
+  - S2.4.9 Read a return or refund receipt, with negative amounts
+  - S2.4.10 Gift receipts and receipts that only state return terms (future)
+  - S2.4.11 Tell the person when a receipt has nothing to track
+  - S2.4.12 Keep the size or variant in its own field
+  - S2.4.13 A refund of a protection plan cancels that plan
+  - S2.4.14 A warranty or plan document belongs to an item you already have
+- F2.5 Inbox auto-scan (Gmail/Outlook OAuth) (future)
+- F2.6 Receipt retention & upload processing (MVP, before launch)
+  - S2.6.1 Choose how long receipts are kept
+  - S2.6.2 Strip location data and shrink photos on upload
+  - S2.6.3 Fair-use storage cap
+- F2.7 Partial data and uncertain facts (v2)
+  - S2.7.1 A purchase date can be approximate
+  - S2.7.2 Evidence behind a fact
+  - S2.7.3 Add something I already own (no purchase)
+  - S2.7.4 Start from a manual, nameplate photo or registration card
+  - S2.7.5 Date from a serial number
+  - S2.7.6 Model number fills in the rest
+  - S2.7.7 The registration card nobody filled in
+  - S2.7.8 The installer is part of the coverage
+  - S2.7.9 Next steps to recover a missing fact
+  - S2.7.10 Date clues from context
+  - S2.7.11 Ask for the one fact that helps most
+  - S2.7.12 Firming up a fact recomputes coverage
+  - S2.7.13 Match a partial item to the purchase that arrives later
+  - S2.7.14 Two sources disagree
+  - S2.7.15 Vehicles: VIN gives the rest (future)
+  - (S3.1.6 Coverage from an uncertain date is in F3.1)
+  - (S3.1.7 The item page: read it, then edit it is in F3.1)
+
+## E3 Coverage & Policies (MVP)
+- F3.1 Coverage tracking (MVP)
+  - S3.1.1 Add or edit a coverage (snapshot of terms)
+  - S3.1.2 Propose coverages when a purchase is saved
+  - S3.1.5 Default coverage for a pending item (v2)
+  - S3.1.8 Lifetime warranties: whose lifetime, and can it be passed on (v2)
+  - S3.1.9 What proof of purchase a warranty asks for (v2)
+  - S3.1.10 New Items are processed, not computed on every look (v2)
+- F3.2 Reference data & versioned policies (MVP)
+  - S3.2.1 Party and versioned policy tables
+  - S3.2.2 Pick a known manufacturer policy or add a new one
+  - S3.2.3 Seed initial reference data
+  - S3.2.4 Verified policies for the most common cards
+- F3.3 Payment methods & card benefits (MVP)
+  - S3.3.1 Add a card
+  - S3.3.2 Confirm card benefits
+  - S3.3.3 Match receipts to cards by last 4
+  - S3.3.4 Search the internet for a card's terms
+  - S3.3.5 Change the number for a card
+  - S3.3.6 Find a card in the catalog, or add one we do not list
+  - S3.3.7 Say what a debit or prepaid card does and does not cover
+- F3.4 Plans and insurance you hold (v2)
+  - S3.4.1 Renter's or homeowner's insurance policy
+  - S3.4.2 Plans from third-party warranty companies
+  - S3.4.3 Add the plan that was bought with an item
+
+## E4 Reminders & Notifications (MVP)
+- F4.1 Expiry reminders (MVP)
+  - S4.1.1 Generate reminders from coverage dates
+  - S4.1.2 Daily job sends due reminders
+- F4.2 Digests and consolidated notifications (v2)
+  - S4.2.1 Digest content and frequency
+  - S4.2.2 Urgent deadlines bypass the digest
+  - S4.2.3 Digest batch job
+  - S4.2.4 Consolidate bursts of events
+- F4.3 Push channel (future)
+- F4.4 Notification preferences (message type x channel) (MVP)
+  - S4.4.1 Message type catalog
+  - S4.4.2 Notification preference grid
+  - S4.4.3 Dispatcher: store preferences and enforce them on every send
+  - S4.4.4 SMS opt-in and verification
+  - S4.4.6 Quiet hours and timezone
+  - S4.4.7 Seed default preferences at signup
+  - S4.4.8 Email compliance and one-click unsubscribe
+  - S4.4.9 Email templates
+  - S4.4.10 Every SMS links to more info
+- F4.5 Notification Center (in-app) (MVP (central to the product))
+  - S4.5.1 Notification record and API
+  - S4.5.2 Header bell and dropdown
+  - S4.5.3 Notification Center page
+  - S4.5.4 Actionable notifications
+  - S4.5.5 Star important notifications
+  - S4.5.6 Keep the unread count current
+  - S4.5.7 Real-time updates and toasts
+  - S4.5.8 Retention and cleanup
+- F4.6 General reminders (to-dos) (MVP candidate base, v2 feed)
+  - S4.6.1 General reminder record and API
+  - S4.6.2 Reminders on the item page and home
+  - S4.6.3 Send due reminders (v2)
+  - S4.6.4 Reminders found by document review (v2)
+
+## E5 Find & Claim (MVP)
+- F5.1 "Something broke" view (MVP)
+  - S5.1.1 Search items
+  - S5.1.2 Ranked coverage detail
+- F5.2 Claim log (v2)
+  - S5.2.2 Was my electronic copy accepted? (v3, future)
+- F5.3 Export & insurance report (v2)
+- F5.4 Return and refund guidance (MVP candidate / v2)
+  - S5.4.1 A how-to for each way out
+  - S5.4.2 Claim steps are versioned reference data
+  - S5.4.3 Do I have what I need? (pre-flight checklist)
+  - S5.4.4 A ready-to-send message or phone script
+  - S5.4.5 Which route should I take? (refund versus repair)
+  - S5.4.6 The real last day (shipping and drop-off time)
+  - S5.4.7 Track the return or claim
+  - S5.4.8 Add my own steps and say what did not work
+  - S5.4.9 Draft steps for a seller we do not cover
+  - S5.4.10 Honest labelling of guidance
+  - S5.4.11 Record money recovered (refund, card payout)
+  - S5.4.12 Refund wizard: tell us what happened
+  - S5.4.13 When a coverage applies (eligibility rules as data)
+  - S5.4.14 The result: what applies, what does not, and how
+  - S5.4.15 Wizard hand-off: save the attempt, record the outcome (v2)
+  - S5.4.16 The wizard with partial information (v2)
+  - S5.4.17 Question bank: ask only what matters (v2)
+  - S5.4.18 Describe what happened (free-text intake) (future)
+  - S5.4.20 Offer to mark an item refunded when a return receipt arrives (v2)
+- F5.5 Returns that work for people with disabilities (future, tentative, speculative)
+  - S5.5.1 Question: what would help people with disabilities?
+  - S5.5.2 Share my return story
+  - S5.5.3 Accessibility tags and filter on return stories
+  - S5.5.4 No-trip returns first
+
+## E6 Curation & Learning (v2 (basic hooks in MVP))
+- F6.1 Candidate policy queue (v2)
+  - S6.1.1 Submission creates a private policy and a candidate
+  - S6.1.2 AI verifies against the official source
+  - S6.1.3 Card terms research agent
+- F6.2 Crowd-learned defaults (MVP hooks / future feature)
+  - S6.2.1 Log coverage observations
+  - S6.2.2 Suggest crowd defaults
+  - S6.2.3 Flag disagreement or needed policy splits
+  - S6.2.4 Grow the product catalog from what people buy
+- F6.3 Automated policy-change detection & user confirmation (v2 add-on)
+  - S6.3.1 Scheduled job detects crowd-reported changes
+  - S6.3.2 AI checks the change against the official source
+  - S6.3.3 Ask affected users to confirm their policy
+  - S6.3.4 Apply a confirmed change without rewriting history
+- F6.4 Other AI review sweeps (future (unconfirmed))
+  - S6.4.1 Re-verify stale policies
+  - S6.4.2 Monitor official pages for changes
+  - S6.4.3 Seasonal and temporary return windows
+  - S6.4.4 Review implausible or conflicting entries
+  - S6.4.5 Warranty registration deadline nudges
+  - S6.4.6 Price-protection window alerts
+  - S6.4.7 Coverage gap and overlap review
+- F6.5 Product recall alerts (future (unconfirmed))
+- F6.6 Contributed warranty documents (v2)
+  - S6.6.1 Upload the official warranty document
+  - S6.6.2 Ask for the document when we have none
+  - S6.6.3 Verify submitted documents
+  - S6.6.4 Watch for new versions of a warranty
+- F6.7 Contribution credits (future, validate first)
+  - S6.7.1 Credit ledger
+  - S6.7.2 Earning rules
+  - S6.7.3 Redeem credits for free months
+  - S6.7.4 Credits page
+  - S6.7.5 Fraud controls
+  - S6.1.3 Sharing is the default for policies and official documents
+  - S6.1.4 Unverified until enough people agree
+  - S6.1.5 Show how trustworthy shared data is
+- F6.8 Price-drop alerts during the return window (same-store v2; cross-store future, validate first)
+  - S6.8.1 Opt in, and the settings that govern alerts
+  - S6.8.2 Days to Decide
+  - S6.8.3 Minimum savings threshold
+  - S6.8.4 Detect a lower price from member receipts
+  - S6.8.5 Does this store adjust prices?
+  - S6.8.6 The alert, the claim steps, and the outcome
+  - S6.8.7 Privacy rules for aggregate prices
+  - S6.8.8 Alert limits: no churn nudging
+  - S6.8.9 Net savings for return-and-rebuy (future)
+  - S6.8.10 Is the other seller comparable? (future)
+  - S6.8.11 Buy first, return second (future)
+
+## E7 Platform & Admin (MVP)
+- F7.1 Admin console (MVP (minimal))
+  - S7.1.1 Edit reference data with versioning
+  - S7.1.2 Review candidate and disagreement queues
+  - S7.1.10 See how the app is being used
+- F7.2 Legal & compliance (MVP)
+  - S7.2.1 Terms, privacy, disclaimer
+- F7.3 Operations & cost control (MVP)
+- F7.4 Marketing site & SEO pages (MVP (minimal))
+- F7.5 Data foundation (DDL) (MVP)
+  - S7.5.1 DDL: reference data schema
+  - S7.5.2 DDL: account, user and billing schema
+  - S7.5.3 DDL: purchases, items and coverage schema
+  - S7.5.4 DDL: curation and learning schema
+  - S7.5.5 Migration tooling and seed scripts
+  - S7.5.6 DDL: notification and messaging schema
+- F7.6 Technical foundation (MVP)
+  - S7.6.1 Environments and deployment
+  - S7.6.2 Background job scheduler
+  - S7.6.3 Private file storage
+  - S7.6.4 Transactional and inbound email
+  - S7.6.5 LLM integration and cost control
+  - S7.2.2 Crowd-data terms and consent at signup
+  - S7.1.3 A different home for the administrator
+  - S7.1.4 Switch between admin and customer view
+  - S7.1.5 Protect administrator access
+  - S7.1.6 A limited reviewer role
+  - S7.1.7 Turn administrator two-step sign-in back on before deployment
+  - S7.1.8 Send feedback or report a problem
+  - S7.1.9 Feedback and issues queue
+
+## E8 Business membership (future)
+- F8.1 Multi-user organizations & asset tags (future)
+- F8.2 Business plans & invoicing (future)
+
+## E9 Web app UI (core screens) (MVP)
+- F9.1 App shell & navigation (MVP)
+  - S9.1.1 Responsive layout for phone and desktop
+  - S9.1.3 Inline quick-add, expand for details
+  - S9.1.4 Installable on a phone (PWA)
+  - S9.1.5 Native app wrapper for iPhone and Android
+  - S9.1.6 Account menu: cards, plans, insurance and settings hang off Account
+  - S9.1.7 Welcome: bring in the purchases I already have
+  - S9.1.2 Empty states and first-run guidance
+- F9.2 Items list & dashboard (MVP)
+  - S9.2.1 Items list with coverage highlights
+  - S9.2.2 Dashboard highlights
+  - S9.2.3 Item detail page
+  - S9.2.4 People on an item
+  - S9.2.5 Dashboard: total recovered
+  - S9.2.6 Refund button and coverage summary on the item page
+  - S9.2.8 Returns in progress
+  - S9.2.9 Group, filter and search on every list (deferred)
+- F9.3 Purchase create / edit / delete (MVP)
+  - S9.3.1 Create a purchase
+  - S9.3.2 Edit a purchase
+  - S9.3.3 Delete or archive a purchase
+- F9.4 Coverage add / edit / delete (MVP)
+  - S9.4.1 Add or edit a coverage
+  - S9.4.2 Confirm or edit proposed coverages
+- F9.5 Stores, manufacturers, card issuers & warranty providers (MVP)
+  - S9.5.1 Pick a party or create one inline
+  - S9.5.2 Manage my parties
+  - S9.5.3 View a global party
+- F9.6 Policies create / edit / view (MVP)
+  - S9.6.1 Add a policy for a party
+  - S9.6.2 Edit or retire my policy
+  - S9.6.3 View policy history
+- F9.7 Cards screen (MVP)
+  - S9.7.1 List, add, edit and remove cards
+- F9.8 Settings & user configuration (MVP)
+  - S9.8.1 Settings page
+  - S9.8.2 Choose a color theme
+  - S9.8.3 Region and display preferences
+  - S9.8.4 Setup checklist and dismissals
+  - S9.8.5 Choose what is worth tracking
+- F9.9 New Items inbox (v2)
+  - S9.9.1 New Items list
+  - S9.9.2 Add Details opens the prefilled form
+  - S9.9.3 Accept into My Items
+  - S9.9.4 Dismiss: do not track
+  - S9.9.5 Tab names and new-item count
+  - S9.9.6 Each arrival: a new item, or a document for one I already have
+
+
+## T Testing playbooks (not product features)
+- T1 Simulating the passing of time

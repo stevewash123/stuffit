@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warranty document runner</title>
+<style>
+  :root { --bg:#fafaf7; --fg:#1d1d1b; --muted:#8a8a82; --line:#e2e1da; --accent:#1f5f4a; --card:#fff; --chip:#eef3ef; --ok:#1f7a4a; --bad:#b3261e; --badbg:#fde8e6; --extrabg:#fff1d6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161614; --fg:#ecece6; --muted:#8d8d85; --line:#2d2d29; --accent:#6fcf9f; --card:#1e1e1b; --chip:#232a26; --ok:#6fcf9f; --bad:#ff8a80; --badbg:#4a2320; --extrabg:#4a3a17; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:2; }
+  button, select { font:inherit; color:inherit; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:5px 11px; }
+  button { cursor:pointer; } button:hover { border-color:var(--accent); } button:disabled { opacity:.4; cursor:default; }
+  a { color:var(--accent); }
+  .stat { border:1px solid var(--line); border-radius:999px; padding:1px 10px; font-size:13px; color:var(--muted); }
+  main { display:grid; grid-template-columns:260px minmax(420px, 1fr) minmax(300px, 460px); gap:20px; padding:16px; align-items:start; }
+  @media (max-width: 1200px) { main { grid-template-columns:1fr; } }
+  #list { display:flex; flex-direction:column; gap:2px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:6px; max-height:80vh; overflow:auto; }
+  #list button { text-align:left; border:0; border-radius:6px; background:transparent; padding:4px 8px; font-size:13px; display:flex; gap:6px; }
+  #list button.cur { background:var(--chip); font-weight:600; }
+  .mk { width:1.2em; flex:none; } .mk.pass { color:var(--ok); } .mk.fail { color:var(--bad); } .mk.near { color:#9a6a00; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:0 16px 10px; margin-bottom:14px; }
+  .grp { margin:0 -16px 6px; padding:8px 16px; background:var(--chip); border-radius:10px 10px 0 0; border-bottom:1px solid var(--line); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); }
+  .kv { display:grid; grid-template-columns:9em minmax(0,1fr) minmax(0,1fr); gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); }
+  .kv:last-child { border-bottom:0; } .kv.head { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.06em; border-bottom:1px solid var(--line); }
+  .kv > :first-child { color:var(--muted); } .kv > div { word-break:break-word; }
+  .res { border-radius:5px; padding:0 7px; } .res.ok { color:var(--ok); } .res.bad { background:var(--badbg); color:var(--bad); font-weight:600; } .res.near { background:var(--extrabg); }
+  .empty { color:var(--muted); opacity:.55; }
+  .log { font-size:13px; color:var(--muted); margin:0; padding-left:1.2em; } .log li.err { color:var(--bad); }
+  iframe { width:100%; height:78vh; border:1px solid var(--line); border-radius:10px; background:#fff; }
+  .banner { border-radius:8px; padding:6px 12px; margin-bottom:12px; background:var(--chip); }
+  .banner.bad { background:var(--badbg); color:var(--bad); } .banner.near { background:var(--extrabg); } .banner.ok { color:var(--ok); }
+  label { font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <strong>Warranty documents</strong>
+  <label>How it is given <select id="mode">
+    <option value="waiting">To the item waiting in New Items</option>
+    <option value="kept">To the item kept in My Items (read, then confirm)</option>
+    <option value="looseWaiting">Loose, its item is waiting in New Items</option>
+    <option value="looseKept">Loose, its item is kept in My Items</option>
+    <option value="looseNone">Loose, no item (expect: unable to find)</option>
+  </select></label>
+  <label>Format <select id="fmt"><option value="pdf">PDF</option><option value="jpg">Photo scan (receipt and document)</option></select></label>
+  <label>Item <select id="itemSel"><option value="">its source receipt, made now</option></select></label>
+  <button id="refreshItems" title="Reload the item list">↻</button>
+  <button id="run">Run this one</button>
+  <button id="runAll">Run all</button>
+  <button id="stop" disabled>Stop</button>
+  <button id="clear" title="Dismisses and deletes everything in New Items so each run starts clean">Clear New Items</button>
+  <span class="stat" id="tally"></span>
+  <span class="stat" id="who"></span>
+  <a href="key-viewer.html" style="margin-left:auto">Receipt key viewer</a>
+</header>
+<main>
+  <div id="list"></div>
+  <div id="detail"></div>
+  <div><iframe id="pdf" title="The warranty document"></iframe></div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let rows = [], cur = 0, running = false, stopFlag = false;
+const results = {};   // file -> { verdict, log, outcome, coverages }
+
+function parseCsv(text) {
+  const out = []; let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) { if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; } else if (ch === '"') q = false; else cell += ch; }
+    else if (ch === '"') q = true; else if (ch === ',') { row.push(cell); cell = ''; }
+    else if (ch === '\n') { row.push(cell.replace(/\r$/, '')); out.push(row); row = []; cell = ''; } else cell += ch;
+  }
+  if (cell || row.length) { row.push(cell); out.push(row); }
+  const [h, ...r] = out; return r.filter(x => x.length > 1).map(x => Object.fromEntries(h.map((k, i) => [k.replace(/^﻿/, ''), x[i]])));
+}
+
+/* ---------- the app, through the viewer server (it adds the saved sign-in) ---------- */
+async function api(method, path, body) {
+  const r = await fetch(path, { method, body });
+  const t = await r.text(); let j = null; try { j = JSON.parse(t); } catch { }
+  if (!r.ok) throw new Error(`${method} ${path}: ${r.status} ${(j && (j.detail || j.title || j.message)) || t.slice(0, 200)}`);
+  return j;
+}
+async function fileForm(url, name, field) {
+  const blob = await (await fetch(url)).blob();
+  const fd = new FormData(); fd.append(field, new Blob([blob], { type: /\.jpg$/i.test(name) ? 'image/jpeg' : 'application/pdf' }), name); return fd;
+}
+// PDF or photo scan: the receipt and the document are both sent in the chosen format (same names, .jpg for the photo twins)
+const photo = () => $('fmt').value === 'jpg';
+const as = f => photo() ? f.replace(/\.pdf$/i, '.jpg') : f;
+const docName = row => as(row.file), docUrl = row => (photo() ? 'warranty-photos/' : 'warranty-docs/') + docName(row);
+const rcptName = row => as(row.source_receipt), rcptUrl = row => (photo() ? '' : 'receipt-pdfs/') + rcptName(row);
+const rk = row => row.file + (photo() ? ':jpg' : ':pdf');
+const uploadReceipt = async row => api('POST', '/api/pending-items/upload', await fileForm(rcptUrl(row), rcptName(row), 'files'));
+const uploadLoose = async row => api('POST', '/api/pending-items/upload', await fileForm(docUrl(row), docName(row), 'files'));
+
+function modelHit(row, name, model) { const k = String(row.model || '').toUpperCase().split(/[ \/(]/)[0]; return k && (String(model || '').toUpperCase().includes(k) || String(name || '').toUpperCase().includes(k)); }
+
+/* the item the document is for: made from its source receipt, or the one picked */
+async function setupItem(row, kept, log) {
+  const picked = $('itemSel').value;
+  if (picked) { const [kind, id] = picked.split(':'); log(`Using the item you picked (${kind === 'p' ? 'New Items' : 'My Items'}).`); return kind === 'p' && !kept ? { pendingId: id } : kind === 'i' ? { itemId: id } : { pendingId: id }; }
+  const up = await uploadReceipt(row);
+  const items = up.map(u => u.item).filter(Boolean);
+  let it = items.find(i => modelHit(row, i.name, i.modelNumber)) || items[0];
+  if (!it) throw new Error('The source receipt made no item: ' + (up[0] && (up[0].note || up[0].error) || 'nothing came back'));
+  log(`Source receipt ${rcptName(row)}: ${it.duplicate ? 'already there; ' : ''}${esc(it.name || '?')} (${it.modelNumber || 'no model'}), ${it.status}.`);
+  if (!kept) { if (it.status !== 'pending') throw new Error('That item is already in My Items. Choose a kept mode, or clear New Items and start again.'); return { pendingId: it.id }; }
+  let purchaseId = it.acceptedPurchaseId;
+  if (it.status === 'pending') { purchaseId = (await api('POST', `/api/pending-items/${it.id}/accept`)).purchaseId; log('Added it to My Items.'); }
+  const purchase = await api('GET', `/api/purchases/${purchaseId}`);
+  const mine = (purchase.items || []).find(x => modelHit(row, x.name, x.model)) || purchase.items[0];
+  return { itemId: mine.id };
+}
+
+async function waitingCoverages(pendingId) {
+  const p = await api('GET', `/api/pending-items/${pendingId}`);
+  return (p.coverage || []).filter(c => String(c.key).startsWith('doc:')).map(c => ({ kind: c.kind, start: c.startDate, end: c.endDate, months: c.termMonths, confidence: c.overallConfidence, parts: (c.components || []).map(x => `${x.component} ${x.partsMonths ?? '-'}/${x.laborMonths ?? '-'}`).join('; '), label: c.sourceLabel }));
+}
+async function keptCoverages(itemId) {
+  const d = await api('GET', `/api/items/${itemId}`);
+  return (d.item.coverages || []).filter(c => c.kind === 'extendedPlan' || c.kind === 'manufacturer').map(c => ({ kind: c.kind, start: c.startDate, end: c.endDate, months: c.termMonths, parts: c.component || '', label: c.providerName || '' }));
+}
+
+/* ---------- one file ---------- */
+async function runFile(row) {
+  const mode = $('mode').value, log = [], say = (t, err) => log.push({ t, err });
+  const res = { log, outcome: null, coverages: [], note: null, verdict: null, mode };
+  results[rk(row)] = res; paintList(); if (rows[cur] === row) show();
+  try {
+    if (mode === 'looseNone') {
+      const up = (await uploadLoose(row))[0];
+      say(`Uploaded the document with no item anywhere.`); res.note = up.note || null; res.outcome = up.warranty || null;
+      res.verdict = up.item == null && !up.warranty && /Unable to find this item/.test(up.note || '') ? { cls: 'ok', text: 'Turned away with the message, as expected.' }
+        : { cls: 'bad', text: up.warranty ? 'It found an item it should not have.' : up.item ? 'It made an item.' : 'Unexpected answer: ' + (up.note || up.error || 'none') };
+      return;
+    }
+    const kept = mode === 'kept' || mode === 'looseKept';
+    const target = await setupItem(row, kept, t => say(t));
+    if (mode === 'waiting') {
+      res.outcome = await api('POST', `/api/pending-items/${target.pendingId}/warranty-document`, await fileForm(docUrl(row), docName(row), 'file'));
+      say(`Added the document to the waiting item: ${res.outcome.status}.`);
+      res.coverages = await waitingCoverages(target.pendingId);
+    } else if (mode === 'kept') {
+      const o = await api('POST', `/api/items/${target.itemId}/warranty-document`, await fileForm(docUrl(row), docName(row), 'file'));
+      say(`Read it for the kept item: ${o.status}${o.mismatch ? ' (' + o.mismatch + ')' : ''}. The popup would ask; the runner says Add.`);
+      res.outcome = o;
+      if (o.status === 'proposed') { await api('POST', `/api/items/${target.itemId}/warranty-document/${o.documentId}/apply`); say('Applied.'); }
+      res.coverages = await keptCoverages(target.itemId);
+    } else {
+      const up = (await uploadLoose(row))[0];
+      res.note = up.note || null; res.outcome = up.warranty || null;
+      say(`Uploaded the document on its own: ${up.warranty ? up.warranty.status + ' to ' + (up.warrantyItemName || '?') : (up.note || 'no result')}`);
+      if (!up.warranty) { res.verdict = { cls: 'bad', text: 'No item was found: ' + (up.note || 'nothing came back') }; return; }
+      if (mode === 'looseWaiting') res.coverages = await waitingCoverages(target.pendingId);
+      else { await api('POST', `/api/items/${up.warrantyItemId}/warranty-document/${up.warranty.documentId}/apply`); say('Applied.'); res.coverages = await keptCoverages(up.warrantyItemId); }
+    }
+    res.verdict = judge(row, res);
+  } catch (e) { say(e.message, true); res.verdict = { cls: 'bad', text: e.message }; }
+  finally { paintList(); if (rows[cur] === row) show(); }
+}
+
+/* ---------- the key against the result ---------- */
+const money = v => v == null || v === '' ? '' : Number(v).toFixed(2);
+const norm = s => String(s ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
+function yearsIn(term) { const m = /^\s*(\d+)\s*(?:years?|yrs?|y)\b/i.exec(term || ''); return m ? +m[1] * 12 : null; }
+function addMonths(iso, n) { const d = new Date(iso + 'T00:00:00Z'); d.setUTCMonth(d.getUTCMonth() + n); return d.toISOString().slice(0, 10); }
+
+function compareRows(row, res) {
+  const o = res.outcome || {}, out = [];
+  const add = (label, key, got, cls, text) => out.push({ label, key, got, cls, text });
+  const wantPlan = row.kind === 'retailer_plan';
+  const kindOk = wantPlan ? ['retailer_plan', 'third_party_plan'].includes(o.kind) : o.kind === 'manufacturer';
+  add('Kind', row.kind, o.kind, kindOk ? (o.kind === row.kind ? 'ok' : 'near') : 'bad');
+  const printed = row.plan_no && !/^\(not printed\)$/i.test(row.plan_no) ? row.plan_no : '';
+  add('Plan number', printed || '(none printed)', o.contractNumber || '(none)', norm(printed) === norm(o.contractNumber) ? 'ok' : 'bad');
+  add('Starts', row.start_or_purchase, o.startDate, row.start_or_purchase === o.startDate ? 'ok' : 'bad');
+  let wantEnd = row.end, endCls;
+  if (!wantEnd) { const m = yearsIn(row.term); if (m && row.start_or_purchase) wantEnd = addMonths(row.start_or_purchase, m); }
+  endCls = !wantEnd ? 'near' : wantEnd === o.endDate ? 'ok' : 'bad';
+  add('Ends', row.end || (wantEnd ? wantEnd + ' (from the term)' : `(term: ${row.term})`), o.endDate, endCls, !wantEnd ? 'check by eye' : '');
+  const priceKey = parseFloat(row.plan_price);
+  if (wantPlan) add('Price', row.plan_price || '(none)', o.price == null ? '' : money(o.price), isNaN(priceKey) ? 'near' : (o.price != null && Math.abs(priceKey - o.price) < 0.005 ? 'ok' : 'bad'));
+  const parts = (res.coverages[0] && res.coverages[0].parts) || '';
+  add('Term / parts', row.term, [o.termMonths ? o.termMonths + ' months' : '', parts].filter(Boolean).join(' · '), 'near', 'compare by eye');
+  add('Mismatch', '(none expected)', o.mismatch || '(none)', o.mismatch ? 'bad' : 'ok');
+  return out;
+}
+function judge(row, res) {
+  if (!res.outcome) return { cls: 'bad', text: 'Nothing was read.' };
+  if (!['added', 'proposed', 'applied'].includes(res.outcome.status)) return { cls: 'bad', text: `Not added: ${res.outcome.reason || res.outcome.status}` };
+  const rs = compareRows(row, res), bad = rs.filter(r => r.cls === 'bad');
+  if (bad.length) return { cls: 'bad', text: 'Differs: ' + bad.map(r => r.label).join(', ') };
+  if (!res.coverages.length) return { cls: 'bad', text: 'No coverage came of it.' };
+  return rs.some(r => r.cls === 'near') ? { cls: 'near', text: 'Matches; check the term and parts by eye.' } : { cls: 'ok', text: 'Matches the key.' };
+}
+
+/* ---------- screen ---------- */
+function paintList() {
+  $('list').innerHTML = '';
+  rows.forEach((r, n) => {
+    const v = results[rk(r)] && results[rk(r)].verdict, b = document.createElement('button');
+    b.className = n === cur ? 'cur' : ''; b.innerHTML = `<span class="mk ${v ? v.cls : ''}">${v ? (v.cls === 'ok' ? '✓' : v.cls === 'near' ? '≈' : '✗') : ''}</span><span>${esc(r.file.replace('.pdf', ''))}</span>`;
+    b.onclick = () => { cur = n; paintList(); show(); }; $('list').appendChild(b);
+  });
+  const vs = Object.values(results).map(x => x.verdict).filter(Boolean);
+  $('tally').textContent = `${vs.filter(v => v.cls === 'ok').length} match · ${vs.filter(v => v.cls === 'near').length} check · ${vs.filter(v => v.cls === 'bad').length} differ · ${rows.length - vs.length} not run`;
+}
+function show() {
+  const row = rows[cur]; if (!row) return;
+  $('pdf').src = docUrl(row);
+  const res = results[rk(row)], d = $('detail');
+  let h = `<div class="card"><div class="grp">${esc(row.file)} · confidence ${esc(row.confidence)}</div><div style="padding:6px 0">${esc(row.product)} · model ${esc(row.model)}<br><span class="empty">${esc(row.notes)}</span><br><span class="empty">Source receipt: ${esc(row.source_receipt)}</span></div></div>`;
+  if (!res) { d.innerHTML = h + '<p class="empty">Not run yet. Choose how it is given above, then Run this one.</p>'; return; }
+  if (res.verdict) h += `<div class="banner ${res.verdict.cls}">${esc(res.verdict.text)}</div>`;
+  if (res.mode !== 'looseNone' && res.outcome) {
+    h += `<div class="card"><div class="grp">Key against what the app made</div><div class="kv head"><div></div><div>Answer key</div><div>App result</div></div>`;
+    for (const r of compareRows(row, res)) h += `<div class="kv"><div>${esc(r.label)}</div><div>${esc(r.key)}</div><div><span class="res ${r.cls}">${esc(r.got) || '<span class="empty">(blank)</span>'}</span>${r.text ? ` <span class="empty">${esc(r.text)}</span>` : ''}</div></div>`;
+    h += '</div>';
+  }
+  if (res.coverages.length) {
+    h += '<div class="card"><div class="grp">Coverage on the item</div>';
+    for (const c of res.coverages) h += `<div class="kv"><div>${esc(c.kind)}</div><div colspan="2">${esc(c.start)} → ${esc(c.end)}${c.months ? ` (${c.months} months)` : ''}${c.confidence != null ? ` · confidence ${c.confidence}` : ''}</div><div>${esc(c.parts) || '<span class="empty">no parts</span>'}</div></div>`;
+    h += '</div>';
+  }
+  if (res.note) h += `<div class="card"><div class="grp">Message to the person</div><div style="padding:6px 0">${esc(res.note)}</div></div>`;
+  h += `<ul class="log">${res.log.map(l => `<li class="${l.err ? 'err' : ''}">${l.err ? esc(l.t) : l.t}</li>`).join('')}</ul>`;
+  d.innerHTML = h;
+}
+
+async function loadItems() {
+  const sel = $('itemSel'), keep = sel.value; sel.innerHTML = '<option value="">its source receipt, made now</option>';
+  try {
+    const p = await api('GET', '/api/pending-items?pageSize=100');
+    for (const i of p.items) sel.add(new Option(`New Items: ${i.name || i.sourceLabel} ${i.modelNumber ? '(' + i.modelNumber + ')' : ''}`, 'p:' + i.id));
+    const k = await api('GET', '/api/items?pageSize=100');
+    for (const i of k.items || []) sel.add(new Option(`My Items: ${i.name} ${i.model ? '(' + i.model + ')' : ''}`, 'i:' + i.id));
+    sel.value = keep;
+  } catch (e) { /* the list is a convenience */ }
+}
+async function clearNew() {
+  if (!confirm('Dismiss and delete every item in New Items (the test user\'s)? Items already in My Items stay.')) return;
+  $('clear').disabled = true;
+  try {
+    for (const status of ['pending', 'dismissed']) {
+      const p = await api('GET', `/api/pending-items?status=${status}&pageSize=100`);
+      for (const i of p.items) { if (status === 'pending') await api('POST', `/api/pending-items/${i.id}/dismiss`); await api('DELETE', `/api/pending-items/${i.id}`); }
+    }
+  } catch (e) { alert(e.message); }
+  $('clear').disabled = false; loadItems();
+}
+async function runAll() {
+  running = true; stopFlag = false; $('run').disabled = $('runAll').disabled = true; $('stop').disabled = false;
+  $('itemSel').value = '';   // a picked item makes no sense for the whole set
+  for (let n = 0; n < rows.length && !stopFlag; n++) { cur = n; paintList(); show(); await runFile(rows[n]); }
+  running = false; $('run').disabled = $('runAll').disabled = false; $('stop').disabled = true; loadItems();
+}
+async function refreshWho() {
+  try { const s = await (await fetch('/viewer/session')).json(); $('who').textContent = s.enabled ? 'Signed in as ' + s.email : 'No saved sign-in: start serve-viewer.py with a login'; } catch { $('who').textContent = 'Not served by serve-viewer.py'; }
+}
+
+(async function init() {
+  rows = parseCsv(await (await fetch('warranty-docs/index.csv')).text());
+  paintList(); show(); refreshWho(); loadItems();
+  $('run').onclick = async () => { $('run').disabled = true; await runFile(rows[cur]); $('run').disabled = false; loadItems(); };
+  $('runAll').onclick = runAll; $('stop').onclick = () => { stopFlag = true; };
+  $('clear').onclick = clearNew; $('refreshItems').onclick = loadItems;
+  $('fmt').onchange = () => { paintList(); show(); };
+  setTimeout(() => {   // a link from test-matrix.html: ?doc=04-home-depot-samsung-fridge-5yr&mode=kept&fmt=jpg
+    const q = new URLSearchParams(location.search);
+    if (q.get('fmt')) $('fmt').value = q.get('fmt');
+    if (q.get('mode')) { $('mode').value = q.get('mode'); $('mode').onchange(); }
+    const k = rows.findIndex(r => r.file.replace(/\.pdf$/i, '') === (q.get('doc') || '').replace(/\.(pdf|jpg)$/i, ''));
+    if (k >= 0) cur = k;
+    paintList(); show();
+  }, 0);
+  $('mode').onchange = () => { $('itemSel').disabled = ['looseWaiting', 'looseKept', 'looseNone'].includes($('mode').value); };
+  document.addEventListener('keydown', e => { if (/SELECT|INPUT/.test(e.target.tagName)) return; if (e.key === 'ArrowDown' && cur < rows.length - 1) { cur++; paintList(); show(); } if (e.key === 'ArrowUp' && cur > 0) { cur--; paintList(); show(); } });
+})();
+</script>
+</body>
+</html>

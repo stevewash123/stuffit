@@ -1,0 +1,71 @@
+From: Apple <no_reply@email.apple.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your order has shipped. Order W1234567890
+Date: Tue, 22 Sep 2026 05:03:00 -0500
+Message-ID: <apple-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Apple
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8399494032264247148=="
+
+--===============8399494032264247148==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your package is on its way.
+
+Order Number: W1234567890
+
+Carrier / Tracking
+UPS
+Tracking #: 1Z999AA10123456785
+
+Estimated delivery
+Fri, 26 Sep
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  iPhone 16 Pro 256GB - Natural Titanium
+    MYX23LL/A  Qty: 1   $1,099.00
+
+
+
+
+--===============8399494032264247148==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Apple layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Apple</title></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Helvetica Neue,Helveti=
+ca,Arial;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+"><tr><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#1d1d1f;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Apple</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your package is o=
+n its way.</h2><p style=3D"font-size:14px">Order Number: W1234567890</p><h3 s=
+tyle=3D"margin:18px 0 4px;font-size:15px">Carrier / Tracking</h3><div style=
+=3D"font-size:14px;line-height:1.5">UPS<br>Tracking #: <b>1Z999AA10123456785<=
+/b></div><h3 style=3D"margin:18px 0 4px;font-size:15px">Estimated delivery</h=
+3><div style=3D"font-size:14px;line-height:1.5">Fri, 26 Sep</div><h3 style=3D=
+"margin:18px 0 4px;font-size:15px">Shipping to</h3><div style=3D"font-size:14=
+px;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</di=
+v><h3 style=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr>=
+<td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-w=
+eight:bold">iPhone 16 Pro 256GB - Natural Titanium</div><div style=3D"font-si=
+ze:12px;color:#666">MYX23LL/A</div></td><td align=3D"center" style=3D"border-=
+bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1=
+px solid #eee">$1,099.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============8399494032264247148==--

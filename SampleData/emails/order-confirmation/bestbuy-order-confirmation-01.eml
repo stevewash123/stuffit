@@ -1,0 +1,98 @@
+From: Best Buy <BestBuyInfo@emailinfo.bestbuy.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Thanks for your order! Order #BBY01-806000000001
+Date: Tue, 09 Jun 2026 15:02:00 -0500
+Message-ID: <bestbuy-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Best Buy
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2553879762797121961=="
+
+--===============2553879762797121961==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order, Sam!
+
+We'll email you when your items ship. Order Number: BBY01-806000000001
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Delivery estimate
+Fri, Jun 12 - Tue, Jun 16
+
+Payment
+Visa ending in 4242
+
+Order details
+  Samsung - 65" Class S90D OLED 4K UHD Smart Tizen TV
+    SKU: 6571234  Qty: 1   $1,299.99
+  Best Buy Protection - 2-Year TV Plan
+    SKU: 1098765  Qty: 1   $179.99
+  Insignia - 6' HDMI Cable
+    SKU: 5001122  Qty: 2   $39.98
+
+Subtotal: $1,519.96
+Instant savings: -$100.00
+Shipping: FREE
+Estimated tax: $81.65
+Total: $1,501.61
+
+
+
+--===============2553879762797121961==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Best Buy layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Best Buy</title></h=
+ead>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0046be;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Best Buy</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thanks for your o=
+rder, Sam!</h2><p style=3D"font-size:14px">We'll email you when your items sh=
+ip. Order Number: <b>BBY01-806000000001</b></p><h3 style=3D"margin:18px 0 4px=
+;font-size:15px">Shipping to</h3><div style=3D"font-size:14px;line-height:1.5=
+">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</div><h3 style=3D"mar=
+gin:18px 0 4px;font-size:15px">Delivery estimate</h3><div style=3D"font-size:=
+14px;line-height:1.5">Fri, Jun 12 - Tue, Jun 16</div><h3 style=3D"margin:18px=
+ 0 4px;font-size:15px">Payment</h3><div style=3D"font-size:14px;line-height:1=
+.5">Visa ending in 4242</div><h3 style=3D"margin:18px 0 4px;font-size:15px">O=
+rder details</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid=
+ #eee"><div style=3D"font-weight:bold">Samsung - 65&quot; Class S90D OLED 4K =
+UHD Smart Tizen TV</div><div style=3D"font-size:12px;color:#666">SKU: 6571234=
+</div><div style=3D"font-size:12px;color:#666">Model: QN65S90DAFXZA</div></td=
+><td align=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td al=
+ign=3D"right" style=3D"border-bottom:1px solid #eee">$1,299.99</td></tr><tr><=
+td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-we=
+ight:bold">Best Buy Protection - 2-Year TV Plan</div><div style=3D"font-size:=
+12px;color:#666">SKU: 1098765</div><div style=3D"font-size:12px;color:#666">C=
+are plan</div></td><td align=3D"center" style=3D"border-bottom:1px solid #eee=
+">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid #eee">$179.9=
+9</td></tr><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div =
+style=3D"font-weight:bold">Insignia - 6&#x27; HDMI Cable</div><div style=3D"f=
+ont-size:12px;color:#666">SKU: 5001122</div></td><td align=3D"center" style=
+=3D"border-bottom:1px solid #eee">Qty 2</td><td align=3D"right" style=3D"bord=
+er-bottom:1px solid #eee">$39.98</td></tr></table><table width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"font-size:14px;margin-top:10px"><tr><=
+td style=3D"padding:3px 0">Subtotal</td><td align=3D"right">$1,519.96</td></t=
+r><tr><td style=3D"padding:3px 0">Instant savings</td><td align=3D"right">-$1=
+00.00</td></tr><tr><td style=3D"padding:3px 0">Shipping</td><td align=3D"righ=
+t">FREE</td></tr><tr><td style=3D"padding:3px 0">Estimated tax</td><td align=
+=3D"right">$81.65</td></tr><tr><td style=3D"padding:3px 0">Total</td><td alig=
+n=3D"right">$1,501.61</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============2553879762797121961==--

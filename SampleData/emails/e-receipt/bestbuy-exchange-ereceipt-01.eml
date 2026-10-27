@@ -1,0 +1,75 @@
+From: Best Buy <BestBuyInfo@emailinfo.bestbuy.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Best Buy return confirmation
+Date: Wed, 05 Aug 2026 12:00:00 -0500
+Message-ID: <bestbuy-exchange-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Best Buy
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============3132363023875430237=="
+
+--===============3132363023875430237==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Return and exchange confirmation
+
+BEST BUY
+STORE #0999  TESTVILLE
+RETURN / EXCHANGE
+----------------------------------------
+INSIGNIA 6FT HDMI CABLE          -$39.98
+   SKU 5001122  RETURNED  QTY 2 @ -$19.99
+INSIGNIA 10FT HDMI CABLE          $24.99
+   SKU 5001133  EXCHANGE ITEM
+
+SUBTOTAL                         -$14.99
+SALES TAX (5.500%)                -$0.82
+TOTAL                            -$15.81
+
+NET DUE / (REFUND)   -$15.81
+CREDIT TO VISA XXXX4242
+----------------------------------------
+Original order BBY01-806000000001
+08/05/2026 12:00 PM  REG 01  TRAN 009001
+
+--===============3132363023875430237==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Best Buy layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Best Buy</title></h=
+ead>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0046be;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Best Buy</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Return and excha=
+nge confirmation</h3><pre style=3D"font-family:Courier New,monospace;font-siz=
+e:13px;line-height:1.35;margin:0">BEST BUY
+STORE #0999  TESTVILLE
+RETURN / EXCHANGE
+----------------------------------------
+INSIGNIA 6FT HDMI CABLE          -$39.98
+   SKU 5001122  RETURNED  QTY 2 @ -$19.99
+INSIGNIA 10FT HDMI CABLE          $24.99
+   SKU 5001133  EXCHANGE ITEM
+
+SUBTOTAL                         -$14.99
+SALES TAX (5.500%)                -$0.82
+TOTAL                            -$15.81
+
+NET DUE / (REFUND)   -$15.81
+CREDIT TO VISA XXXX4242
+----------------------------------------
+Original order BBY01-806000000001
+08/05/2026 12:00 PM  REG 01  TRAN 009001</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============3132363023875430237==--

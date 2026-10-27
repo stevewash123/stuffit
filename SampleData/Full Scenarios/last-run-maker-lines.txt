@@ -1,0 +1,40 @@
+account scenarios+1793051528@example.test
+
+=== Scenario 15 - Maker line - heated gear
+  upload 01-email-homedepot-milwaukee-heated-jacket.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-homedepot-milwaukee-heated-jacket.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Milwaukee M12 Heated TOUGHSHELL Jacket Kit (Black, Large)' | store 'Home Depot' -> Home Depot | maker Milwaukee | model 204B-21L | 2026-10-19 | $188.85 | card 1111 Chase Freedom Unlimited | order H23100-51501
+    docs: [('01-email-homedepot-milwaukee-heated-jacket.eml', 'receipt'), ('02-receipt-homedepot-milwaukee-heated-jacket.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Home Depot return policy  (return, 90.0 d, ends 2027-01-17, overall 0.96, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Milwaukee warranty  (manufacturer, 365.0 d, ends 2027-10-19, overall 0.59, verified) why: Checked against the official source on Oct 7, 2026.
+    [x] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-10-19, overall 0.9, verified) why: Read on the company's own website on Sep 30, 2026.
+    [x] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-16, overall 0.9, verified) why: Read on the company's own website on Sep 30, 2026.
+    CHECK FAIL: expected one Milwaukee warranty ticked (Heated gear, 12 months), got 0
+    ADDED to My Items with: [('return', 'Home Depot', '2027-01-17'), ('card', 'Chase', '2027-02-16'), ('card', 'Chase', '2028-10-19')]
+
+=== Scenario 16 - Maker line - digital levels
+  upload 01-email-homedepot-milwaukee-digital-level.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-homedepot-milwaukee-digital-level.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Milwaukee 48 in. Digital Level' | store 'Home Depot' -> Home Depot | maker Milwaukee | model MLDIG48 | 2026-10-20 | $125.55 | card 1111 Chase Freedom Unlimited | order H23100-51602
+    docs: [('01-email-homedepot-milwaukee-digital-level.eml', 'receipt'), ('02-receipt-homedepot-milwaukee-digital-level.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Home Depot return policy: general  (return, 90.0 d, ends 2027-01-18, overall 0.94, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Home Depot return policy: major appliances  (return, 2.0 d, ends 2026-10-22, overall 0.69, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Milwaukee warranty  (manufacturer, 365.0 d, ends 2027-10-20, overall 0.69, verified) why: Checked against the official source on Oct 7, 2026.
+    [x] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-10-20, overall 0.9, verified) why: Read on the company's own website on Sep 30, 2026.
+    [x] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-17, overall 0.9, verified) why: Read on the company's own website on Sep 30, 2026.
+    CHECK FAIL: expected one Milwaukee warranty ticked (Digital levels, 36 months), got 0
+    ADDED to My Items with: [('return', 'Home Depot', '2027-01-18'), ('card', 'Chase', '2027-02-17'), ('card', 'Chase', '2028-10-20')]
+
+=== Scenario 17 - Maker line - portable generators
+  upload 01-email-homedepot-milwaukee-portable-generator.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-homedepot-milwaukee-portable-generator.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Milwaukee 3,500-Watt Gas Powered Portable Generator' | store 'Home Depot' -> Home Depot | maker Milwaukee | model 6010-50 | 2026-10-21 | $579.2 | card 1111 Chase Freedom Unlimited | order H23100-51703
+    docs: [('01-email-homedepot-milwaukee-portable-generator.eml', 'receipt'), ('02-receipt-homedepot-milwaukee-portable-generator.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Home Depot return policy  (return, 90.0 d, ends 2027-01-19, overall 0.96, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Milwaukee warranty  (manufacturer, 365.0 d, ends 2027-10-21, overall 0.59, verified) why: Checked against the official source on Oct 7, 2026.
+    [x] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-10-21, overall 0.9, verified) why: Read on the company's own website on Sep 30, 2026.
+    [x] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-18, overall 0.9, verified) why: Read on the company's own website on Sep 30, 2026.
+    CHECK FAIL: expected one Milwaukee warranty ticked (Portable generators, 24 months), got 0
+    ADDED to My Items with: [('return', 'Home Depot', '2027-01-19'), ('card', 'Chase', '2027-02-18'), ('card', 'Chase', '2028-10-21')]
+
+(throwaway account left in the dev database: scenarios+1793051528@example.test)

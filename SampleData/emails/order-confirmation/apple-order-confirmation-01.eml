@@ -1,0 +1,94 @@
+From: Apple <no_reply@email.apple.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: We're processing your order W1234567890.
+Date: Sat, 19 Sep 2026 06:03:00 -0500
+Message-ID: <apple-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Apple
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2714350386018628528=="
+
+--===============2714350386018628528==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for your order.
+
+Order Number: W1234567890
+Ordered on: Sep 19, 2026
+
+Delivery
+Estimated delivery: Wed, 24 Sep - Fri, 26 Sep
+
+Ship to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Billed to
+Visa ending in 4242
+
+Order details
+  iPhone 16 Pro 256GB - Natural Titanium
+    MYX23LL/A  Qty: 1   $1,099.00
+  AppleCare+ for iPhone 16 Pro
+    SKU: S9876ZM/A  (2 years of coverage)  Qty: 1   $199.00
+  MagSafe Charger (1 m)
+    MXCZ3AM/A  Qty: 1   $39.00
+
+Subtotal: $1,337.00
+Shipping: FREE
+Tax: $73.53
+Order Total: $1,410.53
+
+
+
+--===============2714350386018628528==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Apple layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Apple</title></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Helvetica Neue,Helveti=
+ca,Arial,sans-serif;color:#222"><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0"><tr><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#1d1d1f;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Apple</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thank you for you=
+r order.</h2><p style=3D"font-size:14px">Order Number: <b>W1234567890</b><br>=
+Ordered on: Sep 19, 2026</p><h3 style=3D"margin:18px 0 4px;font-size:15px">De=
+livery</h3><div style=3D"font-size:14px;line-height:1.5">Estimated delivery: =
+Wed, 24 Sep - Fri, 26 Sep</div><h3 style=3D"margin:18px 0 4px;font-size:15px"=
+>Ship to</h3><div style=3D"font-size:14px;line-height:1.5">Sam Sample<br>100 =
+Example Lane<br>Testville, ME 04000</div><h3 style=3D"margin:18px 0 4px;font-=
+size:15px">Billed to</h3><div style=3D"font-size:14px;line-height:1.5">Visa e=
+nding in 4242</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Order detai=
+ls</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"fon=
+t-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><di=
+v style=3D"font-weight:bold">iPhone 16 Pro 256GB - Natural Titanium</div><div=
+ style=3D"font-size:12px;color:#666">MYX23LL/A</div></td><td align=3D"center"=
+ style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=
+=3D"border-bottom:1px solid #eee">$1,099.00</td></tr><tr><td style=3D"padding=
+:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">AppleCar=
+e+ for iPhone 16 Pro</div><div style=3D"font-size:12px;color:#666">SKU: S9876=
+ZM/A  (2 years of coverage)</div></td><td align=3D"center" style=3D"border-bo=
+ttom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px=
+ solid #eee">$199.00</td></tr><tr><td style=3D"padding:8px 0;border-bottom:1p=
+x solid #eee"><div style=3D"font-weight:bold">MagSafe Charger (1 m)</div><div=
+ style=3D"font-size:12px;color:#666">MXCZ3AM/A</div></td><td align=3D"center"=
+ style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=
+=3D"border-bottom:1px solid #eee">$39.00</td></tr></table><table width=3D"100=
+%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px;margin-top:10p=
+x"><tr><td style=3D"padding:3px 0">Subtotal</td><td align=3D"right">$1,337.00=
+</td></tr><tr><td style=3D"padding:3px 0">Shipping</td><td align=3D"right">FR=
+EE</td></tr><tr><td style=3D"padding:3px 0">Tax</td><td align=3D"right">$73.5=
+3</td></tr><tr><td style=3D"padding:3px 0">Order Total</td><td align=3D"right=
+">$1,410.53</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============2714350386018628528==--

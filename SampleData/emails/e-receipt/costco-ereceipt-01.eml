@@ -1,0 +1,81 @@
+From: Costco Wholesale <ereceipt@costco.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Costco Warehouse Receipt - Testville #0999
+Date: Sat, 14 Nov 2026 17:48:00 -0500
+Message-ID: <costco-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Costco
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8541989725324051781=="
+
+--===============8541989725324051781==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for shopping with us
+
+COSTCO WHOLESALE #0999
+TESTVILLE
+700 WAREHOUSE RD
+TESTVILLE, ME 04000
+----------------------------------------
+1234567 SAMSUNG 75IN QN90D     $1,399.99
+   E
+7654321 KS PAPER TOWEL            $49.98
+   A  QTY 2 @ $24.99
+
+SUBTOTAL                       $1,449.97
+SALES TAX (0.000%)                 $0.00
+TOTAL                          $1,449.97
+
+XXXXXXXXXXXX2468 COSTCO VISA
+APPROVED - PURCHASE  $1,449.97
+AID: A0000000031010   SEQ# 1234
+----------------------------------------
+MEMBER 111222333444
+TOTAL NUMBER OF ITEMS SOLD = 3
+11/14/2026 17:48  0999 04 0210 456
+
+--===============8541989725324051781==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Costco layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>COSTCO WHOLESALE</t=
+itle></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#e31837;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">COSTCO WHOLESALE</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Thank you for sh=
+opping with us</h3><pre style=3D"font-family:Courier New,monospace;font-size:=
+13px;line-height:1.35;margin:0">COSTCO WHOLESALE #0999
+TESTVILLE
+700 WAREHOUSE RD
+TESTVILLE, ME 04000
+----------------------------------------
+1234567 SAMSUNG 75IN QN90D     $1,399.99
+   E
+7654321 KS PAPER TOWEL            $49.98
+   A  QTY 2 @ $24.99
+
+SUBTOTAL                       $1,449.97
+SALES TAX (0.000%)                 $0.00
+TOTAL                          $1,449.97
+
+XXXXXXXXXXXX2468 COSTCO VISA
+APPROVED - PURCHASE  $1,449.97
+AID: A0000000031010   SEQ# 1234
+----------------------------------------
+MEMBER 111222333444
+TOTAL NUMBER OF ITEMS SOLD =3D 3
+11/14/2026 17:48  0999 04 0210 456</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============8541989725324051781==--

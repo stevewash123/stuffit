@@ -1,0 +1,6 @@
+{
+  "1000000254.jpg": { "store": "Pine Street Hardware", "purchase_date": "2026-10-03", "total": "142.91", "tax": "7.45", "payment_last4": "1212", "order_number": "771203", "brand": "DeWalt", "model_number": "DCD771", "item_price": "99.00", "items": "DeWalt DCD771 Drill" },
+  "1000000255.jpg": { "store": "Blue Heron Outfitters", "purchase_date": "2026-07-04", "total": "68.58", "tax": "3.58", "payment_last4": "1212", "order_number": "55820", "brand": "Osprey", "model_name": "Daylite Pack", "item_price": "65.00" },
+  "1000000256.jpg": { "store": "Northwind Electronics", "purchase_date": "2026-08-21", "total": "742.70", "tax": "38.72", "payment_last4": "7711", "order_number": "233-0011-9982", "brand": "Samsung", "model_number": "QN55Q60D", "item_price": "649.00" },
+  "1000000257.jpg": { "store": "Harbor Appliance & Home", "purchase_date": "2026-09-12", "total": "1369.37", "tax": "71.39", "payment_last4": "1212", "order_number": "0088-4417", "brand": "Frigidaire", "model_number": "FRT18B3", "item_price": "1099.00" }
+}

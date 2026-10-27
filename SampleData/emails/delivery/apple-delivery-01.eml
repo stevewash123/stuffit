@@ -1,0 +1,54 @@
+From: Apple <no_reply@email.apple.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your order has been delivered. Order W1234567890
+Date: Fri, 25 Sep 2026 15:10:00 -0500
+Message-ID: <apple-delivery-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Apple
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============9138735692629018191=="
+
+--===============9138735692629018191==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your package was delivered.
+
+Delivered on Thursday, 25 September. Signed by: S. Sample.
+
+Order details
+  iPhone 16 Pro 256GB - Natural Titanium
+    MYX23LL/A  Qty: 1   $1,099.00
+
+
+
+
+--===============9138735692629018191==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Apple layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Apple</title></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Helvetica Neue,Helveti=
+ca,Arial;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+"><tr><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#1d1d1f;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Apple</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your package was =
+delivered.</h2><p style=3D"font-size:14px">Delivered on Thursday, 25 Septembe=
+r. Signed by: S. Sample.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Or=
+der details</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid =
+#eee"><div style=3D"font-weight:bold">iPhone 16 Pro 256GB - Natural Titanium<=
+/div><div style=3D"font-size:12px;color:#666">MYX23LL/A</div></td><td align=
+=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"rig=
+ht" style=3D"border-bottom:1px solid #eee">$1,099.00</td></tr></table></td></=
+tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============9138735692629018191==--

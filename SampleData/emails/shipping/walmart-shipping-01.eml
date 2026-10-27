@@ -1,0 +1,73 @@
+From: Walmart <help@walmart.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Part of your order has shipped (Order# 200000012345678)
+Date: Wed, 09 Sep 2026 08:40:00 -0500
+Message-ID: <walmart-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Walmart
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============4205169633281373483=="
+
+--===============4205169633281373483==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+1 of 3 items shipped
+
+Your Samsung TV has shipped. Your mount and Instant Pot will ship separately.
+
+Carrier / Tracking
+FedEx Ground
+Tracking #: 794600000002
+
+Estimated delivery
+Fri, Sep 12
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Samsung 55" Class 4K UHD Crystal LED Smart TV
+    Walmart # 5551212345  Qty: 1   $378.00
+
+
+
+
+--===============4205169633281373483==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Walmart layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Walmart</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0071dc;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Walmart</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">1 of 3 items ship=
+ped</h2><p style=3D"font-size:14px">Your Samsung TV has shipped. Your mount a=
+nd Instant Pot will ship separately.</p><h3 style=3D"margin:18px 0 4px;font-s=
+ize:15px">Carrier / Tracking</h3><div style=3D"font-size:14px;line-height:1.5=
+">FedEx Ground<br>Tracking #: <b>794600000002</b></div><h3 style=3D"margin:18=
+px 0 4px;font-size:15px">Estimated delivery</h3><div style=3D"font-size:14px;=
+line-height:1.5">Fri, Sep 12</div><h3 style=3D"margin:18px 0 4px;font-size:15=
+px">Shipping to</h3><div style=3D"font-size:14px;line-height:1.5">Sam Sample<=
+br>100 Example Lane<br>Testville, ME 04000</div><h3 style=3D"margin:18px 0 4p=
+x;font-size:15px">Order details</h3><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8px 0;bord=
+er-bottom:1px solid #eee"><div style=3D"font-weight:bold">Samsung 55&quot; Cl=
+ass 4K UHD Crystal LED Smart TV</div><div style=3D"font-size:12px;color:#666"=
+>Walmart # 5551212345</div></td><td align=3D"center" style=3D"border-bottom:1=
+px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid=
+ #eee">$378.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============4205169633281373483==--

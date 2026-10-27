@@ -1,0 +1,54 @@
+From: Amazon.com <auto-confirm@amazon.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Mon, 05 Oct 2026 09:24:00 -0500
+Message-ID: <full-scenario-10-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Amazon.com
+Subject: Your Amazon.com order of Dyson V15 Detect - 113-4471209-3380912
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7063254702287538541=="
+
+--===============7063254702287538541==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order
+
+Thanks for your order. Order Number: 113-4471209-3380912
+
+Shipping to
+Sam Sample
+12 Sample Lane, Testville, ME 04000
+
+Estimated delivery: Oct 09, 2026
+
+Order details
+  Dyson V15 Detect Cordless Vacuum
+    Model # SV47  |  Qty: 1   $649.99
+
+Subtotal: $649.99
+Tax: $35.75
+Total: $685.74
+
+--===============7063254702287538541==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Amazon.com layout --><!doct=
+ype html><html><head><meta charset=3D"utf-8"><title>Amazon.com</title></head>=
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600p=
+x;margin:auto"><tr><td style=3D"background:#232f3e;color:#fff;padding:18px 24=
+px;font-size:22px;font-weight:bold">AMAZON.COM</td></tr><tr><td style=3D"padd=
+ing:24px"><h2 style=3D"margin:0 0 8px">Thanks for your order</h2><p style=3D"=
+font-size:14px">Thanks for your order. Order Number: <b>113-4471209-3380912</=
+b></p><div style=3D"font-size:14px;line-height:1.5">Shipping to<br>Sam Sample=
+<br>12 Sample Lane, Testville, ME 04000<br><br>Estimated delivery: Oct 09, 20=
+26</div><h3>Order details</h3><table width=3D"100%" style=3D"font-size:14px">=
+<tr><td>Dyson V15 Detect Cordless Vacuum<br><span style=3D"color:#666">Model =
+# SV47 | Qty: 1</span></td><td align=3D"right" valign=3D"top">$649.99</td></t=
+r></table><p style=3D"font-size:14px;margin-top:16px">Subtotal: $649.99<br>Ta=
+x: $35.75<br><b>Total: $685.74</b></p></td></tr></table></body></html>
+
+--===============7063254702287538541==--

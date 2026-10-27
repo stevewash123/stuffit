@@ -1,0 +1,73 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Home Depot Return Receipt
+Date: Fri, 28 Aug 2026 14:03:00 -0500
+Message-ID: <homedepot-return-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on The Home Depot
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============3377446578037748666=="
+
+--===============3377446578037748666==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Return receipt
+
+THE HOME DEPOT #0999
+RETURN RECEIPT
+300 HARDWARE BLVD, TESTVILLE, ME 04000
+----------------------------------------
+DEWALT CIRCULAR SAW DCS565B     -$149.00
+   RETURN of 08/15/26
+
+SUBTOTAL                        -$149.00
+SALES TAX (5.500%)                -$8.20
+TOTAL                           -$157.20
+
+REFUND TO VISA ****4242  -$157.20
+RETURN AUTH 998877
+----------------------------------------
+STORE 0999  REG 02  TRANS 7711  CSHR 00112244
+08/28/26 02:03 PM
+ORIGINAL TRANS 3456 08/15/26
+
+--===============3377446578037748666==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on The Home Depot layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#f96302;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">THE HOME DEPOT</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Return receipt</=
+h3><pre style=3D"font-family:Courier New,monospace;font-size:13px;line-height=
+:1.35;margin:0">THE HOME DEPOT #0999
+RETURN RECEIPT
+300 HARDWARE BLVD, TESTVILLE, ME 04000
+----------------------------------------
+DEWALT CIRCULAR SAW DCS565B     -$149.00
+   RETURN of 08/15/26
+
+SUBTOTAL                        -$149.00
+SALES TAX (5.500%)                -$8.20
+TOTAL                           -$157.20
+
+REFUND TO VISA ****4242  -$157.20
+RETURN AUTH 998877
+----------------------------------------
+STORE 0999  REG 02  TRANS 7711  CSHR 00112244
+08/28/26 02:03 PM
+ORIGINAL TRANS 3456 08/15/26</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============3377446578037748666==--

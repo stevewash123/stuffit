@@ -1,0 +1,46 @@
+operator signed in with two-step sign-in
+already counted before this run: {('store', None): 1, ('policy', 'Audio'): 1}
+
+--- account 1: scenarios+1793119382@example.test
+  warranty applied: applied 1 year from 2026-10-03, to 2027-10-03 shared: True match: new
+  claim store  x2 ready=False  Quillfeather Mercantile  [None]  A store called "Quillfeather Mercantile" that is not in the 
+  claim policy x2 ready=False  Sony warranty  [Audio]  12 months
+  claim brand  x1 ready=False  Hexaquill  [None]  A brand called "Hexaquill" that is not in the shared list.
+
+--- account 2: scenarios+1793119469@example.test
+  warranty applied: applied 1 year from 2026-10-03, to 2027-10-03 shared: True match: new
+  claim store  x3 ready=True  Quillfeather Mercantile  [None]  A store called "Quillfeather Mercantile" that is not in the 
+  claim policy x3 ready=True  Sony warranty  [Audio]  12 months
+  claim brand  x2 ready=False  Hexaquill  [None]  A brand called "Hexaquill" that is not in the shared list.
+
+--- account 3: scenarios+1793119555@example.test
+  warranty applied: applied 1 year from 2026-10-03, to 2027-10-03 shared: True match: new
+  claim store  x4 ready=True  Quillfeather Mercantile  [None]  A store called "Quillfeather Mercantile" that is not in the 
+  claim policy x4 ready=True  Sony warranty  [Audio]  12 months
+  claim brand  x3 ready=True  Hexaquill  [None]  A brand called "Hexaquill" that is not in the shared list.
+
+evaluate returned 3 ready
+   store  x4 ready=True  Quillfeather Mercantile  [None]  A store called "Quillfeather Mercantile" that is not in the 
+   policy x4 ready=True  Sony warranty  [Audio]  12 months
+   brand  x3 ready=True  Hexaquill  [None]  A brand called "Hexaquill" that is not in the shared list.
+  approve Quillfeather Mercantile -> approved
+  approve Sony warranty -> approved
+  approve Hexaquill -> approved
+
+--- a fourth account afterwards: scenarios+1793119643@example.test
+  scenario 3: Makita 18V LXT Brushless 7-1/4 in. Circular Saw (Tool Only) | store Quillfeather Mercantile (shared: True) | maker Makita (shared: True) | coverage [('card', 'Chase', '2027-01-01'), ('manufacturer', 'Makita', '2027-09-03'), ('card', 'Chase', '2028-09-03')]
+  scenario 4: Hexaquill 12V Cordless Screwdriver Set | store Target (shared: True) | maker Hexaquill (shared: True) | coverage [('return', 'Target', '2026-12-18'), ('card', 'Chase', '2027-01-17')]
+  scenario 6: Sony WH-1000XM5 Wireless Noise Canceling Headphones, Black | store Best Buy (shared: True) | maker Sony (shared: True) | coverage [('card', 'Chase', '2027-01-31'), ('manufacturer', 'Sony', '2027-10-03'), ('card', 'Chase', '2028-10-03')]
+
+CHECKS
+   PASS after account 1: the store, brand and policy claims each went up to 1 new account(s)
+   PASS after account 1: each is ready exactly when it has 3 accounts
+   PASS after account 2: the store, brand and policy claims each went up to 2 new account(s)
+   PASS after account 2: each is ready exactly when it has 3 accounts
+   PASS after account 3: the store, brand and policy claims each went up to 3 new account(s)
+   PASS after account 3: each is ready exactly when it has 3 accounts
+   PASS evaluate returns the three ready claims
+   PASS nothing is left to review
+   PASS fourth account: Quillfeather Mercantile is now a shared store (not marked unverified)
+   PASS fourth account: Hexaquill is now a shared brand (not marked unverified)
+   PASS fourth account: the Sony warranty now comes from shared data and is added

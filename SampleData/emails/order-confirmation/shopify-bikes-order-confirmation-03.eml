@@ -1,0 +1,74 @@
+From: Lakeside Cycles <store+0000000@shopify-mail.invalid>
+To: Sam Sample <sam.sample@example.com>
+Subject: Order #3107 confirmed
+Date: Thu, 02 Jul 2026 12:12:00 -0500
+Message-ID: <shopify-bikes-order-confirmation-03@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Lakeside Cycles
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2966769986604494513=="
+
+--===============2966769986604494513==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for your purchase!
+
+Order summary - Order #3107
+
+Gravel Bike Frame Set - 56cm x 1  $1,250.00
+
+Subtotal: $1,250.00
+Shipping: Free
+Taxes: $68.75
+Total: $1,318.75 USD
+
+Pickup address
+Sample Store, 1 Example Way, Testville, ME 04000
+
+Shipping method
+Local pickup - Testville Shop
+
+Payment method
+Local pickup - pay in store (Invoice)
+
+--===============2966769986604494513==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Lakeside Cycles layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Lakeside Cycles</ti=
+tle></head>
+<body style=3D"margin:0;background:#ffffff;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#c8553d;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Lakeside Cycles</td></tr>
+<tr><td style=3D"padding:24px"><h1 style=3D"font-size:20px">Thank you for you=
+r purchase!</h1><p>Hi Sam, we're getting your order ready to be shipped. We w=
+ill notify you when it has been sent.</p>
+<p style=3D"background:#f5f5f5;padding:12px">Order summary &mdash; Order #310=
+7</p><table width=3D"100%" style=3D"font-size:14px"><tr><td style=3D"padding:=
+10px 0;border-bottom:1px solid #e5e5e5"><b>Gravel Bike Frame Set - 56cm</b> &=
+times; 1<br><span style=3D"color:#777;font-size:12px">Frameset lifetime warra=
+nty (original owner)</span><br><span style=3D"color:#777;font-size:12px">SKU:=
+ GRV-FR-56</span></td><td align=3D"right" style=3D"border-bottom:1px solid #e=
+5e5e5">$1,250.00</td></tr></table>
+<table width=3D"100%" style=3D"font-size:14px;margin-top:12px"><tr><td>Subtot=
+al</td><td align=3D"right">$1,250.00</td></tr><tr><td>Shipping</td><td align=
+=3D"right">Free</td></tr><tr><td>Taxes</td><td align=3D"right">$68.75</td></t=
+r><tr><td style=3D"font-size:16px;padding-top:8px"><b>Total</b></td><td align=
+=3D"right" style=3D"font-size:16px"><b>$1,318.75 USD</b></td></tr></table>
+<h3>Customer information</h3><h3>Pickup address</h3><p>Sample Store, 1 Exampl=
+e Way, Testville, ME 04000</p><h3>Shipping method</h3><p>Local pickup - Testv=
+ille Shop</p><h3>Payment method</h3><p>Local pickup - pay in store (Invoice)<=
+/p></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">If you have any questions, reply to this email or contact us at su=
+pport@example.com</td></tr>
+</table></td></tr></table></body></html>
+
+--===============2966769986604494513==--

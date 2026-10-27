@@ -1,0 +1,84 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your order is confirmed - Pick Up In Store - H12345-67890
+Date: Wed, 12 Aug 2026 08:20:00 -0500
+Message-ID: <homedepot-order-confirmation-02@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on The Home Depot
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2135745948762893299=="
+
+--===============2135745948762893299==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your order is on its way to the store
+
+We'll email you when your order is ready for pickup. Order Number: H12345-678=
+90
+
+Pick Up In Store
+The Home Depot #0999 - Testville
+300 Hardware Blvd, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  Milwaukee M18 FUEL 18V Brushless Cordless 1/2 in. Hammer Drill/Driver Kit
+    Model # 2904-22  |  Internet # 304111222  |  Store SKU # 1005550001  Qty:=
+ 1   $199.00
+  DEWALT 20V MAX Cordless Circular Saw
+    Model # DCS565B  |  Internet # 300999888  Qty: 1   $149.00
+
+Subtotal: $348.00
+Tax: $19.14
+Total: $367.14
+
+
+
+--===============2135745948762893299==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on The Home Depot layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#f96302;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">THE HOME DEPOT</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your order is on =
+its way to the store</h2><p style=3D"font-size:14px">We'll email you when you=
+r order is ready for pickup. Order Number: <b>H12345-67890</b></p><h3 style=
+=3D"margin:18px 0 4px;font-size:15px">Pick Up In Store</h3><div style=3D"font=
+-size:14px;line-height:1.5">The Home Depot #0999 - Testville<br>300 Hardware =
+Blvd, Testville, ME 04000</div><h3 style=3D"margin:18px 0 4px;font-size:15px"=
+>Pickup person</h3><div style=3D"font-size:14px;line-height:1.5">Sam Sample</=
+div><h3 style=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table w=
+idth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><t=
+r><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font=
+-weight:bold">Milwaukee M18 FUEL 18V Brushless Cordless 1/2 in. Hammer Drill/=
+Driver Kit</div><div style=3D"font-size:12px;color:#666">Model # 2904-22  |  =
+Internet # 304111222  |  Store SKU # 1005550001</div></td><td align=3D"center=
+" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=
+=3D"border-bottom:1px solid #eee">$199.00</td></tr><tr><td style=3D"padding:8=
+px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">DEWALT 20V=
+ MAX Cordless Circular Saw</div><div style=3D"font-size:12px;color:#666">Mode=
+l # DCS565B  |  Internet # 300999888</div></td><td align=3D"center" style=3D"=
+border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-b=
+ottom:1px solid #eee">$149.00</td></tr></table><table width=3D"100%" cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"font-size:14px;margin-top:10px"><tr><td =
+style=3D"padding:3px 0">Subtotal</td><td align=3D"right">$348.00</td></tr><tr=
+><td style=3D"padding:3px 0">Tax</td><td align=3D"right">$19.14</td></tr><tr>=
+<td style=3D"padding:3px 0">Total</td><td align=3D"right">$367.14</td></tr></=
+table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============2135745948762893299==--

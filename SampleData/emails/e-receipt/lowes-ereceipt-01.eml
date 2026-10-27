@@ -1,0 +1,81 @@
+From: Lowe's <lowes@mail.lowes.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Lowe's eReceipt
+Date: Sat, 30 May 2026 09:12:00 -0500
+Message-ID: <lowes-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Lowe's
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7455117473608370646=="
+
+--===============7455117473608370646==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for shopping with us
+
+LOWE'S OF TESTVILLE, ME
+STORE #1999
+400 BUILDER PKWY TESTVILLE ME 04000
+PHONE 207-555-0101
+----------------------------------------
+WHIRLPOOL WED5605MW DRYER        $849.00
+   1234568  WED5605MW
+DRYER VENT KIT 4IN                $14.98
+   5002233
+
+SUBTOTAL                         $863.98
+SALES TAX (5.500%)                $47.52
+TOTAL                            $911.50
+
+MASTERCARD ENDING IN 5454   $911.50
+AUTH #ABC123
+----------------------------------------
+Sale 05/30/2026 09:12 AM  REG#4  TRANS#6789  CASHIER 0042
+LOWE'S RETURN POLICY: 90 DAYS
+Major appliances: return within 30 days
+MyLowe's Rewards: ***4567
+
+--===============7455117473608370646==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Lowe's layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Lowe&#x27;s</title>=
+</head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#004990;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Lowe&#x27;s</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Thank you for sh=
+opping with us</h3><pre style=3D"font-family:Courier New,monospace;font-size:=
+13px;line-height:1.35;margin:0">LOWE&#x27;S OF TESTVILLE, ME
+STORE #1999
+400 BUILDER PKWY TESTVILLE ME 04000
+PHONE 207-555-0101
+----------------------------------------
+WHIRLPOOL WED5605MW DRYER        $849.00
+   1234568  WED5605MW
+DRYER VENT KIT 4IN                $14.98
+   5002233
+
+SUBTOTAL                         $863.98
+SALES TAX (5.500%)                $47.52
+TOTAL                            $911.50
+
+MASTERCARD ENDING IN 5454   $911.50
+AUTH #ABC123
+----------------------------------------
+Sale 05/30/2026 09:12 AM  REG#4  TRANS#6789  CASHIER 0042
+LOWE&#x27;S RETURN POLICY: 90 DAYS
+Major appliances: return within 30 days
+MyLowe&#x27;s Rewards: ***4567</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============7455117473608370646==--

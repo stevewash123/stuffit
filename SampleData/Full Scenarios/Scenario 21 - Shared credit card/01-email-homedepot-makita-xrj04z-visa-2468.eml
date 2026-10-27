@@ -1,0 +1,59 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <stevewash123.test@gmail.com>
+Subject: Your order is confirmed - Pick Up In Store - H23100-52104
+Date: Wed, 21 Oct 2026 08:20:00 -0500
+Message-ID: <shared-scenario-homedepot-makita-xrj04z-visa-2468@sample.invalid>
+X-Synthetic-Sample: true; fictitious data
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6754236362518595483=="
+
+--===============6754236362518595483==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your order is on its way to the store
+
+We'll email you when your order is ready for pickup. Order Number: H23100-521=
+04
+
+Pick Up In Store
+The Home Depot #2310 - Testville
+300 Hardware Blvd, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  Makita 18V LXT Brushless Cordless Reciprocating Saw (Tool Only)
+    Model # XRJ04Z  Qty: 1   $159.00
+
+Subtotal: $159.00
+Tax: $8.75
+Total: $167.75
+
+--===============6754236362518595483==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600p=
+x;margin:auto"><tr><td style=3D"background:#f96302;color:#fff;padding:18px 24=
+px;font-size:22px;font-weight:bold">THE HOME DEPOT</td></tr><tr><td style=3D"=
+padding:24px"><h2 style=3D"margin:0 0 8px">Your order is on its way to the st=
+ore</h2><p style=3D"font-size:14px">We'll email you when your order is ready =
+for pickup. Order Number: <b>H23100-52104</b></p><div style=3D"font-size:14px=
+;line-height:1.5">Pick Up In Store<br>The Home Depot #2310 - Testville<br>300=
+ Hardware Blvd, Testville, ME 04000<br><br>Pickup person<br>Sam Sample</div><=
+h3>Order details</h3><table width=3D"100%" style=3D"font-size:14px"><tr><td>M=
+akita 18V LXT Brushless Cordless Reciprocating Saw (Tool Only)<br><span style=
+=3D"color:#666">Model # XRJ04Z Qty: 1</span></td><td align=3D"right" valign=
+=3D"top">$159.00</td></tr></table><p style=3D"font-size:14px;margin-top:16px"=
+>Subtotal: $159.00<br>Tax: $8.75<br><b>Total: $167.75</b></p></td></tr></tabl=
+e></body></html>
+
+--===============6754236362518595483==--

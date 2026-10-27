@@ -1,0 +1,60 @@
+From: Harbor Ceramics <store+0000000@shopify-mail.invalid>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your order #1042 was delivered
+Date: Tue, 12 May 2026 17:03:00 -0500
+Message-ID: <shopify-ceramics-delivery-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Harbor Ceramics
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============3072537209154695698=="
+
+--===============3072537209154695698==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order was delivered
+
+Your order #1042 was delivered on May 12 at 4:55 PM.
+
+Order details
+  Stoneware Mug - Speckled
+    SKU: MUG-SPK-01  Qty: 2   $56.00
+  Pour-over Dripper
+    SKU: DRP-BLK  Qty: 1   $42.00
+
+
+
+
+--===============3072537209154695698==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Harbor Ceramics layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Harbor Ceramics</ti=
+tle></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#3a5a40;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Harbor Ceramics</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your order was de=
+livered</h2><p style=3D"font-size:14px">Your order #1042 was delivered on May=
+ 12 at 4:55 PM.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Order detai=
+ls</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"fon=
+t-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><di=
+v style=3D"font-weight:bold">Stoneware Mug - Speckled</div><div style=3D"font=
+-size:12px;color:#666">SKU: MUG-SPK-01</div></td><td align=3D"center" style=
+=3D"border-bottom:1px solid #eee">Qty 2</td><td align=3D"right" style=3D"bord=
+er-bottom:1px solid #eee">$56.00</td></tr><tr><td style=3D"padding:8px 0;bord=
+er-bottom:1px solid #eee"><div style=3D"font-weight:bold">Pour-over Dripper</=
+div><div style=3D"font-size:12px;color:#666">SKU: DRP-BLK</div></td><td align=
+=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"rig=
+ht" style=3D"border-bottom:1px solid #eee">$42.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============3072537209154695698==--

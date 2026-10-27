@@ -1,0 +1,99 @@
+From: Walmart <help@walmart.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Thanks for your order! Order# 200000012345678
+Date: Tue, 08 Sep 2026 19:50:00 -0500
+Message-ID: <walmart-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Walmart
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7861183593267226293=="
+
+--===============7861183593267226293==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thanks for your order, Sam
+
+Order# 200000012345678 (placed Sep 8, 2026)
+
+Arrives by
+Fri, Sep 12 (TV and mount)
+Arrives by Tue, Sep 16 (Instant Pot, Seller shipment)
+
+Shipping address
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Payment
+Debit card ending in 9876
+
+Order details
+  Samsung 55" Class 4K UHD Crystal LED Smart TV
+    Walmart # 5551212345  Qty: 1   $378.00
+  onn. Tilting Wall Mount 32-80in
+    Walmart # 5551212346  Qty: 1   $24.97
+  Instant Pot Duo 6 Qt
+    Walmart # 5551212347  Qty: 1   $79.00
+
+Subtotal: $481.97
+Shipping: Free
+Taxes: $28.92
+Order total: $510.89
+
+
+
+--===============7861183593267226293==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Walmart layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Walmart</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0071dc;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Walmart</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thanks for your o=
+rder, Sam</h2><p style=3D"font-size:14px">Order# <b>200000012345678</b> (plac=
+ed Sep 8, 2026)</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Arrives by<=
+/h3><div style=3D"font-size:14px;line-height:1.5">Fri, Sep 12 (TV and mount)<=
+br>Arrives by Tue, Sep 16 (Instant Pot, Seller shipment)</div><h3 style=3D"ma=
+rgin:18px 0 4px;font-size:15px">Shipping address</h3><div style=3D"font-size:=
+14px;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</=
+div><h3 style=3D"margin:18px 0 4px;font-size:15px">Payment</h3><div style=3D"=
+font-size:14px;line-height:1.5">Debit card ending in 9876</div><h3 style=3D"m=
+argin:18px 0 4px;font-size:15px">Order details</h3><table width=3D"100%" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"pad=
+ding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Sams=
+ung 55&quot; Class 4K UHD Crystal LED Smart TV</div><div style=3D"font-size:1=
+2px;color:#666">Walmart # 5551212345</div><div style=3D"font-size:12px;color:=
+#666">Sold &amp; shipped by Walmart.com</div></td><td align=3D"center" style=
+=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"bord=
+er-bottom:1px solid #eee">$378.00</td></tr><tr><td style=3D"padding:8px 0;bor=
+der-bottom:1px solid #eee"><div style=3D"font-weight:bold">onn. Tilting Wall =
+Mount 32-80in</div><div style=3D"font-size:12px;color:#666">Walmart # 5551212=
+346</div><div style=3D"font-size:12px;color:#666">Sold &amp; shipped by Walma=
+rt.com</div></td><td align=3D"center" style=3D"border-bottom:1px solid #eee">=
+Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid #eee">$24.97</=
+td></tr><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div sty=
+le=3D"font-weight:bold">Instant Pot Duo 6 Qt</div><div style=3D"font-size:12p=
+x;color:#666">Walmart # 5551212347</div><div style=3D"font-size:12px;color:#6=
+66">Sold &amp; shipped by ExampleHome Seller</div></td><td align=3D"center" s=
+tyle=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"=
+border-bottom:1px solid #eee">$79.00</td></tr></table><table width=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px;margin-top:10px"><=
+tr><td style=3D"padding:3px 0">Subtotal</td><td align=3D"right">$481.97</td><=
+/tr><tr><td style=3D"padding:3px 0">Shipping</td><td align=3D"right">Free</td=
+></tr><tr><td style=3D"padding:3px 0">Taxes</td><td align=3D"right">$28.92</t=
+d></tr><tr><td style=3D"padding:3px 0">Order total</td><td align=3D"right">$5=
+10.89</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============7861183593267226293==--

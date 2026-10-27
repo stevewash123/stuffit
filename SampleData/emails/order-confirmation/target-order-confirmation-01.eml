@@ -1,0 +1,82 @@
+From: Target <orders@oe1.target.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Thanks for your order, Sam! Order #102000000001
+Date: Thu, 01 Oct 2026 12:10:00 -0500
+Message-ID: <target-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Target
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1185689875277469193=="
+
+--===============1185689875277469193==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Thanks for your order!
+
+Order #102000000001 placed on Oct 1, 2026. Drive Up: we'll let you know in th=
+e Target app when it's ready (usually within 2 hours).
+
+Pickup at
+Target Testville
+Store #1234
+
+Payment
+Target Circle Card ending in 3333, 5% off applied at checkout
+
+Order details
+  Dyson V8 Cordless Vacuum Cleaner
+    DPCI: 059-04-0123  Qty: 1   $349.99
+  Threshold Cotton Bath Towel 4pk
+    DPCI: 066-12-0456  Qty: 2   $48.00
+
+Subtotal: $397.99
+Taxes: Calculated at pickup/ship
+Estimated total: $397.99
+
+
+
+--===============1185689875277469193==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Target layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>TARGET</title></hea=
+d>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#cc0000;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">TARGET</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thanks for your o=
+rder!</h2><p style=3D"font-size:14px">Order #<b>102000000001</b> placed on Oc=
+t 1, 2026. <b>Drive Up</b>: we'll let you know in the Target app when it's re=
+ady (usually within 2 hours).</p><h3 style=3D"margin:18px 0 4px;font-size:15p=
+x">Pickup at</h3><div style=3D"font-size:14px;line-height:1.5">Target Testvil=
+le<br>Store #1234</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Payment=
+</h3><div style=3D"font-size:14px;line-height:1.5">Target Circle Card ending =
+in 3333, 5% off applied at checkout</div><h3 style=3D"margin:18px 0 4px;font-=
+size:15px">Order details</h3><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8px 0;border-bott=
+om:1px solid #eee"><div style=3D"font-weight:bold">Dyson V8 Cordless Vacuum C=
+leaner</div><div style=3D"font-size:12px;color:#666">DPCI: 059-04-0123</div><=
+/td><td align=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td=
+ align=3D"right" style=3D"border-bottom:1px solid #eee">$349.99</td></tr><tr>=
+<td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-w=
+eight:bold">Threshold Cotton Bath Towel 4pk</div><div style=3D"font-size:12px=
+;color:#666">DPCI: 066-12-0456</div></td><td align=3D"center" style=3D"border=
+-bottom:1px solid #eee">Qty 2</td><td align=3D"right" style=3D"border-bottom:=
+1px solid #eee">$48.00</td></tr></table><table width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"font-size:14px;margin-top:10px"><tr><td style=
+=3D"padding:3px 0">Subtotal</td><td align=3D"right">$397.99</td></tr><tr><td =
+style=3D"padding:3px 0">Taxes</td><td align=3D"right">Calculated at pickup/sh=
+ip</td></tr><tr><td style=3D"padding:3px 0">Estimated total</td><td align=3D"=
+right">$397.99</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============1185689875277469193==--

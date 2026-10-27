@@ -1,0 +1,56 @@
+From: Walmart <orders@e.walmart.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Thu, 08 Oct 2026 10:10:00 -0500
+Message-ID: <full-scenario-7-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Walmart
+Subject: Your order is confirmed - Pickup - WM-2026-77120
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5445173007254508891=="
+
+--===============5445173007254508891==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: WM-2026-77120
+
+Pick Up In Store
+Walmart Supercenter #5120 - Testville
+2000 Highway Rd, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  BLACK+DECKER 20V MAX Cordless Hedge Trimmer
+    Model # LHT2220  |  Qty: 1   $99.00
+
+Subtotal: $99.00
+Tax: $5.45
+Total: $104.45
+
+--===============5445173007254508891==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Walmart layout --><!doctype=
+ html><html><head><meta charset=3D"utf-8"><title>Walmart</title></head><body =
+style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif;c=
+olor:#222"><table width=3D"600" style=3D"background:#fff;max-width:600px;marg=
+in:auto"><tr><td style=3D"background:#0071dc;color:#fff;padding:18px 24px;fon=
+t-size:22px;font-weight:bold">WALMART</td></tr><tr><td style=3D"padding:24px"=
+><h2 style=3D"margin:0 0 8px">Your order is on its way to the store</h2><p st=
+yle=3D"font-size:14px">We'll email you when your order is ready. Order Number=
+: <b>WM-2026-77120</b></p><div style=3D"font-size:14px;line-height:1.5">Pick =
+Up In Store<br>Walmart Supercenter #5120 - Testville<br>2000 Highway Rd, Test=
+ville, ME 04000<br><br>Pickup person<br>Sam Sample</div><h3>Order details</h3=
+><table width=3D"100%" style=3D"font-size:14px"><tr><td>BLACK+DECKER 20V MAX =
+Cordless Hedge Trimmer<br><span style=3D"color:#666">Model # LHT2220 | Qty: 1=
+</span></td><td align=3D"right" valign=3D"top">$99.00</td></tr></table><p sty=
+le=3D"font-size:14px;margin-top:16px">Subtotal: $99.00<br>Tax: $5.45<br><b>To=
+tal: $104.45</b></p></td></tr></table></body></html>
+
+--===============5445173007254508891==--

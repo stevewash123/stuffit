@@ -1,0 +1,73 @@
+From: Wayfair <noreply@wayfair.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Wayfair package is on the way - PO# 1234567890
+Date: Sun, 25 Jan 2026 13:30:00 -0500
+Message-ID: <wayfair-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Wayfair
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7516857219027263427=="
+
+--===============7516857219027263427==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Package 2 of 2 has shipped
+
+Your accent chairs shipped via a freight carrier.
+
+Carrier / Tracking
+XPO Logistics (LTL)
+Tracking #: PRO 123-456789-0
+
+Estimated delivery
+Delivery appointment will be scheduled by the carrier
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Wade Logan Dalton Accent Chair
+    SKU: WLGN5678  Qty: 2   $458.00
+
+
+
+
+--===============7516857219027263427==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Wayfair layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Wayfair</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#7b189f;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Wayfair</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Package 2 of 2 ha=
+s shipped</h2><p style=3D"font-size:14px">Your accent chairs shipped via a fr=
+eight carrier.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Carrier / Tr=
+acking</h3><div style=3D"font-size:14px;line-height:1.5">XPO Logistics (LTL)<=
+br>Tracking #: <b>PRO 123-456789-0</b></div><h3 style=3D"margin:18px 0 4px;fo=
+nt-size:15px">Estimated delivery</h3><div style=3D"font-size:14px;line-height=
+:1.5">Delivery appointment will be scheduled by the carrier</div><h3 style=3D=
+"margin:18px 0 4px;font-size:15px">Shipping to</h3><div style=3D"font-size:14=
+px;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</di=
+v><h3 style=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr>=
+<td style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-w=
+eight:bold">Wade Logan Dalton Accent Chair</div><div style=3D"font-size:12px;=
+color:#666">SKU: WLGN5678</div></td><td align=3D"center" style=3D"border-bott=
+om:1px solid #eee">Qty 2</td><td align=3D"right" style=3D"border-bottom:1px s=
+olid #eee">$458.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============7516857219027263427==--

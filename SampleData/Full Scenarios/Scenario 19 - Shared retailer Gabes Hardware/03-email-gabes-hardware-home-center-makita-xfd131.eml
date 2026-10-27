@@ -1,0 +1,59 @@
+From: Gabe's Hardware & Home Center <Orders@email.gabeshardware.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Subject: Your order is confirmed - Pick Up In Store - GHC-31982
+Date: Thu, 22 Oct 2026 08:20:00 -0500
+Message-ID:
+ <shared-scenario-gabes-hardware-home-center-makita-xfd131@sample.invalid>
+X-Synthetic-Sample: true; fictitious data
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5617389975687396031=="
+
+--===============5617389975687396031==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready for pickup. Order Number: GHC-31982
+
+Pick Up In Store
+Gabe's Hardware & Home Center
+88 Harbor St, Portland, ME 04101
+
+Pickup person
+Sam Sample
+
+Order details
+  Makita 18V LXT Brushless Cordless Drill-Driver (Tool Only)
+    Model # XFD131  Qty: 1   $119.00
+
+Subtotal: $119.00
+Tax: $6.55
+Total: $125.55
+
+--===============5617389975687396031==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>GABE'S HARDWARE & H=
+OME CENTER</title></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600p=
+x;margin:auto"><tr><td style=3D"background:#1f6f43;color:#fff;padding:18px 24=
+px;font-size:22px;font-weight:bold">GABE'S HARDWARE & HOME CENTER</td></tr><t=
+r><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your order is on it=
+s way to the store</h2><p style=3D"font-size:14px">We'll email you when your =
+order is ready for pickup. Order Number: <b>GHC-31982</b></p><div style=3D"fo=
+nt-size:14px;line-height:1.5">Pick Up In Store<br>Gabe's Hardware & Home Cent=
+er<br>88 Harbor St, Portland, ME 04101<br><br>Pickup person<br>Sam Sample</di=
+v><h3>Order details</h3><table width=3D"100%" style=3D"font-size:14px"><tr><t=
+d>Makita 18V LXT Brushless Cordless Drill-Driver (Tool Only)<br><span style=
+=3D"color:#666">Model # XFD131 Qty: 1</span></td><td align=3D"right" valign=
+=3D"top">$119.00</td></tr></table><p style=3D"font-size:14px;margin-top:16px"=
+>Subtotal: $119.00<br>Tax: $6.55<br><b>Total: $125.55</b></p></td></tr></tabl=
+e></body></html>
+
+--===============5617389975687396031==--

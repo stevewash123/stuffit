@@ -1,0 +1,83 @@
+From: Walmart <receipts@walmart.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Walmart receipt
+Date: Wed, 02 Sep 2026 19:39:00 -0500
+Message-ID: <walmart-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Walmart
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8940170857624835639=="
+
+--===============8940170857624835639==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for shopping with us
+
+Walmart
+Supercenter  ST# 0999 OP# 009047 TE# 47 TR# 07721
+100 MAIN ST TESTVILLE ME 04000
+----------------------------------------
+ONN TILT MOUNT                    $24.97
+   681131234567 F
+HDMI CABLE 6FT                    $15.94
+   681131234568 F  QTY 2 @ $7.97
+DUCT TAPE                          $6.48
+   070123456789 F
+
+SUBTOTAL                          $47.39
+SALES TAX (5.500%)                 $2.61
+TOTAL                             $50.00
+
+VISA CREDIT  **** **** **** 4242
+APPROVAL # 011623   REF # 125500146003
+TERMINAL # SC010144   $50.00
+----------------------------------------
+# ITEMS SOLD 4
+TC# 1954 3376 3692 1507 6011
+09/02/26 19:39:02
+
+--===============8940170857624835639==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Walmart layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Walmart</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0071dc;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Walmart</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Thank you for sh=
+opping with us</h3><pre style=3D"font-family:Courier New,monospace;font-size:=
+13px;line-height:1.35;margin:0">Walmart
+Supercenter  ST# 0999 OP# 009047 TE# 47 TR# 07721
+100 MAIN ST TESTVILLE ME 04000
+----------------------------------------
+ONN TILT MOUNT                    $24.97
+   681131234567 F
+HDMI CABLE 6FT                    $15.94
+   681131234568 F  QTY 2 @ $7.97
+DUCT TAPE                          $6.48
+   070123456789 F
+
+SUBTOTAL                          $47.39
+SALES TAX (5.500%)                 $2.61
+TOTAL                             $50.00
+
+VISA CREDIT  **** **** **** 4242
+APPROVAL # 011623   REF # 125500146003
+TERMINAL # SC010144   $50.00
+----------------------------------------
+# ITEMS SOLD 4
+TC# 1954 3376 3692 1507 6011
+09/02/26 19:39:02</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============8940170857624835639==--

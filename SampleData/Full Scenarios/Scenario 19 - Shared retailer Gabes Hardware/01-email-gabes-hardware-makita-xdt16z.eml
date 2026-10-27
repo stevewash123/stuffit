@@ -1,0 +1,57 @@
+From: Gabe's Hardware <Orders@email.gabeshardware.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Subject: Your order is confirmed - Pick Up In Store - GH-20417
+Date: Tue, 20 Oct 2026 08:20:00 -0500
+Message-ID: <shared-scenario-gabes-hardware-makita-xdt16z@sample.invalid>
+X-Synthetic-Sample: true; fictitious data
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2331385514680725595=="
+
+--===============2331385514680725595==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready for pickup. Order Number: GH-20417
+
+Pick Up In Store
+Gabe's Hardware
+88 Harbor St, Portland, ME 04101
+
+Pickup person
+Sam Sample
+
+Order details
+  Makita 18V LXT Brushless Cordless Impact Driver (Tool Only)
+    Model # XDT16Z  Qty: 1   $129.00
+
+Subtotal: $129.00
+Tax: $7.10
+Total: $136.10
+
+--===============2331385514680725595==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>GABE'S HARDWARE</ti=
+tle></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600p=
+x;margin:auto"><tr><td style=3D"background:#1f6f43;color:#fff;padding:18px 24=
+px;font-size:22px;font-weight:bold">GABE'S HARDWARE</td></tr><tr><td style=3D=
+"padding:24px"><h2 style=3D"margin:0 0 8px">Your order is on its way to the s=
+tore</h2><p style=3D"font-size:14px">We'll email you when your order is ready=
+ for pickup. Order Number: <b>GH-20417</b></p><div style=3D"font-size:14px;li=
+ne-height:1.5">Pick Up In Store<br>Gabe's Hardware<br>88 Harbor St, Portland,=
+ ME 04101<br><br>Pickup person<br>Sam Sample</div><h3>Order details</h3><tabl=
+e width=3D"100%" style=3D"font-size:14px"><tr><td>Makita 18V LXT Brushless Co=
+rdless Impact Driver (Tool Only)<br><span style=3D"color:#666">Model # XDT16Z=
+ Qty: 1</span></td><td align=3D"right" valign=3D"top">$129.00</td></tr></tabl=
+e><p style=3D"font-size:14px;margin-top:16px">Subtotal: $129.00<br>Tax: $7.10=
+<br><b>Total: $136.10</b></p></td></tr></table></body></html>
+
+--===============2331385514680725595==--

@@ -1,0 +1,92 @@
+From: Wayfair <noreply@wayfair.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Wayfair Order Confirmation - PO# 1234567890
+Date: Thu, 22 Jan 2026 10:18:00 -0500
+Message-ID: <wayfair-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Wayfair
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============0060422094501835613=="
+
+--===============0060422094501835613==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Thanks for your order!
+
+Your order #1234567890 has been received. Your items ship from multiple wareh=
+ouses and may arrive on different days.
+
+Package 1 - Sectional
+Estimated delivery: Jan 29 - Feb 6 (White Glove, schedule by phone)
+
+Package 2 - Chairs
+Estimated delivery: Jan 26 - Jan 30
+
+Ship to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Mercury Row Aneesa 3 Piece Sectional
+    SKU: MCRW1234  Qty: 1   $1,049.99
+  Wade Logan Dalton Accent Chair
+    SKU: WLGN5678  Qty: 2   $458.00
+
+Subtotal: $1,507.99
+Shipping: $99.00 (Oversized)
+Tax: Calculated at shipment
+Total: $1,606.99
+
+
+
+--===============0060422094501835613==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Wayfair layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Wayfair</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#7b189f;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Wayfair</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thanks for your o=
+rder!</h2><p style=3D"font-size:14px">Your order #<b>1234567890</b> has been =
+received. Your items ship from multiple warehouses and may arrive on differen=
+t days.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Package 1 - Section=
+al</h3><div style=3D"font-size:14px;line-height:1.5">Estimated delivery: Jan =
+29 - Feb 6 (White Glove, schedule by phone)</div><h3 style=3D"margin:18px 0 4=
+px;font-size:15px">Package 2 - Chairs</h3><div style=3D"font-size:14px;line-h=
+eight:1.5">Estimated delivery: Jan 26 - Jan 30</div><h3 style=3D"margin:18px =
+0 4px;font-size:15px">Ship to</h3><div style=3D"font-size:14px;line-height:1.=
+5">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</div><h3 style=3D"ma=
+rgin:18px 0 4px;font-size:15px">Order details</h3><table width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padd=
+ing:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Mercu=
+ry Row Aneesa 3 Piece Sectional</div><div style=3D"font-size:12px;color:#666"=
+>SKU: MCRW1234</div><div style=3D"font-size:12px;color:#666">Color: Grey | Sh=
+ips from: Supplier warehouse</div></td><td align=3D"center" style=3D"border-b=
+ottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1p=
+x solid #eee">$1,049.99</td></tr><tr><td style=3D"padding:8px 0;border-bottom=
+:1px solid #eee"><div style=3D"font-weight:bold">Wade Logan Dalton Accent Cha=
+ir</div><div style=3D"font-size:12px;color:#666">SKU: WLGN5678</div><div styl=
+e=3D"font-size:12px;color:#666">Ships from: Another supplier</div></td><td al=
+ign=3D"center" style=3D"border-bottom:1px solid #eee">Qty 2</td><td align=3D"=
+right" style=3D"border-bottom:1px solid #eee">$458.00</td></tr></table><table=
+ width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px;m=
+argin-top:10px"><tr><td style=3D"padding:3px 0">Subtotal</td><td align=3D"rig=
+ht">$1,507.99</td></tr><tr><td style=3D"padding:3px 0">Shipping</td><td align=
+=3D"right">$99.00 (Oversized)</td></tr><tr><td style=3D"padding:3px 0">Tax</t=
+d><td align=3D"right">Calculated at shipment</td></tr><tr><td style=3D"paddin=
+g:3px 0">Total</td><td align=3D"right">$1,606.99</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============0060422094501835613==--

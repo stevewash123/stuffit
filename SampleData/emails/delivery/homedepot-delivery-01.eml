@@ -1,0 +1,56 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your order W123456781 was delivered
+Date: Tue, 14 Apr 2026 11:02:00 -0500
+Message-ID: <homedepot-delivery-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on The Home Depot
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============0351161948688691897=="
+
+--===============0351161948688691897==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your delivery is complete
+
+Your LG refrigerator was delivered and installed. Keep this email as proof of=
+ delivery.
+
+Order details
+  LG 27 cu. ft. Smart French Door Refrigerator
+    Model # LRFXS2706S | Internet # 312345678  Qty: 1   $2,198.00
+
+
+
+
+--===============0351161948688691897==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on The Home Depot layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#f96302;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">THE HOME DEPOT</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your delivery is =
+complete</h2><p style=3D"font-size:14px">Your LG refrigerator was delivered a=
+nd installed. Keep this email as proof of delivery.</p><h3 style=3D"margin:18=
+px 0 4px;font-size:15px">Order details</h3><table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8p=
+x 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">LG 27 cu. f=
+t. Smart French Door Refrigerator</div><div style=3D"font-size:12px;color:#66=
+6">Model # LRFXS2706S | Internet # 312345678</div></td><td align=3D"center" s=
+tyle=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"=
+border-bottom:1px solid #eee">$2,198.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============0351161948688691897==--

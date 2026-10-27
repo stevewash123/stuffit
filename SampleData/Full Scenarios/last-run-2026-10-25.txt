@@ -1,0 +1,175 @@
+account scenarios+1792982241@example.test
+
+=== Scenario 1
+  upload 01-email-homedepot-order-milwaukee-hammer-drill.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-homedepot-pickup-milwaukee-hammer-drill.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Milwaukee M18 FUEL 18V Brushless Cordless 1/2 in. Hammer Drill/Driver (Tool Only)' | store 'Home Depot' -> Home Depot | maker Milwaukee | model 2904-20 | 2026-09-14 | $262.7 | card 1111 Chase Freedom Unlimited | order H23100-41982
+    docs: [('01-email-homedepot-order-milwaukee-hammer-drill.eml', 'receipt'), ('02-receipt-homedepot-pickup-milwaukee-hammer-drill.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Home Depot return policy: general  (return, 90.0 d, ends 2026-12-13, overall 0.93, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Home Depot return policy: major appliances  (return, 2.0 d, ends 2026-09-16, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Milwaukee warranty  (manufacturer, 1826.0 d, ends 2031-09-14, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-01-12, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: [('return', 'Home Depot', '2026-12-13')]
+
+=== Scenario 2 - No order email
+  upload 01-receipt-lowes-dewalt-dcs565b.pdf: dup=False updated=False err=None note=None left_out=0
+  ITEM 'Circular Saw' | store "Lowe's" -> Lowe's | maker DeWalt | model DCS565B | 2026-08-22 | $157.2 | card 1111 Chase Freedom Unlimited | order 1832 0822 5510
+    docs: [('01-receipt-lowes-dewalt-dcs565b.pdf', 'receipt')]  missing: []  stage: None
+    [ ] Lowe's return policy: general  (return, 90.0 d, ends 2026-11-20, overall 0.73, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Lowe's return policy: major appliances  (return, 2.0 d, ends 2026-08-24, overall 0.3, likely) why: Read from the web on Sep 30, 2026.
+    [ ] DeWalt warranty  (manufacturer, 1096.0 d, ends 2029-08-22, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 365.0 d, ends 2030-08-22, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2026-12-20, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 3 - Store not in shared data
+  upload 01-email-order-quillfeather-mercantile-makita-xsh06z.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-quillfeather-mercantile-makita-xsh06z.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Makita 18V LXT Brushless 7-1/4 in. Circular Saw (Tool Only)' | store 'Quillfeather Mercantile' -> None | maker Makita | model XSH06Z | 2026-09-03 | $209.95 | card 1111 Chase Freedom Unlimited | order QM-260903-1187
+    docs: [('01-email-order-quillfeather-mercantile-makita-xsh06z.eml', 'receipt'), ('02-receipt-quillfeather-mercantile-makita-xsh06z.pdf', 'receipt')]  missing: []  stage: confirmation
+    [ ] Makita warranty  (manufacturer, 365.0 d, ends 2027-09-03, overall 0.6, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-09-03, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-01-01, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 4 - Brand not in shared data
+  upload 01-email-order-target-hexaquill-hx-sd12.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-target-hexaquill-hx-sd12.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Hexaquill 12V Cordless Screwdriver Set' | store 'Target' -> Target | maker Hexaquill | model HX-SD12 | 2026-09-19 | $36.91 | card 1111 Chase Freedom Unlimited | order TGT-4471903
+    docs: [('01-email-order-target-hexaquill-hx-sd12.eml', 'receipt'), ('02-receipt-target-hexaquill-hx-sd12.pdf', 'receipt')]  missing: []  stage: confirmation
+    [ ] Target return policy: general  (return, 90.0 d, ends 2026-12-18, overall 0.77, verified) why: Checked against the official source on Oct 22, 2026.
+    [ ] Target return policy: electronics  (return, 30.0 d, ends 2026-10-19, overall 0.38, verified) why: Checked against the official source on Oct 22, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, None d, ends None, overall 0.45, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-01-17, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 5 - Store policy unverified
+  upload 01-email-order-kohls-kitchenaid-ksm150pser.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-kohls-kitchenaid-ksm150pser.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'KitchenAid Artisan 5-Qt Tilt-Head Stand Mixer' | store "Kohl's" -> Kohl's | maker KitchenAid | model KSM150PSER | 2026-09-26 | $348.14 | card 1111 Chase Freedom Unlimited | order KH-26-88413
+    docs: [('01-email-order-kohls-kitchenaid-ksm150pser.eml', 'receipt'), ('02-receipt-kohls-kitchenaid-ksm150pser.pdf', 'receipt')]  missing: []  stage: confirmation
+    [ ] Kohl's return policy  (return, 30.0 d, ends 2026-10-26, overall 0.05, unconfirmed) why: A placeholder for testing: these are not the real terms.
+    [ ] KitchenAid warranty  (manufacturer, 365.0 d, ends 2027-09-26, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-09-26, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-01-24, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 6 - Brand policy unverified
+  upload 01-email-order-best-buy-sony-wh1000xm5-b.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-best-buy-sony-wh1000xm5-b.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Sony WH-1000XM5 Wireless Noise Canceling Headphones, Black' | store 'Best Buy' -> Best Buy | maker Sony | model WH1000XM5/B | 2026-10-03 | $421.99 | card 1111 Chase Freedom Unlimited | order BBY01-806412
+    docs: [('01-email-order-best-buy-sony-wh1000xm5-b.eml', 'receipt'), ('02-receipt-best-buy-sony-wh1000xm5-b.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Best Buy return policy: general  (return, 15.0 d, ends 2026-10-18, overall 0.93, verified) why: Checked against the official source on Oct 22, 2026.
+    [ ] Best Buy return policy: smartphones  (return, 14.0 d, ends 2026-10-17, overall 0.38, verified) why: Checked against the official source on Oct 22, 2026.
+    [ ] Sony warranty  (manufacturer, 365.0 d, ends 2027-10-03, overall 0.05, unconfirmed) why: A placeholder for testing: these are not the real terms.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-10-03, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-01-31, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: [('return', 'Best Buy', '2026-10-18')]
+
+=== Scenario 7 - No warranty document
+  upload 01-email-order-walmart-blackdecker-lht2220.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-walmart-blackdecker-lht2220.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'BLACK+DECKER 20V MAX Cordless Hedge Trimmer' | store 'Walmart' -> Walmart | maker Black+Decker | model LHT2220 | 2026-10-08 | $104.45 | card 1111 Chase Freedom Unlimited | order WM-2026-77120
+    docs: [('01-email-order-walmart-blackdecker-lht2220.eml', 'receipt'), ('02-receipt-walmart-blackdecker-lht2220.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Walmart return policy: general  (return, 90.0 d, ends 2027-01-06, overall 0.93, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: electronics  (return, 30.0 d, ends 2026-11-07, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: smartphones  (return, 14.0 d, ends 2026-10-22, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Black+Decker warranty  (manufacturer, 731.0 d, ends 2028-10-08, overall 0.45, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 365.0 d, ends 2029-10-08, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-05, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: [('return', 'Walmart', '2027-01-06')]
+
+=== Scenario 8 - Store protection plan
+  upload 01-email-order-best-buy-lg-oled65c4pua.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-best-buy-lg-oled65c4pua.pdf: dup=False updated=True err=None note=None left_out=0
+  upload 03-protection-plan-best-buy-lg-oled65c4pua.pdf: dup=False updated=False err=None note=Added to your LG 65-inch OLED evo C4 4K Smart TV in New Items. It is a suggestion there: check it. left_out=0
+  ITEM 'LG 65-inch OLED evo C4 4K Smart TV' | store 'Best Buy' -> Best Buy | maker LG | model OLED65C4PUA | 2026-10-10 | $1879.31 | card 1111 Chase Freedom Unlimited | order BBY01-806771
+    docs: [('01-email-order-best-buy-lg-oled65c4pua.eml', 'receipt'), ('02-receipt-best-buy-lg-oled65c4pua.pdf', 'receipt'), ('03-protection-plan-best-buy-lg-oled65c4pua.pdf', 'terms')]  missing: []  stage: confirmation
+    [x] Best Buy return policy: general  (return, 15.0 d, ends 2026-10-25, overall 0.93, verified) why: Checked against the official source on Oct 22, 2026.
+    [ ] Best Buy return policy: smartphones  (return, 14.0 d, ends 2026-10-24, overall 0.38, verified) why: Checked against the official source on Oct 22, 2026.
+    [ ] LG warranty  (manufacturer, 365.0 d, ends 2027-10-10, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-10-10, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-07, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] 4-Year Protection Plan (your document)  (extendedPlan, 1461.0 d, ends 2030-10-10, overall 0.75, None) why: 
+    ADDED to My Items with: [('return', 'Best Buy', '2026-10-25')]
+
+=== Scenario 9 - Card not on the account
+  upload 01-email-order-walmart-garmin-010-02810-00.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-walmart-garmin-010-02810-00.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Garmin Forerunner 265 GPS Running Smartwatch' | store 'Walmart' -> Walmart | maker Garmin | model 010-02810-00 | 2026-10-12 | $474.74 | card 7777 None | order WM-2026-81234
+    docs: [('01-email-order-walmart-garmin-010-02810-00.eml', 'receipt'), ('02-receipt-walmart-garmin-010-02810-00.pdf', 'receipt')]  missing: []  stage: confirmation
+    [ ] Walmart return policy: general  (return, 90.0 d, ends 2027-01-10, overall 0.77, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: electronics  (return, 30.0 d, ends 2026-11-11, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: smartphones  (return, 14.0 d, ends 2026-10-26, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Garmin warranty  (manufacturer, 365.0 d, ends 2027-10-12, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 10 - Online order, no receipt
+  upload 01-email-order-amazon-dyson-sv47.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-email-shipped-amazon-dyson-sv47.eml: dup=False updated=True err=None note=None left_out=0
+  upload 03-email-delivered-amazon-dyson-sv47.eml: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Dyson V15 Detect Cordless Vacuum' | store 'Amazon' -> Amazon | maker Dyson | model None | 2026-10-05 | $685.74 | card None None | order 113-4471209-3380912
+    docs: [('01-email-order-amazon-dyson-sv47.eml', 'receipt'), ('02-email-shipped-amazon-dyson-sv47.eml', 'receipt'), ('03-email-delivered-amazon-dyson-sv47.eml', 'receipt')]  missing: []  stage: delivered
+    [ ] Amazon return policy  (return, 30.0 d, ends 2026-11-04, overall 0.73, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Dyson warranty  (manufacturer, 731.0 d, ends 2028-10-05, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 11 - Warranty for a different model
+  upload 01-email-order-lowes-blackdecker-ld120va.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-lowes-blackdecker-ld120va.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'BLACK+DECKER 20V MAX Cordless Drill/Driver' | store "Lowe's" -> Lowe's | maker Black+Decker | model LD120VA | 2026-09-28 | $52.74 | card 1111 Chase Freedom Unlimited | order LW-48213
+    docs: [('01-email-order-lowes-blackdecker-ld120va.eml', 'receipt'), ('02-receipt-lowes-blackdecker-ld120va.pdf', 'receipt')]  missing: []  stage: confirmation
+    [ ] Lowe's return policy: general  (return, 90.0 d, ends 2026-12-27, overall 0.73, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Lowe's return policy: major appliances  (return, 2.0 d, ends 2026-09-30, overall 0.3, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Black+Decker warranty  (manufacturer, 731.0 d, ends 2028-09-28, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 365.0 d, ends 2029-09-28, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-01-26, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: []
+
+=== Scenario 12 - Receipt PDF attached to the email
+  upload 01-email-attached-home-depot-dewalt-dcd791d2.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-home-depot-dewalt-dcd791d2.pdf: dup=False updated=False err=None note=None left_out=0
+  ITEM 'Drill/Driver Kit' | store 'Home Depot' -> Home Depot | maker DeWalt | model DCD791D2 | 2026-10-14 | $188.85 | card 1111 Chase Freedom Unlimited | order 0417 1014 5532
+    docs: [('02-receipt-home-depot-dewalt-dcd791d2.pdf', 'receipt')]  missing: []  stage: None
+    [x] Home Depot return policy: general  (return, 90.0 d, ends 2027-01-12, overall 0.93, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Home Depot return policy: major appliances  (return, 2.0 d, ends 2026-10-16, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] DeWalt warranty  (manufacturer, 1096.0 d, ends 2029-10-14, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 365.0 d, ends 2030-10-14, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-11, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: [('return', 'Home Depot', '2027-01-12')]
+  ITEM 'Drill/Driver Kit' | store 'Home Depot' -> Home Depot | maker DeWalt | model DCD791D2 | 2026-10-14 | $188.85 | card 1111 Chase Freedom Unlimited | order 0417 1014 5532
+    docs: [('01-email-attached-home-depot-dewalt-dcd791d2.eml', 'receipt'), ('HomeDepot-receipt-1014.pdf', 'receipt')]  missing: []  stage: receipt
+    [x] Home Depot return policy: general  (return, 90.0 d, ends 2027-01-12, overall 0.93, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Home Depot return policy: major appliances  (return, 2.0 d, ends 2026-10-16, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] DeWalt warranty  (manufacturer, 1096.0 d, ends 2029-10-14, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 365.0 d, ends 2030-10-14, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-11, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    accept failed: POST /pending-items/01a17615-a1d6-7f1c-ac80-9c38f69af6d4/accept -> 409 {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.10","title":"Conflict","status":409,"detail":"You already have a purchase from this store with that order number.","existingPurchaseId":"01a17615-f2ca-7e17-8662-97217737bd58","traceId":"00-303f5950432ff306d6cd9c33912c706d-900ff9340c1a1487-00"}
+
+=== Scenario 13 - Warranty attached to the order email
+  upload 01-email-order-walmart-makita-xdt16z.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-walmart-makita-xdt16z.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'Makita 18V LXT Brushless Cordless 1/4 in. Impact Driver (Tool Only)' | store 'Walmart' -> Walmart | maker Makita | model XDT16Z | 2026-10-15 | $157.2 | card 1111 Chase Freedom Unlimited | order WM-2026-82067
+    docs: [('01-email-order-walmart-makita-xdt16z.eml', 'receipt'), ('Makita-limited-warranty.pdf', 'terms'), ('02-receipt-walmart-makita-xdt16z.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Walmart return policy: general  (return, 90.0 d, ends 2027-01-13, overall 0.93, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: electronics  (return, 30.0 d, ends 2026-11-14, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: smartphones  (return, 14.0 d, ends 2026-10-29, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 366.0 d, ends 2028-10-15, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-12, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [x] Limited Warranty (your document)  (manufacturer, 365.0 d, ends 2027-10-15, overall 1, None) why: 
+    ADDED to My Items with: [('return', 'Walmart', '2027-01-13'), ('manufacturer', 'Makita', '2027-10-15')]
+
+=== Scenario 14 - Marketing images attached to the email
+  upload 01-email-order-walmart-dewalt-dck240c2.eml: dup=False updated=False err=None note=None left_out=0
+  upload 02-receipt-walmart-dewalt-dck240c2.pdf: dup=False updated=True err=None note=None left_out=0
+  ITEM 'DEWALT 20V MAX Cordless Drill and Impact Driver Combo Kit' | store 'Walmart' -> Walmart | maker DeWalt | model DCK240C2 | 2026-10-16 | $209.95 | card 1111 Chase Freedom Unlimited | order WM-2026-82351
+    docs: [('01-email-order-walmart-dewalt-dck240c2.eml', 'receipt'), ('app-store-badge.jpg', 'receipt'), ('02-receipt-walmart-dewalt-dck240c2.pdf', 'receipt')]  missing: []  stage: confirmation
+    [x] Walmart return policy: general  (return, 90.0 d, ends 2027-01-14, overall 0.93, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: electronics  (return, 30.0 d, ends 2026-11-15, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] Walmart return policy: smartphones  (return, 14.0 d, ends 2026-10-30, overall 0.38, verified) why: Checked against the official source on Oct 24, 2026.
+    [ ] DeWalt warranty  (manufacturer, 1096.0 d, ends 2029-10-16, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Extended warranty  (card, 365.0 d, ends 2030-10-16, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    [ ] Chase Freedom Unlimited: Purchase protection  (card, 120.0 d, ends 2027-02-13, overall 0.75, likely) why: Read from the web on Sep 30, 2026.
+    ADDED to My Items with: [('return', 'Walmart', '2027-01-14')]
+
+(throwaway account left in the dev database: scenarios+1792982241@example.test)

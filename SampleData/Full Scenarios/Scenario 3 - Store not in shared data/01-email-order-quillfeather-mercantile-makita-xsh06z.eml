@@ -1,0 +1,58 @@
+From: Quillfeather Mercantile <orders@quillfeather.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Thu, 03 Sep 2026 08:15:00 -0500
+Message-ID: <full-scenario-3-order@sample.invalid>
+X-Synthetic-Sample:
+ true; fictitious data, layout modeled on Quillfeather Mercantile
+Subject: Your order is confirmed - Pick Up In Store - QM-260903-1187
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5841363133174454358=="
+
+--===============5841363133174454358==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: QM-260903-1187
+
+Pick Up In Store
+Quillfeather Mercantile - Testville
+41 Main Street, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  Makita 18V LXT Brushless 7-1/4 in. Circular Saw (Tool Only)
+    Model # XSH06Z  |  Qty: 1   $199.00
+
+Subtotal: $199.00
+Tax: $10.95
+Total: $209.95
+
+--===============5841363133174454358==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Quillfeather Mercantile lay=
+out --><!doctype html><html><head><meta charset=3D"utf-8"><title>Quillfeather=
+ Mercantile</title></head><body style=3D"margin:0;background:#f4f4f4;font-fam=
+ily:Arial,Helvetica,sans-serif;color:#222"><table width=3D"600" style=3D"back=
+ground:#fff;max-width:600px;margin:auto"><tr><td style=3D"background:#6b4f9e;=
+color:#fff;padding:18px 24px;font-size:22px;font-weight:bold">QUILLFEATHER ME=
+RCANTILE</td></tr><tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px"=
+>Your order is on its way to the store</h2><p style=3D"font-size:14px">We'll =
+email you when your order is ready. Order Number: <b>QM-260903-1187</b></p><d=
+iv style=3D"font-size:14px;line-height:1.5">Pick Up In Store<br>Quillfeather =
+Mercantile - Testville<br>41 Main Street, Testville, ME 04000<br><br>Pickup p=
+erson<br>Sam Sample</div><h3>Order details</h3><table width=3D"100%" style=3D=
+"font-size:14px"><tr><td>Makita 18V LXT Brushless 7-1/4 in. Circular Saw (Too=
+l Only)<br><span style=3D"color:#666">Model # XSH06Z | Qty: 1</span></td><td =
+align=3D"right" valign=3D"top">$199.00</td></tr></table><p style=3D"font-size=
+:14px;margin-top:16px">Subtotal: $199.00<br>Tax: $10.95<br><b>Total: $209.95<=
+/b></p></td></tr></table></body></html>
+
+--===============5841363133174454358==--

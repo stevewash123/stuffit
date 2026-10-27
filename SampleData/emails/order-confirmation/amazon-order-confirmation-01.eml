@@ -1,0 +1,101 @@
+From: Amazon.com <auto-confirm@amazon.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Amazon.com order of Anker 737 Power Bank and 2 more items.
+Date: Sat, 14 Mar 2026 09:12:00 -0500
+Message-ID: <amazon-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Amazon
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6810384496030913455=="
+
+--===============6810384496030913455==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Ordered: 3 items
+
+Hello Sam, thank you for shopping with us. We'll send a confirmation when you=
+r items ship.
+
+Arriving
+Thursday, March 19
+
+Your order will be sent to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order #
+112-0000001-0000001
+
+Payment method
+Visa ending in 4242
+
+Order details
+  Anker 737 Power Bank (PowerCore 24K)
+      Qty: 1   $109.99
+  Ninja AF101 Air Fryer, 4 Qt, Grey
+      Qty: 1   $99.99
+  Cuisinart 12-Piece Knife Set
+      Qty: 1   $34.50
+
+Item(s) Subtotal: $244.48
+Shipping & Handling: $0.00
+Estimated tax to be collected: $12.22
+Order Total: $256.70
+
+Amazon.com footer (fictional)
+
+--===============6810384496030913455==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Amazon layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>amazon.com</title><=
+/head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#232f3e;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">amazon.com</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Ordered: 3 items<=
+/h2><p style=3D"font-size:14px">Hello Sam, thank you for shopping with us. We=
+'ll send a confirmation when your items ship.</p><h3 style=3D"margin:18px 0 4=
+px;font-size:15px">Arriving</h3><div style=3D"font-size:14px;line-height:1.5"=
+><b>Thursday, March 19</b></div><h3 style=3D"margin:18px 0 4px;font-size:15px=
+">Your order will be sent to</h3><div style=3D"font-size:14px;line-height:1.5=
+">Sam Sample<br>100 Example Lane<br>Testville, ME 04000</div><h3 style=3D"mar=
+gin:18px 0 4px;font-size:15px">Order #</h3><div style=3D"font-size:14px;line-=
+height:1.5">112-0000001-0000001</div><h3 style=3D"margin:18px 0 4px;font-size=
+:15px">Payment method</h3><div style=3D"font-size:14px;line-height:1.5">Visa =
+ending in 4242</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Order deta=
+ils</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"fo=
+nt-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><d=
+iv style=3D"font-weight:bold">Anker 737 Power Bank (PowerCore 24K)</div><div =
+style=3D"font-size:12px;color:#666">Sold by: Anker Direct</div></td><td align=
+=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"rig=
+ht" style=3D"border-bottom:1px solid #eee">$109.99</td></tr><tr><td style=3D"=
+padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">N=
+inja AF101 Air Fryer, 4 Qt, Grey</div><div style=3D"font-size:12px;color:#666=
+">Sold by: Amazon.com Services LLC</div></td><td align=3D"center" style=3D"bo=
+rder-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bot=
+tom:1px solid #eee">$99.99</td></tr><tr><td style=3D"padding:8px 0;border-bot=
+tom:1px solid #eee"><div style=3D"font-weight:bold">Cuisinart 12-Piece Knife =
+Set</div><div style=3D"font-size:12px;color:#666">Sold by: ExampleKitchen Sto=
+re</div></td><td align=3D"center" style=3D"border-bottom:1px solid #eee">Qty =
+1</td><td align=3D"right" style=3D"border-bottom:1px solid #eee">$34.50</td><=
+/tr></table><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"font-size:14px;margin-top:10px"><tr><td style=3D"padding:3px 0">Item(s) S=
+ubtotal</td><td align=3D"right">$244.48</td></tr><tr><td style=3D"padding:3px=
+ 0">Shipping &amp; Handling</td><td align=3D"right">$0.00</td></tr><tr><td st=
+yle=3D"padding:3px 0">Estimated tax to be collected</td><td align=3D"right">$=
+12.22</td></tr><tr><td style=3D"padding:3px 0">Order Total</td><td align=3D"r=
+ight">$256.70</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">Amazon.com footer (fictional)</td></tr>
+</table></td></tr></table></body></html>
+
+--===============6810384496030913455==--

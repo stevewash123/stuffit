@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Answer key viewer</title>
+<style>
+  :root { --bg:#fafaf7; --fg:#1d1d1b; --muted:#8a8a82; --line:#e2e1da; --accent:#1f5f4a; --card:#fff; --chip:#eef3ef; --ok:#1f7a4a; --bad:#b3261e; --badbg:#fde8e6; --extrabg:#fff1d6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161614; --fg:#ecece6; --muted:#8d8d85; --line:#2d2d29; --accent:#6fcf9f; --card:#1e1e1b; --chip:#232a26; --ok:#6fcf9f; --bad:#ff8a80; --badbg:#4a2320; --extrabg:#4a3a17; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:2; }
+  button, input[type=number], select { font:inherit; color:inherit; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:5px 11px; }
+  button { cursor:pointer; } button:hover { border-color:var(--accent); } button:disabled { opacity:.4; cursor:default; }
+  input[type=number] { width:5.5em; }
+  .stat { border:1px solid var(--line); border-radius:999px; padding:1px 10px; font-size:13px; color:var(--muted); }
+  .stat.pass { color:var(--ok); border-color:var(--ok); } .stat.fail { color:var(--bad); border-color:var(--bad); background:var(--badbg); } .stat.deferred { color:var(--muted); border-style:dashed; } .stat.retest { color:#9a6a00; border-color:#c99a2e; background:var(--extrabg); }
+  .pos { color:var(--muted); font-variant-numeric:tabular-nums; }
+  .file { margin-left:auto; color:var(--muted); font-size:13px; }
+  main { display:grid; grid-template-columns:minmax(320px, 520px) 1fr; gap:24px; padding:16px; align-items:start; }
+  main.has-test { grid-template-columns:minmax(560px, 920px) minmax(240px, 1fr); }
+  @media (max-width: 1100px) { main, main.has-test { grid-template-columns:1fr; } }
+  #fields { display:flex; flex-direction:column; gap:16px; }
+  dl { margin:0; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:0 16px 8px; }
+  dl.missing { border-color:var(--bad); } dl.extrablk { border-color:#c99a2e; }
+  .grp { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 -16px 4px; padding:8px 16px; background:var(--chip); border-radius:10px 10px 0 0; border-bottom:1px solid var(--line); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); }
+  .grp .printed { text-transform:none; letter-spacing:0; font-size:14px; color:var(--fg); font-weight:600; }
+  .grp .sp { flex:1; } .grp button { font-size:12px; padding:2px 8px; text-transform:none; letter-spacing:0; }
+  .kv { display:grid; grid-template-columns:9.5em 1fr; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); }
+  main.has-test .kv { grid-template-columns:9.5em minmax(0,1fr) minmax(0,1fr); }
+  .kv:last-child { border-bottom:0; }
+  .kv.head { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.06em; border-bottom:1px solid var(--line); }
+  dt { color:var(--muted); } dd { margin:0; word-break:break-word; }
+  dd.empty { color:var(--muted); opacity:.5; }
+  dd.note { background:var(--chip); border-radius:5px; padding:1px 7px; }
+  dd.res { border-radius:5px; padding:0 7px; }
+  dd.res.ok { color:var(--ok); }
+  dd.res.bad { background:var(--badbg); color:var(--bad); font-weight:600; }
+  dd.res.extra, dd.res.near { background:var(--extrabg); }
+  dd.res.na { color:var(--muted); font-style:italic; }
+  .banner { margin:8px 0 2px; padding:7px 10px; border-radius:6px; background:var(--badbg); color:var(--bad); font-size:14px; }
+  .banner.info { background:var(--chip); color:var(--fg); }
+  .kind { display:inline-block; background:var(--chip); color:var(--accent); border-radius:4px; padding:0 7px; font-size:13px; }
+  .pic { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px; position:sticky; top:64px; }
+  .pic img { max-width:100%; max-height:calc(100vh - 110px); display:block; margin:0 auto; }
+  .pic .miss { color:var(--muted); padding:30px 10px; text-align:center; }
+  #empty { padding:40px 16px; color:var(--muted); }
+  #test { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; letter-spacing:.03em; }
+  @media (prefers-color-scheme: dark) { #test { color:#0e1f17; } }
+  #test:disabled { background:var(--card); color:var(--muted); }
+  label.opt { display:flex; gap:6px; align-items:center; font-size:13px; color:var(--muted); }
+  #result { margin:0 16px 32px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 16px 16px; }
+  #result h2 { margin:6px 0; font-size:15px; }
+  #result .meta { color:var(--muted); font-size:13px; margin-bottom:8px; }
+  #result table { border-collapse:collapse; width:100%; margin:6px 0 12px; font-size:14px; }
+  #result th, #result td { text-align:left; padding:4px 10px 4px 0; border-bottom:1px dashed var(--line); vertical-align:top; }
+  #result th { color:var(--muted); font-weight:500; }
+  .ok { color:var(--ok); } .bad { color:var(--bad); } .dim { color:var(--muted); }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:20px; } @media (max-width: 860px) { .two { grid-template-columns:1fr; } }
+  dd.key input, dd.key select { width:100%; font:inherit; color:inherit; background:var(--bg); border:1px solid var(--accent); border-radius:5px; padding:2px 6px; }
+  .ctl { display:flex; gap:8px; margin:6px 0 2px; } .ctl button { font-size:13px; padding:3px 9px; }
+  #saved.bad { color:var(--bad); } #saved.ok { color:var(--ok); } #save.dirty { background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600; }
+  #issuedlg { max-width:580px; width:92vw; } #issuedlg textarea { width:100%; font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:6px 9px; resize:vertical; }
+  #issueold { margin:8px 0 2px; font-size:13px; max-height:30vh; overflow:auto; } #issueold .old { border-left:3px solid var(--line); padding:2px 8px; margin:5px 0; white-space:pre-wrap; }
+  #issueold .when { color:var(--muted); font-size:12px; }
+  dialog { background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:10px; padding:18px 20px; max-width:380px; }
+  dialog label { display:block; margin:8px 0 2px; font-size:13px; color:var(--muted); }
+  dialog input { width:100%; font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:6px 9px; }
+  dialog .row { display:flex; gap:8px; justify-content:flex-end; margin-top:14px; } dialog .err { color:var(--bad); font-size:13px; margin-top:8px; min-height:1.2em; }
+</style>
+</head>
+<body>
+<header>
+  <button id="open">Open CSV…</button>
+  <select id="rcpt" title="Jump to a receipt (keys: &larr; &rarr;)"></select>
+  <span class="pos" id="pos"></span>
+  <span class="stat" id="stat"></span>
+  <button id="markpass" title="Mark this receipt as passed">Pass</button><button id="markfail" title="Mark this receipt as failed">Fail</button><button id="markretest" title="Mark this receipt as needing a retest">Retest</button><button id="markdefer" title="Set this receipt aside until the app can handle it">Defer</button>
+  <span class="pos" id="tally"></span>
+  <button id="test" disabled title="Sends this receipt's image to the API as a new upload (key: T)">TEST THIS</button>
+  <label class="opt" title="Checked: shrink to 2000 px and re-encode as the app does for a camera photo. Unchecked: send the file bytes as they are, like choosing a JPEG file."><input type="checkbox" id="asphoto" checked> as a phone photo</label>
+  <button id="testall" title="Test every receipt that has not passed, one after another">Test all not passed</button>
+  <button id="retestall" title="After a change to the app: mark every tested receipt as needing a retest">Mark all retest</button>
+  <span class="pos" id="testhint"></span>
+  <span class="pos" id="who"></span>
+  <label class="opt" title="Turn the answer-key cells into inputs. Changes are kept in this page until you press Save (Ctrl+S)."><input type="checkbox" id="edit"> edit key</label>
+  <button id="save" disabled title="Write the answer key back to answer-key-by-item.csv (Ctrl+S)">Save</button>
+  <span class="pos" id="saved"></span>
+  <button id="issue" disabled title="Add a comment about this receipt to issues.md (key: I). Each line has its own Note button.">Note issue</button>
+  <span class="pos" id="issuemsg"></span>
+  <span class="file" id="fname"></span>
+  <input type="file" id="picker" accept=".csv,text/csv" hidden>
+</header>
+<div id="empty">Open <b>answer-key-by-item.csv</b> to begin. Keys: &larr; &rarr; step one receipt; T tests this receipt; I notes an issue; R reloads the file after you save it.</div>
+<main id="main" hidden>
+  <div id="fields"></div>
+  <div class="pic" id="pic"></div>
+</main>
+<section id="result" hidden></section>
+<dialog id="issuedlg">
+  <form method="dialog" id="issueform">
+    <b id="issuetitle"></b>
+    <div id="issueold"></div>
+    <label for="issuetext">Comment</label><textarea id="issuetext" rows="5" required placeholder="What is wrong, or unclear, about this receipt or line?"></textarea>
+    <label class="opt" id="issuetestrow"><input type="checkbox" id="issuetest"> include what the test found for this receipt</label>
+    <div class="err" id="issueerr"></div>
+    <div class="row"><button type="button" id="issuecancel">Cancel</button><button type="submit" id="issuego">Add to issues.md</button></div>
+  </form>
+</dialog>
+<dialog id="login">
+  <form method="dialog" id="loginform">
+    <b>Sign in to the API</b>
+    <label for="lemail">Email</label><input id="lemail" type="email" autocomplete="username" required>
+    <label for="lpass">Password</label><input id="lpass" type="password" autocomplete="current-password" required>
+    <div class="err" id="lerr"></div>
+    <div class="row"><button type="button" id="lcancel">Cancel</button><button type="submit" id="lgo">Sign in</button></div>
+  </form>
+</dialog>
+
+<script>
+const RECEIPT = ['document_class','store','order_number','purchase_date','delivery_date','total','payment_last4','receipt_note'];
+const LINE = ['line_no','kind','certainty','line','price','brand','name','model_number','stated_warranty','covers_line_no','line_note'];
+const LABEL = { document_class:'Document', store:'Store', order_number:'Order #', purchase_date:'Purchase date', delivery_date:'Delivery date', total:'Total',
+  payment_last4:'Card last 4', receipt_note:'Receipt note', line_no:'Line', kind:'Kind', certainty:'Certainty', line:'Line as printed', price:'Price',
+  brand:'Brand', name:'Product name', model_number:'Model #', stated_warranty:'Stated warranty', covers_line_no:'Covers line', line_note:'Line note', file:'File' };
+
+const $ = id => document.getElementById(id);
+let rows = [], headers = [], i = 0, handle = null, editing = false, dirty = false;
+const tests = {};   // file -> what the API made from it the last time it was tested (kept while this page stays open)
+
+/* ---------- how each key field is read back from the New Items the API made ---------- */
+const money = v => (v == null || v === '') ? '' : Number(v).toFixed(2);
+const RDEF = {
+  document_class: { get: it => it.documentClass },
+  store: { get: it => it.sellerName || it.storeText, loose: true },
+  order_number: { get: it => it.orderRef },
+  purchase_date: { get: it => it.purchaseDate },
+  delivery_date: { get: it => it.deliveryDate },
+  total: { get: it => money(it.total), num: true, perLineWhenSeveral: true },
+  payment_last4: { get: it => it.cardLast4 },
+};
+const LDEF = {
+  brand: { get: it => it.manufacturerName, loose: true },
+  name: { get: it => it.name, loose: true },
+  model_number: { get: it => it.modelNumber, loose: true },
+  price: { get: it => money(it.itemPrice ?? it.total), num: true },
+};
+
+const norm = s => String(s ?? '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');   // "A & B" and "A and B" are the same name
+function esc(s) { return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+/* key vs read -> { cls: ok | bad | extra | na | none, text } */
+function compare(key, read, def, nItems) {
+  if (def.na) return { cls: 'na', text: def.na };
+  if (def.perLineWhenSeveral && nItems > 1) return { cls: 'na', text: `${nItems} items made: each item's total is its own line price` };
+  const k = String(key ?? '').trim(), r = read == null ? '' : String(read).trim();
+  if (k === '' && r === '') return { cls: 'none', text: '' };
+  if (k === '') return { cls: 'extra', text: r };
+  if (r === '') return { cls: 'bad', text: '(nothing read)' };
+  if (def.num) return { cls: Math.abs(parseFloat(k) - parseFloat(r)) < 0.005 ? 'ok' : 'bad', text: r };
+  const a = norm(k), b = norm(r);
+  if (a === b) return { cls: 'ok', text: r };
+  const ta = new Set(String(key).toLowerCase().split(/[^a-z0-9.]+/).filter(Boolean)), tb = new Set(r.toLowerCase().split(/[^a-z0-9.]+/).filter(Boolean));
+  const subset = (x, y) => x.size > 0 && [...x].every(t => y.has(t));
+  return { cls: def.loose && (a.includes(b) || b.includes(a) || subset(ta, tb) || subset(tb, ta)) ? 'near' : 'bad', text: r };   // near: one contains the other (Logi / Logitech, HDMI cable / HDMI 2.1 Cable 6FT)   // near: one contains the other (Logi / Logitech), not the same
+}
+
+function parseCsv(text) {
+  if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+  const out = []; let row = [], cell = '', q = false;
+  for (let k = 0; k < text.length; k++) {
+    const c = text[k];
+    if (q) { if (c === '"') { if (text[k+1] === '"') { cell += '"'; k++; } else q = false; } else cell += c; }
+    else if (c === '"') q = true;
+    else if (c === ',') { row.push(cell); cell = ''; }
+    else if (c === '\n' || c === '\r') { if (c === '\r' && text[k+1] === '\n') k++; row.push(cell); cell = ''; if (row.length > 1 || row[0] !== '') out.push(row); row = []; }
+    else cell += c;
+  }
+  if (cell !== '' || row.length) { row.push(cell); out.push(row); }
+  return out;
+}
+function load(text, name) {
+  const t = parseCsv(text); headers = t[0];
+  rows = t.slice(1).map(r => Object.fromEntries(headers.map((h, n) => [h, r[n] ?? ''])));
+  $('fname').textContent = name + ' · ' + rows.length + ' rows'; dirty = false; updateSave();
+  const sel = $('rcpt'); sel.innerHTML = '';
+  let last = null;
+  rows.forEach((r, n) => { if (r.file !== last) { last = r.file; const o = document.createElement('option'); o.value = n; o.textContent = r.file.replace(/\.jpg$/, ''); sel.appendChild(o); } });
+  $('empty').hidden = true; $('main').hidden = false;
+  show(Math.min(i, rows.length - 1));
+}
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+
+/* ---------- which created item belongs to which key line: by what they say, not by position ---------- */
+const toks = s => new Set(String(s ?? '').toLowerCase().split(/[^a-z0-9.]+/).filter(t => t.length > 1));
+const isProduct = r => r.kind === 'product' || r.kind === 'repair' ||
+  (r.kind === 'consumable' && rows.some(x => x.file === r.file && (x.kind === 'product' || x.kind === 'repair')));   // lines the app should make an item for: consumables only beside a product (a grocery receipt makes nothing)
+function score(r, it) {
+  let s = 0;
+  const m = norm(r.model_number), im = norm(it.modelNumber);
+  if (m && im && m === im) s += 10;
+  const p = parseFloat(r.price), ip = parseFloat(it.itemPrice ?? it.total);
+  if (!isNaN(p) && !isNaN(ip) && Math.abs(p - ip) < 0.005) s += 4;
+  const a = toks([r.line, r.name, r.brand, r.model_number].join(' ')), b = toks([it.name, it.manufacturerName, it.modelNumber].join(' '));
+  if (a.size && b.size) { let n = 0; b.forEach(t => { if (a.has(t)) n++; }); s += 3 * n / b.size; }
+  return s;
+}
+/* byRow: key product line -> its item; extras: items no key line claims */
+function matchItems(file, T) {
+  const lines = rows.filter(x => x.file === file && isProduct(x)), pairs = [];
+  lines.forEach(r => T.items.forEach(it => { const s = score(r, it); if (s >= 2) pairs.push({ r, it, s }); }));
+  pairs.sort((a, b) => b.s - a.s);
+  const byRow = new Map(), used = new Set();
+  for (const p of pairs) if (!byRow.has(p.r) && !used.has(p.it)) { byRow.set(p.r, p.it); used.add(p.it); }
+  return { byRow, extras: T.items.filter(it => !used.has(it)) };
+}
+
+/* the result cell for one field of a block, or null when there is nothing to say about it */
+function receiptResult(k, r, T) {
+  const def = RDEF[k]; if (!T || !def) return null;
+  if (!T.items.length) return { cls: 'na', text: '—' };
+  return compare(r[k], def.get ? def.get(T.items[0]) : null, def, T.items.length);
+}
+function lineResult(k, r, T, M) {
+  if (!T) return null;
+  const it = isProduct(r) ? M.byRow.get(r) : null;
+  if (k === 'kind') return !isProduct(r) ? { cls: 'na', text: 'not a product line: no item expected' } : it ? { cls: 'na', text: 'item made' } : (T.already || T.dismissed) ? { cls: 'extra', text: 'no item made (may be one of the lines already tracked or dismissed)' } : { cls: 'bad', text: 'no item made' };
+  const def = LDEF[k]; if (!def || !isProduct(r)) return null;
+  if (!it) return { cls: 'na', text: '—' };
+  return compare(r[k], def.get ? def.get(it) : null, def, 1);
+}
+
+/* one block: a heading, then label / key / result rows */
+function block(title, keys, r, T, resFn, opts = {}) {
+  const dl = document.createElement('dl'); if (opts.cls) dl.className = opts.cls;
+  const g = el('div', 'grp'); g.appendChild(el('span', '', title));
+  if (opts.kind) g.appendChild(el('span', 'kind', opts.kind));
+  if (opts.printed) g.appendChild(el('span', 'printed', opts.printed));
+  g.appendChild(el('span', 'sp'));
+  for (const [text, fn, tip] of opts.buttons || []) { const b = el('button', '', text); if (tip) b.title = tip; b.onclick = fn; g.appendChild(b); }
+  dl.appendChild(g);
+  if (T) { const h = el('div', 'kv head'); h.appendChild(el('span', '', '')); h.appendChild(el('span', '', 'Answer key')); h.appendChild(el('span', '', 'Test result')); dl.appendChild(h); }
+  for (const k of keys) {
+    if (!(k in r)) continue;
+    const kv = el('div', 'kv'); kv.appendChild(el('dt', '', (LABEL[k] || k) + ':'));
+    const v = r[k]; let dd;
+    if (editing && EDITABLE.has(k)) { dd = el('dd', 'key'); dd.appendChild(editor(k, r, kv)); }
+    else {
+      dd = el('dd', v === '' ? 'empty' : k.endsWith('note') ? 'note' : '', v === '' ? '(blank)' : v);
+      if (k === 'certainty' && v === 'judgment') dd.className = 'note';
+      if (k === 'kind' && v) { dd.textContent = ''; dd.appendChild(el('span', 'kind', v)); }
+    }
+    kv.appendChild(dd);
+    if (T) {
+      const rd = el('dd');
+      const paint = () => { const res = resFn(k); rd.className = res && res.cls !== 'none' ? 'res ' + res.cls : ''; rd.textContent = res ? ((res.cls === 'ok' ? '✓ ' : res.cls === 'near' ? '≈ ' : '') + (res.text === '' ? '' : res.text)) : ''; };
+      paint(); kv.appendChild(rd); kv._paint = paint;
+    }
+    dl.appendChild(kv);
+  }
+  return dl;
+}
+/* an item the API made that no key line claims */
+function extraBlock(it) {
+  const dl = document.createElement('dl'); dl.className = 'extrablk';
+  const g = el('div', 'grp'); g.appendChild(el('span', '', 'Extra item: made, but no key line matches it')); dl.appendChild(g);
+  const h = el('div', 'kv head'); h.appendChild(el('span', '', '')); h.appendChild(el('span', '', 'Answer key')); h.appendChild(el('span', '', 'Test result')); dl.appendChild(h);
+  for (const [label, val] of [['Product name', it.name], ['Brand', it.manufacturerName], ['Model #', it.modelNumber], ['Price', money(it.itemPrice ?? it.total)], ['Checks', (it.check || []).join(', ')]]) {
+    if (val == null || val === '') continue;
+    const kv = el('div', 'kv'); kv.appendChild(el('dt', '', label + ':')); kv.appendChild(el('dd', 'empty', '(no line)')); kv.appendChild(el('dd', 'res extra', val)); dl.appendChild(kv);
+  }
+  return dl;
+}
+
+function show(n) {
+  const file = rows[Math.max(0, Math.min(rows.length - 1, n))].file, keepScroll = rows[i] && rows[i].file === file ? scrollY : 0;
+  i = rows.findIndex(x => x.file === file);
+  const mine = rows.filter(x => x.file === file), r = rows[i], T = tests[file];
+  $('main').classList.toggle('has-test', !!T);
+  const out = $('fields'); out.innerHTML = '';
+  const M = T ? matchItems(file, T) : null;
+  if (T) {
+    const wanted = mine.filter(isProduct), missing = wanted.filter(x => !M.byRow.has(x)).length;
+    const parts = [`${T.items.length} item${T.items.length === 1 ? '' : 's'} made`, `${M.byRow.size} matched to key lines`];
+    if (M.extras.length) parts.push(`${M.extras.length} extra`);
+    if (missing) parts.push(`${missing} key product line${missing === 1 ? '' : 's'} with no item`);
+    if (T.already) parts.push(`${T.already} line${T.already === 1 ? '' : 's'} not made again: already in New Items or My Items`);
+    if (T.dismissed) parts.push(`${T.dismissed} dismissed earlier`);
+    if (T.leftOut) parts.push(`${T.leftOut} over the cap, left out`);
+    const bad = T.messages.find(m => m.bad);
+    out.appendChild(el('div', 'banner' + (!bad && !M.extras.length && !missing && T.items.length ? ' info' : ''), bad ? bad.text : T.items.length ? parts.join(' · ') + ' — red = differs from the key, amber = close (≈) or read where the key is blank' : (T.messages.map(m => m.text).join(' ') || 'No items were made from this image.')));
+  }
+  out.appendChild(block('Receipt', ['file', ...RECEIPT], r, T, k => receiptResult(k, r, T)));
+  for (const L of mine) {
+    const buttons = [];
+    if (served) buttons.push(['Note', () => openIssue(L), 'Add a comment about this line to issues.md']);
+    if (editing) { buttons.push(['+ Add a line after', () => addLine(L)]); buttons.push(['Delete line', () => deleteLine(L)]); }
+    const lost = T && isProduct(L) && !M.byRow.has(L) && T.items.length > 0;
+    out.appendChild(block(`Line ${L.line_no}`, LINE.filter(k => k !== 'line_no'), L, T, k => lineResult(k, L, T, M), { kind: L.kind, printed: L.line, buttons, cls: lost ? 'missing' : '' }));
+  }
+  if (T) M.extras.forEach(it => out.appendChild(extraBlock(it)));
+  $('pos').textContent = `receipt ${new Set(rows.slice(0, i + 1).map(x => x.file)).size} of ${new Set(rows.map(x => x.file)).size} · ${mine.length} line${mine.length === 1 ? '' : 's'}`;
+  $('rcpt').value = i; paintStatus();
+  const pic = $('pic'); pic.innerHTML = '';
+  const img = new Image(); img.alt = file; img.src = encodeURI(file);
+  img.onerror = () => { pic.innerHTML = ''; pic.appendChild(el('div', 'miss', 'Image not found next to this page: ' + file)); };
+  pic.appendChild(img);
+  onRowShown();
+  scrollTo(0, keepScroll);
+}
+function stepReceipt(d) {
+  const f = rows[i].file; let n = i;
+  if (d > 0) { while (n < rows.length && rows[n].file === f) n++; if (n >= rows.length) return; }
+  else { if (i === 0) return; n = rows.findIndex(x => x.file === rows[i - 1].file); }
+  show(n);
+}
+async function reload() {
+  if (dirty && !confirm('Discard your unsaved edits and reload the file?')) return;
+  try {
+    if (handle) { const f = await handle.getFile(); load(await f.text(), f.name); return; }
+    const res = await fetch('answer-key-by-item.csv', { cache: 'no-store' }); if (res.ok) load(await res.text(), 'answer-key-by-item.csv');
+  } catch (e) { /* opened from disk: wait for the picker */ }
+}
+$('open').onclick = async () => {
+  if (window.showOpenFilePicker) {
+    try { [handle] = await showOpenFilePicker({ types: [{ description: 'CSV', accept: { 'text/csv': ['.csv'] } }] }); const f = await handle.getFile(); load(await f.text(), f.name); } catch (e) {}
+  } else $('picker').click();
+};
+$('picker').onchange = async e => { const f = e.target.files[0]; if (f) load(await f.text(), f.name); };
+$('rcpt').onchange = e => show(parseInt(e.target.value, 10));
+addEventListener('keydown', e => {
+  if (!rows.length || /INPUT|SELECT|TEXTAREA/.test(e.target.tagName) || $('login').open) return;
+  if (e.key === 'ArrowRight') { stepReceipt(1); e.preventDefault(); }
+  else if (e.key === 'ArrowLeft') { stepReceipt(-1); e.preventDefault(); }
+  else if (e.key.toLowerCase() === 'r') reload();
+  else if (e.key.toLowerCase() === 't' && !$('test').disabled) testThis();
+});
+
+/* ---------- issues: comments about a receipt or line, appended to issues.md by serve-viewer.py ---------- */
+const issueCache = {};   // file -> the notes already made about it
+async function loadIssues(file) {
+  try { const r = await fetch('/viewer/issues?file=' + encodeURIComponent(file), { cache: 'no-store' }); issueCache[file] = r.ok ? (await r.json()).issues : []; }
+  catch (e) { issueCache[file] = []; }
+  if (rows[i] && rows[i].file === file) updateIssueButton();
+}
+function updateIssueButton() {
+  const f = rows[i] && rows[i].file, n = f && issueCache[f] ? issueCache[f].length : 0;
+  $('issue').textContent = n ? `Note issue (${n})` : 'Note issue';
+}
+/* what the last test of this receipt found, in one line, for the note */
+function testSummary(r, whole) {
+  const T = tests[r.file]; if (!T) return '';
+  const M = matchItems(r.file, T), diffs = [];
+  const add = (label, key, res, where = '') => { if (res && (res.cls === 'bad' || res.cls === 'extra' || res.cls === 'near')) diffs.push(`${where}${label}: key "${key}" ${res.cls === 'near' ? '≈' : 'vs'} read "${res.text}"`); };
+  const first = rows.find(x => x.file === r.file);
+  if (whole && T.items.length) for (const k of RECEIPT) add(LABEL[k], first[k], receiptResult(k, first, T));
+  for (const L of rows.filter(x => x.file === r.file && (whole || x === r) && isProduct(x))) {
+    const it = M.byRow.get(L), where = `line ${L.line_no} `;
+    if (!it) { if (T.items.length) diffs.push(`${where}(${L.line}): no item made`); continue; }
+    for (const k of Object.keys(LDEF)) add(LABEL[k], L[k], compare(L[k], LDEF[k].get(it), LDEF[k], 1), where);
+  }
+  if (whole) for (const it of M.extras) diffs.push(`extra item made: ${it.name || '?'} (${money(it.itemPrice ?? it.total)})`);
+  return `${T.sentAs.split(' (')[0]} at ${T.at}: ${T.items.length} item(s) made` + (diffs.length ? '; differs: ' + diffs.join('; ') : T.items.length ? '; no differences' : '')
+    + (T.messages.length ? ' [' + T.messages.map(m => m.text).join(' ') + ']' : '');
+}
+let issueRow = null, issueWhole = false;   // the key line the open note is about; whole = about the receipt
+function openIssue(line) {
+  const r = line || rows[i]; if (!r || !served) return;
+  issueRow = r; issueWhole = !line;
+  $('issuetitle').textContent = `Issue for ${r.file.replace(/\.jpg$/, '')} · ${issueWhole ? 'whole receipt' : `line ${r.line_no}${r.line ? ' (' + r.line.slice(0, 50) + ')' : ''}`}`;
+  const old = issueCache[r.file] || [];
+  $('issueold').innerHTML = old.length ? '<div class="dim">Already noted for this receipt:</div>' + old.map(o => `<div class="old"><span class="when">line ${esc(o.line_no)} · ${esc(o.time)}</span>\n${esc(o.comment)}</div>`).join('') : '';
+  $('issuetext').value = ''; $('issueerr').textContent = '';
+  const has = !!tests[r.file]; $('issuetestrow').hidden = !has; $('issuetest').checked = has;
+  $('issuego').disabled = false;
+  $('issuedlg').showModal(); $('issuetext').focus();
+}
+$('issue').onclick = () => openIssue();
+$('issuecancel').onclick = () => $('issuedlg').close();
+$('issuetext').addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); $('issueform').requestSubmit(); } });
+$('issueform').onsubmit = async e => {
+  e.preventDefault(); const r = issueRow; if (!r) return;
+  $('issuego').disabled = true; $('issueerr').textContent = '';
+  try {
+    const res = await fetch('/viewer/issue', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file: r.file, line_no: issueWhole ? '' : r.line_no, line: issueWhole ? '' : r.line, comment: $('issuetext').value.trim(), test: $('issuetest').checked ? testSummary(r, issueWhole) : '' }) });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(j.error || 'the server answered ' + res.status);
+    $('issuedlg').close(); delete issueCache[r.file]; await loadIssues(r.file);
+    const m = $('issuemsg'); m.className = 'pos ok'; m.textContent = 'Added to issues.md'; setTimeout(() => { m.textContent = ''; }, 4000);
+  } catch (err) { $('issueerr').textContent = 'Not added: ' + err.message; $('issuego').disabled = false; }
+};
+addEventListener('keydown', e => {
+  if (/INPUT|SELECT|TEXTAREA/.test(e.target.tagName) || document.querySelector('dialog[open]') || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (e.key.toLowerCase() === 'i' && !$('issue').disabled) { e.preventDefault(); openIssue(); }
+});
+
+/* ---------- editing the answer key ---------- */
+const EDITABLE = new Set([...RECEIPT, ...LINE].filter(k => k !== 'line_no'));
+const CHOICES = { kind: ['product', 'service', 'repair', 'consumable', 'fee'], certainty: ['sure', 'judgment'],
+  document_class: ['receipt', 'order_confirmation', 'warranty_document', 'insurance_policy', 'manual', 'other'] };
+function editor(k, r, kv) {
+  let c;
+  if (CHOICES[k]) {
+    c = document.createElement('select');
+    const opts = CHOICES[k].includes(r[k]) || r[k] === '' ? CHOICES[k] : [...CHOICES[k], r[k]];
+    for (const o of ['', ...opts]) { const op = document.createElement('option'); op.value = o; op.textContent = o === '' ? '(blank)' : o; c.appendChild(op); }
+  } else { c = document.createElement('input'); if (k === 'price' || k === 'total') c.inputMode = 'decimal'; }
+  c.value = r[k] ?? '';
+  c.onchange = () => { apply(k, c.value.trim(), r); if (k === 'kind') show(i); else if (kv._paint) kv._paint(); };
+  return c;
+}
+function apply(k, v, r) {
+  const same = rows.filter(x => x.file === r.file);
+  if (k === 'receipt_note') same[0].receipt_note = v;                                  // kept on the first row of a receipt only
+  else if (RECEIPT.includes(k)) same.forEach(x => { x[k] = v; });                      // receipt-level: the same on every row of the receipt
+  else r[k] = v;
+  if (status[r.file] && !['retest', 'deferred'].includes(status[r.file].status)) setStatus(r.file, 'retest', 'key edited');
+  markDirty();
+}
+function renumber(file) { rows.filter(x => x.file === file).forEach((x, n) => { x.line_no = String(n + 1); }); }
+function addLine(r) {
+  const at = rows.indexOf(r), here = parseInt(r.line_no, 10) || 0, blank = Object.fromEntries(headers.map(h => [h, '']));
+  const row = Object.assign(blank, Object.fromEntries(['file', ...RECEIPT.filter(k => k !== 'receipt_note')].map(k => [k, r[k]])), { kind: 'product', certainty: 'sure' });
+  rows.splice(at + 1, 0, row);
+  rows.filter(x => x.file === r.file && x !== row).forEach(x => { const c = parseInt(x.covers_line_no, 10); if (c > here) x.covers_line_no = String(c + 1); });
+  renumber(r.file); markDirty(); show(at);
+}
+function deleteLine(r) {
+  const same = rows.filter(x => x.file === r.file), at = rows.indexOf(r);
+  if (same.length < 2) { alert('A receipt needs at least one line.'); return; }
+  if (!confirm(`Delete line ${r.line_no} (${r.line || 'blank'}) of this receipt?`)) return;
+  const gone = parseInt(r.line_no, 10), wasFirst = same[0] === r;
+  rows.splice(at, 1);
+  const left = rows.filter(x => x.file === r.file);
+  if (wasFirst) left[0].receipt_note = r.receipt_note;
+  left.forEach(x => { const c = parseInt(x.covers_line_no, 10); if (c === gone) x.covers_line_no = ''; else if (c > gone) x.covers_line_no = String(c - 1); });
+  renumber(r.file); markDirty(); show(Math.min(at, rows.length - 1));
+}
+function markDirty() { dirty = true; $('saved').textContent = ''; updateSave(); }
+function updateSave() {
+  const b = $('save'); b.disabled = !dirty || !(served || handle); b.classList.toggle('dirty', dirty);
+  if (!dirty && !$('saved').textContent) $('saved').className = 'pos';
+}
+const csvCell = v => /[",\r\n]/.test(v) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v ?? '');
+const serialize = () => [headers.join(','), ...rows.map(r => headers.map(h => csvCell(r[h] ?? '')).join(','))].join('\r\n') + '\r\n';
+async function save() {
+  if (!dirty) return;
+  const s = $('saved'); s.className = 'pos'; s.textContent = 'Saving…';
+  try {
+    const text = serialize(); let note = '';
+    if (handle) { const w = await handle.createWritable(); await w.write('﻿' + text); await w.close(); }
+    else {
+      const res = await fetch('/viewer/save-key', { method: 'POST', headers: { 'Content-Type': 'text/csv' }, body: text });
+      const j = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(j.error || 'the server answered ' + res.status);
+      note = j.draft === 'regenerated' ? ' · truth.draft.json regenerated' : j.draft ? ' · ' + j.draft : '';
+    }
+    dirty = false; s.className = 'pos ok'; s.textContent = 'Saved ' + new Date().toLocaleTimeString() + note; updateSave();
+  } catch (e) { s.className = 'pos bad'; s.textContent = 'Not saved: ' + e.message; }
+}
+$('edit').onchange = e => { editing = e.target.checked; $('main').classList.toggle('editing', editing); if (rows.length) show(i); };
+$('save').onclick = save;
+addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') { e.preventDefault(); save(); } });
+addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+/* ---------- TEST THIS: send the current receipt image to the API as a new upload ---------- */
+const served = location.protocol.startsWith('http');
+let busy = false;
+let token = sessionStorage.getItem('keyviewer.token'), tokenEmail = sessionStorage.getItem('keyviewer.email');   // a sign-in typed in the box lasts for this tab
+let server = null;                                                                                               // what serve-viewer.py says it holds
+localStorage.removeItem('keyviewer.base');                                                                        // an old "API address" setting would bypass the server: never use it
+
+function onRowShown() {
+  const f = rows[i] && rows[i].file;
+  $('test').disabled = !served || !f || busy;
+  $('testhint').textContent = !served ? 'TEST THIS is off: run  python serve-viewer.py  and open http://localhost:8765/key-viewer.html' : !f ? 'Open the CSV first' : '';
+  $('test').title = served ? "Sends this receipt's image to the API as a new upload (key: T). Creates New Items in the account you are signed in as." : 'Open this page through serve-viewer.py so it can reach the API';
+  const T = f && tests[f];
+  if (T) renderBottom(f, T); else $('result').hidden = true;
+  $('issue').disabled = !served || !f;
+  if (f && served && issueCache[f] === undefined) loadIssues(f); else updateIssueButton();
+}
+
+async function refreshWho() {
+  if (!served) { $('who').textContent = ''; return; }
+  server = await fetch('/viewer/session').then(r => r.ok ? r.json() : null).catch(() => null);
+  const w = $('who');
+  if (server && server.enabled) { w.className = 'pos ' + (server.error ? 'bad' : 'ok'); w.textContent = server.error ? 'Saved login problem: ' + server.error : `Signed in as ${server.email} (kept by serve-viewer.py)`; }
+  else if (token) { w.className = 'pos ok'; w.textContent = `Signed in as ${tokenEmail || 'you'} (this tab)`; }
+  else { w.className = 'pos'; w.textContent = 'Not signed in: TEST THIS will ask'; }
+}
+
+/* the same shrink the app applies to a camera photo (core/image-shrink.ts): longest side 2000 px, JPEG 0.85, only if that is smaller */
+async function shrinkPhoto(file, maxSide = 2000) {
+  if (!/^image\/(jpeg|png|webp)$/.test(file.type) || typeof createImageBitmap !== 'function') return file;
+  try {
+    const bmp = await createImageBitmap(file, { imageOrientation: 'from-image' });
+    const scale = Math.min(1, maxSide / Math.max(bmp.width, bmp.height));
+    if (scale === 1) { bmp.close(); return file; }
+    const c = document.createElement('canvas'); c.width = Math.round(bmp.width * scale); c.height = Math.round(bmp.height * scale);
+    c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height); bmp.close();
+    const blob = await new Promise(r => c.toBlob(r, 'image/jpeg', 0.85));
+    if (!blob || blob.size >= file.size) return file;
+    return new File([blob], file.name.replace(/\.\w+$/, '') + '.jpg', { type: 'image/jpeg' });
+  } catch (e) { return file; }
+}
+
+function askLogin() {
+  return new Promise(resolve => {
+    const dlg = $('login'); $('lerr').textContent = '';
+    $('lemail').value = localStorage.getItem('keyviewer.email') || 'stevewash123.test@gmail.com'; $('lpass').value = '';
+    const done = ok => { dlg.close(); $('loginform').onsubmit = null; $('lcancel').onclick = null; resolve(ok); };
+    $('lcancel').onclick = () => done(false);
+    $('loginform').onsubmit = async e => {
+      e.preventDefault(); $('lgo').disabled = true; $('lerr').textContent = '';
+      try {
+        const email = $('lemail').value.trim(); localStorage.setItem('keyviewer.email', email);
+        const res = await fetch('/api/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password: $('lpass').value }) });
+        if (!res.ok) { $('lerr').textContent = res.status === 502 ? await res.text() : `Sign-in failed (${res.status}).`; $('lgo').disabled = false; return; }
+        token = (await res.json()).accessToken; tokenEmail = email;
+        sessionStorage.setItem('keyviewer.token', token); sessionStorage.setItem('keyviewer.email', email);
+        $('lgo').disabled = false; done(true);
+      } catch (err) { $('lerr').textContent = `The browser could not reach ${location.origin}/api/auth/login (${err.message}). Is serve-viewer.py still running?`; $('lgo').disabled = false; }
+    };
+    dlg.showModal();
+  });
+}
+
+/* the part of the result that is not a field: what was sent, API messages, and the items made next to the key's product lines */
+function renderBottom(file, T) {
+  const mine = rows.filter(x => x.file === file), out = [];
+  out.push(`<h2>Test of ${esc(file)}</h2><div class="meta">Sent ${esc(T.sentAs)} · ${T.kb} KB · ${esc(T.at)}</div>`);
+  for (const m of T.messages) out.push(`<p class="${m.bad ? 'bad' : 'dim'}">${esc(m.text)}</p>`);
+  const box = $('result'); box.innerHTML = out.join(''); box.hidden = false;
+}
+
+async function testThis() { const r = rows[i]; if (r) await testFile(r.file); }
+/* sends one receipt's image to the API; true when a result (even an error from the API) was recorded, false when it was not sent (busy, sign-in cancelled) */
+async function testFile(file) {
+  if (!file || busy) return false;
+  busy = true; const btn = $('test'); btn.disabled = true; const label = btn.textContent; btn.textContent = 'Sending…';
+  try {
+    await refreshWho();
+    const viaServer = !!(server && server.enabled);   // serve-viewer.py holds the sign-in and adds it to every call: nothing to type again
+    if (!viaServer && !token && !(await askLogin())) return false;
+    const blob = await (await fetch(encodeURI(file))).blob();
+    let sent = new File([blob], file, { type: 'image/jpeg' });
+    const asPhoto = $('asphoto').checked; if (asPhoto) sent = await shrinkPhoto(sent);
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const form = new FormData(); form.append('files', sent, sent.name);
+      const res = await fetch('/api/pending-items/upload', { method: 'POST', headers: viaServer ? {} : { Authorization: 'Bearer ' + token }, body: form });
+      if (res.status === 401) {
+        if (viaServer) { finish(file, [], asPhoto, sent, [{ bad: true, text: (await res.text()) || 'The API rejected the saved sign-in. Stop serve-viewer.py and start it again to retype the password.' }]); return false; }
+        token = null; sessionStorage.removeItem('keyviewer.token'); await refreshWho();
+        if (attempt === 0 && (await askLogin())) continue;
+        return false;
+      }
+      if (!res.ok) { finish(file, [], asPhoto, sent, [{ bad: true, text: `The API answered ${res.status}: ${(await res.text()).slice(0, 400)}` }]); return true; }
+      finish(file, await res.json(), asPhoto, sent, []); return true;
+    }
+    return false;
+  } catch (e) { finish(file, [], false, { size: 0 }, [{ bad: true, text: 'Could not send: ' + e.message }]); return false; }
+  finally { busy = false; btn.textContent = label; onRowShown(); refreshWho(); }
+}
+function finish(fileName, data, asPhoto, file, messages) {
+  const items = []; let banner = '', already = 0, dismissed = 0, leftOut = 0;
+  for (const res of data) {
+    already += res.alreadyTracked || 0; dismissed += res.dismissed || 0; leftOut += res.leftOut || 0;
+    if (res.error) messages.push({ bad: true, text: 'The API refused it: ' + res.error });
+    if (res.duplicate) messages.push({ bad: true, text: 'Reported as a duplicate: this receipt is already in New Items, so nothing was read this time. Dismiss or delete it in the app, then test again.' });
+    if (res.note) messages.push({ text: 'Note from the API: ' + res.note });
+    items.push(...[res.item, ...(res.others || [])].filter(Boolean));
+    if (!res.item && !res.error && !res.duplicate) messages.push({ text: 'No items were made from this image.' });
+  }
+  const bad = messages.find(m => m.bad);
+  banner = bad ? bad.text : (items.length ? `${items.length} item${items.length === 1 ? '' : 's'} made · red = differs from the key, amber = close (≈, one contains the other) or read where the key is blank` : '');
+  tests[fileName] = { items, messages, banner, already, dismissed, leftOut, sentAs: asPhoto ? 'as a phone photo (shrunk like the app does)' : 'as an uploaded file (bytes unchanged)', kb: Math.round((file.size || 0) / 1024), at: new Date().toLocaleTimeString() };
+  const v = verdictOf(fileName, tests[fileName]); if (statusOf(fileName) === 'deferred') setStatus(fileName, 'deferred', `last test ${v.ok ? 'matched the key' : 'differed: ' + v.why}`, tests[fileName]);   // a deferred receipt stays deferred; its result is kept to look at
+  else setStatus(fileName, v.ok ? 'pass' : 'fail', v.ok ? 'matched the key' : v.why, tests[fileName]);
+  if (rows[i] && rows[i].file === fileName) show(i);
+}
+$('test').onclick = testThis;
+if (!served) $('empty').insertAdjacentHTML('beforeend', '<br>TEST THIS needs this page opened through <code>python serve-viewer.py</code> (then http://localhost:8765/key-viewer.html).');
+
+/* ---------- which receipts passed: kept in review-status.json by serve-viewer.py ---------- */
+let status = {};   // file -> { status: pass | fail | retest, at, why }
+const MARK = { pass: '✓', fail: '✗', retest: '↻', deferred: '⏸' };
+/* the status shown for a receipt: what was recorded, else deferred for a return or refund document (the app does not read those yet, S2.4.9) */
+const statusOf = f => (status[f] && status[f].status) || (rows.some(x => x.file === f && x.document_class === 'return') ? 'deferred' : null);
+async function loadStatus() {
+  if (!served) return;
+  try { const r = await fetch('/viewer/status', { cache: 'no-store' }); if (r.ok) status = await r.json(); } catch (e) { /* none yet */ }
+  for (const [f, s] of Object.entries(status)) if (s.result) tests[f] = s.result;   // what the API made last time, so a reload does not lose it
+  if (rows.length) show(i);
+  paintStatus();
+}
+let statusTimer = null;
+function saveStatusSoon() {
+  clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => { fetch('/viewer/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(status) }).catch(() => {}); }, 400);
+}
+function setStatus(file, st, why, result) {
+  const keep = result || (status[file] && status[file].result);
+  if (st) status[file] = { status: st, at: new Date().toISOString().slice(0, 16).replace('T', ' '), why: why || '', ...(keep ? { result: keep } : {}) }; else delete status[file];
+  saveStatusSoon(); paintStatus();
+}
+function paintStatus() {
+  if (!rows.length) return;
+  const files = [...new Set(rows.map(x => x.file))], sel = $('rcpt'), count = { pass: 0, fail: 0, retest: 0, deferred: 0, none: 0 };
+  files.forEach((f, n) => {
+    const st = statusOf(f); count[st || 'none']++;
+    const o = sel.options[n]; if (o) o.textContent = (st ? MARK[st] : '·') + ' ' + f.replace(/\.jpg$/, '');
+  });
+  $('tally').textContent = `${count.pass} ✓ · ${count.fail} ✗ · ${count.retest} ↻ · ${count.deferred} ⏸ deferred · ${count.none} not tested`;
+  const f = rows[i] && rows[i].file, cur = f && statusOf(f), s = f && status[f];
+  const chip = $('stat'); chip.className = 'stat ' + (cur || ''); chip.textContent = cur ? `${MARK[cur]} ${cur}` : 'not tested';
+  chip.title = s ? `${s.at}${s.why ? ' · ' + s.why : ''}` : cur === 'deferred' ? 'Return and refund documents are deferred until the app reads them (S2.4.9)' : 'No result recorded for this receipt yet';
+}
+/* did the last test of this receipt match the key? amber (≈) counts as a match, red and "read where the key is blank" do not */
+function verdictOf(file, T) {
+  const bad = T.messages.find(m => m.bad); if (bad) return { ok: false, why: bad.text.slice(0, 140) };
+  const first = rows.find(x => x.file === file), M = matchItems(file, T), why = [], wrong = res => res && (res.cls === 'bad' || res.cls === 'extra'), wrongLine = res => res && res.cls === 'bad';   // a line field read where the key is blank (a consumable's name) is not a failure
+  if (T.items.length) for (const k of RECEIPT) if (wrong(receiptResult(k, first, T))) why.push(LABEL[k]);
+  for (const L of rows.filter(x => x.file === file && isProduct(x))) {
+    const it = M.byRow.get(L);
+    if (!it) { if (!T.already && !T.dismissed) why.push(`line ${L.line_no} no item`); continue; }
+    for (const k of Object.keys(LDEF)) if (wrongLine(compare(L[k], LDEF[k].get(it), LDEF[k], 1))) why.push(`line ${L.line_no} ${LABEL[k]}`);
+  }
+  if (M.extras.length) why.push(`${M.extras.length} extra item${M.extras.length === 1 ? '' : 's'}`);
+  return { ok: why.length === 0, why: why.join(', ') };
+}
+for (const [id, st] of [['markpass', 'pass'], ['markfail', 'fail'], ['markretest', 'retest'], ['markdefer', 'deferred']])
+  $(id).onclick = () => { const f = rows[i] && rows[i].file; if (f) setStatus(f, st, 'set by hand'); };
+
+/* test every receipt that has not passed, one after another */
+let batchStop = false;
+async function testAll() {
+  if (busy) { batchStop = true; return; }
+  const files = [...new Set(rows.map(x => x.file))].filter(f => !['pass', 'deferred'].includes(statusOf(f)));
+  if (!files.length) { alert('Every receipt has passed.'); return; }
+  if (!confirm(`Send ${files.length} receipt${files.length === 1 ? '' : 's'} (not passed or deferred) to the API one after another? Each makes New Items in the signed-in account and costs a fraction of a cent. Stop any time with the same button.`)) return;
+  batchStop = false; const btn = $('testall'), label = btn.textContent; btn.textContent = 'Stop';
+  try {
+    for (let n = 0; n < files.length && !batchStop; n++) {
+      $('tally').textContent = `testing ${n + 1} of ${files.length}: ${files[n]}`;
+      show(rows.findIndex(x => x.file === files[n]));
+      if (!(await testFile(files[n]))) break;
+    }
+  } finally { btn.textContent = label; batchStop = false; paintStatus(); }
+}
+$('testall').onclick = testAll;
+$('retestall').onclick = () => {
+  if (!confirm('Mark every receipt "needs retest"? Use this after a change to the app, so each one is tested again.')) return;
+  [...new Set(rows.map(x => x.file))].forEach(f => { if (status[f] && status[f].status !== 'deferred') status[f] = { ...status[f], status: 'retest', why: 'app changed' }; });
+  saveStatusSoon(); paintStatus();
+};
+
+reload();
+refreshWho();
+loadStatus();
+</script>
+</body>
+</html>

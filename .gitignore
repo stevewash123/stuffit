@@ -1,0 +1,17 @@
+# the two apps are their own repos
+/StuffIt_API/
+/StuffIt_UI/
+
+# run logs and build output
+*.log
+*.err
+node_modules/
+__pycache__/
+*.pyc
+
+# directory junctions made for the receipt viewer (they point back into this tree)
+/SampleData/receipts/pdf-as-jpg/receipt-pdfs/
+/SampleData/receipts/pdf-as-jpg/sample/
+/SampleData/receipts/pdf-as-jpg/testing/
+/SampleData/receipts/pdf-as-jpg/warranty-docs/
+/SampleData/receipts/pdf-as-jpg/warranty-photos/

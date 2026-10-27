@@ -1,0 +1,90 @@
+From: Dyson <orders@dyson.example.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Dyson order confirmation - 1000012345
+Date: Sat, 03 Oct 2026 16:25:00 -0500
+Message-ID: <dyson-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Dyson
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============7910907251531372028=="
+
+--===============7910907251531372028==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Thank you for your order
+
+Order number 1000012345. Register your machine within 30 days to activate you=
+r 2-year warranty.
+
+Delivery address
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Estimated delivery
+3-5 working days
+
+Payment
+Mastercard ending 5454
+
+Order details
+  Dyson V15 Detect Absolute Cordless Vacuum
+    Model: SV47 / 394451-01  Qty: 1   $749.99
+  Dyson Airwrap Complete Long
+    Model: HS05 / 453331-01  Qty: 1   $599.99
+
+Subtotal: $1,349.98
+Delivery: Free
+Tax: $74.25
+Total: $1,424.23
+
+
+
+--===============7910907251531372028==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Dyson layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>dyson</title></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Helvetica,Arial;color:=
+#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><tr><td align=
+=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#2d2d2d;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">dyson</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thank you for you=
+r order</h2><p style=3D"font-size:14px">Order number <b>1000012345</b>. Regis=
+ter your machine within 30 days to activate your 2-year warranty.</p><h3 styl=
+e=3D"margin:18px 0 4px;font-size:15px">Delivery address</h3><div style=3D"fon=
+t-size:14px;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testville, ME =
+04000</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Estimated delivery<=
+/h3><div style=3D"font-size:14px;line-height:1.5">3-5 working days</div><h3 s=
+tyle=3D"margin:18px 0 4px;font-size:15px">Payment</h3><div style=3D"font-size=
+:14px;line-height:1.5">Mastercard ending 5454</div><h3 style=3D"margin:18px 0=
+ 4px;font-size:15px">Order details</h3><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"padding:8px 0;b=
+order-bottom:1px solid #eee"><div style=3D"font-weight:bold">Dyson V15 Detect=
+ Absolute Cordless Vacuum</div><div style=3D"font-size:12px;color:#666">Model=
+: SV47 / 394451-01</div><div style=3D"font-size:12px;color:#666">Includes 2-y=
+ear limited warranty</div></td><td align=3D"center" style=3D"border-bottom:1p=
+x solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid =
+#eee">$749.99</td></tr><tr><td style=3D"padding:8px 0;border-bottom:1px solid=
+ #eee"><div style=3D"font-weight:bold">Dyson Airwrap Complete Long</div><div =
+style=3D"font-size:12px;color:#666">Model: HS05 / 453331-01</div><div style=
+=3D"font-size:12px;color:#666">Registered warranty: 2 years</div></td><td ali=
+gn=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"r=
+ight" style=3D"border-bottom:1px solid #eee">$599.99</td></tr></table><table =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px;ma=
+rgin-top:10px"><tr><td style=3D"padding:3px 0">Subtotal</td><td align=3D"righ=
+t">$1,349.98</td></tr><tr><td style=3D"padding:3px 0">Delivery</td><td align=
+=3D"right">Free</td></tr><tr><td style=3D"padding:3px 0">Tax</td><td align=3D=
+"right">$74.25</td></tr><tr><td style=3D"padding:3px 0">Total</td><td align=
+=3D"right">$1,424.23</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============7910907251531372028==--

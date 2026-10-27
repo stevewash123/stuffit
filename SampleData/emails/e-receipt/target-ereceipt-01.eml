@@ -1,0 +1,83 @@
+From: Target <receipts@oe1.target.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Target Receipt
+Date: Sat, 03 Oct 2026 12:22:00 -0500
+Message-ID: <target-ereceipt-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Target
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6872067757280845733=="
+
+--===============6872067757280845733==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you for shopping with us
+
+Target
+Testville  Store #1234
+500 Retail Dr, Testville, ME 04000
+----------------------------------------
+DYSON V8 VACUUM                  $349.99
+   059-04-0123
+THRESHOLD BATH TOWEL              $24.00
+   066-12-0456  QTY 2 @ $12.00
+FRESH BANANAS                      $0.39
+   267-00-8011
+
+SUBTOTAL                         $374.38
+SALES TAX (5.500%)                $20.59
+TOTAL                            $394.97
+
+VISA CREDIT ****4242  $394.97
+AID A0000000031010 AUTH 112233
+----------------------------------------
+Target Circle: 5% off applied
+Date: 10/03/2026 12:22 PM
+REC#2-8132-2870-0169-3511-3  VCD#759-280-869
+Return by 11/02/2026
+
+--===============6872067757280845733==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Target layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>TARGET</title></hea=
+d>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#cc0000;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">TARGET</td></tr>
+<tr><td style=3D"padding:24px"><h3 style=3D"margin:0 0 12px">Thank you for sh=
+opping with us</h3><pre style=3D"font-family:Courier New,monospace;font-size:=
+13px;line-height:1.35;margin:0">Target
+Testville  Store #1234
+500 Retail Dr, Testville, ME 04000
+----------------------------------------
+DYSON V8 VACUUM                  $349.99
+   059-04-0123
+THRESHOLD BATH TOWEL              $24.00
+   066-12-0456  QTY 2 @ $12.00
+FRESH BANANAS                      $0.39
+   267-00-8011
+
+SUBTOTAL                         $374.38
+SALES TAX (5.500%)                $20.59
+TOTAL                            $394.97
+
+VISA CREDIT ****4242  $394.97
+AID A0000000031010 AUTH 112233
+----------------------------------------
+Target Circle: 5% off applied
+Date: 10/03/2026 12:22 PM
+REC#2-8132-2870-0169-3511-3  VCD#759-280-869
+Return by 11/02/2026</pre></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd">This is an electronic copy of your in-store receipt.</td></tr>
+</table></td></tr></table></body></html>
+
+--===============6872067757280845733==--

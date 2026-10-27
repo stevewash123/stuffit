@@ -1,0 +1,56 @@
+From: Kohl's <orders@e.kohls.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Sat, 26 Sep 2026 09:05:00 -0500
+Message-ID: <full-scenario-5-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Kohl's
+Subject: Your order is confirmed - Store Pickup - KH-26-88413
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1770409404807423689=="
+
+--===============1770409404807423689==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: KH-26-88413
+
+Pick Up In Store
+Kohl's #0614 - Testville
+700 Plaza Drive, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  KitchenAid Artisan 5-Qt Tilt-Head Stand Mixer
+    Model # KSM150PSER  |  Qty: 1   $329.99
+
+Subtotal: $329.99
+Tax: $18.15
+Total: $348.14
+
+--===============1770409404807423689==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Kohl's layout --><!doctype =
+html><html><head><meta charset=3D"utf-8"><title>Kohl's</title></head><body st=
+yle=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif;col=
+or:#222"><table width=3D"600" style=3D"background:#fff;max-width:600px;margin=
+:auto"><tr><td style=3D"background:#111111;color:#fff;padding:18px 24px;font-=
+size:22px;font-weight:bold">KOHL'S</td></tr><tr><td style=3D"padding:24px"><h=
+2 style=3D"margin:0 0 8px">Your order is on its way to the store</h2><p style=
+=3D"font-size:14px">We'll email you when your order is ready. Order Number: <=
+b>KH-26-88413</b></p><div style=3D"font-size:14px;line-height:1.5">Pick Up In=
+ Store<br>Kohl's #0614 - Testville<br>700 Plaza Drive, Testville, ME 04000<br=
+><br>Pickup person<br>Sam Sample</div><h3>Order details</h3><table width=3D"1=
+00%" style=3D"font-size:14px"><tr><td>KitchenAid Artisan 5-Qt Tilt-Head Stand=
+ Mixer<br><span style=3D"color:#666">Model # KSM150PSER | Qty: 1</span></td><=
+td align=3D"right" valign=3D"top">$329.99</td></tr></table><p style=3D"font-s=
+ize:14px;margin-top:16px">Subtotal: $329.99<br>Tax: $18.15<br><b>Total: $348.=
+14</b></p></td></tr></table></body></html>
+
+--===============1770409404807423689==--

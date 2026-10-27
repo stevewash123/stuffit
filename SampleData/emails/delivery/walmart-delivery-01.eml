@@ -1,0 +1,54 @@
+From: Walmart <help@walmart.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Delivered: Your Walmart order Order# 200000012345678
+Date: Sat, 12 Sep 2026 16:48:00 -0500
+Message-ID: <walmart-delivery-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Walmart
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1667675284036144115=="
+
+--===============1667675284036144115==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your package was delivered
+
+Left at front door.
+
+Order details
+  Samsung 55" Class 4K UHD Crystal LED Smart TV
+    Walmart # 5551212345  Qty: 1   $378.00
+
+
+
+
+--===============1667675284036144115==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Walmart layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Walmart</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#0071dc;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Walmart</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your package was =
+delivered</h2><p style=3D"font-size:14px">Left at front door.</p><h3 style=3D=
+"margin:18px 0 4px;font-size:15px">Order details</h3><table width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"p=
+adding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Sa=
+msung 55&quot; Class 4K UHD Crystal LED Smart TV</div><div style=3D"font-size=
+:12px;color:#666">Walmart # 5551212345</div></td><td align=3D"center" style=
+=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"bord=
+er-bottom:1px solid #eee">$378.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============1667675284036144115==--

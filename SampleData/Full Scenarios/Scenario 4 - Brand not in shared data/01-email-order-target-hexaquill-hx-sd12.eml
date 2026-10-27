@@ -1,0 +1,56 @@
+From: Target <orders@e.target.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Sat, 19 Sep 2026 09:40:00 -0500
+Message-ID: <full-scenario-4-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Target
+Subject: Your order is confirmed - Order Pickup - TGT-4471903
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6805297828879713251=="
+
+--===============6805297828879713251==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: TGT-4471903
+
+Pick Up In Store
+Target #2284 - Testville
+900 Retail Way, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  Hexaquill 12V Cordless Screwdriver Set
+    Model # HX-SD12  |  Qty: 1   $34.99
+
+Subtotal: $34.99
+Tax: $1.92
+Total: $36.91
+
+--===============6805297828879713251==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Target layout --><!doctype =
+html><html><head><meta charset=3D"utf-8"><title>Target</title></head><body st=
+yle=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif;col=
+or:#222"><table width=3D"600" style=3D"background:#fff;max-width:600px;margin=
+:auto"><tr><td style=3D"background:#cc0000;color:#fff;padding:18px 24px;font-=
+size:22px;font-weight:bold">TARGET</td></tr><tr><td style=3D"padding:24px"><h=
+2 style=3D"margin:0 0 8px">Your order is on its way to the store</h2><p style=
+=3D"font-size:14px">We'll email you when your order is ready. Order Number: <=
+b>TGT-4471903</b></p><div style=3D"font-size:14px;line-height:1.5">Pick Up In=
+ Store<br>Target #2284 - Testville<br>900 Retail Way, Testville, ME 04000<br>=
+<br>Pickup person<br>Sam Sample</div><h3>Order details</h3><table width=3D"10=
+0%" style=3D"font-size:14px"><tr><td>Hexaquill 12V Cordless Screwdriver Set<b=
+r><span style=3D"color:#666">Model # HX-SD12 | Qty: 1</span></td><td align=3D=
+"right" valign=3D"top">$34.99</td></tr></table><p style=3D"font-size:14px;mar=
+gin-top:16px">Subtotal: $34.99<br>Tax: $1.92<br><b>Total: $36.91</b></p></td>=
+</tr></table></body></html>
+
+--===============6805297828879713251==--

@@ -1,0 +1,56 @@
+From: Wayfair <noreply@wayfair.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Wayfair order has been delivered - PO# 1234567890
+Date: Tue, 03 Feb 2026 15:45:00 -0500
+Message-ID: <wayfair-delivery-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Wayfair
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============3224639527503127099=="
+
+--===============3224639527503127099==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Your sectional was delivered!
+
+Delivered with White Glove service (assembly and debris removal). Leave a rev=
+iew to earn points.
+
+Order details
+  Mercury Row Aneesa 3 Piece Sectional
+    SKU: MCRW1234  Qty: 1   $1,049.99
+
+
+
+
+--===============3224639527503127099==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Wayfair layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Wayfair</title></he=
+ad>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#7b189f;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Wayfair</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your sectional wa=
+s delivered!</h2><p style=3D"font-size:14px">Delivered with White Glove servi=
+ce (assembly and debris removal). Leave a review to earn points.</p><h3 style=
+=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=
+=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bol=
+d">Mercury Row Aneesa 3 Piece Sectional</div><div style=3D"font-size:12px;col=
+or:#666">SKU: MCRW1234</div></td><td align=3D"center" style=3D"border-bottom:=
+1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px soli=
+d #eee">$1,049.99</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============3224639527503127099==--

@@ -1,0 +1,64 @@
+From: Amazon.com <shipment-tracking@amazon.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Delivered: Your Amazon.com order of Anker 737 Power Bank...
+Date: Wed, 18 Mar 2026 14:22:00 -0500
+Message-ID: <amazon-delivery-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Amazon
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2701567584220927293=="
+
+--===============2701567584220927293==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Delivered: Thursday, March 19
+
+Your package was left near the front door or porch.
+
+Order #
+112-0000001-0000001
+
+Order details
+  Anker 737 Power Bank (PowerCore 24K)
+      Qty: 1   $109.99
+  Ninja AF101 Air Fryer
+      Qty: 1   $99.99
+
+
+
+
+--===============2701567584220927293==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Amazon layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>amazon.com</title><=
+/head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#232f3e;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">amazon.com</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Delivered: Thursd=
+ay, March 19</h2><p style=3D"font-size:14px">Your package was left near the f=
+ront door or porch.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Order #=
+</h3><div style=3D"font-size:14px;line-height:1.5">112-0000001-0000001</div><=
+h3 style=3D"margin:18px 0 4px;font-size:15px">Order details</h3><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><t=
+d style=3D"padding:8px 0;border-bottom:1px solid #eee"><div style=3D"font-wei=
+ght:bold">Anker 737 Power Bank (PowerCore 24K)</div></td><td align=3D"center"=
+ style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=
+=3D"border-bottom:1px solid #eee">$109.99</td></tr><tr><td style=3D"padding:8=
+px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Ninja AF10=
+1 Air Fryer</div></td><td align=3D"center" style=3D"border-bottom:1px solid #=
+eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px solid #eee">$99=
+.99</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============2701567584220927293==--

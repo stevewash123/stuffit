@@ -1,0 +1,80 @@
+From: Lowe's <lowes@mail.lowes.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Your Lowe's order 123456789 is ready for delivery scheduling
+Date: Tue, 03 Mar 2026 10:00:00 -0500
+Message-ID: <lowes-shipping-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Lowe's
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8070156723633020718=="
+
+--===============8070156723633020718==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your appliances have shipped
+
+Delivery team will call to schedule your 4-hour window.
+
+Carrier / Tracking
+Lowe's Delivery
+Tracking #: (none - dispatched by delivery team)
+
+Estimated delivery
+03/06/2026
+
+Shipping to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Order details
+  Whirlpool 4.5-cu ft Front Load Washer (White)
+    Item #1234567 | Model #WFW5605MW  Qty: 1   $899.00
+  Whirlpool 7.4-cu ft Electric Dryer (White)
+    Item #1234568 | Model #WED5605MW  Qty: 1   $849.00
+
+
+
+
+--===============8070156723633020718==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Lowe's layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>Lowe&#x27;s</title>=
+</head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#004990;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">Lowe&#x27;s</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Your appliances h=
+ave shipped</h2><p style=3D"font-size:14px">Delivery team will call to schedu=
+le your 4-hour window.</p><h3 style=3D"margin:18px 0 4px;font-size:15px">Carr=
+ier / Tracking</h3><div style=3D"font-size:14px;line-height:1.5">Lowe's Deliv=
+ery<br>Tracking #: <b>(none - dispatched by delivery team)</b></div><h3 style=
+=3D"margin:18px 0 4px;font-size:15px">Estimated delivery</h3><div style=3D"fo=
+nt-size:14px;line-height:1.5">03/06/2026</div><h3 style=3D"margin:18px 0 4px;=
+font-size:15px">Shipping to</h3><div style=3D"font-size:14px;line-height:1.5"=
+>Sam Sample<br>100 Example Lane<br>Testville, ME 04000</div><h3 style=3D"marg=
+in:18px 0 4px;font-size:15px">Order details</h3><table width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-size:14px"><tr><td style=3D"paddin=
+g:8px 0;border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Whirlpo=
+ol 4.5-cu ft Front Load Washer (White)</div><div style=3D"font-size:12px;colo=
+r:#666">Item #1234567 | Model #WFW5605MW</div></td><td align=3D"center" style=
+=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"bord=
+er-bottom:1px solid #eee">$899.00</td></tr><tr><td style=3D"padding:8px 0;bor=
+der-bottom:1px solid #eee"><div style=3D"font-weight:bold">Whirlpool 7.4-cu f=
+t Electric Dryer (White)</div><div style=3D"font-size:12px;color:#666">Item #=
+1234568 | Model #WED5605MW</div></td><td align=3D"center" style=3D"border-bot=
+tom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"border-bottom:1px =
+solid #eee">$849.00</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============8070156723633020718==--

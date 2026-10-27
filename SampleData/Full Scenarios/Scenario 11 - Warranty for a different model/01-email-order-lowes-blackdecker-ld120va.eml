@@ -1,0 +1,56 @@
+From: Lowe's <orders@e.lowes.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Mon, 28 Sep 2026 08:45:00 -0500
+Message-ID: <full-scenario-11-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Lowe's
+Subject: Your order is confirmed - Pick Up In Store - LW-48213
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8435107381851371305=="
+
+--===============8435107381851371305==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: LW-48213
+
+Pick Up In Store
+Lowe's Home Improvement #1832 - Testville
+300 Home Way, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  BLACK+DECKER 20V MAX Cordless Drill/Driver
+    Model # LD120VA  |  Qty: 1   $49.99
+
+Subtotal: $49.99
+Tax: $2.75
+Total: $52.74
+
+--===============8435107381851371305==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Lowe's layout --><!doctype =
+html><html><head><meta charset=3D"utf-8"><title>Lowe's</title></head><body st=
+yle=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif;col=
+or:#222"><table width=3D"600" style=3D"background:#fff;max-width:600px;margin=
+:auto"><tr><td style=3D"background:#004990;color:#fff;padding:18px 24px;font-=
+size:22px;font-weight:bold">LOWE'S</td></tr><tr><td style=3D"padding:24px"><h=
+2 style=3D"margin:0 0 8px">Your order is on its way to the store</h2><p style=
+=3D"font-size:14px">We'll email you when your order is ready. Order Number: <=
+b>LW-48213</b></p><div style=3D"font-size:14px;line-height:1.5">Pick Up In St=
+ore<br>Lowe's Home Improvement #1832 - Testville<br>300 Home Way, Testville, =
+ME 04000<br><br>Pickup person<br>Sam Sample</div><h3>Order details</h3><table=
+ width=3D"100%" style=3D"font-size:14px"><tr><td>BLACK+DECKER 20V MAX Cordles=
+s Drill/Driver<br><span style=3D"color:#666">Model # LD120VA | Qty: 1</span><=
+/td><td align=3D"right" valign=3D"top">$49.99</td></tr></table><p style=3D"fo=
+nt-size:14px;margin-top:16px">Subtotal: $49.99<br>Tax: $2.75<br><b>Total: $52=
+.74</b></p></td></tr></table></body></html>
+
+--===============8435107381851371305==--

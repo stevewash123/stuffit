@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flows</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2430; --mute:#667085; --line:#dfe3ea; --ok:#1a7f4b; --okbg:#e5f5ec; --bad:#b42318; --badbg:#fdeceb; --warn:#8a5a00; --warnbg:#fff4d6; --accent:#2457d6; --chip:#eef2fb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12151a; --card:#1b1f27; --ink:#e6e9ef; --mute:#9aa4b5; --line:#2c3340; --ok:#5fd194; --okbg:#173325; --bad:#ff8a80; --badbg:#3a1c1a; --warn:#f0c75e; --warnbg:#37300f; --accent:#7ea2ff; --chip:#222a3b; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 system-ui, Segoe UI, sans-serif; }
+  header { position:sticky; top:0; z-index:5; background:var(--card); border-bottom:1px solid var(--line); padding:8px 16px; display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+  header h1 { font-size:16px; margin:0 8px 0 0; }
+  header label { color:var(--mute); font-size:12px; }
+  header input, header select, header button { font:inherit; padding:3px 8px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--ink); }
+  header button { cursor:pointer; } header a { color:var(--accent); font-size:12px; }
+  #tally { font-weight:600; }
+  main { max-width:1100px; margin:0 auto; padding:12px 16px 80px; }
+  .setup, .band { background:var(--card); border:1px solid var(--line); border-radius:10px; margin:12px 0; overflow:hidden; }
+  .setup > summary, .band > summary { list-style:none; cursor:pointer; padding:10px 14px; background:var(--bg); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:2px 12px; align-items:baseline; }
+  summary::-webkit-details-marker { display:none; }
+  .num { font-weight:700; color:var(--accent); }
+  .band h2, .setup h2 { font-size:15px; margin:0; }
+  .sub { flex:1 1 100%; color:var(--mute); font-size:12px; }
+  .prog { margin-left:auto; color:var(--mute); font-size:12px; }
+  .body { padding:10px 14px 14px; }
+  .setup .body li { margin:3px 0; }
+  h3 { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--mute); margin:12px 0 6px; }
+  ol.steps { margin:0; padding:0; list-style:none; counter-reset:s; }
+  ol.steps > li { counter-increment:s; display:grid; grid-template-columns:28px 1fr; gap:4px 8px; padding:7px 0; border-top:1px solid var(--line); }
+  ol.steps > li:first-child { border-top:0; }
+  ol.steps > li::before { content:counter(s); width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff; display:grid; place-items:center; font-size:12px; font-weight:700; }
+  .do { font-weight:500; } .note { color:var(--mute); font-size:12px; }
+  .files { display:flex; flex-wrap:wrap; gap:8px; margin-top:5px; grid-column:2; }
+  .file { display:flex; gap:8px; align-items:flex-start; background:var(--chip); border:1px solid var(--line); border-radius:8px; padding:5px 8px; max-width:100%; }
+  .file img { height:54px; width:auto; border:1px solid var(--line); border-radius:3px; background:#fff; }
+  .file .ic { width:54px; height:54px; display:grid; place-items:center; font-size:11px; font-weight:700; color:var(--accent); border:1px solid var(--line); border-radius:3px; background:var(--card); }
+  .file b { font:12px ui-monospace, Consolas, monospace; font-weight:600; word-break:break-all; display:block; }
+  .file .links { font-size:12px; display:flex; flex-wrap:wrap; gap:2px 10px; margin-top:2px; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  .chk { display:grid; grid-template-columns:96px 1fr; gap:4px 12px; padding:7px 0; border-top:1px solid var(--line); }
+  .chk:first-of-type { border-top:0; }
+  .chk.pass { background:var(--okbg); } .chk.fail { background:var(--badbg); }
+  .btns { display:flex; gap:4px; align-items:flex-start; }
+  .btns button { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:6px; padding:2px 9px; cursor:pointer; font:inherit; }
+  .btns button.on.pass { background:var(--ok); color:#fff; border-color:var(--ok); } .btns button.on.fail { background:var(--bad); color:#fff; border-color:var(--bad); }
+  .seen { margin-top:3px; font-size:12px; color:var(--mute); } .seen.diff { color:var(--warn); background:var(--warnbg); padding:2px 6px; border-radius:4px; display:inline-block; }
+  .seen b { font-weight:600; }
+  textarea { width:100%; height:30px; margin-top:4px; font:inherit; font-size:12px; border:1px solid var(--line); border-radius:6px; padding:3px 6px; background:var(--card); color:var(--ink); resize:vertical; }
+  .tag { font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:1px 7px; border-radius:10px; background:var(--chip); color:var(--accent); }
+  .tag.run { background:var(--okbg); color:var(--ok); } .tag.exp { background:var(--warnbg); color:var(--warn); }
+  @media (max-width:760px) { .chk { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>How items flow in</h1>
+  <span id="tally"></span>
+  <label>Show <select id="filter"><option value="all">everything</option><option value="todo">unchecked</option><option value="fail">failed</option></select></label>
+  <label>App <input id="app" size="22" title="Where the StuffIt UI runs"></label>
+  <button id="collapse">Collapse all</button><button id="expand">Expand all</button>
+  <button id="export">Export results</button><button id="reset">Reset</button>
+  <a href="test-matrix.html">File-by-file matrix</a><a href="key-viewer.html">Receipt runner</a><a href="warranty-viewer.html">Documents runner</a>
+</header>
+<main id="main"></main>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const F = (path, how) => ({ path, how });   // how: a hint for the documents page: waiting | kept | looseWaiting | looseKept | looseNone
+
+const SETUP = [
+  'A test user. Use <b>Clear New Items</b> on the documents page (it removes everything in New Items, yours included) or dismiss and delete by hand, so each flow starts empty.',
+  'A registered card <b>ending 4242</b>: Chase, product <b>Chase Sapphire Preferred</b>, and in the card settings <b>confirm both proposed benefits</b> (extended warranty +12 months up to 48, purchase protection). The email and invoice samples (Amazon, Apple, Best Buy, Wayfair, the Home Depot pair) are all paid with 4242. The other samples use 1212 (Bank of America card already on the test user), 1111, 5454 and 7711.',
+  'To count as <b>verified</b>, a policy needs a confidence of 85% or more. The seeded maker policies (Milwaukee, DeWalt, Apple and the rest) are <b>75% "likely"</b>, read from the web on Sep 30, and a quick add attaches only what is <b>80% or more</b>. For the flows that expect a maker warranty on a quick add, first add an official-source evidence row to the Milwaukee and DeWalt manufacturer policies (admin, policy evidence). Until then expect the "Seen" notes below.',
+  'A "New Item" is one row in New Items. The order email makes its rows, a receipt photo joins them when the store and order number match, and a receipt with several lines can make more rows. Quick add = the Add button on a New Item (accept).',
+];
+
+const FLOWS = [
+  {
+    id: 'F1', title: 'Order email, then a photo of the receipt: known brands, registered card', tag: 'run',
+    sub: 'The main path. Home Depot pickup order H12345-67890: a Milwaukee hammer drill and a DeWalt circular saw, paid with the registered 4242 card. I made receipt 104 to pair with this email.',
+    steps: [
+      { do: 'Upload the order confirmation email (New Items, add a file).', files: [F('emails/order-confirmation/homedepot-order-confirmation-02.eml')] },
+      { do: 'Upload the photo of the receipt.', files: [F('receipts/pdf-as-jpg/104-thermal-homedepot-pickup-order-milwaukee-dewalt.jpg')], note: 'PDF twin: receipts/pdf/104-thermal-homedepot-pickup-order-milwaukee-dewalt.pdf' },
+    ],
+    confirm: [
+      { t: 'The email makes a New Item for each product line (the drill and the saw).', seen: 'Only the drill was made from the email. The saw exists only after the photo, as its own item holding just the photo.', diff: true },
+      { t: 'The photo joins the same order: the drill now has two documents, the email and the photo. No second drill.', seen: 'Joined. Documents: the .eml and the .jpg.' },
+      { t: 'Fields are filled and agree: store Home Depot, maker Milwaukee, model 2904-22, price 199.00, date 2026-08-12, order H12345-67890.', seen: 'All filled. Nothing missing, nothing to check.' },
+      { t: 'The card 4242 is matched to the registered card.', seen: 'Matched (shown by its nickname).' },
+      { t: 'Maker warranty on the drill: Milwaukee, 60 months, 2026-08-12 to 2031-08-12.', seen: 'Listed with those dates, at 75% ("likely").', diff: true },
+      { t: 'Return window: Home Depot, 90 days, to 2026-11-10.', seen: 'Listed to 2026-11-10, noted "general policy, none for this category", overall 58%.', diff: true },
+      { t: 'Card benefits: purchase protection to 2026-12-10 on both. Extended warranty only on the saw (DeWalt 36 months to 2029-08-12, +12 months to 2030-08-12); not on the drill, whose 5-year maker term is over the card\'s 3-year limit.', seen: 'Exactly that.' },
+      { t: 'Ready for a quick add: the Add button is enabled, nothing flagged.', seen: 'Nothing missing, nothing to check.' },
+      { t: 'A quick add attaches every coverage at 80% or more, so the maker warranty and the return window come with it.', seen: 'Maker warranty is 75% and the return window 58%: only the two card benefits would attach until the policies are verified.', diff: true },
+      { t: 'After the quick add, My Items shows the drill with both documents linked, the card, and the order number.', seen: 'Not run: the live check stopped before adding.' },
+    ],
+  },
+  {
+    id: 'F2', title: 'Photo first, then the order email', tag: 'exp',
+    sub: 'Same order in the other sequence: the person scans the receipt at the store counter and the email arrives later.',
+    steps: [
+      { do: 'Upload the photo of the receipt.', files: [F('receipts/pdf-as-jpg/104-thermal-homedepot-pickup-order-milwaukee-dewalt.jpg')] },
+      { do: 'Upload the order confirmation email.', files: [F('emails/order-confirmation/homedepot-order-confirmation-02.eml')] },
+    ],
+    confirm: [
+      { t: 'The email joins the items the photo made (same store and order number): the drill ends with two documents.' },
+      { t: 'The end state matches F1: the same fields, the same coverages, no duplicate drill or saw.' },
+      { t: 'The email only fills what the receipt left blank and does not overwrite what the receipt read.' },
+    ],
+  },
+  {
+    id: 'F3', title: 'No email: the photo alone', tag: 'exp',
+    sub: 'Most real purchases have no email we can see.',
+    steps: [{ do: 'Upload only the photo.', files: [F('receipts/pdf-as-jpg/104-thermal-homedepot-pickup-order-milwaukee-dewalt.jpg')] }],
+    confirm: [
+      { t: 'Two New Items, the drill and the saw, each holding the photo.' },
+      { t: 'Same fields and the same coverages as F1; card 4242 matched.' },
+      { t: 'Ready for a quick add, with the same 80% rule.' },
+    ],
+  },
+  {
+    id: 'F4', title: 'Order email only, no receipt ever', tag: 'exp',
+    sub: 'The email is all the person has. Checks what an order confirmation alone can support.',
+    steps: [{ do: 'Upload only the email.', files: [F('emails/order-confirmation/homedepot-order-confirmation-02.eml')] }],
+    confirm: [
+      { t: 'A New Item for the drill with store, model, price, order number and date taken from the email.' },
+      { t: 'It shows as ordered or pending, not as delivered, and the return window is counted from the date it has (estimated if it has none).' },
+      { t: 'The saw is also made (the email lists two products).', seen: 'In the live run only the drill was made.', diff: true },
+    ],
+  },
+  {
+    id: 'F5', title: 'The same receipt twice: PDF and photo', tag: 'exp',
+    sub: 'A person emails themselves the PDF and later photographs the paper copy.',
+    steps: [
+      { do: 'Upload the PDF.', files: [F('receipts/pdf/104-thermal-homedepot-pickup-order-milwaukee-dewalt.pdf')] },
+      { do: 'Upload the photo of the same receipt.', files: [F('receipts/pdf-as-jpg/104-thermal-homedepot-pickup-order-milwaukee-dewalt.jpg')] },
+    ],
+    confirm: [
+      { t: 'No second drill and no second saw: the photo joins the PDF\'s items by order number.' },
+      { t: 'Both files are kept as documents on the item, or the second is reported as already uploaded.' },
+    ],
+  },
+  {
+    id: 'F6', title: 'The whole life of an order: confirmation, shipping, delivery, receipt', tag: 'run',
+    sub: 'Best Buy order BBY01-806000000001: a Samsung OLED TV, a protection plan and two HDMI cables, paid with 4242.',
+    steps: [
+      { do: 'Order confirmation email.', files: [F('emails/order-confirmation/bestbuy-order-confirmation-01.eml')] },
+      { do: 'Shipping email.', files: [F('emails/shipping/bestbuy-shipping-01.eml')] },
+      { do: 'Delivery email (a partial delivery).', files: [F('emails/delivery/bestbuy-delivery-01.eml')] },
+      { do: 'Photo of the invoice.', files: [F('receipts/pdf-as-jpg/bestbuy-invoice-01.jpg')] },
+    ],
+    confirm: [
+      { t: 'One TV item and one cable item for the order; every email and the invoice land on them.', seen: 'The shipping email and the invoice joined the TV (3 documents). The delivery email made its own "Insignia HDMI Cable" item, and the invoice\'s cable line made another "HDMI Cable": three items for two products.', diff: true },
+      { t: 'The delivery email carries the order number and joins.', seen: 'It made a separate item with no order number, no date and no total, flagged with an error.', diff: true },
+      { t: 'The TV has the store plan (Best Buy Protection 2-Year, 2 years from delivery) as a suggestion, the maker warranty, and card benefits.', seen: 'Maker warranty and card benefits listed; the plan line was not listed as a coverage.', diff: true },
+      { t: 'The warranty start is the delivery date, not the order date.' },
+      { t: 'Maker warranty on the Samsung TV is a verified policy.', seen: 'Samsung\'s verified policy is for major appliances; the TV got a placeholder at 5%.', diff: true },
+    ],
+  },
+  {
+    id: 'F7', title: 'Unknown brands: nothing on file to attach', tag: 'run',
+    sub: 'Amazon order 112-0000001-0000001: an Anker power bank, a Ninja air fryer and a Cuisinart knife set, three sellers, paid with 4242.',
+    steps: [
+      { do: 'Order confirmation email.', files: [F('emails/order-confirmation/amazon-order-confirmation-01.eml')] },
+      { do: 'Photo of the invoice.', files: [F('receipts/pdf-as-jpg/amazon-invoice-01.jpg')] },
+    ],
+    confirm: [
+      { t: 'Three New Items from the email (Anker, Ninja, Cuisinart); the invoice joins them.', seen: 'Three items. The Anker item holds both documents. I did not look at the other two.' },
+      { t: 'No maker warranty is proposed for a brand with no policy on file, and the item says so.', seen: 'No maker warranty row. Return window 30 days at 75%, purchase protection listed, and the card\'s extended warranty says "add the maker\'s warranty first".' },
+      { t: 'Ready for a quick add: attaches only what is 80% or more (the card benefits).', seen: 'Nothing flagged; consistent.' },
+      { t: 'A prompt or a visible way to add the maker\'s warranty (upload the document, see F11).' },
+    ],
+  },
+  {
+    id: 'F8', title: 'A known brand whose policy is only a placeholder', tag: 'run',
+    sub: 'Apple order W1234567890: an iPhone 16 Pro, AppleCare+ and a MagSafe charger, paid with 4242.',
+    steps: [
+      { do: 'Order confirmation email.', files: [F('emails/order-confirmation/apple-order-confirmation-01.eml')] },
+      { do: 'Photo of the invoice.', files: [F('receipts/pdf-as-jpg/apple-invoice-01.jpg')] },
+    ],
+    confirm: [
+      { t: 'The invoice joins the iPhone item (two documents) and fills its price (1,099.00).', seen: 'Joined, two documents, but the iPhone\'s own price stayed empty.', diff: true },
+      { t: 'The MagSafe charger is a New Item of its own, not duplicated.', seen: 'A separate item holding only the photo.' },
+      { t: 'AppleCare+ is not an item; it is suggested as a plan on the iPhone (ends 22 Sep 2028).', seen: 'No plan row on the iPhone.', diff: true },
+      { t: 'Apple\'s manufacturer warranty on the iPhone is a verified 12 months.', seen: 'The iPhone\'s maker warranty is 5% (a placeholder for the Smartphones category); the charger\'s is 75%.', diff: true },
+    ],
+  },
+  {
+    id: 'F9', title: 'Receipt cannot be tied to its order', tag: 'run',
+    sub: 'Two cases where the order number or store is missing, so the receipt does not join and the same product appears twice.',
+    steps: [
+      { do: 'Wayfair: order email, then the invoice (it prints no store name).', files: [F('emails/order-confirmation/wayfair-order-confirmation-01.eml'), F('receipts/pdf-as-jpg/wayfair-invoice-01.jpg')] },
+      { do: 'Home Depot: after the F1 email, the in-store receipt that has no order number.', files: [F('receipts/pdf-as-jpg/homedepot-receipt-01.jpg')], note: 'It lists the same Milwaukee drill and DeWalt saw.' },
+    ],
+    confirm: [
+      { t: 'Wayfair: the invoice joins the email\'s sectional, or the item says clearly what is missing.', seen: 'It did not join: a second item "Aneesa Sectional" flagged "missing: store".', diff: true },
+      { t: 'Home Depot: the same drill is recognised and offered as a match, or the person is asked.', seen: 'A second "M18 FUEL Hammer Drill" New Item, and the store number 3456 read as the order number.', diff: true },
+    ],
+  },
+  {
+    id: 'F10', title: 'Registered card, and a card that is not registered', tag: 'exp',
+    sub: 'The same kind of purchase with and without a matching card. The test user already has a Bank of America card ending 1212 with a confirmed extended warranty.',
+    steps: [
+      { do: 'Registered card (1212): LG OLED TV from Best Buy.', files: [F('receipts/pdf-as-jpg/15-thermal-bestbuy-tv-geek-squad.jpg')] },
+      { do: 'Card not registered (7711): Samsung TV from Northwind Electronics.', files: [F('receipts/pdf-as-jpg/03-letter-page-small-receipt-top-left.jpg')] },
+    ],
+    confirm: [
+      { t: 'The 1212 receipt is linked to the card and lists the card\'s extended warranty (maker term 12 months, so +12).' },
+      { t: 'The 7711 receipt links to no card and lists no card benefits; the person is told the card is not one of theirs.' },
+      { t: 'The unregistered card does not block a quick add.' },
+    ],
+  },
+  {
+    id: 'F11', title: 'No warranty on file, then the person uploads one', tag: 'exp',
+    sub: 'An unknown-brand item (Shark robot vacuum, Target) gets its maker warranty from a document. Try it three ways.',
+    steps: [
+      { do: 'Upload the receipt.', files: [F('receipts/pdf-as-jpg/47-a5-target-bangor-shark-robot-vacuum.jpg')] },
+      { do: 'While it waits in New Items, attach the maker warranty to that item.', files: [F('warranties-from-receipts-photo/19-shark-ion-robot-vacuum-rv761.jpg', 'waiting'), F('warranties-from-receipts/19-shark-ion-robot-vacuum-rv761.pdf', 'waiting')], note: 'Run once with the photo and once with the PDF, from a fresh receipt each time.' },
+      { do: 'Or add the item first, then attach the document on its page (confirmation popup).', files: [F('warranties-from-receipts/19-shark-ion-robot-vacuum-rv761.pdf', 'kept')] },
+      { do: 'Or upload the document loose, with no item chosen.', files: [F('warranties-from-receipts/19-shark-ion-robot-vacuum-rv761.pdf', 'looseWaiting')] },
+    ],
+    confirm: [
+      { t: 'Waiting item: the maker warranty (1 year from 2026-08-02) is added as a suggestion marked as read from the document.' },
+      { t: 'Kept item: a popup asks "Add it as an active warranty?" with Add and Not now; Add attaches it.' },
+      { t: 'Loose: found by model, added at reduced confidence on a waiting item, or proposed for a kept item; a document with no matching item is turned away with the standard message.' },
+      { t: 'After the document, the item is ready for a quick add with the maker warranty included.' },
+    ],
+  },
+  {
+    id: 'F12', title: 'A policy on file and a warranty document that says more', tag: 'exp',
+    sub: 'Milwaukee drill: the policy on file says 60 months; the document adds a 3-year battery term.',
+    steps: [
+      { do: 'Upload the receipt.', files: [F('receipts/pdf-as-jpg/41-thermal-homedepot-milwaukee-hammer-drill.jpg')] },
+      { do: 'Attach the maker\'s warranty from the receipt set.', files: [F('warranties-from-receipts/18-milwaukee-m18-hammer-drill.pdf', 'waiting')] },
+      { do: 'Then the generic Milwaukee warranty for the same model.', files: [F('warranties/standard-power-tool-5yr.pdf', 'kept')] },
+    ],
+    confirm: [
+      { t: 'One manufacturer coverage, not two: the document replaces the one suggested from shared data.' },
+      { t: 'Parts show as their own rows (tool 5 years, battery and charger 3 years).' },
+      { t: 'The second document updates the first rather than adding a duplicate.' },
+    ],
+  },
+  {
+    id: 'F13', title: 'A store protection plan bought with the item', tag: 'exp',
+    sub: 'LG OLED TV with a Geek Squad plan: the receipt has the plan line, the plan document arrives later.',
+    steps: [
+      { do: 'Upload the receipt.', files: [F('receipts/pdf-as-jpg/15-thermal-bestbuy-tv-geek-squad.jpg')] },
+      { do: 'Attach the Geek Squad plan document (waiting item, then kept item on a second run).', files: [F('warranties-from-receipts/01-geek-squad-lg-oled-4yr.pdf', 'waiting'), F('warranties-from-receipts-photo/01-geek-squad-lg-oled-4yr.jpg', 'kept')] },
+    ],
+    confirm: [
+      { t: 'The plan line is not an item; it is a suggested plan on the TV.' },
+      { t: 'The document gives plan GS-88104471, 4 years, 2026-09-27 to 2030-09-27, price 299.99.' },
+      { t: 'Alongside it: the LG maker warranty and the card benefit; they do not replace one another.' },
+    ],
+  },
+  {
+    id: 'F14', title: 'The plan document arrives before the item exists', tag: 'exp',
+    sub: 'Out of order: the emailed plan is uploaded first.',
+    steps: [
+      { do: 'Upload the plan document with no item anywhere.', files: [F('warranties-from-receipts/01-geek-squad-lg-oled-4yr.pdf', 'looseNone')] },
+      { do: 'Upload the receipt.', files: [F('receipts/pdf-as-jpg/15-thermal-bestbuy-tv-geek-squad.jpg')] },
+      { do: 'Upload the plan document again.', files: [F('warranties-from-receipts/01-geek-squad-lg-oled-4yr.pdf', 'looseWaiting')] },
+    ],
+    confirm: [
+      { t: 'First upload: turned away with "Unable to find this item. If this is a new item, use Add Item. If not, upload the document from that item\'s detail page." Nothing is made.' },
+      { t: 'Third upload: found by model, added to the waiting TV at reduced confidence.' },
+    ],
+  },
+  {
+    id: 'F15', title: 'The item is returned after it was added', tag: 'exp',
+    sub: 'Not built end to end. Record what happens.',
+    steps: [
+      { do: 'Receipt, quick add to My Items.', files: [F('receipts/pdf-as-jpg/15-thermal-bestbuy-tv-geek-squad.jpg')] },
+      { do: 'Then the return receipt for the TV and its plan.', files: [F('receipts/pdf-as-jpg/95-thermal-bestbuy-return-tv-and-geek-squad-plan.jpg')] },
+    ],
+    confirm: [
+      { t: 'The return is recognised as a return and makes no new item.' },
+      { t: 'The kept TV and its plan are marked returned or the person is asked.', seen: 'Expected gap: returning a kept item from a receipt is not built.' },
+    ],
+  },
+];
+
+const KEY = 't2-flow-results';
+let res = {}; try { res = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { res = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(res)); } catch { } };
+const app = () => ($('app').value || 'http://localhost:4200').replace(/\/$/, '');
+const nameOf = p => p.replace(/^.*\//, '');
+const isImg = p => /\.(jpg|png)$/i.test(p);
+
+function fileChip(f) {
+  const base = nameOf(f.path).replace(/\.(pdf|jpg|png|eml)$/i, ''), links = [`<a href="sample/${f.path}" target="_blank">Open</a>`];
+  if (/^receipts\/pdf-as-jpg\/.+\.jpg$/.test(f.path)) links.push(`<a href="key-viewer.html?file=${encodeURIComponent(base)}" target="_blank">Key viewer</a>`);
+  if (/^warranties-from-receipts(-photo)?\//.test(f.path) && f.how) links.push(`<a href="warranty-viewer.html?doc=${encodeURIComponent(base)}&mode=${f.how}&fmt=${f.path.endsWith('.jpg') ? 'jpg' : 'pdf'}" target="_blank">Documents page</a>`);
+  const thumb = isImg(f.path) ? `<a href="sample/${f.path}" target="_blank"><img loading="lazy" src="sample/${f.path}" alt=""></a>` : `<div class="ic">${/\.eml$/i.test(f.path) ? 'EMAIL' : 'PDF'}</div>`;
+  return `<div class="file">${thumb}<div><b>${esc(f.path)}</b><div class="links">${links.join('')}</div></div></div>`;
+}
+const cid = (fl, i) => fl.id + '-' + (i + 1);
+function flowHtml(fl, shown) {
+  const rows = fl.confirm.map((c, i) => {
+    const id = cid(fl, i), s = res[id] || {};
+    if (shown === 'todo' && s.r) return ''; if (shown === 'fail' && s.r !== 'fail') return '';
+    const b = k => `<button class="${k}${s.r === k ? ' on ' + k : ''}" data-id="${id}" data-r="${k}">${k === 'pass' ? '✓ Yes' : '✗ No'}</button>`;
+    return `<div class="chk ${s.r || ''}" data-id="${id}"><div class="btns">${b('pass')}${b('fail')}</div><div><div>${c.t}</div>${c.seen ? `<div class="seen ${c.diff ? 'diff' : ''}"><b>Live run 2026-10-21:</b> ${esc(c.seen)}</div>` : ''}<textarea data-note="${id}" placeholder="What you saw">${esc(s.n || '')}</textarea></div></div>`;
+  }).join('');
+  if (!rows && shown !== 'all') return '';
+  const done = fl.confirm.filter((c, i) => (res[cid(fl, i)] || {}).r === 'pass').length, bad = fl.confirm.filter((c, i) => (res[cid(fl, i)] || {}).r === 'fail').length;
+  return `<details class="band" data-id="${fl.id}" ${open.has(fl.id) || shown !== 'all' ? 'open' : ''}>
+    <summary><span class="num">${fl.id}</span><h2>${esc(fl.title)}</h2><span class="tag ${fl.tag}">${fl.tag === 'run' ? 'run live' : 'not run yet'}</span><span class="prog">${done}/${fl.confirm.length} confirmed${bad ? ` · <b style="color:var(--bad)">${bad} failed</b>` : ''}</span><span class="sub">${esc(fl.sub)}</span></summary>
+    <div class="body"><h3>Steps</h3><ol class="steps">${fl.steps.map(s => `<li><div><div class="do">${esc(s.do)}</div>${s.note ? `<div class="note">${esc(s.note)}</div>` : ''}</div><div class="files">${s.files.map(fileChip).join('')}</div></li>`).join('')}</ol>
+    <h3>Confirm</h3>${rows}<div class="note" style="margin-top:8px">Look in <a href="${app()}/add" target="_blank">New Items</a>, open the item to see its coverage, then <a href="${app()}/items" target="_blank">My Items</a> after the quick add.</div></div></details>`;
+}
+const open = new Set(['F1']);
+function paint() {
+  const shown = $('filter').value;
+  $('main').innerHTML = `<details class="setup" open><summary><h2>Before you start</h2></summary><div class="body"><ul>${SETUP.map(s => `<li>${s}</li>`).join('')}</ul></div></details>` + FLOWS.map(f => flowHtml(f, shown)).join('');
+  tally();
+}
+function tally() {
+  let p = 0, f = 0, n = 0; for (const fl of FLOWS) fl.confirm.forEach((c, i) => { n++; const r = (res[cid(fl, i)] || {}).r; if (r === 'pass') p++; if (r === 'fail') f++; });
+  $('tally').textContent = `${p} ✓ · ${f} ✗ · ${n - p - f} unchecked, of ${n}`;
+}
+$('main').addEventListener('click', e => {
+  const b = e.target.closest('button[data-r]'); if (!b) return;
+  const id = b.dataset.id, k = b.dataset.r; res[id] = res[id] || {};
+  if (res[id].r === k) delete res[id].r; else res[id].r = k;
+  save(); paint();
+});
+$('main').addEventListener('input', e => { const id = e.target.dataset.note; if (!id) return; res[id] = res[id] || {}; res[id].n = e.target.value; save(); });
+$('main').addEventListener('toggle', e => { const id = e.target.dataset && e.target.dataset.id; if (id && e.target.classList.contains('band')) { if (e.target.open) open.add(id); else open.delete(id); } }, true);
+$('filter').onchange = paint;
+$('app').value = (() => { try { return localStorage.getItem('t2-app') || 'http://localhost:4200'; } catch { return 'http://localhost:4200'; } })();
+$('app').onchange = () => { try { localStorage.setItem('t2-app', $('app').value); } catch { } paint(); };
+$('collapse').onclick = () => { open.clear(); document.querySelectorAll('.band').forEach(d => d.open = false); };
+$('expand').onclick = () => document.querySelectorAll('.band').forEach(d => { d.open = true; open.add(d.dataset.id); });
+$('reset').onclick = () => { if (confirm('Forget every check and note saved in this browser?')) { res = {}; save(); paint(); } };
+$('export').onclick = () => {
+  const q = s => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"', lines = ['flow,check,result,note,expected,live_run_2026_10_21'];
+  for (const fl of FLOWS) fl.confirm.forEach((c, i) => { const s = res[cid(fl, i)] || {}; lines.push([fl.id + ' ' + fl.title, cid(fl, i), s.r === 'pass' ? 'yes' : s.r === 'fail' ? 'no' : '', s.n || '', c.t.replace(/<[^>]+>/g, ''), c.seen || ''].map(q).join(',')); });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + lines.join('\n') + '\n'], { type: 'text/csv' })); a.download = 'flow-results-' + new Date().toISOString().slice(0, 10) + '.csv'; a.click();
+};
+paint();
+</script>
+</body>
+</html>

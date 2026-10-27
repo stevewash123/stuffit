@@ -1,0 +1,91 @@
+From: The Home Depot <HomeDepot@email.homedepot.com>
+To: Sam Sample <sam.sample@example.com>
+Subject: Order # W123456781 Confirmation
+Date: Sat, 04 Apr 2026 13:45:00 -0500
+Message-ID: <homedepot-order-confirmation-01@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on The Home Depot
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5910184849773164147=="
+
+--===============5910184849773164147==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Thank you for your order!
+
+Order Number: W123456781
+Order Date: April 4, 2026
+
+Delivery
+Scheduled delivery window: Tue, Apr 14, 2026 (8am-12pm). A text will confirm =
+the day before.
+
+Delivering to
+Sam Sample
+100 Example Lane
+Testville, ME 04000
+
+Payment
+Home Depot Consumer Credit Card ending in 7777
+
+Order details
+  LG 27 cu. ft. Smart French Door Refrigerator in PrintProof Stainless Steel
+    Model # LRFXS2706S  |  Internet # 312345678  Qty: 1   $2,198.00
+  Haul Away - Old Appliance
+    Service  Qty: 1   $29.00
+
+Merchandise: $2,227.00
+Delivery: $0.00
+Estimated Tax: $122.48
+Order Total: $2,349.48
+
+
+
+--===============5910184849773164147==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on The Home Depot layout -->
+<!doctype html><html><head><meta charset=3D"utf-8"><title>THE HOME DEPOT</tit=
+le></head>
+<body style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-s=
+erif;color:#222"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"center">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"background:=
+#fff;max-width:600px">
+<tr><td style=3D"background:#f96302;color:#fff;padding:18px 24px;font-size:22=
+px;font-weight:bold">THE HOME DEPOT</td></tr>
+<tr><td style=3D"padding:24px"><h2 style=3D"margin:0 0 8px">Thank you for you=
+r order!</h2><p style=3D"font-size:14px">Order Number: <b>W123456781</b><br>O=
+rder Date: April 4, 2026</p><h3 style=3D"margin:18px 0 4px;font-size:15px">De=
+livery</h3><div style=3D"font-size:14px;line-height:1.5">Scheduled delivery w=
+indow: Tue, Apr 14, 2026 (8am-12pm). A text will confirm the day before.</div=
+><h3 style=3D"margin:18px 0 4px;font-size:15px">Delivering to</h3><div style=
+=3D"font-size:14px;line-height:1.5">Sam Sample<br>100 Example Lane<br>Testvil=
+le, ME 04000</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Payment</h3>=
+<div style=3D"font-size:14px;line-height:1.5">Home Depot Consumer Credit Card=
+ ending in 7777</div><h3 style=3D"margin:18px 0 4px;font-size:15px">Order det=
+ails</h3><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"f=
+ont-size:14px"><tr><td style=3D"padding:8px 0;border-bottom:1px solid #eee"><=
+div style=3D"font-weight:bold">LG 27 cu. ft. Smart French Door Refrigerator i=
+n PrintProof Stainless Steel</div><div style=3D"font-size:12px;color:#666">Mo=
+del # LRFXS2706S  |  Internet # 312345678</div></td><td align=3D"center" styl=
+e=3D"border-bottom:1px solid #eee">Qty 1</td><td align=3D"right" style=3D"bor=
+der-bottom:1px solid #eee">$2,198.00</td></tr><tr><td style=3D"padding:8px 0;=
+border-bottom:1px solid #eee"><div style=3D"font-weight:bold">Haul Away - Old=
+ Appliance</div><div style=3D"font-size:12px;color:#666">Service</div></td><t=
+d align=3D"center" style=3D"border-bottom:1px solid #eee">Qty 1</td><td align=
+=3D"right" style=3D"border-bottom:1px solid #eee">$29.00</td></tr></table><ta=
+ble width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-size:14p=
+x;margin-top:10px"><tr><td style=3D"padding:3px 0">Merchandise</td><td align=
+=3D"right">$2,227.00</td></tr><tr><td style=3D"padding:3px 0">Delivery</td><t=
+d align=3D"right">$0.00</td></tr><tr><td style=3D"padding:3px 0">Estimated Ta=
+x</td><td align=3D"right">$122.48</td></tr><tr><td style=3D"padding:3px 0">Or=
+der Total</td><td align=3D"right">$2,349.48</td></tr></table></td></tr>
+<tr><td style=3D"padding:16px 24px;font-size:11px;color:#777;border-top:1px s=
+olid #ddd"></td></tr>
+</table></td></tr></table></body></html>
+
+--===============5910184849773164147==--

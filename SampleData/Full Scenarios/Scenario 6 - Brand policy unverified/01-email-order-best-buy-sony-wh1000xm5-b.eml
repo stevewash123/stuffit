@@ -1,0 +1,56 @@
+From: Best Buy <orders@e.bestbuy.example>
+To: Sam Sample <stevewash123.test@gmail.com>
+Date: Sat, 03 Oct 2026 11:20:00 -0500
+Message-ID: <full-scenario-6-order@sample.invalid>
+X-Synthetic-Sample: true; fictitious data, layout modeled on Best Buy
+Subject: Your order is confirmed - Store Pickup - BBY01-806412
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8921579353031154392=="
+
+--===============8921579353031154392==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your order is on its way to the store
+
+We'll email you when your order is ready. Order Number: BBY01-806412
+
+Pick Up In Store
+Best Buy #0123 - Testville
+55 Commerce Blvd, Testville, ME 04000
+
+Pickup person
+Sam Sample
+
+Order details
+  Sony WH-1000XM5 Wireless Noise Canceling Headphones, Black
+    Model # WH1000XM5/B  |  Qty: 1   $399.99
+
+Subtotal: $399.99
+Tax: $22.00
+Total: $421.99
+
+--===============8921579353031154392==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!-- SYNTHETIC SAMPLE: fictitious data modeled on Best Buy layout --><!doctyp=
+e html><html><head><meta charset=3D"utf-8"><title>Best Buy</title></head><bod=
+y style=3D"margin:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif=
+;color:#222"><table width=3D"600" style=3D"background:#fff;max-width:600px;ma=
+rgin:auto"><tr><td style=3D"background:#0046be;color:#fff;padding:18px 24px;f=
+ont-size:22px;font-weight:bold">BEST BUY</td></tr><tr><td style=3D"padding:24=
+px"><h2 style=3D"margin:0 0 8px">Your order is on its way to the store</h2><p=
+ style=3D"font-size:14px">We'll email you when your order is ready. Order Num=
+ber: <b>BBY01-806412</b></p><div style=3D"font-size:14px;line-height:1.5">Pic=
+k Up In Store<br>Best Buy #0123 - Testville<br>55 Commerce Blvd, Testville, M=
+E 04000<br><br>Pickup person<br>Sam Sample</div><h3>Order details</h3><table =
+width=3D"100%" style=3D"font-size:14px"><tr><td>Sony WH-1000XM5 Wireless Nois=
+e Canceling Headphones, Black<br><span style=3D"color:#666">Model # WH1000XM5=
+/B | Qty: 1</span></td><td align=3D"right" valign=3D"top">$399.99</td></tr></=
+table><p style=3D"font-size:14px;margin-top:16px">Subtotal: $399.99<br>Tax: $=
+22.00<br><b>Total: $421.99</b></p></td></tr></table></body></html>
+
+--===============8921579353031154392==--

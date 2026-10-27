@@ -1,0 +1,117 @@
+
+===== Scenario 19
+operator signed in with two-step sign-in
+
+--- account 1: scenarios+1793118882@example.test brings in the Gabe's Hardware order
+  claim: store       x1 ready=False  Gabe's Hardware  A store called "Gabe's Hardware" that is not in the shared list.
+
+--- account 2: scenarios+1793118908@example.test brings in the Gabe's Hardware order
+  claim: store       x2 ready=False  Gabe's Hardware  A store called "Gabe's Hardware" that is not in the shared list.
+
+--- account 3: scenarios+1793118935@example.test brings in the Gabe's Hardware order
+  claim: store       x3 ready=True  Gabe's Hardware  A store called "Gabe's Hardware" that is not in the shared list.
+
+  approved: {'id': 'c:01a17e372ec87cb38cb6015472256082', 'outcome': 'approved', 'sharedId': '01a17e38-0a66-786a-86ad-9fc8a0e81a6d'}
+  account 1: purchase store "Gabe's Hardware" (01a17e38-0a66-786a-86ad-9fc8a0e81a6d); return suggestions [(None, '2026-11-19', 0.96)]
+  account 2: purchase store "Gabe's Hardware" (01a17e38-0a66-786a-86ad-9fc8a0e81a6d); return suggestions [(None, '2026-11-19', 0.96)]
+  account 3: purchase store "Gabe's Hardware" (01a17e38-0a66-786a-86ad-9fc8a0e81a6d); return suggestions [(None, '2026-11-19', 0.96)]
+
+--- a fourth account brings in the order from "Gabe's Hardware & Home Center"
+  claim: alias       x1 ready=True  Gabe's Hardware & Home Center  "Gabe's Hardware & Home Center" may be another name for Gabe's Hardwar
+  aliases now: ["Gabe's Hardware & Home Center"]
+
+CHECKS
+   PASS after account 1: one store claim for Gabe's Hardware with 1 account(s), ready only at 3
+   PASS after account 2: one store claim for Gabe's Hardware with 2 account(s), ready only at 3
+   PASS after account 3: one store claim for Gabe's Hardware with 3 account(s), ready only at 3
+   PASS evaluate returns the store claim
+   PASS approved: the claim is gone from the list
+   PASS account 1: its purchase now points at the shared store
+   PASS account 1: the verified 30-day return window is suggested and ticked, ending 2026-11-19
+   PASS account 2: its purchase now points at the shared store
+   PASS account 2: the verified 30-day return window is suggested and ticked, ending 2026-11-19
+   PASS account 3: its purchase now points at the shared store
+   PASS account 3: the verified 30-day return window is suggested and ticked, ending 2026-11-19
+   PASS the shared store is not any account's own
+   PASS fourth account: the longer name is matched to the shared store on its first words
+   PASS an alias claim is offered: "Gabe's Hardware & Home Center" for "Gabe's Hardware", ready at one account
+   PASS approved: the longer name is now an alias of the shared store
+   PASS approved: the alias claim is closed
+
+ 16 of 16 passed
+
+===== Scenario 20
+operator signed in with two-step sign-in
+
+--- account 1: scenarios+1793119039@example.test brings in scenario 4 (Hexaquill) and adds the brand as its own
+  warranty: applied 2 years from 2026-09-19, to 2028-09-19, and 1 parts with their own terms shared: True match: new
+  claim: brand       x1 ready=False  Hexaquill  A brand called "Hexaquill" that is not in the shared list.
+  claim: policy      x1 ready=False  Hexaquill warranty  24 months, 1 listed parts
+
+--- account 2: scenarios+1793119076@example.test brings in scenario 4 (Hexaquill) and adds the brand as its own
+  warranty: applied 2 years from 2026-09-19, to 2028-09-19, and 1 parts with their own terms shared: True match: new
+  claim: brand       x2 ready=False  Hexaquill  A brand called "Hexaquill" that is not in the shared list.
+  claim: policy      x1 ready=False  Hexaquill warranty  24 months, 1 listed parts
+  claim: policy      x1 ready=False  Hexaquill warranty  24 months, 1 listed parts
+
+--- account 3: scenarios+1793119113@example.test brings in scenario 4 (Hexaquill) and adds the brand as its own
+  warranty: applied 2 years from 2026-09-19, to 2028-09-19, and 1 parts with their own terms shared: True match: new
+  claim: brand       x3 ready=True  Hexaquill  A brand called "Hexaquill" that is not in the shared list.
+  claim: policy      x1 ready=False  Hexaquill warranty  24 months, 1 listed parts
+  claim: policy      x1 ready=False  Hexaquill warranty  24 months, 1 listed parts
+  claim: policy      x1 ready=False  Hexaquill warranty  24 months, 1 listed parts
+
+  brand approved: {'id': 'c:01a17e39bd487a4d882d759a0ef05f90', 'outcome': 'approved', 'sharedId': '01a17e3a-e7e3-7cf1-952e-9d45b96ee3b5'}
+  claim: policy      x3 ready=True  Hexaquill warranty  24 months, 1 listed parts
+  warranty approved: {'id': 'p:1:01a17e3ae7e37cf1952e9d45b96ee3b5:01a0f4e444bc7cac8724e93e1e649361:c28266f7f4b8502e93ca7db829fc89f2a3baa2e24619ae8fe648038342fa519f', 'outcome': 'approved', 'sharedId': '01a17e3b-020f-7810-a205-154c39ee46f6'}
+
+--- a fourth account brings in scenario 4 afterwards
+  maker 'Hexaquill' shared id 01a17e3a-e7e3-7cf1-952e-9d45b96ee3b5; coverage added on accept [('Hexaquill', '2026-09-19', '2028-09-19')]
+
+CHECKS
+   PASS before the brand is verified: one brand claim with 3 accounts, ready
+   PASS before the brand is verified: each account's warranty is its own claim of 1 (each is about its own private brand)
+   PASS after the brand is verified: the three warranty claims become one claim of 3 accounts, ready
+   PASS account 1: its item now points at the shared brand
+   PASS account 2: its item now points at the shared brand
+   PASS account 3: its item now points at the shared brand
+   PASS fourth account: Hexaquill is the shared brand
+   PASS fourth account: the verified 24-month Hexaquill warranty was ticked and added on its own, ending 2028-09-19
+
+ 8 of 8 passed
+
+===== Scenario 21
+operator signed in with two-step sign-in
+
+--- account 1: scenarios+1793119218@example.test adds Gabe's Credit Union Rewards Visa as its own card, then brings in the Home Depot order paid with it
+  claim: issuer      x1 ready=False  Gabe's Credit Union  A card issuer called "Gabe's Credit Union" that is not in the shared l
+
+--- account 2: scenarios+1793119244@example.test adds Gabe's Credit Union Rewards Visa as its own card, then brings in the Home Depot order paid with it
+  claim: issuer      x2 ready=False  Gabe's Credit Union  A card issuer called "Gabe's Credit Union" that is not in the shared l
+
+--- account 3: scenarios+1793119272@example.test adds Gabe's Credit Union Rewards Visa as its own card, then brings in the Home Depot order paid with it
+  claim: issuer      x3 ready=True  Gabe's Credit Union  A card issuer called "Gabe's Credit Union" that is not in the shared l
+
+  issuer approved: {'id': 'c:01a17e3c4f3e7364bd56858fd0297a00', 'outcome': 'approved', 'sharedId': '01a17e3d-25f0-739b-8b74-6f5498c6e385'}
+  claim: cardProduct x3 ready=True  Gabe's Credit Union Gabe's Rewards Visa  A card called "Gabe's Rewards Visa" from Gabe's Credit Union that is n
+  claim: cardBenefit x3 ready=True  Gabe's Credit Union Gabe's Rewards Visa: extended warranty +12 months, up to 48 months in all  extended warranty +12 months, up to 48 months in all, as accounts hold
+  card approved: {'id': 'c:01a17e3d339c7c85beb0a329d396534d', 'outcome': 'approved', 'sharedId': '01a17e3d-3703-7f1d-9999-7b1fdcf26562'}
+  benefit approved: {'id': 'c:01a17e3d3407783a811fa4195e31bd76', 'outcome': 'approved', 'sharedId': '01a17e3d-3898-7220-91e1-563d29c2bee5'}
+
+--- a fourth account picks the card from the list, then brings in the same order
+  card coverage added on accept [("Gabe's Credit Union", '2028-10-21')]
+
+CHECKS
+   PASS before the issuer is verified: one card issuer claim with 3 accounts, ready
+   PASS before the issuer is verified: no card or benefit claim yet (they wait for a shared issuer)
+   PASS after the issuer: a card claim of 3 accounts, ready
+   PASS after the issuer: a benefit claim of 3 accounts, ready (extended warranty +12 months, up to 48)
+   PASS account 1: its card now points at the shared issuer
+   PASS account 2: its card now points at the shared issuer
+   PASS account 3: its card now points at the shared issuer
+   PASS a benefit is refused without the page the card's terms were read on
+   PASS everything ready is decided: nothing left to review
+   PASS fourth account: the card is in the card list under the shared issuer
+   PASS fourth account: the card's published extended warranty was ticked and added on its own, ending 2028-10-21, without having confirmed anything
+
+ 11 of 11 passed
