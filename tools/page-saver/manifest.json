@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "StuffIt Page Saver",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Click the button (or Alt+Shift+S) to save the source of the page you are on, plus any PDFs it links to: to the local receiver if it is running, otherwise to your Downloads folder. Human-triggered, one page at a time.",
   "permissions": ["activeTab", "scripting", "downloads", "storage"],
   "host_permissions": ["http://127.0.0.1:8791/*", "https://*/*", "http://*/*"],

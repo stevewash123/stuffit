@@ -98,6 +98,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.2.2 Pick a known manufacturer policy or add a new one
   - S3.2.3 Seed initial reference data
   - S3.2.4 Verified policies for the most common cards
+  - S3.2.10 Store brands: a brand that belongs to a retailer (v2)
 - F3.3 Payment methods & card benefits (MVP)
   - S3.3.1 Add a card
   - S3.3.2 Confirm card benefits

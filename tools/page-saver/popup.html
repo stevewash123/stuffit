@@ -1,18 +1,51 @@
 <!doctype html>
 <meta charset="utf-8">
 <style>
-  body { width: 340px; margin: 0; padding: 12px; font: 13px system-ui, sans-serif; }
+  body { width: 400px; margin: 0; padding: 12px; font: 13px system-ui, sans-serif; }
   #page { color: #555; margin: 0 0 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   textarea { width: 100%; box-sizing: border-box; height: 78px; font: inherit; }
+  input[type=text], input[type=password], select { width: 100%; box-sizing: border-box; font: inherit; padding: 4px; }
   .row { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
   button { padding: 6px 14px; font: inherit; }
   #msg { color: #2e7d32; margin-top: 8px; word-break: break-all; }
-  #msg.err { color: #c62828; }
+  #msg.err, .err { color: #c62828; }
   small { color: #777; }
+  hr { border: 0; border-top: 1px solid #ddd; margin: 14px 0 10px; }
+  h4 { margin: 10px 0 4px; }
+  .opt { display: block; margin: 4px 0; padding: 4px 6px; border: 1px solid #ddd; border-radius: 4px; }
+  .opt q { color: #555; display: block; font-size: 12px; }
+  .good { color: #2e7d32; }
+  #log { color: #777; font-size: 12px; max-height: 70px; overflow: auto; white-space: pre-wrap; }
+  .confirm { background: #1976d2; color: #fff; border: 0; border-radius: 4px; }
+  .confirm:disabled { background: #9bb; }
+  details { margin-top: 8px; }
 </style>
 <p id="page"></p>
 <label for="note">What caught your eye? <small>(optional: where the AI should start)</small></label>
 <textarea id="note" autofocus placeholder="e.g. 3-year warranty on NUC; PDF card linked under Warranty terms"></textarea>
 <div class="row"><button id="save">Save page</button><small>Enter saves, Shift+Enter adds a line</small></div>
 <div id="msg" role="status"></div>
+
+<hr>
+<b>Confirm into StuffIt</b>
+<div class="row"><input id="site" type="text" aria-label="Saved site folder"><button id="process">Read saved pages</button></div>
+<div id="log"></div>
+<div id="found" hidden>
+  <h4>Store or brand</h4>
+  <input id="partyq" type="text" placeholder="Search by name if the right one is not listed">
+  <select id="party" size="4"></select>
+  <div id="sellerBox"></div>
+  <div id="makerBox"></div>
+  <p><small>Pressing Confirm states that these values are correct for this store or brand, taken from its own site. They are written to the live reference data and marked Verified.</small></p>
+  <div class="row"><button id="confirm" class="confirm" disabled>Confirm and update StuffIt</button></div>
+</div>
+<div id="out"></div>
+
+<details id="setup">
+  <summary>StuffIt connection</summary>
+  <p><small>The address of the StuffIt API (the part before /api) and the key made in Admin &gt; Extension keys.</small></p>
+  <input id="api" type="text" placeholder="https://your-stuffit-api.onrender.com">
+  <input id="token" type="password" placeholder="sit_... key" style="margin-top:6px">
+  <div class="row"><button id="saveSetup">Save and test</button><span id="setupMsg"></span></div>
+</details>
 <script src="popup.js"></script>

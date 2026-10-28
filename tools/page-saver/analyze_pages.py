@@ -155,8 +155,13 @@ Return ONLY a JSON object, no prose:
  "products": [string],            // products, product lines or models the page says the warranty applies to
  "facts": [ { "what": string, "value": string, "applies_to": string|null, "page": number|null, "quote": string } ],
  "links": [ { "url": string, "why": string, "kind": "warranty_pdf" | "terms" | "registration" | "claim" | "extended_plan" | "article" | "other", "priority": 1|2|3 } ],
- "gaps": [string]                 // what the page does not say that the person will want (e.g. when the warranty starts)
+ "gaps": [string],                // what the page does not say that the person will want (e.g. when the warranty starts)
+ "policy": {                      // the company's own standard terms, only when the page states them plainly; otherwise null
+   "seller": { "return_days": number|null, "return_from_delivery": true|false|null, "restocking_fee_percent": number|null, "conditions": string|null, "quote": string } | null,
+   "manufacturer": { "term_months": number|null, "start_rule": "purchase_date"|"registration"|null, "conditions": string|null, "quote": string } | null
+ }
 }
+"policy.seller" is the store's general return window for ordinary purchases (not one product, not a holiday extension, not a member-only rule). "policy.manufacturer" is the maker's standard warranty length (one year = 12 months, lifetime = null with the word in conditions). Each block's "quote" is the exact sentence the number came from. If the page gives several different figures for different things, give null rather than pick one. Conditions are short plain words (e.g. "unopened or defective items; receipt required"), never copied boilerplate.
 Facts are things like the length of the warranty (and from when it starts), what is covered or excluded, conditions (proof of purchase, registration deadlines), whether it can be extended, claim steps, who is covered.
 Every fact's "quote" must be copied exactly, character for character, from the page text. If you cannot quote it, leave the fact out. Never guess a number of months or years.
 Links must be copied exactly from the list given. Choose the ones most likely to lead to official warranty terms, PDFs of them, extended plans, registration or claims. Priority 1 = almost certainly warranty terms. Skip navigation, social, legal boilerplate and shopping links.
@@ -205,7 +210,99 @@ def check(result: dict, text: str, links: list, is_doc: bool = False) -> dict:
         else:
             dropped += 1
     kept.sort(key=lambda l: l.get("priority", 3))
-    return {**result, "facts": facts, "links": kept, "dropped_unverified": dropped}
+    policy, dropped = check_policy(result.get("policy"), page_norm, flat, is_doc, dropped)
+    return {**result, "facts": facts, "links": kept, "policy": policy, "dropped_unverified": dropped}
+
+
+WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten", 12: "twelve",
+         14: "fourteen", 15: "fifteen", 20: "twenty", 21: "twentyone", 30: "thirty", 45: "fortyfive", 60: "sixty", 90: "ninety"}
+
+
+def number_in_quote(n, quote: str, months: bool = False) -> bool:
+    """The number the model reports must really appear in its quote, as digits or a word ("one year" = 12 months)."""
+    if n is None:
+        return True
+    q = squash(quote)
+    want = {n}
+    if months and n % 12 == 0:
+        want.add(n // 12)
+    for v in want:
+        v = int(v) if float(v) == int(v) else v
+        if re.search(r"(?<!\d)" + re.escape(str(v)) + r"(?!\d)", re.sub(r"[^a-z0-9]+", " ", (quote or "").lower())):
+            return True
+        if isinstance(v, int) and WORDS.get(v) and WORDS[v] in q:
+            return True
+    return False
+
+
+def check_policy(policy, page_norm: str, flat: str, is_doc: bool, dropped: int):
+    """Keep a policy block only if its sentence is on the page and says the number reported. Nothing else reaches the database."""
+    out = {"seller": None, "manufacturer": None}
+    for kind, nums in (("seller", ("return_days", "restocking_fee_percent")), ("manufacturer", ("term_months",))):
+        b = (policy or {}).get(kind) if isinstance(policy, dict) else None
+        if not isinstance(b, dict):
+            continue
+        q = b.get("quote") or ""
+        on_page = (len(squash(q)) >= 12 and squash(q) in flat) if is_doc else quote_on_page(q, page_norm)
+        if not on_page or not all(number_in_quote(b.get(k), q, months=(k == "term_months")) for k in nums) \
+                or not any(b.get(k) is not None for k in (*nums, "conditions", "return_from_delivery", "start_rule")):
+            dropped += 1
+            continue
+        out[kind] = b
+    return out, dropped
+
+
+def candidates(site_dir: Path):
+    """What the saved pages and documents of one site say about the company's own terms: one entry per verified block, with where it came from."""
+    out = {"seller": [], "manufacturer": [], "sources": []}
+    for a in sorted((site_dir / "pagesource").glob("*.analysis.json")) + sorted(site_dir.glob("*.analysis.json")):
+        d = json.loads(a.read_text(encoding="utf-8"))
+        url = d.get("url") or ""
+        out["sources"].append({"url": url, "title": d.get("title"), "kind": d.get("page_kind"), "company": d.get("company"), "facts": len(d.get("facts", []))})
+        for kind in ("seller", "manufacturer"):
+            b = (d.get("policy") or {}).get(kind)
+            if b and url:
+                out[kind].append({**b, "source_url": url, "title": d.get("title")})
+    return out
+
+
+def analyze_site(site_dir: Path, model: str, key: str, everything: bool = False, log=print):
+    """Read every saved page and document of one site that has no analysis yet (or an old one without the policy block)."""
+    def stale(out: Path):
+        if everything or not out.exists():
+            return True
+        return "policy" not in json.loads(out.read_text(encoding="utf-8"))
+    for page in sorted((site_dir / "pagesource").glob("*.html")):
+        out = page.with_suffix(".analysis.json")
+        if not stale(out):
+            continue
+        meta, text, links = read_saved(page)
+        log(f"reading {page.name} ({len(text)} chars, {len(links)} links)")
+        try:
+            result = check(ask(model, meta, text, links, key), text, links)
+        except Exception as e:
+            log(f"  failed: {e}")
+            continue
+        out.write_text(json.dumps({**meta, **result, "page_file": page.name, "model": model}, indent=2, ensure_ascii=False), encoding="utf-8")
+        log(f"  {len(result['facts'])} fact(s), {len(result['links'])} link(s), {result['dropped_unverified']} dropped")
+    for doc in sorted(site_dir.glob("*")):
+        if doc.suffix.lower() not in (".pdf", ".docx", ".doc", ".rtf"):
+            continue
+        out = doc.with_name(doc.name + ".analysis.json")
+        if not stale(out):
+            continue
+        log(f"reading {doc.name}")
+        try:
+            meta, text = read_document(doc)
+            text, kept_pages, total_pages = select_pages(text, MAX_DOC_TEXT)
+            meta["pages_read"] = (f"{len(kept_pages)} of {total_pages} pages: " + ", ".join(map(str, kept_pages))) if kept_pages is not None else f"all {total_pages} pages"
+            result = check(ask(model, meta, text, [], key), text, [], is_doc=True)
+        except Exception as e:
+            log(f"  skipped: {e}")
+            continue
+        out.write_text(json.dumps({**meta, **result, "file": doc.name, "model": model}, indent=2, ensure_ascii=False), encoding="utf-8")
+        log(f"  {len(result['facts'])} fact(s), {result['dropped_unverified']} dropped")
+    review(site_dir)
 
 
 def review(site_dir: Path):
@@ -251,42 +348,9 @@ def main(argv):
     key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not key:
         sys.exit("Set ANTHROPIC_API_KEY first (it is only read from the environment).")
-    sites = set()
-    for page in sorted(root.glob("*/pagesource/*.html")):
-        out = page.with_suffix(".analysis.json")
-        sites.add(page.parent.parent)
-        if out.exists() and not everything:
-            continue
-        meta, text, links = read_saved(page)
-        print("reading", page.relative_to(root), f"({len(text)} chars, {len(links)} links)")
-        try:
-            result = check(ask(model, meta, text, links, key), text, links)
-        except Exception as e:
-            print("  failed:", e)
-            continue
-        out.write_text(json.dumps({**meta, **result, "page_file": page.name, "model": model}, indent=2, ensure_ascii=False), encoding="utf-8")
-        print(f"  {len(result['facts'])} fact(s), {len(result['links'])} link(s), {result['dropped_unverified']} dropped")
-    for doc in sorted(root.glob("*/*")):
-        if doc.suffix.lower() not in (".pdf", ".docx", ".doc", ".rtf"):
-            continue
-        out = doc.with_name(doc.name + ".analysis.json")
-        sites.add(doc.parent)
-        if out.exists() and not everything:
-            continue
-        print("reading", doc.relative_to(root))
-        try:
-            meta, text = read_document(doc)
-            text, kept_pages, total_pages = select_pages(text, MAX_DOC_TEXT)
-            meta["pages_read"] = (f"{len(kept_pages)} of {total_pages} pages: " + ", ".join(map(str, kept_pages))) if kept_pages is not None else f"all {total_pages} pages"
-            result = check(ask(model, meta, text, [], key), text, [], is_doc=True)
-        except Exception as e:
-            print("  skipped:", e)
-            continue
-        out.write_text(json.dumps({**meta, **result, "file": doc.name, "model": model, }, indent=2, ensure_ascii=False), encoding="utf-8")
-        print(f"  {len(result['facts'])} fact(s), {result['dropped_unverified']} dropped")
-    for s in sites:
-        review(s)
-        print("wrote", s / "REVIEW.md")
+    for site in sorted(d for d in root.iterdir() if d.is_dir()):
+        analyze_site(site, model, key, everything)
+        print("wrote", site / "REVIEW.md")
 
 
 if __name__ == "__main__":
