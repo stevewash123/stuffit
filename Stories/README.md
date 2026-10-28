@@ -110,6 +110,12 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.4.1 Renter's or homeowner's insurance policy
   - S3.4.2 Plans from third-party warranty companies
   - S3.4.3 Add the plan that was bought with an item
+  - S3.4.4 A warranty company's page leads to its plans
+  - S3.4.5 A company's plan types are shared data
+  - S3.4.6 Waiting period, monthly billing and open-ended renewal
+  - S3.4.7 A plan that covers a home and its systems
+  - S3.4.8 Plan limits, service fees and asking for service
+  - S3.4.9 State-specific versions of a plan agreement
 
 ## E4 Reminders & Notifications (MVP)
 - F4.1 Expiry reminders (MVP)
@@ -173,6 +179,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S5.4.17 Question bank: ask only what matters (v2)
   - S5.4.18 Describe what happened (free-text intake) (future)
   - S5.4.20 Offer to mark an item refunded when a return receipt arrives (v2)
+  - S5.4.21 Point to the maker's own warranty and service tools (v2)
 - F5.5 Returns that work for people with disabilities (future, tentative, speculative)
   - S5.5.1 Question: what would help people with disabilities?
   - S5.5.2 Share my return story
