@@ -111,7 +111,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.4.2 Plans from third-party warranty companies
   - S3.4.3 Add the plan that was bought with an item
   - S3.4.4 A warranty company's page leads to its plans
-  - S3.4.5 A company's plan types are shared data
+  - S3.4.5 Plan types are shared data, whoever sells them
   - S3.4.6 Waiting period, monthly billing and open-ended renewal
   - S3.4.7 A plan that covers a home and its systems
   - S3.4.8 Plan limits, service fees and asking for service

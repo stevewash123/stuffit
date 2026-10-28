@@ -1,7 +1,8 @@
 // StuffIt Page Saver: save the rendered source of the current tab.
 // 1) POST to the local receiver (receiver.py) which writes into the StuffIt folder.
 // 2) If it is not running, download into Downloads/StuffIt-pages/<host>/ instead.
-const RECEIVER = "http://127.0.0.1:8765/save";
+const DOC_URL = /\.(pdf|docx?|rtf)($|[?#])/i;
+const RECEIVER = "http://127.0.0.1:8791/save";
 
 const clean = (s, max = 80) => (String(s || "").replace(/[^A-Za-z0-9._-]+/g, "_").replace(/^_+|_+$/g, "").slice(0, max)) || "page";
 
@@ -21,24 +22,28 @@ async function pageOf(tabId) {
     target: { tabId },
     func: () => ({
       url: location.href, title: document.title, html: document.documentElement.outerHTML,
-      pdfs: [...new Set([...document.querySelectorAll("a[href]")].map((a) => a.href).filter((h) => /^https?:/i.test(h) && /\.pdf($|[?#])/i.test(h)))]
+      pdfs: [...new Set([...document.querySelectorAll("a[href]")].map((a) => a.href).filter((h) => /^https?:/i.test(h) && /\.(pdf|docx?|rtf)($|[?#])/i.test(h)))]
     })
   });
   return r.result;
 }
 
-const isPdfUrl = (u) => /\.pdf($|[?#])/i.test(u);
+const isPdfUrl = (u) => DOC_URL.test(u);   // a PDF or Word document
 
-// Fetch a PDF and hand it to the receiver (or Downloads). Skips anything that is not really a PDF.
+// Fetch a PDF or Word document and hand it to the receiver (or Downloads). Skips anything that is not really one:
+// the first bytes must match the type the address claims (a login page saved as ".pdf" is refused).
+const MAGIC = { pdf: [0x25, 0x50, 0x44, 0x46], docx: [0x50, 0x4b, 0x03, 0x04], doc: [0xd0, 0xcf, 0x11, 0xe0], rtf: [0x7b, 0x5c, 0x72, 0x74] };
 async function savePdf(url, host) {
-  const name = clean(decodeURIComponent(new URL(url).pathname.split("/").pop() || "document")).replace(/\.pdf$/i, "") + ".pdf";
+  const base = decodeURIComponent(new URL(url).pathname.split("/").pop() || "document");
+  const ext = (base.match(/\.(pdf|docx?|rtf)$/i) || [, "pdf"])[1].toLowerCase();
+  const name = clean(base).replace(/\.(pdf|docx?|rtf)$/i, "") + "." + ext;
   const res = await fetch(url, { credentials: "include" });
   if (!res.ok) throw new Error("HTTP " + res.status);
   const bytes = new Uint8Array(await res.arrayBuffer());
-  if (String.fromCharCode(...bytes.slice(0, 4)) !== "%PDF") throw new Error("not a PDF");
+  if (!MAGIC[ext].every((v, i) => bytes[i] === v)) throw new Error("not a real ." + ext + " file");
   try {
     const r = await fetch(RECEIVER.replace("/save", "/save-file"), {
-      method: "POST", headers: { "content-type": "application/pdf", "x-host": host, "x-name": name }, body: bytes
+      method: "POST", headers: { "content-type": "application/octet-stream", "x-host": host, "x-name": name, "x-url": encodeURIComponent(url) }, body: bytes
     });
     if (!r.ok) throw new Error("HTTP " + r.status);
     return (await r.json()).path;

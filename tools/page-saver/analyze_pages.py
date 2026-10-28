@@ -2,7 +2,7 @@
 
     python analyze_pages.py [OfficialDocs folder] [--all] [--model MODEL]
 
-For every OfficialDocs/<site>/pagesource/*.html with no .analysis.json beside it (or all, with --all):
+For every OfficialDocs/<site>/pagesource/*.html, and every PDF or .docx saved in OfficialDocs/<site>/, with no .analysis.json beside it (or all, with --all):
   - takes the page text and its links (never runs the page; scripts and styles are dropped),
   - starts from your note if you left one in the popup,
   - asks the model for the warranty facts (each with the sentence it relied on), the links worth fetching, and what kind of page it is,
@@ -10,12 +10,14 @@ For every OfficialDocs/<site>/pagesource/*.html with no .analysis.json beside it
   - writes <page>.analysis.json, then rebuilds OfficialDocs/<site>/REVIEW.md: facts to check, links to open, PDFs already saved.
 Nothing is fetched and nothing is trusted: you open the links and confirm. Needs ANTHROPIC_API_KEY in the environment.
 """
-import json, os, re, sys, urllib.request
+import json, logging, os, re, sys, urllib.request, zipfile
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
-MAX_TEXT, MAX_LINKS = 60_000, 300
+logging.getLogger("pypdf").setLevel(logging.ERROR)   # font warnings that do not matter here
+MAX_TEXT, MAX_DOC_TEXT, MAX_LINKS = 60_000, 150_000, 300
 DEFAULT_MODEL = "claude-sonnet-5-5"
 
 
@@ -73,6 +75,66 @@ def read_saved(path: Path):
     return meta, text, links
 
 
+def read_document(path: Path):
+    """Text of a PDF (with [page N] markers) or .docx, plus where it came from (the .source.txt the extension leaves beside it)."""
+    ext = path.suffix.lower()
+    if ext == ".pdf":
+        try:
+            import pypdf
+        except ImportError:
+            raise RuntimeError("reading PDFs needs pypdf: pip install pypdf")
+        parts = [f"[page {i}]" + chr(10) + (pg.extract_text() or "") for i, pg in enumerate(pypdf.PdfReader(str(path)).pages, 1)]
+        text = chr(10).join(parts)
+        if len(re.sub(r"\[page \d+\]|\s", "", text)) < 50:
+            raise RuntimeError("no text in this PDF (a scan?): it needs OCR first")
+    elif ext == ".docx":
+        with zipfile.ZipFile(path) as z:
+            root = ET.fromstring(z.read("word/document.xml"))
+        w = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+        paras = ["".join(t.text or "" for t in para.iter(w + "t")) for para in root.iter(w + "p")]
+        text = chr(10).join(x for x in paras if x.strip())
+    else:
+        raise RuntimeError(f"{ext} files are not read: save it as .docx or PDF first")
+    text = re.sub(r"[ \t]+", " ", text)
+    meta = {"title": path.name, "kind": "document"}
+    src = path.with_name(path.name + ".source.txt")
+    if src.exists():
+        meta["url"] = src.read_text(encoding="utf-8").split()[0]
+    return meta, text
+
+
+STOP = set("the and of to a in is or for if your you any this that with by be are not as on from at will".split())
+KEYS = ("warranty", "warranties", "defect", "period", "months", "years", "exclu", "void", "coverage", "covered", "claim", "proof of purchase", "repair", "replace", "limited", "registration", "transfer")
+
+
+def select_pages(text: str, limit: int):
+    """A long document (the ASUS card is 264 pages in many languages) cannot all be sent. Keep the pages that read as English
+    and talk most about warranty terms, in their original order, until the limit. Returns (text, pages kept, pages total)."""
+    chunks = re.split(r"(?=^\[page \d+\]$)", text, flags=re.M)
+    chunks = [c for c in chunks if c.strip()]
+    if len(text) <= limit:
+        return text, None, len(chunks)
+    scored = []
+    for i, c in enumerate(chunks):
+        words = re.findall(r"[a-zA-Z']+", c.lower())
+        english = sum(w in STOP for w in words) / max(len(words), 1)
+        hits = sum(c.lower().count(k) for k in KEYS)
+        scored.append((hits * (1 if english > 0.12 else 0), i))
+    keep, used = set(), 0
+    for score, i in sorted(scored, reverse=True):
+        if score <= 0 or used + len(chunks[i]) > limit:
+            continue
+        keep.add(i)
+        used += len(chunks[i])
+    nums = [int(re.match(r"\[page (\d+)\]", chunks[i]).group(1)) for i in sorted(keep)]
+    return "".join(chunks[i] for i in sorted(keep)), nums, len(chunks)
+
+
+def squash(s: str) -> str:
+    """Letters and digits only: a PDF breaks lines and hyphens anywhere, so compare without them."""
+    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+
+
 def norm(s: str) -> str:
     s = s.lower().replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
     s = re.sub(r"[‐-―]", "-", s)
@@ -91,14 +153,15 @@ Return ONLY a JSON object, no prose:
  "page_kind": "warranty_terms" | "warranty_index" | "support_article" | "product_page" | "registration_or_claim" | "other",
  "company": string|null,
  "products": [string],            // products, product lines or models the page says the warranty applies to
- "facts": [ { "what": string, "value": string, "applies_to": string|null, "quote": string } ],
+ "facts": [ { "what": string, "value": string, "applies_to": string|null, "page": number|null, "quote": string } ],
  "links": [ { "url": string, "why": string, "kind": "warranty_pdf" | "terms" | "registration" | "claim" | "extended_plan" | "article" | "other", "priority": 1|2|3 } ],
  "gaps": [string]                 // what the page does not say that the person will want (e.g. when the warranty starts)
 }
 Facts are things like the length of the warranty (and from when it starts), what is covered or excluded, conditions (proof of purchase, registration deadlines), whether it can be extended, claim steps, who is covered.
 Every fact's "quote" must be copied exactly, character for character, from the page text. If you cannot quote it, leave the fact out. Never guess a number of months or years.
 Links must be copied exactly from the list given. Choose the ones most likely to lead to official warranty terms, PDFs of them, extended plans, registration or claims. Priority 1 = almost certainly warranty terms. Skip navigation, social, legal boilerplate and shopping links.
-If the person left a note, begin with what it points at, and say in "gaps" if you could not find it."""
+If the person left a note, begin with what it points at, and say in "gaps" if you could not find it.
+When the text is a document (a PDF or Word file) and not a web page: there are no links, so return "links": []; "page" is the number from the nearest [page N] marker above the quote; if it repeats in several languages, report the English text only; limits, exclusions, what voids the warranty, how long it lasts and when it starts matter most."""
 
 
 def ask(model: str, meta: dict, text: str, links: list, key: str) -> dict:
@@ -122,12 +185,15 @@ def ask(model: str, meta: dict, text: str, links: list, key: str) -> dict:
     return json.loads(m.group(0))
 
 
-def check(result: dict, text: str, links: list) -> dict:
+def check(result: dict, text: str, links: list, is_doc: bool = False) -> dict:
     """Keep only what the page backs up: facts whose sentence is on it, links it really has."""
-    page_norm, known = norm(text), {l["url"]: l["label"] for l in links}
+    clean_text = re.sub(r"\[page \d+\]", " ", text)
+    page_norm, flat, known = norm(text), squash(clean_text), {l["url"]: l["label"] for l in links}
     facts, dropped = [], 0
     for f in result.get("facts") or []:
-        if isinstance(f, dict) and quote_on_page(f.get("quote", ""), page_norm):
+        q = f.get("quote", "") if isinstance(f, dict) else ""
+        ok = (len(squash(q)) >= 12 and squash(q) in flat) if is_doc else quote_on_page(q, page_norm)
+        if ok:
             facts.append(f)
         else:
             dropped += 1
@@ -148,17 +214,19 @@ def review(site_dir: Path):
     have = {p.name.lower() for p in site_dir.glob("*.pdf")}
     lines, seen = [f"# {site_dir.name}: what the saved pages say", "", "Generated by analyze_pages.py. Open the page or PDF and check before you rely on any of it.", ""], set()
     todo = []
-    for a in sorted(src.glob("*.analysis.json")):
+    for a in sorted(src.glob("*.analysis.json")) + sorted(site_dir.glob("*.analysis.json")):
         d = json.loads(a.read_text(encoding="utf-8"))
-        lines += [f"## {d.get('title') or a.name}", f"{d.get('url', '')}  ({d.get('page_kind', '?')}; {d.get('company') or 'company not named'})"]
+        lines += [f"## {d.get('title') or a.name}", f"{d.get('url') or 'address unknown: put it in ' + d.get('file', '') + '.source.txt'}  ({d.get('page_kind', '?')}; {d.get('company') or 'company not named'})"]
         if d.get("note"):
             lines.append(f"Your note: {d['note']}")
         if d.get("products"):
             lines.append("Products: " + "; ".join(d["products"]))
         for f in d.get("facts", []):
-            lines.append(f"- **{f.get('what')}**: {f.get('value')}" + (f" ({f['applies_to']})" if f.get("applies_to") else "") + f"\n  > {f.get('quote')}")
+            lines.append(f"- **{f.get('what')}**: {f.get('value')}" + (f" ({f['applies_to']})" if f.get("applies_to") else "") + (f", page {f['page']}" if f.get("page") else "") + f"\n  > {f.get('quote')}")
         for g in d.get("gaps", []):
             lines.append(f"- Not on this page: {g}")
+        if d.get("pages_read"):
+            lines.append(f"- Read: {d['pages_read']}")
         if d.get("dropped_unverified"):
             lines.append(f"- {d['dropped_unverified']} item(s) the model offered were dropped: not found on the page.")
         lines.append("")
@@ -198,6 +266,24 @@ def main(argv):
             continue
         out.write_text(json.dumps({**meta, **result, "page_file": page.name, "model": model}, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"  {len(result['facts'])} fact(s), {len(result['links'])} link(s), {result['dropped_unverified']} dropped")
+    for doc in sorted(root.glob("*/*")):
+        if doc.suffix.lower() not in (".pdf", ".docx", ".doc", ".rtf"):
+            continue
+        out = doc.with_name(doc.name + ".analysis.json")
+        sites.add(doc.parent)
+        if out.exists() and not everything:
+            continue
+        print("reading", doc.relative_to(root))
+        try:
+            meta, text = read_document(doc)
+            text, kept_pages, total_pages = select_pages(text, MAX_DOC_TEXT)
+            meta["pages_read"] = (f"{len(kept_pages)} of {total_pages} pages: " + ", ".join(map(str, kept_pages))) if kept_pages is not None else f"all {total_pages} pages"
+            result = check(ask(model, meta, text, [], key), text, [], is_doc=True)
+        except Exception as e:
+            print("  skipped:", e)
+            continue
+        out.write_text(json.dumps({**meta, **result, "file": doc.name, "model": model, }, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"  {len(result['facts'])} fact(s), {result['dropped_unverified']} dropped")
     for s in sites:
         review(s)
         print("wrote", s / "REVIEW.md")
