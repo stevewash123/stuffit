@@ -16,7 +16,7 @@
 | 7 | Test1 | Open Settings, then Notifications | A list of notification types in groups, each with email and in-app toggles. Mandatory ones are locked |
 | 8 | Test1 | Turn email off for one optional type, leave another on, reload the page | Both settings persisted after the reload |
 | 9 | Test1 | Open Settings, Email | The email address shown is the Test1 address; no way shown to break the account by clearing it |
-| 10 | Test1 | Open the To do page (/todos) and the Returns page | Both load without error; empty states are friendly |
+| 10 | Test1 | Open the To do page (/todos) and the Returns page | To do loads with a friendly empty state. Returns loads without error but is a labelled first design ("First design: example data") showing sample returns, not Test1's; see Scenarios 29 and 32 for the real ones |
 | 11 | Test1 | Open a reminder email if one has arrived in the inbox (the app may send nothing yet; if so, note "none arrived") | If one exists: it names the item, the date is right, it has an unsubscribe link |
 | 12 | Test1 | If a reminder email arrived, open its unsubscribe link | A page confirms which notification type was turned off. Sign in and check Settings, Notifications agrees |
 | 13 | Test1 | Open Settings, Privacy and find **Export my data** | An export starts or downloads; record the file name and type |

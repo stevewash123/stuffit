@@ -36,7 +36,12 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 27 | Scenario 27 - Cards, notifications and export | n/a (browser plan) | Credit cards, notification and email settings, data export, and account deletion |
 | 28 | Scenario 28 - Administrator sign-in and shared data | n/a (browser plan) | An administrator enrols two-step sign-in, signs in with a code, and uses the Shared data page; an ordinary account is refused; claims are checked by API only |
 
-Scenarios 22 to 28 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
+| 29 | Scenario 29 - Returns in progress | n/a (browser plan) | Start a return, cancel one, group the working list by store, mark returned with a partial refund, undo with "I have it again"; another account never sees it |
+| 30 | Scenario 30 - Insurance policy and items | n/a (browser plan) | A renter's policy with limits, items left out or linked, the over-limit note and the item-page Insurance card; the arithmetic is checked by hand |
+| 31 | Scenario 31 - Extended warranty plan | n/a (browser plan) | A third-party plan covering several items, yearly cost arithmetic, files, ending the plan switches it off on every item |
+| 32 | Scenario 32 - Reminders and to-dos | n/a (browser plan) | To-dos added on an item, shown on the To do page, done, dismissed, not applicable; never shown to another account |
+
+Scenarios 22 to 32 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
 The shared-data facts (which stores, brands and policies are verified) were read from the development database on 2026-10-24. If that data is re-seeded, re-check the "in shared data / verified" rows before relying on a scenario.
 
