@@ -1,0 +1,1296 @@
+{
+  "company": {
+    "name": "Beautyrest",
+    "website": "https://www.beautyrest.com/",
+    "aliases": [
+      "Beautyrest.com",
+      "BeautySleep® by Beautyrest®",
+      "Beautysleep.com",
+      "Simmons Bedding Company, LLC",
+      "Serta Simmons Bedding, LLC",
+      "Simmons®",
+      "Beauty Sleep®"
+    ],
+    "roles": [
+      "direct seller (beautyrest.com and beautysleep.com)",
+      "brand owner/manufacturer whose mattresses are also sold by authorized retailers"
+    ],
+    "parent_company": null,
+    "parent_company_note": "No page states a parent company. Pages print 'Simmons Bedding Company, LLC' (copyright line, warranties-after-march) and 'Serta Simmons Bedding, LLC' (beautysleep warranty page). See unclear.",
+    "legal_names_printed": [
+      {
+        "name": "Simmons Bedding Company, LLC",
+        "quote": "© 2026 Simmons Bedding Company, LLC. All rights reserved.",
+        "source_url": "https://www.beautyrest.com/pages/promotions-beautyrest"
+      },
+      {
+        "name": "Serta Simmons Bedding, LLC",
+        "quote": "This warranty is extended only to the original purchaser from Serta Simmons Bedding, LLC or its authorized dealers.",
+        "source_url": "https://www.beautyrest.com/pages/warranty-possibly-beautysleep"
+      }
+    ],
+    "brands": [
+      "Beautyrest®",
+      "Beautyrest Black®",
+      "BeautySleep® by Beautyrest®",
+      "baselogic®"
+    ],
+    "brands_named_on_site": [
+      "Simmons®",
+      "Serta (named in the warranty claim sentence)",
+      "Sleeptracker® (third-party, used under license)"
+    ],
+    "brands_quote": "Beautyrest® and all other Beautyrest trademarks, service marks, trade names, trade dress, and other branding devices (collectively, “Marks”) that appear on the Sites and/or Beautyrest Products (collectively the “Beautyrest Marks”)",
+    "brands_quote_source_url": "https://www.beautyrest.com/pages/terms",
+    "claim_url": "https://forms.sertasimmons.com/team/cx/beautyrest-warranty-form",
+    "return_url": "https://beautyrest.liquidonate.com",
+    "return_form_url": "https://forms.sertasimmons.com/team/cx/beautyrestcom-return-form",
+    "claim_phone": "877-298-4955",
+    "claim_email": "warranty@beautyrest.com",
+    "support_email": "support@beautyrest.com",
+    "claim_quote": "reach out to us directly at either 877-298-4955 or via email at warranty@beautyrest.com.",
+    "claim_source_url": "https://www.beautyrest.com/pages/warranty",
+    "address": "Beautyrest, 2451 Industry Avenue, Doraville, GA 30360",
+    "address_quote": "Beautyrest 2451 Industry Avenue Doraville, GA 30360",
+    "address_source_url": "https://www.beautyrest.com/pages/terms",
+    "phone_hours_quote": "Contact our customer experience team is available at 1-877-298-4955 Monday-Thursday 10am–7pm EST Friday 10am–3pm EST",
+    "phone_hours_source_url": "https://www.beautyrest.com/pages/contact-us"
+  },
+  "returns": {
+    "general": {
+      "return_days": 100,
+      "no_returns": false,
+      "restocking_fee_percent": null,
+      "applies_to": "direct: purchases made directly through Beautyrest.com and Beautysleep.com; retailer purchases follow the retailer's policy",
+      "conditions": "Full refund inside the 100-Night Sleep Trial counted from the day the item arrives. Limit of one return or exchange per household per 12 months. Return runs through the LiquiDonate portal using the order number. No restocking fee is mentioned on the pages read.",
+      "quote": "That’s why every Beautyrest.com product comes with our 100-Night Sleep Trial — starting the day it arrives.",
+      "who_pays_shipping": "Beautyrest (return is free)",
+      "who_pays_shipping_quote": "All returns for Beautyrest.com orders are free!",
+      "who_pays_shipping_quote_source_url": "https://help.beautyrest.com/article/1149-do-i-need-to-pay-to-return-my-beautyrest-com-product",
+      "refund_method": "original form of payment",
+      "refund_method_quote": "Refunds are issued back to the original form of payment once we receive confirmation that the return shipment or pickup has been completed.",
+      "refund_timing_quote": "Please allow 5-10 business days for refunds to be processed by your financial institution.",
+      "from_quote": "To return a product bought directly on beautyrest.com within the first 100 days from delivery, please fill out our return link HERE.",
+      "from_quote_source_url": "https://help.beautyrest.com/article/1149-do-i-need-to-pay-to-return-my-beautyrest-com-product",
+      "household_limit_quote": "Limit: One return or exchange per household per 12 months.",
+      "effective_date": null,
+      "effective_date_note": "No effective date on the returns page. Help articles show 'Last updated on September 16, 2026'. Terms of Service (which incorporate the 100-Night Trial Policy) show an effective date, quoted in terms_effective_date_quote.",
+      "terms_effective_date_quote": "Current policy effective as of Oct 1, 2019",
+      "terms_effective_date_source_url": "https://www.beautyrest.com/pages/terms",
+      "terms_incorporation_quote": "The 100-Night Trial Policy and Limited Warranty are each part of these Terms.",
+      "terms_incorporation_source_url": "https://www.beautyrest.com/pages/terms",
+      "source_url": "https://www.beautyrest.com/pages/returns",
+      "from": "delivery"
+    },
+    "exceptions": [
+      {
+        "what": "Beautyrest.com orders (any item): one return per household per year (wording on the 100-night-trial page)",
+        "return_days": 100,
+        "no_returns": false,
+        "quote": "Our return policy only allows for one return per household per year, so we can only return and refund one item purchased within the same year.",
+        "source_url": "https://www.beautyrest.com/pages/100-night-trial"
+      },
+      {
+        "what": "Mattresses: only one mattress can be returned or exchanged per household per 12 months",
+        "return_days": 100,
+        "no_returns": false,
+        "quote": "This means we can only return and refund or exchange one mattress purchased within the same 12 months.",
+        "source_url": "https://help.beautyrest.com/article/1149-do-i-need-to-pay-to-return-my-beautyrest-com-product"
+      },
+      {
+        "what": "Beautyrest.com mattresses (legal text): must be returned directly with Beautyrest no later than day 100 after delivery; mattress must be in the United States",
+        "return_days": 100,
+        "no_returns": false,
+        "quote": "The Beautyrest 100-Night In-Home Trial is limited to one return per household per year, and it must be exercised directly with Beautyrest no later than the 100th day following delivery of the Product for which you want a refund.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      },
+      {
+        "what": "Trial applies only to original purchasers who bought from beautyrest.com; may not apply, or may apply differently, to other authorized channels",
+        "return_days": null,
+        "no_returns": false,
+        "quote": "The 100-Night In-Home Trial may not apply, or may apply differently, to purchases of Beautyrest Products via other authorized Beautyrest distribution channels, or from any other (unauthorized) sources.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      },
+      {
+        "what": "Beautysleep.com mattresses (Beauty Sleep® 100-Night In-Home Trial, sold directly on beautysleep.com)",
+        "return_days": 100,
+        "no_returns": false,
+        "quote": "If within the first 100 nights of receiving delivery of your new Beauty Sleep® MATTRESS, you're not completely satisfied—for any reason—you may return it for a full refund.",
+        "source_url": "https://www.beautyrest.com/pages/warranty-possibly-beautysleep"
+      },
+      {
+        "what": "Pillows (Beautyrest® Deluxe Down Alternative Pillow product page)",
+        "return_days": 100,
+        "no_returns": false,
+        "quote": "Your purchase includes a 100-Night In-Home Trial.",
+        "source_url": "https://www.beautyrest.com/products/deluxe-down-alternative-pillow"
+      },
+      {
+        "what": "Mattress protector (Beautyrest® Mattress Protector product page)",
+        "return_days": 100,
+        "no_returns": false,
+        "quote": "Your purchase includes a 100-Night In-Home Trial.",
+        "source_url": "https://www.beautyrest.com/products/mattress-protector"
+      },
+      {
+        "what": "Purchases from any other retailer: return goes through the original retailer, not Beautyrest",
+        "return_days": null,
+        "no_returns": false,
+        "quote": "If you did not purchase directly through Beautyrest.com your return will need to be done through your original retailer.",
+        "source_url": "https://www.beautyrest.com/pages/returns"
+      },
+      {
+        "what": "Mattress bought from a retailer that has gone out of business and cannot be reached",
+        "return_days": null,
+        "no_returns": true,
+        "quote": "but if not, the mattress is considered a final sale.",
+        "source_url": "https://www.beautyrest.com/pages/returns"
+      },
+      {
+        "what": "Heated products (not sold on Beautyrest.com): Beautyrest cannot assist with returns or refunds",
+        "return_days": null,
+        "no_returns": true,
+        "quote": "Heated products are not sold on Beautyrest.com so we are unable to assist with returns or refunds.",
+        "source_url": "https://help.beautyrest.com/article/1157-my-heated-product-is-not-working-what-should-i-do"
+      },
+      {
+        "what": "Heated products bought within the last 30 days: returned to the original retailer for a replacement (retailer, not Beautyrest)",
+        "return_days": 30,
+        "no_returns": false,
+        "quote": "If your heated product was purchased within the last 30 days, we ask that you return the product back to the original retailer for a replacement.",
+        "source_url": "https://help.beautyrest.com/article/1157-my-heated-product-is-not-working-what-should-i-do"
+      },
+      {
+        "what": "White Glove Delivery fees are not refunded when products are returned (fee exception; the product refund itself is unaffected)",
+        "return_days": null,
+        "no_returns": false,
+        "quote": "White Glove Delivery fees are final and will not be refunded in the event you return any of the Products.",
+        "source_url": "https://www.beautyrest.com/pages/terms"
+      }
+    ],
+    "other_terms": [
+      {
+        "what": "Exchange inside the trial: phone call; price difference charged or refunded",
+        "quote": "Please give us a call at 877-298-4955 so we can walk you through the exchange process",
+        "source_url": "https://help.beautyrest.com/article/1153-how-do-i-exchange-my-beautyrest-com-product"
+      },
+      {
+        "what": "Exchange inside the trial: email (conflicts with the help article, see unclear)",
+        "quote": "If you need to exchange a product within your sleep trial, please reach out to support@beautyrest.com for further assistance.",
+        "source_url": "https://www.beautyrest.com/pages/returns"
+      },
+      {
+        "what": "Price adjustment if a new sale starts during the 100-night trial",
+        "quote": "please reach out to us via phone at 877-298-4955 or via email at support@beautyrest.com while that sale is still active and we will be happy to provide a price adjustment if applicable.",
+        "source_url": "https://help.beautyrest.com/article/864-i-just-purchased-through-the-website-and-now-there-is-a-sale-do-i-have-any-options"
+      },
+      {
+        "what": "Order cancellation before shipment",
+        "quote": "You may cancel an order any time prior to shipment.",
+        "source_url": "https://www.beautyrest.com/pages/terms"
+      },
+      {
+        "what": "Damaged on arrival (orders on Beautyrest.com)",
+        "quote": "if your new product is damaged upon its arrival, you can refuse to accept the delivery.",
+        "source_url": "https://help.beautyrest.com/article/896-my-item-was-delivered-damaged-what-do-i-do"
+      },
+      {
+        "what": "Wrong product received (orders on Beautyrest.com)",
+        "quote": "if you received the wrong product, you can refuse to accept the delivery.",
+        "source_url": "https://help.beautyrest.com/article/897-i-received-the-wrong-product-what-do-i-do-now"
+      },
+      {
+        "what": "Opened or unopened items go through LiquiDonate",
+        "quote": "Generally, for all returns, Liquidonate will provide guidance on donating locally, regardless of whether the product is opened or unopened.",
+        "source_url": "https://help.beautyrest.com/article/1493-how-do-returns-work-with-beautyrest-com-what-is-liquidonate"
+      },
+      {
+        "what": "Refund timing after carrier scan (donation and soft-goods routes)",
+        "quote": "Once the label has been scanned (in transit) by the carrier, a refund will be processed within 24 hours; a final refund confirmation email will be sent from LiquiDonate.",
+        "source_url": "https://www.beautyrest.com/pages/returns"
+      },
+      {
+        "what": "Who pays pickup (legal text); returned mattress 'recycled'",
+        "quote": "Beautyrest will cover the charges of picking up and recycling your MATTRESS.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      },
+      {
+        "what": "Shipping area for orders (free standard shipping contiguous US)",
+        "quote": "Generally, standard shipping is free for customers in the contiguous United States.",
+        "source_url": "https://www.beautyrest.com/pages/terms"
+      },
+      {
+        "what": "No shipping to Alaska or Hawaii from the site",
+        "quote": "No, at this time we are not able to ship products to Alaska or Hawaii directly from our site.",
+        "source_url": "https://help.beautyrest.com/article/872-do-you-ship-to-alaska-and-hawaii"
+      },
+      {
+        "what": "Shipping and FedEx items not eligible for White Glove",
+        "quote": "Any item that is shipped via FedEx will not include White Glove Delivery.",
+        "source_url": "https://help.beautyrest.com/article/861-is-shipping-free"
+      }
+    ]
+  },
+  "warranty": {
+    "general": {
+      "term": "Period depends on the code on the white law label; see depends_on. Coverage runs from the date of delivery.",
+      "term_months": null,
+      "starts_from": "date of delivery",
+      "starts_from_quote": "The warranty coverage runs from the date of delivery.",
+      "covers": "Manufacturing defects in the mattress or foundation (materials or workmanship), including the removable fabric cover on select models. Help center: excessive compressions, sagging, foam splitting or cracking, cover defects such as unraveling stitching.",
+      "covers_quote": "The limited warranty covers manufacturing defects in your Beautyrest® or Simmons® mattress or foundation including faults in materials or manufacturing defects in the removable fabric cover available on select models.",
+      "covers_quote_2": "For purchases made on Beautyrest.com, our 10-year limited warranty covers manufacturing defects such as excessive compressions, sagging, flaws in the foam causing it to split or crack, and cover defects, such as unraveling stitching.",
+      "covers_quote_2_source_url": "https://help.beautyrest.com/article/1154-what-does-the-warranty-cover",
+      "excludes": "Comfort preference, normal softening or foam recovery changes, normal body impressions per code, cover and handles, corner guards, bent border wires, burns/cuts/tears, vermin, stains or soil, inadequate foundation, adjustable foundations (separate warranty), as-is/distressed/floor models, claims outside the listed territory, transportation/inspection/removal costs (except California).",
+      "excludes_quotes": [
+        "Consumer firmness/comfort preference.",
+        "Normal changes in softness or recovery time of high density foams, including memory foam, due to normal use, temperature, or humidity.",
+        "Normal body impression(s) as indicated by your warranty code (see chart).",
+        "Cover (fabric) and handles.",
+        "Corner guards.",
+        "Bent border/grid wires.",
+        "Burns, cuts or tears.",
+        "Vermin infestations.",
+        "Mattresses used with an inadequate foundation and/or support system.",
+        "Adjustable foundations (see owner’s manual for details on warranty coverage).",
+        "Merchandise sold “as-is”, “distressed” or “floor model/sample”.",
+        "Claims made outside the 50 United States, District of Columbia, Puerto Rico or U.S. Virgin Islands.",
+        "Transportation, inspection, or removal costs of product, except in California."
+      ],
+      "limits": "Replacement does not extend the warranty; exclusive remedy is replacement in the US, Puerto Rico or US Virgin Islands; implied warranties limited to the term; no incidental or consequential damages.",
+      "limits_quotes": [
+        "Replacement of the mattress or foundation does not extend its limited warranty or begin a new limited warranty period.",
+        "the exclusive remedy under this warranty will be replacement of the defective product in the U.S., Puerto Rico or U.S. Virgin Islands.",
+        "Simmons shall not be liable for incidental or consequential damages that result from the use of your Beautyrest® or Simmons® product."
+      ],
+      "quote": "Your warranty period is based on the code printed on your white law label as indicated on the Warranty Code Chart below.",
+      "applies_to": "both: legal text covers purchasers from Simmons Bedding Company or its authorized dealers; claims for retailer purchases go to the retailer first",
+      "transferable": false,
+      "transferable_quote": "This limited warranty is provided only to the original purchaser and is not transferable.",
+      "registration_required": false,
+      "registration_required_quote": "No! We don't require registering or a registration card anymore because the warranty information is on the law tag of your mattress.",
+      "registration_required_source_url": "https://help.beautyrest.com/article/1155-do-i-need-to-register-my-warranty",
+      "proof_of_purchase_needed": true,
+      "proof_of_purchase_quote": "A copy of original bill of sale is needed to determine original date of purchase.",
+      "label_needed_quote": "Model name label and law label must be provided to identify the bedding and validate this warranty.",
+      "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+    },
+    "variants": [
+      {
+        "basis": "channel",
+        "applies_to": "direct: mattresses ordered through Beautyrest.com ('10-year limited warranty that you won't find everywhere')",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "10-year limited warranty (stated in help articles and product pages; period is also stated as code-dependent in legal text, see unclear)",
+        "term_months": 120,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "Ordering through Beautyrest.com also provides customers with our 10-year limited warranty.",
+        "source_url": "https://help.beautyrest.com/article/906-what-is-the-difference-between-ordering-from-beautyrest-com-and-another-retailer"
+      },
+      {
+        "basis": "channel",
+        "applies_to": "retailer: mattresses ordered through another retailer are subject to that retailer's return policies; warranty claims go to the retailer first",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "set by retailer; see depends_on",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "Most retail partners will handle their own warranties.",
+        "source_override": "https://www.beautyrest.com/pages/warranty",
+        "source_url": "https://www.beautyrest.com/pages/warranty"
+      },
+      {
+        "basis": "line",
+        "applies_to": "direct: Beautyrest mattresses on product pages (Black, Black Hybrid XCS, World Class, Core, Quilted Mattress In A Box, Dream Weaver)",
+        "line_name": "Beautyrest mattresses (product-page statement)",
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "10-Year Limited Warranty",
+        "term_months": 120,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+        "source_url": "https://www.beautyrest.com/products/black-mattress"
+      },
+      {
+        "basis": "kind",
+        "applies_to": "direct: baselogic® adjustable bases (page checked: Platinum)",
+        "line_name": "baselogic® Adjustable Base",
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "20-Year Limited Warranty",
+        "term_months": 240,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "We stand by our baselogic® Adjustable Base with a 20-Year Limited Warranty.",
+        "source_url": "https://www.beautyrest.com/products/baselogic-platinum-base-bed-frame"
+      },
+      {
+        "basis": "kind",
+        "applies_to": "direct: baselogic® platform bed frame",
+        "line_name": "baselogic® Platform",
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "2-Year Limited Warranty",
+        "term_months": 24,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "We stand by our baselogic® platform with a 2-Year Limited Warranty.",
+        "source_url": "https://www.beautyrest.com/products/baselogic-platform-bed-frame"
+      },
+      {
+        "basis": "kind",
+        "applies_to": "direct: Beautyrest® Deluxe Down Alternative Pillow",
+        "line_name": "Deluxe Down Alternative Pillow",
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "2-Year limited warranty, covering manufacturer defects",
+        "term_months": 24,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "We stand by our Beautyrest® Deluxe Down Alternative Pillow with a 2-Year limited warranty, covering manufacturer defects.",
+        "source_url": "https://www.beautyrest.com/products/deluxe-down-alternative-pillow"
+      },
+      {
+        "basis": "kind",
+        "applies_to": "direct: Beautyrest® Mattress Protector",
+        "line_name": "Mattress Protector",
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "2-Year Warranty, covering manufacturer defects",
+        "term_months": 24,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "We stand by our Beautyrest Mattress Protector with a 2-Year Warranty, covering manufacturer defects.",
+        "source_url": "https://www.beautyrest.com/products/mattress-protector"
+      },
+      {
+        "basis": "date",
+        "applies_to": "Products made after March 1, 2015 (Beautyrest® or Simmons® mattress or foundation); period by law-label code",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": "2015-03-01",
+        "made_or_bought_to": null,
+        "term": "based on the law-label code (no number on this page)",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "Your warranty period is based on the code printed on your white law label as indicated on the Warranty Code Chart below.",
+        "date_quote": "(Products made after March 1, 2015)",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      },
+      {
+        "basis": "date",
+        "applies_to": "Products made before March 1, 2015 (Simmons® mattress or foundation); period by law-label code; remedy is repair or replacement",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": "2015-03-01",
+        "term": "based on the law-label code (see letter chart in depends_on)",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "Your warranty period is based on the code indicated on your white law label. (See chart)",
+        "date_quote": "(Products made before March 1, 2015)",
+        "remedy_quote": "the exclusive remedy under this warranty will be repair or replacement of the defective product in the U.S., Puerto Rico or U.S. Virgin Islands.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-before-march"
+      },
+      {
+        "basis": "channel",
+        "applies_to": "direct: Beautysleep.com orders (Beauty Sleep®/BeautySleep® by Beautyrest®); claims by email to support@beautysleep.com; period by law-label code",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "based on the law-label code (letter chart in depends_on)",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "Your warranty period is based on the code printed on your white law label as indicated on the Warranty Code Chart below.",
+        "claim_quote": "To initiate a warranty claim, please email us at support@beautysleep.com.",
+        "source_url": "https://www.beautyrest.com/pages/warranty-possibly-beautysleep"
+      },
+      {
+        "basis": "channel",
+        "applies_to": "anyone who bought from someone other than Simmons Bedding Company or its authorized dealers",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "warranties excluded",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "No expressed or implied warranties are extended to persons who purchase the product from anyone other than Simmons Bedding Company or its authorized dealers, and all warranties to such persons, including the implied warranties of merchantability and fitness, are hereby excluded.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      },
+      {
+        "basis": "component",
+        "applies_to": "non-mattress items licensed to and made by partners (heated products, adjustable bases, pillows): manufacturer handles the warranty",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "set by manufacturer; not stated on Beautyrest pages",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "Any non-mattress items may be covered by the manufacturer directly.",
+        "source_url": "https://www.beautyrest.com/pages/warranty"
+      },
+      {
+        "basis": "component",
+        "applies_to": "adjustable foundations: separate warranty, not the mattress warranty",
+        "line_name": null,
+        "model_numbers": [],
+        "model_prefixes": [],
+        "made_or_bought_from": null,
+        "made_or_bought_to": null,
+        "term": "separate warranty; not stated on this page",
+        "term_months": null,
+        "parts_months": null,
+        "labor_months": null,
+        "quote": "For all adjustable foundations, which are covered by a separate warranty, please see the owner’s manual for required support.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      }
+    ],
+    "depends_on": [
+      {
+        "what": "Current warranty chart on the warranty page ('Warranty Schedule Chart'), numeric codes 9, 1, 92, 10, 6, 31",
+        "rule": "Period depends on the numeric Warranty Code on the Law Tag. Columns: Total Limited Warranty Period (in years)*, Period for No Charge Repair or Replacement (in years)*, Normal Body Impressions/Sagging (inch). Rows exactly as printed; the page does not say which products carry which code.",
+        "chart_rows": [
+          {
+            "cells": [
+              "9",
+              "10 Year",
+              "10 Year",
+              "1.5"
+            ],
+            "quote": "9 10 Year 10 Year 1.5"
+          },
+          {
+            "cells": [
+              "1",
+              "1 Year",
+              "1 Year",
+              "1.5"
+            ],
+            "quote": "1 1 Year 1 Year 1.5"
+          },
+          {
+            "cells": [
+              "92",
+              "5",
+              "5",
+              "1.5"
+            ],
+            "quote": "92 5 5 1.5"
+          },
+          {
+            "cells": [
+              "10",
+              "10",
+              "10",
+              ".75"
+            ],
+            "quote": "10 10 10 .75"
+          },
+          {
+            "cells": [
+              "6",
+              "10",
+              "3",
+              "1.5"
+            ],
+            "quote": "6 10 3 1.5"
+          },
+          {
+            "cells": [
+              "31",
+              "30 Day",
+              "30 Day",
+              "1.5"
+            ],
+            "quote": "31 30 Day 30 Day 1.5"
+          }
+        ],
+        "quote": "Warranty Schedule Chart Warranty Code on Law Tag Total Limited Warranty Period (in years)* Period for No Charge Repair or Replacement (in years)* Normal Body Impressions/ Sagging (inch)",
+        "source_url": "https://www.beautyrest.com/pages/warranty"
+      },
+      {
+        "what": "Letter-code chart for products made before March 1, 2015 (A–P)",
+        "rule": "Period depends on the letter Warranty Code on the Law Label. Row C says a specific warranty applies, see separate agreement. Transportation is the consumer's responsibility except in CA.",
+        "chart_rows": [
+          {
+            "cells": [
+              "A",
+              "10 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "A 10 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "B",
+              "1 Year",
+              "1 Year",
+              "1.5\" or less"
+            ],
+            "quote": "B 1 Year 1 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "C",
+              "Specific warranty applies",
+              "see separate agreement"
+            ],
+            "quote": "C Specific warranty applies see separate agreement"
+          },
+          {
+            "cells": [
+              "E",
+              "20 Year",
+              "10 Year",
+              ".75\" or less"
+            ],
+            "quote": "E 20 Year 10 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "G",
+              "2 Year",
+              "2 Year",
+              "removeable fabric cover"
+            ],
+            "quote": "G 2 Year 2 Year removeable fabric cover"
+          },
+          {
+            "cells": [
+              "H",
+              "5 Year",
+              "5 Year",
+              "1.5\" or less"
+            ],
+            "quote": "H 5 Year 5 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "I",
+              "20 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "I 20 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "J",
+              "3 Year",
+              "3 Year",
+              "1.5\" or less"
+            ],
+            "quote": "J 3 Year 3 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "K",
+              "10 Year",
+              "3 Year",
+              "1.5\" or less"
+            ],
+            "quote": "K 10 Year 3 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "L",
+              "25 Year",
+              "10 Year",
+              ".75\" or less"
+            ],
+            "quote": "L 25 Year 10 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "M",
+              "15 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "M 15 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "N",
+              "25 Year",
+              "15 Year",
+              "1.5\" or less"
+            ],
+            "quote": "N 25 Year 15 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "O",
+              "25 Year",
+              "15 Year",
+              ".75\" or less"
+            ],
+            "quote": "O 25 Year 15 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "P",
+              "10 Year",
+              "10 Year",
+              ".75\" or less"
+            ],
+            "quote": "P 10 Year 10 Year .75\" or less"
+          }
+        ],
+        "quote": "Warranty Code on Law Label Total Limited Warranty Period for No Charge Except Transportation* Normal Body Impression",
+        "footnote_quote": "*Transportation charges are the responsibility of the consumer, except in CA.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-before-march"
+      },
+      {
+        "what": "Letter-code 'Warranty Code Key' on the Beautysleep warranty page (A–P; differs from the before-March page on rows E, I, K, L, M, N, O)",
+        "rule": "Period depends on the letter Warranty Code on the Law Label.",
+        "chart_rows": [
+          {
+            "cells": [
+              "A",
+              "10 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "A 10 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "B",
+              "1 Year",
+              "1 Year",
+              "1.5\" or less"
+            ],
+            "quote": "B 1 Year 1 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "C Specific warranty applies, see separate agreement Specific warranty applies, see separate agreement Specific warranty applies, see separate agreement"
+            ],
+            "quote": "C Specific warranty applies, see separate agreement Specific warranty applies, see separate agreement Specific warranty applies, see separate agreement"
+          },
+          {
+            "cells": [
+              "E",
+              "20 Year",
+              "20 Year",
+              ".75\" or less"
+            ],
+            "quote": "E 20 Year 20 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "G",
+              "2 Year",
+              "2 Year",
+              "removeable fabric cover"
+            ],
+            "quote": "G 2 Year 2 Year removeable fabric cover"
+          },
+          {
+            "cells": [
+              "H",
+              "5 Year",
+              "5 Year",
+              "1.5\" or less"
+            ],
+            "quote": "H 5 Year 5 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "I",
+              "20 Year",
+              "20 Year",
+              "1.5\" or less"
+            ],
+            "quote": "I 20 Year 20 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "J",
+              "3 Year",
+              "3 Year",
+              "1.5\" or less"
+            ],
+            "quote": "J 3 Year 3 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "K",
+              "10 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "K 10 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "L",
+              "25 Year",
+              "25 Year",
+              ".75\" or less"
+            ],
+            "quote": "L 25 Year 25 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "M",
+              "15 Year",
+              "15 Year",
+              "1.5\" or less"
+            ],
+            "quote": "M 15 Year 15 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "N",
+              "25 Year",
+              "25 Year",
+              "1.5\" or less"
+            ],
+            "quote": "N 25 Year 25 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "O",
+              "25 Year",
+              "25 Year",
+              ".75\" or less"
+            ],
+            "quote": "O 25 Year 25 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "P",
+              "10 Year",
+              "10 Year",
+              ".75\" or less"
+            ],
+            "quote": "P 10 Year 10 Year .75\" or less"
+          }
+        ],
+        "quote": "Warranty Codeon Law Label Total LimitedWarranty Period for No ChargeExcept Transportation* Normal BodyImpression",
+        "source_url": "https://www.beautyrest.com/pages/warranty-possibly-beautysleep"
+      },
+      {
+        "what": "'Previous Warranty Schedule Chart as of 7/2026' (xlsx linked from the warranty page), letter codes A–P",
+        "rule": "Same letter codes; identical to the Beautysleep page chart. Row C repeats 'Specific warranty applies, see separate agreement' in all three columns.",
+        "chart_rows": [
+          {
+            "cells": [
+              "A",
+              "10 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "A 10 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "B",
+              "1 Year",
+              "1 Year",
+              "1.5\" or less"
+            ],
+            "quote": "B 1 Year 1 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "C",
+              "Specific warranty applies, see separate agreement",
+              "Specific warranty applies, see separate agreement",
+              "Specific warranty applies, see separate agreement"
+            ],
+            "quote": "C Specific warranty applies, see separate agreement Specific warranty applies, see separate agreement Specific warranty applies, see separate agreement"
+          },
+          {
+            "cells": [
+              "E",
+              "20 Year",
+              "20 Year",
+              ".75\" or less"
+            ],
+            "quote": "E 20 Year 20 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "G",
+              "2 Year",
+              "2 Year",
+              "removeable fabric cover"
+            ],
+            "quote": "G 2 Year 2 Year removeable fabric cover"
+          },
+          {
+            "cells": [
+              "H",
+              "5 Year",
+              "5 Year",
+              "1.5\" or less"
+            ],
+            "quote": "H 5 Year 5 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "I",
+              "20 Year",
+              "20 Year",
+              "1.5\" or less"
+            ],
+            "quote": "I 20 Year 20 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "J",
+              "3 Year",
+              "3 Year",
+              "1.5\" or less"
+            ],
+            "quote": "J 3 Year 3 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "K",
+              "10 Year",
+              "10 Year",
+              "1.5\" or less"
+            ],
+            "quote": "K 10 Year 10 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "L",
+              "25 Year",
+              "25 Year",
+              ".75\" or less"
+            ],
+            "quote": "L 25 Year 25 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "M",
+              "15 Year",
+              "15 Year",
+              "1.5\" or less"
+            ],
+            "quote": "M 15 Year 15 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "N",
+              "25 Year",
+              "25 Year",
+              "1.5\" or less"
+            ],
+            "quote": "N 25 Year 25 Year 1.5\" or less"
+          },
+          {
+            "cells": [
+              "O",
+              "25 Year",
+              "25 Year",
+              ".75\" or less"
+            ],
+            "quote": "O 25 Year 25 Year .75\" or less"
+          },
+          {
+            "cells": [
+              "P",
+              "10 Year",
+              "10 Year",
+              ".75\" or less"
+            ],
+            "quote": "P 10 Year 10 Year .75\" or less"
+          }
+        ],
+        "quote": "A 10 Year 10 Year 1.5\" or less",
+        "source_url": "https://cdn.shopify.com/s/files/1/0666/8841/7984/files/Warranty_Schedule_Chart.xlsx?v=1785249015"
+      },
+      {
+        "what": "Link text that labels the xlsx as the previous chart",
+        "rule": "The numeric chart on the warranty page is current; the letter chart is labelled previous (as of 7/2026). Which products use which scheme is not stated.",
+        "chart_rows": [],
+        "quote": "Previous Warranty Schedule Chart as of 7/2026",
+        "source_url": "https://www.beautyrest.com/pages/warranty"
+      },
+      {
+        "what": "After-March 2015 page: period is code-based but the chart is not on the page",
+        "rule": "Page says the period is on the Warranty Code Chart below; the raw page contains no chart table, only the line 'Please refer to www.beautyrest.com or Simmons.com for additional codes.'",
+        "chart_rows": [],
+        "quote": "Please refer to www.beautyrest.com or Simmons.com for additional codes.",
+        "source_url": "https://www.beautyrest.com/pages/warranties-after-march"
+      },
+      {
+        "what": "Sagging/body-impression allowance",
+        "rule": "Varies by mattress type; read the code on the law label and use the chart.",
+        "chart_rows": [],
+        "quote": "Please note: Sagging/depression requirements will vary based on the type of mattress.",
+        "source_url": "https://www.beautyrest.com/pages/warranty"
+      },
+      {
+        "what": "Retailer purchases",
+        "rule": "Retailer usually handles warranty; Beautyrest only handles Beautyrest.com and Beautysleep.com orders. No number given.",
+        "chart_rows": [],
+        "quote": "Your mattress warranty is likely covered by the retailer directly.",
+        "source_url": "https://www.beautyrest.com/pages/warranty"
+      },
+      {
+        "what": "Adjustable base length versus manufacturer",
+        "rule": "Product page says 20-year; warranty page sends adjustable-base claims to Ergomotion or Nisco. Whether the 20 years applies to every baselogic model is not stated.",
+        "chart_rows": [],
+        "quote": "We stand by our baselogic® Adjustable Base with a 20-Year Limited Warranty.",
+        "source_url": "https://www.beautyrest.com/products/baselogic-platinum-base-bed-frame"
+      }
+    ]
+  },
+  "length_elsewhere": {
+    "where": "Law label code (white law tag) plus the Warranty Code Chart. Chart rows are in warranty.depends_on; which code a product carries is printed on the product's law label, not on the site.",
+    "quote": "Your warranty period is based on the code printed on your white law label as indicated on the Warranty Code Chart below.",
+    "source_url": "https://www.beautyrest.com/pages/warranties-after-march",
+    "also_quote": "Using the law label attached to your mattress, reference the Warranty Code Key below to see the normal body impression allowance.",
+    "also_quote_source_url": "https://www.beautyrest.com/pages/warranty"
+  },
+  "product_pages": [
+    {
+      "url": "https://www.beautyrest.com/products/black-mattress",
+      "source_url": "https://www.beautyrest.com/products/black-mattress",
+      "product": "Beautyrest Black Series One",
+      "term": "10-Year Limited Warranty",
+      "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your mattress purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® mattress, simply reach out to us and we will help you initiate a return and receive a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/black-hybrid-xcs",
+      "source_url": "https://www.beautyrest.com/products/black-hybrid-xcs",
+      "product": "Beautyrest Black Hybrid Series Three XCS",
+      "term": "10-Year Limited Warranty",
+      "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your mattress purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® mattress, simply reach out to us and we will help you initiate a return and receive a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/world-class-mattress",
+      "source_url": "https://www.beautyrest.com/products/world-class-mattress",
+      "product": "Beautyrest World Class Level Three",
+      "term": "10-Year Limited Warranty",
+      "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your mattress purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® mattress, simply reach out to us and we will help you initiate a return and receive a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/beautyrest-core",
+      "source_url": "https://www.beautyrest.com/products/beautyrest-core",
+      "product": "Beautyrest Level One",
+      "term": "10-Year Limited Warranty",
+      "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your mattress purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® mattress, simply reach out to us and we will help you initiate a return and receive a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/quilted-mattress-in-a-box-10-inch-medium",
+      "source_url": "https://www.beautyrest.com/products/quilted-mattress-in-a-box-10-inch-medium",
+      "product": "BeautySleep® by Beautyrest® Soothing Nights™ Mattress In A Box",
+      "term": "10-Year Limited Warranty",
+      "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your mattress purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® mattress, simply reach out to us and we will help you initiate a return and receive a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/beautysleep-dream-weaver-mattress",
+      "source_url": "https://www.beautyrest.com/products/beautysleep-dream-weaver-mattress",
+      "product": "BeautySleep® by Beautyrest® Dream Weaver™",
+      "term": "10-Year Limited Warranty",
+      "quote": "We stand by our Beautyrest mattresses with a 10-Year Limited Warranty.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your mattress purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® mattress, simply reach out to us and we will help you initiate a return and receive a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/deluxe-down-alternative-pillow",
+      "source_url": "https://www.beautyrest.com/products/deluxe-down-alternative-pillow",
+      "product": "Beautyrest® Deluxe Down Alternative Pillow",
+      "term": "2-Year limited warranty",
+      "quote": "We stand by our Beautyrest® Deluxe Down Alternative Pillow with a 2-Year limited warranty, covering manufacturer defects.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® product, simply reach out to us and we will help you initiate a return for a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/mattress-protector",
+      "source_url": "https://www.beautyrest.com/products/mattress-protector",
+      "product": "Beautyrest® Mattress Protector",
+      "term": "2-Year Warranty",
+      "quote": "We stand by our Beautyrest Mattress Protector with a 2-Year Warranty, covering manufacturer defects.",
+      "return_term": "100-Night In-Home Trial",
+      "return_quote": "Your purchase includes a 100-Night In-Home Trial.",
+      "refund_quote": "If, at any point during your trial, you are unhappy with your Beautyrest® product, simply reach out to us and we will help you initiate a return for a full refund of your purchase."
+    },
+    {
+      "url": "https://www.beautyrest.com/products/baselogic-platinum-base-bed-frame",
+      "source_url": "https://www.beautyrest.com/products/baselogic-platinum-base-bed-frame",
+      "product": "baselogic® Platinum Adjustable Base",
+      "term": "20-Year Limited Warranty",
+      "quote": "We stand by our baselogic® Adjustable Base with a 20-Year Limited Warranty.",
+      "return_term": "no trial or return window stated on this page; only a 'Free Shipping & Returns' label",
+      "return_quote": "Free Shipping & Returns"
+    },
+    {
+      "url": "https://www.beautyrest.com/products/baselogic-platform-bed-frame",
+      "source_url": "https://www.beautyrest.com/products/baselogic-platform-bed-frame",
+      "product": "baselogic® Platform",
+      "term": "2-Year Limited Warranty",
+      "quote": "We stand by our baselogic® platform with a 2-Year Limited Warranty.",
+      "return_term": "no trial or return window stated on this page; only a 'Free Shipping & Returns' label",
+      "return_quote": "Free Shipping & Returns"
+    }
+  ],
+  "lines": [
+    {
+      "name": "Beautyrest Black Series One",
+      "kind_of_product": "mattress (innerspring)",
+      "aliases": [
+        "Beautyrest Black",
+        "black-mattress"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    },
+    {
+      "name": "Beautyrest Black Hybrid Series Three XCS",
+      "kind_of_product": "mattress (hybrid)",
+      "aliases": [
+        "Black Hybrid XCS"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    },
+    {
+      "name": "Beautyrest World Class Level Three",
+      "kind_of_product": "mattress",
+      "aliases": [
+        "World Class",
+        "World Class Hybrid"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page; World Class Hybrid from product URL slugs"
+    },
+    {
+      "name": "Beautyrest Level One (Core)",
+      "kind_of_product": "mattress (innerspring)",
+      "aliases": [
+        "Beautyrest Core",
+        "Core Level Two",
+        "Core Hybrid"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page; others from URL slugs"
+    },
+    {
+      "name": "BeautySleep® by Beautyrest® Dream Weaver™",
+      "kind_of_product": "mattress (innerspring and hybrid)",
+      "aliases": [
+        "Dream Weaver"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    },
+    {
+      "name": "BeautySleep® by Beautyrest® Soothing Nights™ Mattress In A Box",
+      "kind_of_product": "mattress in a box",
+      "aliases": [
+        "Quilted Mattress In A Box"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    },
+    {
+      "name": "Beautyrest Silver",
+      "kind_of_product": "mattress",
+      "aliases": [],
+      "model_numbers": [],
+      "model_prefixes": [
+        "BRS900"
+      ],
+      "name_source": "product URL slugs only (beautyrest-silver-brs900-*); not checked on a page"
+    },
+    {
+      "name": "Beautyrest BR800",
+      "kind_of_product": "mattress",
+      "aliases": [],
+      "model_numbers": [],
+      "model_prefixes": [
+        "BR800"
+      ],
+      "name_source": "product URL slugs only (beautyrest-br800-*); not checked on a page"
+    },
+    {
+      "name": "Beautyrest Hybrid BRX1000-IP",
+      "kind_of_product": "mattress (hybrid)",
+      "aliases": [],
+      "model_numbers": [],
+      "model_prefixes": [
+        "BRX1000"
+      ],
+      "name_source": "product URL slugs only (beautyrest-hybrid-brx1000-ip-*); not checked on a page"
+    },
+    {
+      "name": "baselogic® Adjustable Base (Bronze, Silver, Gold, Pearl, Platinum)",
+      "kind_of_product": "adjustable base",
+      "aliases": [
+        "baselogic Platinum Adjustable Base"
+      ],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "Platinum h1 and comparison table on page; other names also in URL slugs"
+    },
+    {
+      "name": "baselogic® Platform",
+      "kind_of_product": "furniture (platform bed frame)",
+      "aliases": [],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    },
+    {
+      "name": "Beautyrest® Deluxe Down Alternative Pillow",
+      "kind_of_product": "pillow",
+      "aliases": [],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    },
+    {
+      "name": "Beautyrest® Mattress Protector",
+      "kind_of_product": "bedding",
+      "aliases": [],
+      "model_numbers": [],
+      "model_prefixes": [],
+      "name_source": "h1 of product page"
+    }
+  ],
+  "model_lists": [
+    {
+      "url": "https://www.beautyrest.com/pages/brb-size-and-dimensions",
+      "note": "Size and dimension table for Beautyrest Black variants (product names with sizes, dimensions, shipping weight). Not model numbers or a code decoder."
+    },
+    {
+      "url": "https://www.beautyrest.com/pages/beautyrest-hybrid-size-and-dimensions",
+      "note": "Same kind of table for Beautyrest hybrid mattresses."
+    },
+    {
+      "url": "https://www.beautyrest.com/pages/baselogic-gold-adjustable-base-size-and-dimensions",
+      "note": "Same kind of table for baselogic Gold base."
+    },
+    {
+      "url": "https://www.beautyrest.com/products-sitemap.xml",
+      "note": "138 product URLs; each product page carries retail SKUs and GTINs in structured data, not decoded on the site."
+    }
+  ],
+  "model_number_format": null,
+  "date_code_format": null,
+  "unclear": [
+    "Return limit wording differs: returns page 'One return or exchange per household per 12 months'; 100-night-trial page and warranties-after-march 'one return per household per year'; help articles say it counts 'one mattress'. Whether pillows, bases or other items count toward the limit is not stated.",
+    "Exchange route differs: returns page says email support@beautyrest.com; help article 1153 says call 877-298-4955.",
+    "Refund timing: returns page says refund processed within 24 hours after the carrier scans the label, then 5-10 business days at the bank; the legal 100-night text (warranties-after-march) gives no timing.",
+    "Returned mattress: returns page and help say donated through LiquiDonate; the legal 100-night text says 'Your returned MATTRESS will be recycled.'",
+    "Warranty length: help articles and product pages say '10-year limited warranty'; the warranty page, before-March and after-March pages say the period depends on the law-label code, and the charts include codes of 30 days, 1 year, 5 years and so on. No page says how the 10-year headline fits the code charts. No term_months was set at the general level.",
+    "Warranty code charts disagree: current chart on /pages/warranty uses numeric codes (9, 1, 92, 10, 6, 31); letter charts A-P are labelled 'Previous Warranty Schedule Chart as of 7/2026'. The before-March letter chart and the Beautysleep/xlsx letter chart differ on rows E, I, K, L, M, N, O (no-charge period 10/10/3/10/10/15/15 years versus equal to the total). Row C differs in wording.",
+    "/pages/warranties-after-march says the period is 'indicated on the Warranty Code Chart below' but the raw HTML has no chart table (only images and 'Please refer to www.beautyrest.com or Simmons.com for additional codes'). No chart rows could be taken from it.",
+    "The mapping from product or line to law-label code is not on any page read. Model numbers, prefixes and the date-code format are not explained on the pages read (retail SKUs such as 700812149-1020 appear only in structured data and are not decoded).",
+    "Date split is 'made after March 1, 2015' versus 'made before March 1, 2015'; a product made exactly on March 1, 2015 is in neither.",
+    "Warranty territory differs: after-March excludes claims outside 'the 50 United States, District of Columbia, Puerto Rico or U.S. Virgin Islands'; before-March excludes claims outside 'the 50 United States, Puerto Rico or U.S. Virgin Islands' (no District of Columbia).",
+    "Remedy differs: after-March and Beautysleep pages say the exclusive remedy is replacement; before-March says repair or replacement.",
+    "Parent company: no page names a parent. 'Simmons Bedding Company, LLC' is the copyright line and the party named in the after-March warranty; the Beautysleep warranty page names 'Serta Simmons Bedding, LLC'. The help center footer reads '© Tuft & Needle 2026. Powered by Help Scout'. Claim forms are hosted at forms.sertasimmons.com.",
+    "Homepage says 'all of our products come with a 100 night in-home trial, hassle-free warranties and free shipping and returns', but the baselogic Platinum and Platform product pages show no trial and only a 'Free Shipping & Returns' label, and the Platform page says nothing on returns beyond that.",
+    "Page name /pages/warranty-possibly-beautysleep suggests a draft; it appears to be the live Beautysleep.com warranty text.",
+    "Terms of Service (/pages/terms) section IX points to the 100-Night Trial Policy and Limited Warranty but those policy pages are under /policies/, which robots.txt disallows; their text was not fetched. Terms effective date is Oct 1, 2019 while help articles are dated Sept 16, 2026.",
+    "Promotions pages (Fall Sale 2026, Memorial Day Sale 2026) are price offers via participating retailers; no return or warranty terms found and no rows created.",
+    "Pages say beautyrest.com handles only its own orders; warranty on retailer purchases is the retailer's. Terms for those are not published."
+  ],
+  "blocked": [
+    {
+      "url": "https://www.beautyrest.com/policies/",
+      "reason": "robots.txt disallows /policies/ and /*/policies/; not fetched"
+    },
+    {
+      "url": "https://www.beautyrest.com/policies/refund-policy",
+      "reason": "robots.txt disallows /policies/; not fetched (common Shopify path, existence unverified)"
+    },
+    {
+      "url": "https://www.beautyrest.com/policies/terms-of-service",
+      "reason": "robots.txt disallows /policies/; not fetched"
+    },
+    {
+      "url": "https://www.beautyrest.com/policies/shipping-policy",
+      "reason": "robots.txt disallows /policies/; not fetched"
+    },
+    {
+      "url": "https://www.beautyrest.com/policies/privacy-policy",
+      "reason": "robots.txt disallows /policies/; not fetched"
+    },
+    {
+      "url": "https://www.beautyrest.com/search",
+      "reason": "robots.txt disallows /search; not used"
+    },
+    {
+      "url": "https://help.beautyrest.com/robots.txt",
+      "reason": "fetch returned a 'Not Found' page; no robots rules found. Help center was fetched sparingly."
+    }
+  ],
+  "not_checked": [
+    "The other 128 product pages in products-sitemap.xml (138 listed; 10 sampled).",
+    "collections-sitemap and blogs-sitemap URLs (177 in the pages and blogs sitemaps combined); blog and press pages.",
+    "Most other /pages/*-size-and-dimensions pages (3 sampled as model-list candidates).",
+    "beautysleep.com itself (only the copy of its warranty on beautyrest.com was read).",
+    "beautyrest.liquidonate.com (return portal) and forms.sertasimmons.com (return and warranty forms) pages.",
+    "Privacy page and other legal pages not under /policies/.",
+    "Help center articles not about returns, warranty, shipping, discounts or retailers (about 20 of the articles were read).",
+    "Retailer sites and their own return and warranty terms.",
+    "Terms page says no bots, crawlers or scrapers and limits refresh rate; requests were paced at about 1.5 to 2 seconds with a browser-style user agent. Sample was kept small."
+  ]
+}
