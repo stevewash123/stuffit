@@ -1,4 +1,4 @@
-﻿# E6 Curation & Learning
+# E6 Curation & Learning
 
 **Phase:** v2 (basic hooks in MVP)
 
@@ -14,3 +14,4 @@ User-contributed policies are verified and folded into shared reference data; cr
 - [F6.6 Contributed warranty documents](F6.6-contributed-warranty-documents/F6.6-contributed-warranty-documents.md) (v2 (curation))
 - [F6.7 Contribution credits](F6.7-contribution-credits/F6.7-contribution-credits.md) (future (idea from Steve, validate before building))
 - [F6.8 Price-drop alerts during the return window](F6.8-price-drop-alerts/F6.8-price-drop-alerts.md) (same-store v2; cross-store future, validate first)
+- [F6.9 Model-level warranty terms](F6.9-model-level-warranty-terms/F6.9-model-level-warranty-terms.md) (future)
