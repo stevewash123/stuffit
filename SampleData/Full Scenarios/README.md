@@ -28,6 +28,15 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 19 | Scenario 19 - Shared retailer Gabes Hardware | Gabe's Hardware / Makita impact driver | A regional store not in the shared data, reported by three people and verified with its return policy; what changes for them; then a longer name offered as an alias. `python run_shared.py 19` |
 | 20 | Scenario 20 - Shared manufacturer Hexaquill | Target / Hexaquill screwdriver set (files of scenario 4) | A brand and its warranty reported by three people (each with their own private brand), verified brand first and then warranty; what changes for them and for a fourth person. `python run_shared.py 20` |
 | 21 | Scenario 21 - Shared credit card | Home Depot / Makita reciprocating saw, paid with Gabe's Rewards Visa | A card, its issuer and an extended-warranty benefit reported by three people, verified in order; what changes for them and for a fourth person who picks the card from the list. `python run_shared.py 21` |
+| 22 | Scenario 22 - Shared policy vs private purchase | n/a (browser plan) | DRAFT. Two people buy from the same store: both see the same shared policy, each keeps a private coverage, and an unverified submission is never shown as official |
+| 23 | Scenario 23 - Three reports confirm | n/a (browser plan) | DEFERRED (S6.1.4). Three people report the same policy; the count alone does not confirm it, and an administrator reviews and rejects a submission |
+| 24 | Scenario 24 - Time travel and reminders | n/a (browser plan) | DRAFT. The simulated clock moves forward so a return window ends and the reminder email and notification arrive once |
+| 25 | Scenario 25 - Account lifecycle and email | n/a (browser plan) | Two real accounts: sign-up, email confirmation, sign-in, password reset, and a reset requested twice in ten minutes |
+| 26 | Scenario 26 - Purchases, items and privacy | n/a (browser plan) | Purchases added by hand, suggested coverage, receipt upload (Upload waits while the document is read), search and filter, and one account never seeing another's items |
+| 27 | Scenario 27 - Cards, notifications and export | n/a (browser plan) | Credit cards, notification and email settings, data export, and account deletion |
+| 28 | Scenario 28 - Administrator sign-in and shared data | n/a (browser plan) | An administrator enrols two-step sign-in, signs in with a code, and uses the Shared data page; an ordinary account is refused; claims are checked by API only |
+
+Scenarios 22 to 28 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
 The shared-data facts (which stores, brands and policies are verified) were read from the development database on 2026-10-24. If that data is re-seeded, re-check the "in shared data / verified" rows before relying on a scenario.
 

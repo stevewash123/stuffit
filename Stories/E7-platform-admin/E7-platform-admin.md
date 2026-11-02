@@ -1,4 +1,4 @@
-﻿# E7 Platform & Admin
+# E7 Platform & Admin
 
 **Phase:** MVP
 
@@ -11,4 +11,5 @@ The unglamorous pieces that let one person run this.
 - [F7.4 Marketing site & SEO pages](F7.4-marketing-site/F7.4-marketing-site.md) (MVP (minimal))
 - [F7.5 Data foundation (DDL)](F7.5-data-foundation/F7.5-data-foundation.md) (MVP)
 - [F7.6 Technical foundation](F7.6-technical-foundation/F7.6-technical-foundation.md) (MVP)
+- [F7.7 Code health](F7.7-code-health/F7.7-code-health.md) (MVP)
 

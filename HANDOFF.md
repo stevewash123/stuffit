@@ -166,3 +166,13 @@ Yours before launch: lawyer review of the legal pages and the bracketed facts; t
 - Mailbox fix: `ScanQueued` stays true until a scan ends, so "Check mail" no longer reports "nothing new" mid-scan.
 - Findings: incoming email TEXT never reaches the AI model (the plain `ReceiptEmailParser` reads it); only PDFs and photos do. On the 44 sample emails the parser reads 8 Ok, 36 Thin (shipping and delivery notices are Thin by design). Decide from a report on real mail whether the model should read email text.
 - Open: an intermittent 500 on the New Items list in the FULL integration run (passes alone); being chased.
+
+## Simulated clock, code health, UAT (2026-11-01, written on the laptop)
+- Clock: see `Stories/TESTING/T1-simulating-time.md`. `Clock:Simulated=true` registers `OffsetTimeProvider` (refuses Production); about 60 `DateTime.UtcNow` sites on date-driven paths now use `TimeProvider`. Left real on purpose: auth tokens, ClaimService/ReferenceService audit stamps, AI ledger/QA, Stripe, seeders.
+- Code health: new feature F7.7 (`Stories/E7-platform-admin/F7.7-code-health/`). S7.7.1 (split `PendingItemService`) comes BEFORE any more work on that class, the S7.6.5 wiring and S2.2.2.
+- Claims: the ping at 3 is built (`ClaimJob`); auto-approve at 20 is decided but not built (S6.1.4).
+- Approximate dates: a store return window is no longer proposed on an approximate date (S3.1.6).
+- Operators have two-step sign-in again (S7.1.7). Test4 (`stevewash123.tester4@gmail.com`) is the administrator test account.
+- `GET /api/version` returns commit, startedAt, environment, so a tester can tell when a deploy lands. `--remove-test-accounts [--confirm]` (Development only) deletes every non-operator account.
+- Browser tests: `SampleData\Full Scenarios` (Scenarios 22 to 28 added, bot rules in `Bot Rules\`).
+- Build while the API runs: `-p:UseArtifactsOutput=true -p:ArtifactsPath=<folder inside StuffIt_API>`, then delete the folder. Integration tests were not fully run after these changes.

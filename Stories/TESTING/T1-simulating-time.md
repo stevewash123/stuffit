@@ -2,7 +2,7 @@
 
 **Type:** Testing playbook, not a product feature. Open this before testing anything that depends on the date.  
 **Phase:** v2 (use whenever a date-driven behaviour needs checking)  
-**Decision (2026-10-18):** there is no system-wide clock or "Time Machine". The API has about 94 direct clock reads in 39 files; converting them was judged too much churn for a nice-to-have. Time is simulated by moving the data and by running jobs "as of" a day. If a real date bug needs more, put a clock into that one code path, not everywhere.
+**Decision (2026-10-18, reversed 2026-11-01):** there was to be no system-wide clock, because the API had about 94 direct clock reads in 39 files. On 2026-11-01 the date-driven paths were moved onto TimeProvider and a simulated clock was built (technique 2). Techniques 1, 3 and 4 still apply.
 
 ## When to use this
 Anything that depends on today's date: return windows closing, warranties ending (30 and 60 day tiles), reminders and their emails, the todo "due in 30 days" rule, an estimated delivery date arriving, trial and billing dates, the daily AI spend cap.
@@ -12,9 +12,8 @@ Anything that depends on today's date: return windows closing, warranties ending
 ### 1. Seed items that are already old (cheapest)
 `--seed-demo you@example.com` creates a demo account's items relative to today: bought 12, 20, 50, 140 and 400 days ago, one with a return started, one returned, registration deadlines 18 days ahead and 50 days past. Every dashboard tile has something. Run it on a throwaway account.
 
-### 2. Run a time-driven job as of a day
-`dotnet run --project src/StuffIt.Api -- --send-reminders --as-of 2027-09-01` runs the daily reminder send as if it were that day (noon UTC). Development only; it refuses to run elsewhere. It uses the real data and **really sends** what is due (email and in-app notification), so use it on a test account.
-
+### 2. Move the app's clock (built 2026-11-01)
+With `Clock:Simulated=true` the API uses `OffsetTimeProvider` (real time plus an offset). It refuses to switch on in the Production environment. Time moves in jumps: advance, run the job under test, look at the result. Endpoints on the key-guarded maintenance controller (`X-Maintenance-Key`; 404 unless the clock is simulated): `GET /api/maintenance/clock`, `POST /api/maintenance/clock/advance?days=N`, `POST /api/maintenance/clock/reset`, `POST /api/maintenance/run-reminders` (runs the reminder send now; it really sends), `POST /api/maintenance/run-retention`. While the clock is moved, the database context stamps CreatedAt and UpdatedAt from it, so rows made after a jump are not older than the jump. A restart returns to real time. This replaces `--send-reminders --as-of`, which was removed.
 ### 3. Pass the date in, in a test
 Where code takes an explicit "as of" date (for example the coverage rules take the day), a test can pass any date. Where a test needs "today", build the data relative to today (`today.AddDays(-30)`), never a fixed calendar date, so the test does not rot.
 
@@ -44,6 +43,7 @@ A `--shift-dates <account> <days>` command that moves every date on an account b
 | | | | |
 
 ## Status
-- Built 2026-10-18: `--send-reminders --as-of yyyy-MM-dd` (development only), a stopped-clock `FixedTimeProvider` used only by that command. Checked: it builds and rejects a bad date. Not yet run end to end, because it sends real mail.
+- Built 2026-11-01: the simulated clock (technique 2) and the key-guarded endpoints. Unit tests cover the provider, the advance, the guard and the stamping. The browser bot's rules are in `SampleData\Full Scenarios\Bot Rules\README.md`.
+- Left on the real clock on purpose: sign-in tokens and the two-step code, Hangfire's schedule, Stripe, external mail timestamps, the AI cost-cap day, database `now()` defaults.
 - Existing: `--seed-demo`, `--seed-new-items`, `--backfill-reminders`, `--send-reminders`, `--clear-items`, `--clear-new-items`.
 - Not built: `--shift-dates`; a dev-only way to tell the UI what "today" is.

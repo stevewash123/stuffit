@@ -140,9 +140,10 @@ Stripe membership, legal pages, marketing page. Public launch of MVP.
 ## M6 v2a: Email-in & digest
 Forward a receipt, get a draft purchase, see it in a needs-info queue; daily digest.
 
-- S7.6.5 LLM integration and cost control (needs S7.6.1)
+- S7.7.1 Split the pending-item service (no dependencies; FIRST, before more work on that class)
+- S7.6.5 LLM integration and cost control (needs S7.6.1; the remaining wiring needs S7.7.1)
 - S2.2.1 Unique inbound address per user (needs S7.6.4, S7.5.4)
-- S2.2.2 Extract purchase details from email (needs S7.6.5, S2.2.1)
+- S2.2.2 Extract purchase details from email (needs S7.7.1, S7.6.5, S2.2.1)
 - S2.4.1 Document reader: find a list of properties in a scanned document (needs S7.6.5, S2.1.2, S2.6.2)
 - S2.2.3 Needs-info review queue (needs S2.2.2, S3.2.2); the screen is F9.9 below
 - S2.2.4 De-duplicate forwarded receipts (needs S2.2.2)

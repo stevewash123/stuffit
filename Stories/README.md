@@ -99,6 +99,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.2.3 Seed initial reference data
   - S3.2.4 Verified policies for the most common cards
   - S3.2.10 Store brands: a brand that belongs to a retailer (v2)
+  - S3.2.11 Say when something cannot be returned (MVP, built)
 - F3.3 Payment methods & card benefits (MVP)
   - S3.3.1 Add a card
   - S3.3.2 Confirm card benefits
@@ -237,6 +238,15 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S6.8.9 Net savings for return-and-rebuy (future)
   - S6.8.10 Is the other seller comparable? (future)
   - S6.8.11 Buy first, return second (future)
+- F6.9 Model-level warranty terms from owners' documents (future)
+  - S6.9.1 Read the model and term from an uploaded warranty document
+  - S6.9.2 Log a document observation
+  - S6.9.3 Group observations by model line
+  - S6.9.4 Operator view of the groups
+  - S6.9.5 Promote a group to a model-level policy
+  - S6.9.6 Mark a company's terms as depending on a model or a lookup
+  - S6.9.7 Propose the model-level term for an owner's item
+  - S6.9.8 Conflicting terms open a review
 
 ## E7 Platform & Admin (MVP)
 - F7.1 Admin console (MVP (minimal))
@@ -260,6 +270,14 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S7.6.3 Private file storage
   - S7.6.4 Transactional and inbound email
   - S7.6.5 LLM integration and cost control
+- F7.7 Code health (MVP; from the 2026-11-01 audit)
+  - S7.7.1 Split the pending-item service (before more work on it)
+  - S7.7.2 Program.cs: tasks and registrations out
+  - S7.7.3 Cards controller uses a service
+  - S7.7.4 Auth controller uses a service
+  - S7.7.5 Reference and admin controllers use services
+  - S7.7.6 The remaining controllers use services
+  - S7.7.7 A test keeps controllers off the database
   - S7.2.2 Crowd-data terms and consent at signup
   - S7.1.3 A different home for the administrator
   - S7.1.4 Switch between admin and customer view
