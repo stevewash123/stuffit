@@ -170,7 +170,7 @@ Yours before launch: lawyer review of the legal pages and the bracketed facts; t
 ## Simulated clock, code health, UAT (2026-11-01, written on the laptop)
 - Clock: see `Stories/TESTING/T1-simulating-time.md`. `Clock:Simulated=true` registers `OffsetTimeProvider` (refuses Production); about 60 `DateTime.UtcNow` sites on date-driven paths now use `TimeProvider`. Left real on purpose: auth tokens, ClaimService/ReferenceService audit stamps, AI ledger/QA, Stripe, seeders.
 - Code health: new feature F7.7 (`Stories/E7-platform-admin/F7.7-code-health/`). S7.7.1 (split `PendingItemService`) comes BEFORE any more work on that class, the S7.6.5 wiring and S2.2.2.
-- Claims: the ping at 3 is built (`ClaimJob`); auto-approve at 20 is decided but not built (S6.1.4).
+- Claims: the ping at 3 is built (`ClaimJob`); auto-approve at 20 was built 2026-11-02 (API 6108b35; gaps listed in S6.1.4). S7.7.3 (cards service) is done and S7.7.4 (auth service) is partly done, same commit.
 - Approximate dates: a store return window is no longer proposed on an approximate date (S3.1.6).
 - Operators have two-step sign-in again (S7.1.7). Test4 (`stevewash123.tester4@gmail.com`) is the administrator test account.
 - `GET /api/version` returns commit, startedAt, environment, so a tester can tell when a deploy lands. `--remove-test-accounts [--confirm]` (Development only) deletes every non-operator account.
