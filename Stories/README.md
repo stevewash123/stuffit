@@ -93,6 +93,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.1.8 Lifetime warranties: whose lifetime, and can it be passed on (v2)
   - S3.1.9 What proof of purchase a warranty asks for (v2)
   - S3.1.10 New Items are processed, not computed on every look (v2)
+  - S3.1.12 Every date and "days left" comes from the app's clock (open)
 - F3.2 Reference data & versioned policies (MVP)
   - S3.2.1 Party and versioned policy tables
   - S3.2.2 Pick a known manufacturer policy or add a new one
@@ -299,6 +300,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S9.1.5 Native app wrapper for iPhone and Android
   - S9.1.6 Account menu: cards, plans, insurance and settings hang off Account
   - S9.1.7 Welcome: bring in the purchases I already have
+  - S9.1.8 Small wording and interaction fixes from UAT (open)
   - S9.1.2 Empty states and first-run guidance
 - F9.2 Items list & dashboard (MVP)
   - S9.2.1 Items list with coverage highlights
