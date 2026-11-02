@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Send the emails of one or more Full Scenarios (SampleData/Full Scenarios/Scenario N ...) to the StuffIt test mailbox, so Check Emails can pick them up.
+Send the emails of one or more Full Scenarios (Scenarios/Scenario N ...) to the StuffIt test mailbox, so Check Emails can pick them up.
 
 It asks for the Gmail APP password of the test mailbox (hidden; never stored or written anywhere), logs in, and sends each scenario's .eml files in file-name order
 (order, then shipped, then delivered). Like the earlier test emails, each is labelled FAKE: a "[FAKE TEST]" subject tag and an X-StuffIt-Test header. The From display
@@ -28,7 +28,7 @@ from email.utils import formataddr, getaddresses, make_msgid
 from send_test_emails import MAILBOX, open_smtp
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SCENARIOS = os.path.normpath(os.path.join(HERE, "..", "SampleData", "Full Scenarios"))
+SCENARIOS = os.path.normpath(os.path.join(HERE, "..", "Scenarios"))
 
 
 def folder_of(n: int) -> str | None:

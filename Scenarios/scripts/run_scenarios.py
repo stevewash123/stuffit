@@ -1,11 +1,11 @@
-"""Runs the Full Scenarios against a running API: signs up a throwaway account, adds the test card, uploads each
+"""Runs the Scenarios against a running API: signs up a throwaway account, adds the test card, uploads each
 scenario's email(s) and receipt in order, and prints what landed in New Items and which coverage the page would tick.
-Usage: python run_scenarios.py [numbers...]   (API on http://localhost:5259, log at api.log beside this file)"""
+Usage: python scripts/run_scenarios.py [numbers...]   (API on http://localhost:5259, log at api.log beside this file)"""
 import base64, hashlib, hmac, json, os, re, struct, subprocess, sys, time, uuid, urllib.request, urllib.error
 
 BASE = "http://localhost:5259/api"
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = r"C:\Projects\StuffIt\SampleData\Full Scenarios"
+ROOT = os.path.normpath(os.path.join(HERE, ".."))   # the Scenarios folder
 TICKED_FROM = 0.8
 OWN_ACCOUNT_FROM = 15   # 18 is handled by run_claims
 # Answer keys for scenarios 15 to 17: same store and return policy, same maker, a different Milwaukee warranty line each (months).
@@ -209,7 +209,7 @@ def main():
         for d in folders:
             n = int(re.search(r"\d+", d).group())
             if want and n not in want: continue
-            if n >= 18: continue   # 18 is run_claims; 19 to 21 are run_shared.py (python run_shared.py 19 20 21): they need several accounts and an operator
+            if n >= 18: continue   # 18 is run_claims; 19 to 21 are run_shared.py (python scripts/run_shared.py 19 20 21): they need several accounts and an operator
             print(f"\n=== {d}")
             files = sorted(f for f in os.listdir(os.path.join(ROOT, d)) if f.lower().endswith((".eml", ".pdf")) and "warranty" not in f.lower())
             for f in files:

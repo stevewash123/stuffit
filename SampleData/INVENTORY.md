@@ -7,8 +7,8 @@ Purpose: show which documents belong together (same item, same maker, same store
 
 | Folder | Files | Format | Key |
 |---|---|---|---|
-| receipts/pdf | 109 | PDF receipts, invoices, emailed-receipt printouts | answer key by item (below) |
-| receipts/pdf-as-jpg | 109 | The same receipts as phone-style images (same names) | answer-key-by-item.csv |
+| receipts/pdf | 110 | PDF receipts, invoices, emailed-receipt printouts | answer key by item (below) |
+| receipts/pdf-as-jpg | 110 | The same receipts as phone-style images (same names) | answer-key-by-item.csv |
 | receipts/paper-photo | 14 | Real photos of paper receipts | truth.json |
 | warranties-from-receipts | 20 | Plan / warranty documents, each built from a receipt | index.csv (col source_receipt) |
 | warranties | 17 | Generic warranty fixtures, no receipt tie by design (a few share a model with a receipt) | index.csv |

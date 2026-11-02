@@ -2,7 +2,7 @@
 // and the keys. Run:  node make-test-matrix.js
 // The Result and Notes columns are NOT kept on regenerate: copy the CSV first if you have entered results.
 const fs = require('fs'), path = require('path');
-const R = __dirname;
+const R = path.join(__dirname, '..');
 const rd = (p) => fs.readFileSync(path.join(R, p), 'utf8').replace(/^﻿/, '');
 function csv(text) {
   const rows = []; let row = [], cur = '', q = false;

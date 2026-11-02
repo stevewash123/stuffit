@@ -5,7 +5,7 @@ import glob, os, random, zlib
 import pypdfium2 as pdfium
 from PIL import Image, ImageFilter, ImageEnhance, ImageDraw
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 JOBS = [('warranties-from-receipts', 'warranties-from-receipts-photo'), ('warranties', 'warranties-photo')]
 
 def photo(page_img, rnd):

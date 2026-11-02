@@ -5,7 +5,7 @@ Deterministic; re-running rewrites the same files. Dates are close to the run da
 import email.message, email.policy, os, subprocess, tempfile
 import pypdfium2 as pdfium
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))   # the Scenarios folder
 CHROME = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 TAX = 0.055
 

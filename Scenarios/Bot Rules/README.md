@@ -1,6 +1,6 @@
 # Bot rules for the browser test plans
 
-The browser test plans are Scenarios 22 to 28 in the parent folder (Full Scenarios). A bot (Grok) follows them as a real user: browser plus a test mailbox. Deterministic checks stay in the API/UI test suites; the plans are for what needs a browser, an inbox, or more than one person. This folder holds the rules for the bot and the report format (`_template.md`).
+The browser test plans are Scenarios 22 to 28 in the parent folder (Scenarios). A bot (Grok) follows them as a real user: browser plus a test mailbox. Deterministic checks stay in the API/UI test suites; the plans are for what needs a browser, an inbox, or more than one person. This folder holds the rules for the bot and the report format (`_template.md`).
 
 ## Before a run
 - **Reachable URL.** The bot cannot see localhost. It needs the deployed UI (Render) or a tunnel. Put the URL in `RUN-CONFIG.md` (not committed with secrets).
@@ -31,7 +31,7 @@ Passwords live in `RUN-CONFIG.md` only. Use two browser contexts (or private win
 9. **Administrators.** The administrator test account is Ops, `stevewash123.tester4@gmail.com` (Test4). It is an administrator and has access to every feature, so it runs any admin step; it does not stand in for Alice, Bob or Carol. The bot does not make administrators itself: that is the operator's command-line task (`--make-operator <email>`); no web endpoint does it, and the maintenance key does not. Two-step sign-in is ON for administrators since build `f1c96c7`: the first admin sign-in goes to Settings, Security to enrol an authenticator, and later sign-ins ask for a 6-digit code. Grok can compute the codes; keep the setup key in `RUN-CONFIG.md`, never in a report.
 
 ## Plans
-The test plans are Scenarios 22 to 32 in the parent folder (Full Scenarios); each is a `scenario-N.md` in its own folder:
+The test plans are Scenarios 22 to 35 in the parent folder (Scenarios); each is a `scenario-N.md` in its own folder:
 - Scenario 22 - Shared policy vs private purchase (**DRAFT**): shared policy visible to all, purchases private (Alice, Bob).
 - Scenario 23 - Three reports confirm (**DEFERRED**, see S6.1.4): three matching reports do not confirm on their own; an administrator approves (Alice, Bob, Carol, Ops).
 - Scenario 24 - Time travel and reminders (**DRAFT**): clock jump, reminder send, window ends; needs the simulated clock (Alice).
@@ -43,8 +43,11 @@ The test plans are Scenarios 22 to 32 in the parent folder (Full Scenarios); eac
 - Scenario 30 - Insurance policy and items: policy form, limits, items linked or left out, notes on the item (Test1, Test2).
 - Scenario 31 - Extended warranty plan: plan covering several items, cost arithmetic, ending the plan (Test1, Test2).
 - Scenario 32 - Reminders and to-dos: item To do card and the To do page (Test1, Test2).
+- Scenario 33 - What is worth tracking: the Settings control and New Items following it (Test1, Test2).
+- Scenario 34 - Color theme: themes, light and dark, kept per device (Test1, Test2).
+- Scenario 35 - Send feedback: the form, your messages, the hourly limit (Test1, Test2).
 
-Scenarios 25 to 27 and 29 to 32 use Test1 (Alice) and Test2 (Bob) from the persona table. They cover only parts that are built and were checked end to end, so a failure is a real finding. Run them in order: Scenario 25 creates the accounts that 26 and 27 use.
+Scenarios 25 to 27 and 29 to 35 use Test1 (Alice) and Test2 (Bob) from the persona table. They cover only parts that are built and were checked end to end, so a failure is a real finding. Run them in order: Scenario 25 creates the accounts that 26 and 27 use.
 
 ## Which build is running
 `GET https://<ui-site>/api/version` (no sign-in) returns `{"commit":"abc1234","startedAt":"...","environment":"..."}`. `commit` is the short git hash Render deployed; `startedAt` is when that API process started (real time). Record both at the start of every run and in the report. After a push, poll it about once a minute starting five minutes later: a changed `commit` (or a new `startedAt`) means the deploy is live. The UI is a separate Render site, so this shows the API build only.

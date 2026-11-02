@@ -1,4 +1,4 @@
-# Full Scenarios
+# Scenarios
 
 Whole purchases to run through the app by hand: documents in the order to use them, and an answer key for what the app should show. Each folder has a `scenario-N.md` (the answer key, steps and expected coverage) and every file it needs (`.eml`, `.pdf`, and a `.jpg` twin of each PDF; scenario 14 also has the images that come with its email).
 
@@ -24,10 +24,10 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 16 | Scenario 16 - Maker line - digital levels | Home Depot / Milwaukee 48 in. digital level | Own account. Milwaukee's Digital levels line (36 months) |
 | 17 | Scenario 17 - Maker line - portable generators | Home Depot / Milwaukee portable generator | Own account. Milwaukee's Portable generators line (24 months) |
 
-| 18 | Scenario 18 - Three accounts, same unverified data | Quillfeather Mercantile, Hexaquill, Sony | Four accounts and an operator: three accounts report the same store, brand and warranty; an operator verifies them; a fourth account sees them shared. `python run_scenarios.py 18` |
-| 19 | Scenario 19 - Shared retailer Gabes Hardware | Gabe's Hardware / Makita impact driver | A regional store not in the shared data, reported by three people and verified with its return policy; what changes for them; then a longer name offered as an alias. `python run_shared.py 19` |
-| 20 | Scenario 20 - Shared manufacturer Hexaquill | Target / Hexaquill screwdriver set (files of scenario 4) | A brand and its warranty reported by three people (each with their own private brand), verified brand first and then warranty; what changes for them and for a fourth person. `python run_shared.py 20` |
-| 21 | Scenario 21 - Shared credit card | Home Depot / Makita reciprocating saw, paid with Gabe's Rewards Visa | A card, its issuer and an extended-warranty benefit reported by three people, verified in order; what changes for them and for a fourth person who picks the card from the list. `python run_shared.py 21` |
+| 18 | Scenario 18 - Three accounts, same unverified data | Quillfeather Mercantile, Hexaquill, Sony | Four accounts and an operator: three accounts report the same store, brand and warranty; an operator verifies them; a fourth account sees them shared. `python scripts/run_scenarios.py 18` |
+| 19 | Scenario 19 - Shared retailer Gabes Hardware | Gabe's Hardware / Makita impact driver | A regional store not in the shared data, reported by three people and verified with its return policy; what changes for them; then a longer name offered as an alias. `python scripts/run_shared.py 19` |
+| 20 | Scenario 20 - Shared manufacturer Hexaquill | Target / Hexaquill screwdriver set (files of scenario 4) | A brand and its warranty reported by three people (each with their own private brand), verified brand first and then warranty; what changes for them and for a fourth person. `python scripts/run_shared.py 20` |
+| 21 | Scenario 21 - Shared credit card | Home Depot / Makita reciprocating saw, paid with Gabe's Rewards Visa | A card, its issuer and an extended-warranty benefit reported by three people, verified in order; what changes for them and for a fourth person who picks the card from the list. `python scripts/run_shared.py 21` |
 | 22 | Scenario 22 - Shared policy vs private purchase | n/a (browser plan) | DRAFT. Two people buy from the same store: both see the same shared policy, each keeps a private coverage, and an unverified submission is never shown as official |
 | 23 | Scenario 23 - Three reports confirm | n/a (browser plan) | DEFERRED (S6.1.4). Three people report the same policy; the count alone does not confirm it, and an administrator reviews and rejects a submission |
 | 24 | Scenario 24 - Time travel and reminders | n/a (browser plan) | DRAFT. The simulated clock moves forward so a return window ends and the reminder email and notification arrive once |
@@ -41,15 +41,19 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 31 | Scenario 31 - Extended warranty plan | n/a (browser plan) | A third-party plan covering several items, yearly cost arithmetic, files, ending the plan switches it off on every item |
 | 32 | Scenario 32 - Reminders and to-dos | n/a (browser plan) | To-dos added on an item, shown on the To do page, done, dismissed, not applicable; never shown to another account |
 
-Scenarios 22 to 32 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
+| 33 | Scenario 33 - What is worth tracking | n/a (browser plan) | The "What to track" setting, its shortcuts and limits, New Items following it, kept per person |
+| 34 | Scenario 34 - Color theme | n/a (browser plan) | Three themes and Light / Dark / Match my device, kept on the device, no flash on load |
+| 35 | Scenario 35 - Send feedback | n/a (browser plan) | The feedback form, what will be sent, Your messages, the 5-per-hour limit, privacy between accounts |
+
+Scenarios 22 to 35 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
 The shared-data facts (which stores, brands and policies are verified) were read from the development database on 2026-10-24. If that data is re-seeded, re-check the "in shared data / verified" rows before relying on a scenario.
 
-Scenarios 15 to 17 (made by `make_maker_scenarios.py`) each run on their own new account; `python run_scenarios.py 15 16 17` prints `CHECK PASS` or `CHECK FAIL` against the answer key. Last result: `last-run-maker-lines.txt`.
+Scenarios 15 to 17 (made by `scripts/make_maker_scenarios.py`) each run on their own new account; `python scripts/run_scenarios.py 15 16 17` prints `CHECK PASS` or `CHECK FAIL` against the answer key. Last result: `last-run-maker-lines.txt`.
 
 ## Scenarios 18 to 21: shared data being verified
 
-Each needs several accounts and an **operator**, so each has a runner that plays every person on new accounts and prints `PASS` or `FAIL` per check: `python run_scenarios.py 18` and `python run_shared.py 19 20 21`. Documents for 19 and 21 are made by `make_shared_scenarios.py`; scenario 20 reuses the files of scenario 4. Last results: `last-run-claims.txt` (18) and `last-run-shared.txt` (19 to 21).
+Each needs several accounts and an **operator**, so each has a runner that plays every person on new accounts and prints `PASS` or `FAIL` per check: `python scripts/run_scenarios.py 18` and `python scripts/run_shared.py 19 20 21`. Documents for 19 and 21 are made by `make_shared_scenarios.py`; scenario 20 reuses the files of scenario 4. Last results: `last-run-claims.txt` (18) and `last-run-shared.txt` (19 to 21).
 
 The operator steps are **API calls**; there is no claims screen yet. The runner makes its own operator account (two-step sign-in set up through the API, and the operator flag set with the scratchpad `q.js`). By hand, sign in as an operator with two-step sign-in and call, with that token:
 

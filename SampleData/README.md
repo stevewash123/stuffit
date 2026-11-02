@@ -2,7 +2,7 @@
 
 Test inputs for the warranty tracker's receipt/email parser. See `index.csv` (one row per file: path, retailer, kind, channel_hint, source_url, license_notes, parser_notes).
 
-See `INVENTORY.md` for which files belong together (same item, maker, store, returns). It is generated: `node make-inventory.js`.
+See `INVENTORY.md` for which files belong together (same item, maker, store, returns). It is generated: `node _tools/make-inventory.js`.
 
 ## Layout
 - `emails/order-confirmation`, `emails/shipping`, `emails/delivery` - retailer order lifecycle emails (.eml, multipart text+html).
@@ -23,3 +23,9 @@ See `INVENTORY.md` for which files belong together (same item, maker, store, ret
 - Images are downsized copies of the originals (max 2000-2400 px). Some photos are deliberately left rotated/crumpled as OCR stress tests.
 - Some synthetic dates fall in late 2026 (after the folder was built); treat dates as arbitrary.
 - Tracking numbers and order numbers are fake and use real-looking formats only.
+
+## Layout
+- `emails/`, `receipts/`, `warranties/`, `warranties-from-receipts/` and the `*-photo` twins: the sample documents themselves. Pure data; the API seeder (`--seed-demo`, `--seed-new-items`) and the reader harness read this layout, so do not rename.
+- `index.csv`, `INVENTORY.md`: the key and the generated inventory.
+- `_tools/`: scripts that generate files here (`make-inventory.js`, `make-order-pair-receipts.py`, `make-photo-twins.py`, `make-test-matrix.js`).
+- Scenario walkthroughs, runners and results live in `../Scenarios/`, not here.

@@ -1,6 +1,6 @@
-# Full Scenarios run against the API, 2026-10-25
+# Scenarios run against the API, 2026-10-25
 
-Script: `SampleData/Full Scenarios/run_scenarios.py` (raw output: `last-run-2026-10-25.txt`). Local API on the dev database, throwaway account with the Chase Freedom Unlimited card (1111). For each scenario it uploads the emails then the receipt (warranty documents not uploaded), reads New Items, marks what the page ticks (overall confidence >= 0.8, the UI's rule), then Accepts the item and reads what My Items actually received. Today is 2026-10-25.
+Script: `Scenarios/run_scenarios.py` (raw output: `last-run-2026-10-25.txt`). Local API on the dev database, throwaway account with the Chase Freedom Unlimited card (1111). For each scenario it uploads the emails then the receipt (warranty documents not uploaded), reads New Items, marks what the page ticks (overall confidence >= 0.8, the UI's rule), then Accepts the item and reads what My Items actually received. Today is 2026-10-25.
 
 Not covered (needs the UI or the mailbox): Check Emails, the item-page warranty upload and its panel, the New Items chips, the badges/expander look, Save in the browser. The UI tick rule is mirrored, not run.
 

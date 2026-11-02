@@ -5,7 +5,7 @@ Pair 104: emails/order-confirmation/homedepot-order-confirmation-02.eml (order H
 import os, subprocess, tempfile
 import pypdfium2 as pdfium
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 CHROME = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
 RECEIPTS = [{

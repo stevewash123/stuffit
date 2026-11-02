@@ -2,7 +2,7 @@
 // Sources: receipts/pdf-as-jpg/answer-key-by-item.csv (receipts, lines, models), receipts/paper-photo/truth.json, warranties-from-receipts/index.csv,
 // warranties/index.csv, receipts/pdf-series-94-103-returns-manifest.csv, index.csv (emails, photos), the folders themselves.
 const fs = require('fs'), path = require('path');
-const R = __dirname;
+const R = path.join(__dirname, '..');
 const rd = (p) => fs.readFileSync(path.join(R, p), 'utf8').replace(/^﻿/, '');
 function csv(text) {
   const rows = []; let row = [], cur = '', q = false;
