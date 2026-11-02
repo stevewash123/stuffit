@@ -43,7 +43,7 @@ A `--shift-dates <account> <days>` command that moves every date on an account b
 | | | | |
 
 ## Status
-- Built 2026-11-01: the simulated clock (technique 2) and the key-guarded endpoints. Unit tests cover the provider, the advance, the guard and the stamping. The browser bot's rules are in `SampleData\Full Scenarios\Bot Rules\README.md`.
+- Built 2026-11-01: the simulated clock (technique 2) and the key-guarded endpoints. Unit tests cover the provider, the advance, the guard and the stamping. The browser bot's rules are in `Testing\SampleData\Full Scenarios\Bot Rules\README.md`.
 - Left on the real clock on purpose: sign-in tokens and the two-step code, Hangfire's schedule, Stripe, external mail timestamps, the AI cost-cap day, database `now()` defaults.
 - Existing: `--seed-demo`, `--seed-new-items`, `--backfill-reminders`, `--send-reminders`, `--clear-items`, `--clear-new-items`.
 - Not built: `--shift-dates`; a dev-only way to tell the UI what "today" is.

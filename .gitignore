@@ -10,11 +10,11 @@ __pycache__/
 *.pyc
 
 # directory junctions made for the receipt viewer (they point back into this tree)
-/SampleData/receipts/pdf-as-jpg/receipt-pdfs/
-/SampleData/receipts/pdf-as-jpg/sample/
-/SampleData/receipts/pdf-as-jpg/testing/
-/SampleData/receipts/pdf-as-jpg/warranty-docs/
-/SampleData/receipts/pdf-as-jpg/warranty-photos/
+/Testing/SampleData/receipts/pdf-as-jpg/receipt-pdfs/
+/Testing/SampleData/receipts/pdf-as-jpg/sample/
+/Testing/SampleData/receipts/pdf-as-jpg/testing/
+/Testing/SampleData/receipts/pdf-as-jpg/warranty-docs/
+/Testing/SampleData/receipts/pdf-as-jpg/warranty-photos/
 
 # machine-specific setting for the page saver; Windows thumbnail caches; a stray copy of the tool
 /tools/page-saver/folder.txt
