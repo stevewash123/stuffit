@@ -56,10 +56,8 @@ Run **Scenarios 43 and 48** (no longer deferred) and the **steps of 44 listed be
 - Phone insurance, appliance plans, cancel, renew, refund, "plan bought later" and "item returned or replaced" behaviour: not built (Scenarios 45 to 47, 49, 50).
 
 ## Still open, do not report as new
-- No "Did you buy a protection plan with this?" question on Add purchase or Add Details (44-11 to 44-14).
-- No My Items filter "Has a protection plan", no plan icon on rows, no search by contract number (48-12 partly).
-- No card-benefit "What is the difference?" note on the Protection plans page.
-- One place on Home still says "Ending in 30 days... Warranties and plans" (43-15 will be Partial).
+(Push 5 built the "Did you buy ..." question, the My Items filter and plan icon, search by contract number, the card-benefit note and the Home wording; see `CHANGES-push-5-plan-question-and-find-2026-11-03.md`.)
+- One place on Home may still use older wording (check 43-15).
 - The plan kind is not read from a contract by the reader, and `warranty_plans.csv` in the export has no kind column.
 - The four-way sheet's "paperwork or photo" path uses the existing reader (needs the reader on; otherwise note "reader off").
-- Previous retest items still open (see `RETEST-NEXT-BUILD.md`): Lowe's plan with no company note on the row is now covered by the "not verified" line above; confirm that one.
+- Previous retest items still open are in `RETEST-NEXT-BUILD.md`.
