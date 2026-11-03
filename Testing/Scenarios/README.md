@@ -44,8 +44,13 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 33 | Scenario 33 - What is worth tracking | n/a (browser plan) | The "What to track" setting, its shortcuts and limits, New Items following it, kept per person |
 | 34 | Scenario 34 - Color theme | n/a (browser plan) | Three themes and Light / Dark / Match my device, kept on the device, no flash on load |
 | 35 | Scenario 35 - Send feedback | n/a (browser plan) | The feedback form, what will be sent, Your messages, the 5-per-hour limit, privacy between accounts |
+| 36 | Scenario 36 - Claim guidance wizard | n/a (browser plan) | The Refund wizard: reasons, questions, ranked routes (store return, maker warranty, card benefit, extended plan), general-guidance labels, no promise of approval, privacy |
+| 37 | Scenario 37 - Money recovered | n/a (browser plan) | Mark refunded and card payouts, Home total with cash apart from credit, no double count with Mark returned, export file, privacy |
+| 38 | Scenario 38 - Admin feedback queue | n/a (browser plan) | The administrator reads every account's feedback, filters, sets status; customers see the status; non-administrators refused |
+| 39 | Scenario 39 - Daily digest | n/a (browser plan) | Choosing the digest holds emails, one digest a day, no repeats, urgent notices bypass it, bursts collapse; uses the simulated clock and run-digest |
+| 40 | Scenario 40 - Retest of the UAT fixes | n/a (browser plan) | Dates on the item page, bell badge, notification title, ended plan, export download, PDF receipts, feedback overflow, receipt lines past the cap, sign-up leak, console errors |
 
-Scenarios 22 to 35 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
+Scenarios 22 to 40 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
 The shared-data facts (which stores, brands and policies are verified) were read from the development database on 2026-10-24. If that data is re-seeded, re-check the "in shared data / verified" rows before relying on a scenario.
 

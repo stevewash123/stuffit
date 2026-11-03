@@ -47,7 +47,11 @@ Easiest correct method: delete from every table that has an `account_id` for tha
 | 33 What is worth tracking | Alice, Bob | clean (empty New Items); tracking minimum unset. The receipt to upload is in the plan (record file and its lines first) |
 | 34 Color theme | Alice, Bob | clean. The bot must use a browser profile with no earlier choice |
 | 35 Send feedback | Alice, Bob | clean (no feedback rows: the 5-per-hour limit counts rows from the last hour, so the reset also resets the limit), plus Alice has at least one item |
-| (new) claim guidance, recoveries, admin Feedback queue | Alice, Bob, Ops | scenarios not written yet |
+| 36 Claim guidance wizard | Alice, Bob | clean, plus Alice has: item "UAT Blender" (Best Buy, Cuisinart, Small appliances, 89.99, today, return window and maker warranty ticked), a card "UAT Card" (Chase Sapphire Preferred, benefits confirmed) with item "UAT Card Item" paid by it, and item "UAT Plan Item" covered by an extended plan. The 8 general claim guides loaded |
+| 37 Money recovered | Alice, Bob | clean (no recoveries), plus Alice has items "UAT Rec One" 120.00, "UAT Rec Two" 60.00, "UAT Rec Three" 45.00, "UAT Rec Four" 200.00 and Bob has "UAT Rec Bob" 50.00 (any store, today) |
+| 38 Admin feedback queue | Ops, Alice, Bob | Ops operator with two-step enrolled (store the key in `RUN-CONFIG.md`); Alice and Bob clean with NO feedback this hour; Alice has one item |
+| 39 Daily digest | Alice, Bob | clean; simulated clock on with the maintenance key; clock offset 0; Alice time zone America/New_York, reminder time 9:00; digest choices at default |
+| 40 Retest of the UAT fixes | Alice, Bob | clean; simulated clock on, offset 0; Cloudinary with PDF and ZIP delivery enabled; the 12-line Pine Street receipt available |
 
 Plans 1 to 21 are not browser plans (answer keys, runners, email senders); they have their own cleanup scripts and are not covered here.
 

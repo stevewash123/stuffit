@@ -32,7 +32,7 @@ Passwords live in `RUN-CONFIG.md` only. Use two browser contexts (or private win
 9. **Administrators.** The administrator test account is Ops, `stevewash123.tester4@gmail.com` (Test4). It is an administrator and has access to every feature, so it runs any admin step; it does not stand in for Alice, Bob or Carol. An administrator can be made (or unmade) over HTTP with the maintenance key: `POST /api/maintenance/operators/grant` or `/operators/revoke` with header `X-Maintenance-Key` and body `{"email":"..."}`. It only works for an existing account whose email is confirmed, never creates an account, refuses to remove the last administrator, and is written to the admin audit trail as "maintenance key". The command line (`--make-operator <email>`) still works too. The key lives in `RUN-CONFIG.md` only. Two-step sign-in is ON for administrators since build `f1c96c7`: the first admin sign-in goes to Settings, Security to enrol an authenticator, and later sign-ins ask for a 6-digit code. Grok can compute the codes; keep the setup key in `RUN-CONFIG.md`, never in a report.
 
 ## Plans
-The test plans are Scenarios 22 to 35 in the parent folder (Scenarios); each is a `scenario-N.md` in its own folder:
+The test plans are Scenarios 22 to 40 in the parent folder (Scenarios); each is a `scenario-N.md` in its own folder:
 - Scenario 22 - Shared policy vs private purchase (**DRAFT**): shared policy visible to all, purchases private (Alice, Bob).
 - Scenario 23 - Three reports confirm (**DEFERRED**, see S6.1.4): three matching reports do not confirm on their own; an administrator approves (Alice, Bob, Carol, Ops).
 - Scenario 24 - Time travel and reminders (**DRAFT**): clock jump, reminder send, window ends; needs the simulated clock (Alice).
@@ -47,6 +47,11 @@ The test plans are Scenarios 22 to 35 in the parent folder (Scenarios); each is 
 - Scenario 33 - What is worth tracking: the Settings control and New Items following it (Test1, Test2).
 - Scenario 34 - Color theme: themes, light and dark, kept per device (Test1, Test2).
 - Scenario 35 - Send feedback: the form, your messages, the hourly limit (Test1, Test2).
+- Scenario 36 - Claim guidance wizard: the Refund wizard, ranked routes, general-guidance labels, no promise of approval (Test1, Test2).
+- Scenario 37 - Money recovered: refunds and card payouts, the Home total, no double count, export (Test1, Test2).
+- Scenario 38 - Admin feedback queue: the administrator reads and sets the status of every account's feedback (Ops, Test1, Test2).
+- Scenario 39 - Daily digest: choose the digest, one email a day, urgent bypass, bursts; needs the simulated clock and the maintenance key (Test1, Test2).
+- Scenario 40 - Retest of the UAT fixes: the fixes from the 2026-11-02 rounds (Test1, Test2).
 
 Scenarios 25 to 27 and 29 to 35 use Test1 (Alice) and Test2 (Bob) from the persona table. They cover only parts that are built and were checked end to end, so a failure is a real finding. Run them in order: Scenario 25 creates the accounts that 26 and 27 use.
 
