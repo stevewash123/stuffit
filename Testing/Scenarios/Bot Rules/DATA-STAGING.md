@@ -52,6 +52,8 @@ Easiest correct method: delete from every table that has an `account_id` for tha
 | 38 Admin feedback queue | Ops, Alice, Bob | Ops operator with two-step enrolled (store the key in `RUN-CONFIG.md`); Alice and Bob clean with NO feedback this hour; Alice has one item |
 | 39 Daily digest | Alice, Bob | clean; simulated clock on with the maintenance key; clock offset 0; Alice time zone America/New_York, reminder time 9:00; digest choices at default |
 | 40 Retest of the UAT fixes | Alice, Bob | clean; simulated clock on, offset 0; Cloudinary with PDF and ZIP delivery enabled; the 12-line Pine Street receipt available |
+| 41 Receipt plans and stated warranties | Alice, Bob | clean (empty New Items and My Items); the real reader on (`Ai:Provider=anthropic`); the sample receipts named in the plan available |
+| 42 Policy source, to-dos, polish | Alice, Bob, Ops | clean; Alice has item "UAT Todo Item" (any store, today) with no to-dos; New Balance and Best Buy shared policies present, New Balance with a source address; Ops operator (two-step state does not matter) |
 
 Plans 1 to 21 are not browser plans (answer keys, runners, email senders); they have their own cleanup scripts and are not covered here.
 
