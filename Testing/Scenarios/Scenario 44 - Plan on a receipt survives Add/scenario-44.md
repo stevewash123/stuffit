@@ -20,8 +20,8 @@
 | 8 | Test1 | Upload `33-a5-lowes-bosch-dishwasher-protection.pdf` (plan with no company) | Plan section asks to pick the company; saving without one leaves the to-do, not a silent drop |
 | 9 | Test1 | Upload the Walmart/Allstate receipt | Allstate matched or shown "not verified" |
 | 10 | Test1 | In a full Add untick everything and Save | A message "Tick at least one coverage, or choose Add without coverage"; not a silent no-op |
-| 11 | Test1 | Add a Best Buy TV by hand with no receipt | "Did you buy a protection plan with this?" Yes / No / Not sure |
-| 12 | Test1 | Answer **Not sure** | A to-do "Check for a protection plan" due in 14 days; no plan created |
+| 11 | Test1 | Add a Best Buy TV by hand with no receipt | "Did you buy additional protection, an extended warranty, insurance or something similar with this?" Yes / No / Not sure |
+| 12 | Test1 | Answer **Not sure** | A to-do "Check for additional protection, extended warranty or insurance" due in 14 days; no plan created |
 | 13 | Test1 | Add another TV by hand; answer **No** | Not asked again for that item |
 | 14 | Test1 | Add a $5 item or a subscription by hand | The question is not shown |
 | 15 | Test1 | Edit the name and model so the plan's covered product no longer matches | "Check this is for the item above"; plan flagged, not attached silently |
