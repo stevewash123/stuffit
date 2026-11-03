@@ -20,3 +20,9 @@ __pycache__/
 /tools/page-saver/folder.txt
 Thumbs.db
 /OfficialDocs/**/page-saver.zip
+
+# secrets for the test bots (maintenance key, passwords, two-step setup keys): never committed
+RUN-CONFIG*.md
+*.secret
+.env
+.env.*
