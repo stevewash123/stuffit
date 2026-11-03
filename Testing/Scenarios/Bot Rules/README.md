@@ -5,6 +5,7 @@ The browser test plans are Scenarios 22 to 28 in the parent folder (Scenarios). 
 ## Before a run
 - **Reachable URL.** The bot cannot see localhost. It needs the deployed UI (Render) or a tunnel. Put the URL in `RUN-CONFIG.md` (not committed with secrets).
 - **Data.** There is no production yet, so UAT runs against the dev database (`stuffit`, shared by local dev and Render). It holds test data only. Before this changes (real users), move UAT to its own Render services and Neon database.
+- **Data staging.** A separate data-staging bot resets the accounts and creates starting fixtures so this bot does not rebuild them: see `DATA-STAGING.md` (run reset: drop and recreate the four personas once per run; scenario reset: wipe their data, keep the logins, before each plan; what each plan expects). When a plan's precondition says an account or item "exists", it will already be there; if it is not, stop and report it instead of building it.
 - **Clean start.** `dotnet run --project src/StuffIt.Api -- --remove-test-accounts` (add `--confirm` to delete) removes every non-administrator account and its data; the two administrators and the shared reference data stay.
 - **Test mailboxes.** The four Gmail accounts in the table below, created only for testing. Each persona signs up with its own address (no aliases), and the bot reads each inbox.
 - **Never give the bot** personal logins or real receipts. Ops is the administrator test account and is used for admin steps.
