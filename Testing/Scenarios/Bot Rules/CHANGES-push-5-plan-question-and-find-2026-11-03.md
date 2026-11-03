@@ -23,7 +23,7 @@ Run **Scenario 44 steps 11 to 14** and **Scenario 48 step 12**, and recheck **43
 | Search by contract number | The My Items search finds an item by its plan's company, plan name or **contract number**. A row found that way says "Matches plan contract GS-88104471" (or "Matches plan <name> (<company>)"). The line is not shown when the item's own words already match. Only your own account's plans are searched | 48-12 |
 | Plans page search | **Protection plans** has a search box (company, name, contract number) | 48-12 |
 | "What is the difference?" | On Protection plans, a collapsed note: a protection plan is bought (from the maker, a store or a third party); a card benefit comes with the card and is added automatically when the card is confirmed, and shows as "Card extended warranty". Links to Credit cards. No advice wording | 48-12 |
-| Words | The Home hints for the 30-day and 60-day tiles and the Items window note now say "Warranties and protection plans". The account-menu hint says "Warranty extensions, accident cover and other plans...". The sample item says "Card extended warranty" | 43-15 |
+| Words | The Home hints for the 30-day and 60-day tiles and the Items window note now say "Warranties and protection plans". The **Account page** (the phone's Account tab; not the dropdown menu, which shows no hints) says "Warranty extensions, accident cover and other plans...". The sample item says "Card extended warranty" | 43-15 |
 
 ## Decided, do not report
 - The question's eligibility rule (shared store plus category plus price) is deliberate: the data has no "store sells plans" flag yet. A store or item outside the rule not showing the question is expected.
