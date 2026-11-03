@@ -10,7 +10,7 @@
 
 | # | Persona | Action | Expected |
 |---|---|---|---|
-| 1 | Test1 | Add a protection plan from UAT Fridge > **It covers more than this item** | Plan form with Fridge pre-ticked in Cover items |
+| 1 | Test1 | Add-on protection (Add) from UAT Fridge > **It covers more than this item** | Plan form with Fridge pre-ticked in Cover items |
 | 2 | Test1 | Company "UAT Appliance Shield", $24.99 monthly, start today, appliance limit $1,500 each, contract states "not covered if over 12 years old" | Saved; the plan page has an Appliances section |
 | 3 | Test1 | Add Washer and Dryer from the list | Each line shows the item, approximate age from its purchase date, limit, and no age flag |
 | 4 | Test1 | Add the range as a line with no receipt: "about 15 years old" | A line with a name and an estimated age; flagged over the stated 12-year limit with the quote; not removed |

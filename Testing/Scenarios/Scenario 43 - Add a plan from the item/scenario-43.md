@@ -10,14 +10,14 @@
 
 | # | Persona | Action | Expected |
 |---|---|---|---|
-| 1 | Test1 | Open UAT TV (view mode). Look at the coverage section | An **Add a protection plan** button beside Add coverage. Record wording and position |
+| 1 | Test1 | Open UAT TV (view mode). Look at the coverage section | An **Add-on protection** section with its Add button beside Add coverage. Record wording and position |
 | 2 | Test1 | Click it | One sheet "How did you get the plan?" with four choices: paperwork or photo; type it in; covers more than this item; came free with my card or store |
 | 3 | Test1 | Choose **I'll type it in** | Plan form with the item already chosen. Required: company, name or length, start. Price, contract number, fee, claim contacts are optional |
 | 4 | Test1 | Company Geek Squad (from the list), name "2-Year Protection", 24 months, start today, Save | Toast "Geek Squad plan added to your UAT TV". The item shows the plan beside the maker warranty, ending 24 months out |
 | 5 | Test1 | Open the item's plan row | Opens the plan page (not a dead end) listing UAT TV. "Add the rest" offers price, contract number, fee, claim phone. A dismissible to-do "Add the rest of your Geek Squad plan" is on the To do page |
 | 6 | Test1 | Open Account > Extended warranties and Home | The plan is listed (company, status, 1 item). Home shows a Protection plans tile |
 | 7 | Test1 | On UAT Laptop open Add coverage and its kind list | "Extended plan" is no longer a bare coverage form (opens the same sheet, or is gone). Record which |
-| 8 | Test1 | UAT Laptop > Add a protection plan > **paperwork or a photo**; upload `Scenario 8 .../03-protection-plan-*.pdf` (reader on) | "Reading your document..."; each value with quote and page; nothing saved until accepted; company matched or flagged not verified |
+| 8 | Test1 | UAT Laptop > Add-on protection > Add > **paperwork or a photo**; upload `Scenario 8 .../03-protection-plan-*.pdf` (reader on) | "Reading your document..."; each value with quote and page; nothing saved until accepted; company matched or flagged not verified |
 | 9 | Test1 | Accept and Save | Laptop shows the plan with the contract's term; the file is attached to the plan as its contract; the item's receipt is not attached to the plan |
 | 10 | Test1 | From UAT TV choose **It covers more than this item** | Plan form with UAT TV pre-ticked in Cover items |
 | 11 | Test1 | Choose **It came free with my card or store** | Shows the card or store coverage already proposed and how to add the card; no plan created |

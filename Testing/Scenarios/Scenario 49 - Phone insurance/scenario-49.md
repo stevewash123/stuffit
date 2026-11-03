@@ -10,7 +10,7 @@
 
 | # | Persona | Action | Expected |
 |---|---|---|---|
-| 1 | Test1 | UAT Phone > Add a protection plan | **Phone or device insurance** is offered as a starting point |
+| 1 | Test1 | UAT Phone > Add-on protection (Add) | **Phone or device insurance** is offered as a starting point |
 | 2 | Test1 | Choose it; provider "UAT Carrier", $14 monthly, started 100 days ago, IMEI 356938035643809 | Saved as a plan on the phone; no end date; next billing date shown; the IMEI is on the plan and the item |
 | 3 | Test1 | Add the deductibles: screen $29, other damage $99, loss $199, theft $199; claims cap 2 per 12 months | Shown as a small table on the plan |
 | 4 | Test1 | Upload a photo of a carrier bill line or enrolment email (reader on) | Provider, price, start date and device read with quotes; unclear values stay blank; saved only after accept |
