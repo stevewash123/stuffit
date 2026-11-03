@@ -13,7 +13,7 @@ Targets the UAT database only (the dev database `stuffit`, shared with the deplo
 | Alice (Test1) | stevewash123.test@gmail.com | customer | email confirmed, terms accepted (current version), display name "QA Test 1", known password from `RUN-CONFIG.md`, quick set-up not finished, no cards, no items |
 | Bob (Test2) | stevewash123.tester2@gmail.com | customer | same, display name "QA Test 2" |
 | Carol | stevewash123.tester3@gmail.com | customer | same, display name "QA Test 3" |
-| Ops (Test4) | stevewash123.tester4@gmail.com | administrator | **Reset in place, never deleted by default**: keep the account and the operator flag, turn two-step OFF, clear its sessions and its data. Delete-and-recreate only when Steve has explicitly allowed it for that run (the `--ops-rebuild` flag), because an administrator account is only created by the operator's command line (`--make-operator`). Display name "QA Test 4". Scenario 28 enrols two-step itself |
+| Ops (Test4) | stevewash123.tester4@gmail.com | administrator | Reset in place by default: keep the account and the operator flag, turn two-step OFF, clear its sessions and its data. Delete-and-recreate is allowed (Steve approved it, with the maintenance key as the safeguard): recreate the account like the others, then make it an administrator with `POST /api/maintenance/operators/grant` (header `X-Maintenance-Key`, body `{"email":"stevewash123.tester4@gmail.com"}`). Display name "QA Test 4". Scenario 28 enrols two-step itself |
 
 `--create-user <email> <password>` creates a confirmed account (add `--operator` for Ops). Time zone: America/New_York. Do NOT run the run reset between plans: it is only for the start of a run, because the plans that test sign-up and deletion expect to create and destroy accounts themselves.
 
@@ -60,6 +60,7 @@ Plans 1 to 21 are not browser plans (answer keys, runners, email senders); they 
 ## Clarifications from the first dry run (2026-11-02)
 Answers to the staging bot's gaps. Anything marked **Steve** needs a person's decision or a secret, not a guess.
 
+- **Ops rebuild: decided.** Steve approved delete-and-recreate of Ops with the maintenance key as the safeguard (the web endpoint above). The `--ops-rebuild` flag may be used.
 - **Plan 25 needs Alice and Bob absent.** Add a drop-only mode: delete the persona and its data and create nothing. Plan 25 then signs them up through the site. After Plan 25, run the normal run-reset recreate for Alice and Bob before Plans 26 onward.
 - **Terms version.** Recreated accounts must carry the app's *current* terms version, not an old one, or the browser bot is stopped by an accept-terms screen. Read it from the app (`LegalVersions.Current` in `StuffIt.Core/Legal`; today `2026-10-01`) and stamp `terms_accepted_at` now.
 - **Clock offset is not in the database.** Reset it with `POST /api/maintenance/clock/reset` (needs the maintenance key and the API URL) or an API restart, never SQL. Timestamps already written under a shifted clock go away with the data reset, so a non-zero offset only matters for rows you create next: reset the clock first, then stage fixtures. **Steve** supplies the maintenance key and the UI/API URLs as environment values (never in chat or a committed file).
