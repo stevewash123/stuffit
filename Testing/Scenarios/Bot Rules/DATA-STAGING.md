@@ -13,7 +13,7 @@ Targets the UAT database only (the dev database `stuffit`, shared with the deplo
 | Alice (Test1) | stevewash123.test@gmail.com | customer | email confirmed, terms accepted (current version), display name "QA Test 1", known password from `RUN-CONFIG.md`, quick set-up not finished, no cards, no items |
 | Bob (Test2) | stevewash123.tester2@gmail.com | customer | same, display name "QA Test 2" |
 | Carol | stevewash123.tester3@gmail.com | customer | same, display name "QA Test 3" |
-| Ops (Test4) | stevewash123.tester4@gmail.com | administrator | same, display name "QA Test 4", made operator (`--make-operator`), **two-step OFF** unless a plan says otherwise (Scenario 28 enrols it) |
+| Ops (Test4) | stevewash123.tester4@gmail.com | administrator | **Reset in place, never deleted by default**: keep the account and the operator flag, turn two-step OFF, clear its sessions and its data. Delete-and-recreate only when Steve has explicitly allowed it for that run (the `--ops-rebuild` flag), because an administrator account is only created by the operator's command line (`--make-operator`). Display name "QA Test 4". Scenario 28 enrols two-step itself |
 
 `--create-user <email> <password>` creates a confirmed account (add `--operator` for Ops). Time zone: America/New_York. Do NOT run the run reset between plans: it is only for the start of a run, because the plans that test sign-up and deletion expect to create and destroy accounts themselves.
 
@@ -56,3 +56,15 @@ Plans 1 to 21 are not browser plans (answer keys, runners, email senders); they 
 - After a plan that created shared data (claims, shared entries, `UAT04 Policy Store`), run the matching cleanup script and say so.
 - At the end of a run, leave Ops's two-step OFF, the clock at offset 0, and no persona with leftover data except what the next run's reset will remove.
 - If something cannot be reset cleanly (a table you did not recognise, a stored file you could not delete), stop and report it. Do not guess: a half-reset account makes the next plan's results meaningless.
+
+## Clarifications from the first dry run (2026-11-02)
+Answers to the staging bot's gaps. Anything marked **Steve** needs a person's decision or a secret, not a guess.
+
+- **Plan 25 needs Alice and Bob absent.** Add a drop-only mode: delete the persona and its data and create nothing. Plan 25 then signs them up through the site. After Plan 25, run the normal run-reset recreate for Alice and Bob before Plans 26 onward.
+- **Terms version.** Recreated accounts must carry the app's *current* terms version, not an old one, or the browser bot is stopped by an accept-terms screen. Read it from the app (`LegalVersions.Current` in `StuffIt.Core/Legal`; today `2026-10-01`) and stamp `terms_accepted_at` now.
+- **Clock offset is not in the database.** Reset it with `POST /api/maintenance/clock/reset` (needs the maintenance key and the API URL) or an API restart, never SQL. Timestamps already written under a shifted clock go away with the data reset, so a non-zero offset only matters for rows you create next: reset the clock first, then stage fixtures. **Steve** supplies the maintenance key and the UI/API URLs as environment values (never in chat or a committed file).
+- **Fixture items: create them as the person, through the app's API, not by SQL.** Sign in as the persona with the known password, add the item the way the UI does (`POST /api/purchases` with the store, date and item), so the app derives its own coverage from the policies. Plans 30, 31 and 32 assume the items carry a return window ("Return window · Target"), so items inserted by SQL with no coverage would change what those plans see. Insert by SQL only when the API route is not available to the staging bot, and say so in the report so the browser bot's findings can be read in that light.
+- **Fixture dates.** "Today" is today in Alice's time zone (America/New_York), the same convention the UI uses for the date field. Not the UTC date.
+- **Orphaned files.** SQL does not remove stored files (`documents.file_key`, `data_exports` zips). For UAT that is acceptable. Before a real run, list the keys in the report so they can be purged from storage later (the Cloudinary `stuffit/` folder). **Steve** decides whether to purge them.
+- **Attribution left in place.** `reference_audits.user_id` and `policy_evidence.entered_by_user_id` rows on shared data stay as they are: they are the audit trail and shared data is out of scope for a reset.
+- **Operator tokens.** Do not read, change or delete `operator_tokens` rows. They are credentials. **Steve** should check the admin accounts' tokens and revoke any that are not in use, since some labels look like token fragments.
