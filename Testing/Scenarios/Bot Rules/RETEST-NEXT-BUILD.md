@@ -20,8 +20,15 @@ For GrokBot. Read with the plan for each area. Record the commit from `/api/vers
 | Store field | Typing a partial store name shows '"X" is not selected yet' with add as new | FS-42-15 |
 | Shared data filter | Reads 'Brands (makers)' | FS-28-9 |
 
+## Also in this build (second push, 2026-11-03)
+| Area | What to check | Plan |
+|---|---|---|
+| Receipt coverage per item | On a receipt with several items, a plan or stated warranty is shown under the item it was read for and attaches to that item only, never to the first item by default. A plan that matches no item is not attached by a quick add and says 'check this is for the item above' | FS-41 steps 5, 7, 8, 13, 15 |
+| To-do reminders are their own type | Settings > Notifications lists 'To-do reminders' (Email and In-app on, At once / In my daily digest) apart from 'Info needed'. The to-do reminder's unsubscribe page says 'To-do reminders'. Turning off 'Info needed' does not stop to-do reminders, and the reverse. The reminder email and bell entry name the item | FS-27-7, FS-32-12, FS-39-1 |
+| Soft-closed return window | See the section below | FS-24-9, FS-40-1 |
+
 ## Still known, do not report as new
-No 'Is yours one of these?' card prompt; no over-limit insurance note; no days-left badge on return rows; the order total can show as the price on the headphones and dishwasher rows (S2.4.15, later); to-do reminder unsubscribe category is 'Info needed' (left as is).
+No 'Is yours one of these?' card prompt; no over-limit insurance note; no days-left badge on return rows; the order total can show as the price on the headphones and dishwasher rows (S2.4.15, later); 
 
 ## Decided by Steve, do not report
 - A plan is still valid on its last day: 'Ends today' and still covered on the item is correct. No special wording or reminders.

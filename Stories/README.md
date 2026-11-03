@@ -119,6 +119,17 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.4.7 A plan that covers a home and its systems
   - S3.4.8 Plan limits, service fees and asking for service
   - S3.4.9 State-specific versions of a plan agreement
+  - S3.4.10 "I have a protection plan": add one from the item page
+  - S3.4.11 Ask "did you buy a protection plan?" when an item is added
+  - S3.4.12 One front door for extended warranties
+  - S3.4.13 The item page shows what the plan adds to the stack, and its true state
+  - S3.4.14 A plan bought after the item
+  - S3.4.15 Cancel a plan and get the refund
+  - S3.4.16 When the covered item is returned, replaced, sold or dies
+  - S3.4.17 A plan is ending or renewing: what I decide, with the facts in one place
+  - S3.4.18 Plan form: clear errors, no lost work, no accidental changes
+  - S3.4.19 Phone and device insurance: monthly, per claim, and it follows the phone
+  - S3.4.20 Home appliance plans: one plan, many appliances, each with its own age
 
 ## E4 Reminders & Notifications (MVP)
 - F4.1 Expiry reminders (MVP)
