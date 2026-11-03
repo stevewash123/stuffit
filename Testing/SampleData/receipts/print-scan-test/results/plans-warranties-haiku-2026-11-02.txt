@@ -1,0 +1,92 @@
+Real-model reading of plan lines (S2.4.7) and stated warranties (S2.4.8), 2026-11-02
+Model claude-haiku-5-5 (as on Render), kind document, prompt document-v22, 26 sample receipts, answer key answer-key-by-item.csv
+Run with: dotnet run --project tests/StuffIt.ReaderHarness -- <pdfs> --kind document --key-csv <answer-key-by-item.csv> --model claude-haiku-5-5
+
+--- summary claude-haiku-5-5: 26 files, 0 not read, $0.0614 total, $0.0024 per file ---
+
+06-half-letter-invoice-tires.pdf  [claude-haiku-5-5]  
+  WARR want  "Road hazard warranty 50,000 mi"  ->  ok: "Road hazard warranty 50,000 mi" months=- miles=50000 provider=-
+
+13-a5-handwritten-style-repair-invoice.pdf  [claude-haiku-5-5]  
+  WARR want  "Repair warranty: 90 days parts and labor."  ->  ok: "Repair warranty: 90 days parts and labor." months=3 miles=- provider=-
+  WARR want  "Repair warranty: 90 days parts and labor."  ->  ok: "Repair warranty: 90 days parts and labor." months=3 miles=- provider=-
+  WARR want  "Repair warranty: 90 days parts and labor."  ->  ok: "Repair warranty: 90 days parts and labor." months=3 miles=- provider=-
+
+15-thermal-bestbuy-tv-geek-squad.pdf  [claude-haiku-5-5]  
+  PLAN want  GEEK SQUAD PROTECTION 4YR $299.99  ->  ok: Geek Squad Protection 4YR $299.99 term=48 starts=2026-09-27 covers=SKU 6571204 company=Geek Squad
+
+16-a5-bestbuy-dishwasher-geek-squad-install.pdf  [claude-haiku-5-5]  
+  PLAN want  Geek Squad Protection 3-Year $229.99  ->  ok: Geek Squad Protection 3-Year $229.99 term=36 starts=delivery covers=dishwasher company=Geek Squad
+
+17-thermal-unknown-store-generator-single.pdf  [claude-haiku-5-5]  
+  WARR want  "2 YR MFR WARRANTY"  ->  ok: "2 YR MFR WARRANTY" months=24 miles=- provider=maker
+
+20-thermal-unknown-maker-heat-pump-two-items.pdf  [claude-haiku-5-5]  
+  WARR want  "5 YR COMPRESSOR / 1 YR PARTS"  ->  ok: "5 YR COMPRESSOR / 1 YR PARTS" months=- miles=- provider=-
+
+21-letter-bestbuy-email-marketing-geek-squad.pdf  [claude-haiku-5-5]  
+  PLAN want  Geek Squad Protection - 2-Year Plan for headphones $49.99  ->  ok: Geek Squad Protection - 2-Year Plan $49.99 term=24 starts=delivery covers=Covers SKU 6505727 company=Geek Squad
+
+28-thermal-pcrichard-sony-oled-protection.pdf  [claude-haiku-5-5]  
+  PLAN want  PC RICHARD PROTECTION 5YR $279.99  ->  ok: PC Richard Protection 5YR $279.99 term=60 starts=2026-05-16 covers=COVERS XR65A80K company=-
+
+30-thermal-walmart-vizio-tv-protection.pdf  [claude-haiku-5-5]  
+  PLAN want  ALLSTATE PROTECTION 3YR $49.00  ->  ok: Allstate Protection 3YR $49.00 term=36 starts=- covers=TV company=Allstate
+
+33-a5-lowes-bosch-dishwasher-protection.pdf  [claude-haiku-5-5]  
+  PLAN want  Lowe's Protection Plan 3-Year $99.00  ->  ok: Lowe's Protection Plan 3-Year $99.00 term=36 starts=delivery covers=dishwasher company=-
+
+35-a5-searsoutlet-maytag-dishwasher.pdf  [claude-haiku-5-5]  
+  PLAN want  Sears Protection Agreement 2-Year $99.99  ->  ok: Sears Protection Agreement 2-Year $99.99 term=24 starts=delivery covers=Covers dishwasher, term from delivery 04/10/2026 company=-
+  WARR want  "Open-box and scratch-and-dent items carry the manufacturer warranty."  ->  MISS
+
+56-letter-bestbuy-email-bose-headphones-geek-squad.pdf  [claude-haiku-5-5]  
+  PLAN want  Geek Squad Protection - 2-Year Plan for headphones $59.99  ->  ok: Geek Squad Protection - 2-Year Plan $59.99 term=24 starts=delivery covers=Covers SKU 6554128 company=Geek Squad
+
+58-letter-circuitbarn-email-sennheiser-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  CircuitCare 2-Year Plan for headphones $59.99  ->  ok: CircuitCare 2-Year Plan for headphones $59.99 term=24 starts=delivery covers=Covers item CB-HD660S2 company=-
+
+81-letter-homedepot-samsung-fridge-protection-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  HD PROTECTION PLAN 5YR $249.00  ->  ok: HD Protection Plan 5YR $249.00 term=60 starts=2026-08-15 covers=COVERS SKU 1006 220 417 company=-
+
+82-thermal-homedepot-bangor-ge-microwave-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  PROTECTION PLAN 3YR $59.00  ->  ok: Protection Plan 3YR $59.00 term=36 starts=- covers=COVERS PVM9179SRSS company=-
+
+83-a5-homedepot-washer-dryer-two-protection-plans.pdf  [claude-haiku-5-5]  
+  PLAN want  Protection Plan 5-Year - Washer $129.00  ->  ok: Protection Plan 5-Year - Washer $129.00 term=60 starts=delivery covers=washer company=-
+  PLAN want  Protection Plan 5-Year - Dryer $119.00  ->  ok: Protection Plan 5-Year - Dryer $119.00 term=60 starts=delivery covers=dryer company=-
+
+84-letter-lowes-lg-fridge-protection-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  LOWE'S PROTECTION PLAN 5YR $279.00  ->  ok: Lowe's Protection Plan 5YR $279.00 term=60 starts=2026-07-05 covers=ITEM 5013320 company=Lowe's
+
+85-thermal-lowes-bosch-dishwasher-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  PROTECTION PLAN 4YR $99.00  ->  ok: Protection Plan 4YR $99.00 term=48 starts=- covers=ITEM 5011402 company=-
+
+86-a5-lowes-ge-range-plan-install.pdf  [claude-haiku-5-5]  
+  PLAN want  Lowe's Protection Plan 3-Year $149.00  ->  ok: Lowe's Protection Plan 3-Year $149.00 term=36 starts=delivery covers=range company=-
+
+87-letter-amazon-email-samsung-tv-3yr-protection.pdf  [claude-haiku-5-5]  
+  PLAN want  3-Year Protection Plan for TVs ($500-$749.99) $79.99  ->  ok: 3-Year Protection Plan for TVs $79.99 term=36 starts=- covers=Samsung 55-Inch QLED TV company=-
+
+88-letter-amazon-email-macbook-accident-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  2-Year Accident Protection Plan for Laptops ($1000-$1249.99) $189.99  ->  ok: 2-Year Accident Protection Plan for Laptops $189.99 term=24 starts=- covers=MacBook Air 13-inch | includes drops and spills company=-
+
+89-letter-amazon-email-dyson-vacuum-4yr-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  4-Year Protection Plan for Vacuums ($500-$749.99) $99.99  ->  ok: 4-Year Protection Plan for Vacuums $99.99 term=48 starts=- covers=Dyson V15 Detect company=-
+
+90-letter-walmart-samsung-tv-allstate-3yr-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  ALLSTATE 3YR TV PLAN $400-$499 $59.00  ->  ok: Allstate 3YR TV Plan $59.00 term=36 starts=- covers=COVERS SAMSUNG 65IN CU7000 company=Allstate
+
+91-thermal-walmart-bangor-shark-robot-vac-plan.pdf  [claude-haiku-5-5]  
+  PLAN want  ALLSTATE 2YR PLAN $200-$249 $29.00  ->  ok: Allstate 2YR Plan $29.00 term=24 starts=- covers=RV761 company=Allstate
+
+92-a5-apple-store-macbook-applecare-plus.pdf  [claude-haiku-5-5]  
+  PLAN want  AppleCare+ for MacBook Air (3 Years) $249.00  ->  ok: AppleCare+ for MacBook Air (3 Years) $249.00 term=36 starts=2026-09-22 covers=Serial FVFH30417Q6L company=-
+
+93-a5-apple-store-iphone-applecare-monthly.pdf  [claude-haiku-5-5]  
+  PLAN want  AppleCare+ with Theft and Loss (monthly) $13.49  ->  ok: AppleCare+ with Theft and Loss $13.49 term=- starts=- covers=IMEI 35 417209 663021 8 company=AppleCare
+
+Plans:     23/23 found, 0 extra (not in the key)
+Warranties: 6/7 found, 0 extra (not in the key)
+Cost: $0.061 for 26 reads
+
