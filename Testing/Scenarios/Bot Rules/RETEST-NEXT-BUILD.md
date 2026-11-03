@@ -27,8 +27,17 @@ For GrokBot. Read with the plan for each area. Record the commit from `/api/vers
 | To-do reminders are their own type | Settings > Notifications lists 'To-do reminders' (Email and In-app on, At once / In my daily digest) apart from 'Info needed'. The to-do reminder's unsubscribe page says 'To-do reminders'. Turning off 'Info needed' does not stop to-do reminders, and the reverse. The reminder email and bell entry name the item | FS-27-7, FS-32-12, FS-39-1 |
 | Soft-closed return window | See the section below | FS-24-9, FS-40-1 |
 
+## Also in this build (third push, 2026-11-03, after the 7ceedd8 retest)
+| Area | What to check | Plan |
+|---|---|---|
+| Delete the only item of a purchase | Delete it, then upload the same receipt again: it is read as new (no "already added to My Items"), and the export no longer lists the old receipt file | A-20, FS-41-11 |
+| Courtesy override | On an item whose every coverage has ended, after "Ask for a courtesy return anyway" is confirmed, Start a return comes back along with Refund and Mark returned | B-13 |
+| Stated receipt warranty | A warranty the receipt printed (pellet stove, "10 YR LIMITED WARRANTY") is titled "Stated on receipt" on the item page, not "Manufacturer warranty" | A-17 |
+| Recovered card | Reads "$50.00 on 1 item" with a space | D-4 |
+| Money recovered errors | A failed save (future date) shows the field's own message (for example "That date is in the future."), not "One or more validation errors occurred." | D-9 |
+
 ## Still known, do not report as new
-No 'Is yours one of these?' card prompt; no over-limit insurance note; no days-left badge on return rows; the order total can show as the price on the headphones and dishwasher rows (S2.4.15, later); 
+No 'Is yours one of these?' card prompt; no over-limit insurance note; no days-left badge on return rows; the order total can show as the price on the headphones and dishwasher rows (S2.4.15, later); plan rows have no SKU match text or keep tick on the New Items row; the Lowe's plan shows no company or 'not in our list' note; an item with only ended return windows cannot be added from a receipt; no 'Step 3 of 3' label on the wizard results; unticking a plan on Add Details does not persist across a reload; the run-reminders summary reports Sent=0; the unsubscribe page groups To-do reminders under 'Purchases'; an item opened from the list after a test-clock advance can show stale data until reload; 
 
 ## Decided by Steve, do not report
 - A plan is still valid on its last day: 'Ends today' and still covered on the item is correct. No special wording or reminders.
