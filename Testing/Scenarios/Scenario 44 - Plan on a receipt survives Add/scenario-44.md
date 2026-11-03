@@ -10,7 +10,7 @@
 
 | # | Persona | Action | Expected |
 |---|---|---|---|
-| 1 | Test1 | Upload `21-letter-bestbuy-email-marketing-geek-squad.pdf` | One New Item (Sony headphones 349.99); plan under it: Geek Squad, 24 months, $49.99, covers SKU 6505727, matched to the item |
+| 1 | Test1 | Upload `21-letter-bestbuy-email-marketing-geek-squad.pdf` | One New Item (Sony headphones 349.99); plan under it: Geek Squad, 24 months, $49.99, for the headphones, matched to the item |
 | 2 | Test1 | Open **Add Details** | A **Protection plan** section, ticked, with company, name, term, price, contract number and start editable |
 | 3 | Test1 | Untick the plan, reload | Stays unticked. Tick again |
 | 4 | Test1 | Add with the plan ticked | Item added with a coverage from a **plan record** (Extended warranties lists it); toast names both; the receipt is attached to the plan as proof of purchase |
@@ -24,7 +24,7 @@
 | 12 | Test1 | Answer **Not sure** | A to-do "Check for a protection plan" due in 14 days; no plan created |
 | 13 | Test1 | Add another TV by hand; answer **No** | Not asked again for that item |
 | 14 | Test1 | Add a $5 item or a subscription by hand | The question is not shown |
-| 15 | Test1 | Edit the model so the plan's SKU no longer matches | "Check this is for the item above"; plan flagged, not attached silently |
+| 15 | Test1 | Edit the name and model so the plan's covered product no longer matches | "Check this is for the item above"; plan flagged, not attached silently |
 | 16 | Test2 | Look for any of Test1's plans or to-dos | None |
 
 Also record: any plan that silently disappeared between New Items and the item page, and any step where the plan count on the list differs from what you added.
