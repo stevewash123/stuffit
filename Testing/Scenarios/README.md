@@ -53,12 +53,13 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 42 | Scenario 42 - Policy source, recoverable to-dos and polish | n/a (browser plan) | The unconfirmed-policy note and Source link, Suggest coverage, getting dismissed to-dos back, and the small interaction fixes |
 | 43 | Scenario 43 - Add a plan from the item | n/a (browser plan) | DEFERRED (S3.4.10, S3.4.12). Every way to add a protection plan from the item, the plan page and a photo; one word for it; same record whichever way |
 | 44 | Scenario 44 - Plan on a receipt survives Add | n/a (browser plan) | DEFERRED (S3.4.11). The receipt's plan appears on Add Details and is not dropped; "did you buy a plan?" on a by-hand add |
-| 45 | Scenario 45 - Renew, cancel and refund | n/a (browser plan) | DEFERRED (S3.4.6, S3.4.14, S3.4.15, S3.4.17). Waiting period, monthly renewal, decision panel, cancel with refund, plan bought later |
+| 45 | Scenario 45 - Renew, cancel and refund | n/a (browser plan) | DEFERRED (S3.4.6, S3.4.14, S3.4.17). Waiting period, monthly renewal, decision panel, plan bought later. The cancel and refund steps are now built: run Scenario 51 |
 | 46 | Scenario 46 - The covered item changes | n/a (browser plan) | DEFERRED (S3.4.16). Item returned, replaced, sold or deleted: what happens to its plan |
 | 47 | Scenario 47 - Home warranty, limits and service requests | n/a (browser plan) | DEFERRED (S3.4.4 to S3.4.9). Company page to plan, waiting period, covered lines, limits, service requests, state variant |
 | 48 | Scenario 48 - Protection layers and true state | n/a (browser plan) | DEFERRED (S3.4.13, S3.4.18). Item page layers, ended-plan state, form errors, unsaved-work warning, update-from-document diff |
 | 49 | Scenario 49 - Phone insurance | n/a (browser plan) | DEFERRED (S3.4.19). Monthly phone insurance, deductibles by loss, claim cap, bill photo, upgrade moves the plan |
 | 50 | Scenario 50 - Home appliance plan | n/a (browser plan) | DEFERRED (S3.4.20). One plan on several appliances, per-appliance age and limit, offer on a new item, replacement, request history |
+| 51 | Scenario 51 - Cancel a plan and record the refund | n/a (browser plan) | Stop renewal, cancel now with undo, record and replace a refund, re-open (S3.4.15) |
 
 Scenarios 22 to 42 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 

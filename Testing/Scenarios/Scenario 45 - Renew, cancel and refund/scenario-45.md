@@ -1,6 +1,6 @@
 # Scenario 45: A plan that renews, ends or is cancelled
 
-**DEFERRED until implemented: S3.4.6, S3.4.14, S3.4.15, S3.4.17.** Do not run before then. Steps that need a not-yet-built screen say what to look for and will fail on build 982952c.
+**S3.4.15 (cancel and refund) is built: run Scenario 51 for it. Still DEFERRED until implemented: S3.4.6, S3.4.14, S3.4.17.** Do not run before then. Steps that need a not-yet-built screen say what to look for and will fail on build 982952c.
 
 **Accounts:** Test1 (stevewash123.test@gmail.com), Test2 (stevewash123.tester2@gmail.com)
 **Preconditions:** Both accounts clean. Test1 has "UAT Phone" ($900) and "UAT Tablet" ($500), bought 10 days ago. Clock offset 0.
