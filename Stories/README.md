@@ -205,6 +205,9 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S6.1.1 Submission creates a private policy and a candidate
   - S6.1.2 AI verifies against the official source
   - S6.1.3 Card terms research agent
+  - S6.1.4 Unverified until enough people agree
+  - S6.1.5 Show how trustworthy shared data is
+  - S6.1.6 Share uploaded warranty documents safely to improve matching (reopened 2026-11-04)
 - F6.2 Crowd-learned defaults (MVP hooks / future feature)
   - S6.2.1 Log coverage observations
   - S6.2.2 Suggest crowd defaults
@@ -235,9 +238,6 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S6.7.3 Redeem credits for free months
   - S6.7.4 Credits page
   - S6.7.5 Fraud controls
-  - S6.1.3 Sharing is the default for policies and official documents
-  - S6.1.4 Unverified until enough people agree
-  - S6.1.5 Show how trustworthy shared data is
 - F6.8 Price-drop alerts during the return window (same-store v2; cross-store future, validate first)
   - S6.8.1 Opt in, and the settings that govern alerts
   - S6.8.2 Days to Decide

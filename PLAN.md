@@ -132,7 +132,7 @@ Stripe membership, legal pages, marketing page. Public launch of MVP.
 - S1.4.2 Delete my account (needs S1.2.2, S2.6.1)
 - S1.4.3 Canceled accounts: 90 days, then purge (needs S1.2.3, S1.2.6)
 - S7.2.2 Crowd-data terms and consent at signup (needs S1.1.1, S7.2.1)
-- S6.1.3 Sharing is the default for policies and official documents (needs S7.2.2)
+- S6.1.6 Share uploaded warranty documents safely, with redaction preview and opt-out (needs S7.2.2); reopened 2026-11-04
 - S7.1.5 Protect administrator access (needs S1.1.1, S7.1.1)
 - S7.1.7 Turn administrator two-step sign-in back on before deployment (needs S7.1.5, S7.6.1; release gate, do it last)
 - S3.2.4 Verified policies for the most common cards (needs S3.2.3, S3.3.6)
