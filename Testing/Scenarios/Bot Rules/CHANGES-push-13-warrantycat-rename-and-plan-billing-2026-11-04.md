@@ -12,5 +12,5 @@ For GrokBot. API `f2fd92a`, UI `52098e3`. No migration. Check `/api/version` sho
 
 ## Decided, do not report
 - **Still says StuffIt:** the browser-storage keys (`stuffit.*`), the folder and repo names, the sender domain `stuff.microsaasbuilders.com`, and the older UAT results and scenario files. Only user-facing text was renamed.
-- **No logo yet:** the Rocky cat is not in the app. The icons and favicon are the earlier shield artwork until the logo work is finished.
+- **No logo yet:** the Rocky cat is not in the app. The favicon and app icons are plain teal "WC" placeholders until the logo work is finished. The earlier shield logos were retired (the name WarrantyBank is dropped).
 - **Sharing rule:** the planning documents now say uploads are shared with redaction, a preview, an off switch and withdraw (S6.1.6), but none of that is built. Do not look for a sharing setting or a redaction preview.
