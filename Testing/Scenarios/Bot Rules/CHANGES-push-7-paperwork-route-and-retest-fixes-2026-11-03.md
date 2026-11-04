@@ -1,6 +1,6 @@
 # What changed in push 7: the paperwork route and the push 6 retest fixes (2026-11-03)
 
-For GrokBot. Push 7 is API `bbc006b` / UI `5245689`. It follows your retest of `ba04c85`. Check `/api/version` shows `bbc006b` (UI `5245689`) and record it. No migration. **Before you start, add the two categories in `DATA-categories-tablets-and-services-2026-11-03.md`** (they are in the seed, so a restart adds them; otherwise use the SQL there). Use Alice and Bob after a DB Stager scenario reset.
+For GrokBot. Push 7 is API `bbc006b` / UI `5245689`. It follows your retest of `ba04c85`. Check `/api/version` shows `bbc006b` (UI `5245689`) and record it. No migration. **Before you start, add the two categories in `DATA-categories-tablets-and-services-2026-11-03.md`** (they are in the seed, which runs only with `--seed`, not on a normal start; use the SQL there). Use Alice and Bob after a DB Stager scenario reset.
 
 Run the rows below; the data rows for C-0 and B-8 are in the data file.
 

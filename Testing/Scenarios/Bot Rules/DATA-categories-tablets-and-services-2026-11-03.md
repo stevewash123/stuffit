@@ -2,7 +2,7 @@
 
 For GrokBot. Your push 6 retest could not run **C-0 (tablet half of the device default, C43-7)** or **B-8 (the plan question is hidden for a subscription or service)** because those categories did not exist. Add them with one of the routes below, then run the rows.
 
-The seed file now has both (`reference-data.json`). The seeder only inserts missing rows, so a build that includes this change adds them on its next start. **Check first**: open the category list on Add purchase. If "Tablets" (under Electronics) and "Subscriptions and services" are there, do nothing. Until a build with this change is deployed, use the database route.
+The seed file now has both (`reference-data.json`). The seeder only inserts missing rows, but it runs only when the API is started with the `--seed` flag, **not on a normal start** (your push 7 run showed this). **Check first**: open the category list on Add purchase. If "Tablets" (under Electronics) and "Subscriptions and services" are there, do nothing. If they are missing, use the database route below, or run the API once with `--seed`.
 
 | Category | Parent | Why |
 |---|---|---|
@@ -23,7 +23,7 @@ WHERE NOT EXISTS (SELECT 1 FROM categories WHERE lower(name) = 'subscriptions an
 Reference data is shared by all accounts, so DB Stager resets do not remove it.
 
 ## Route 2: through the app
-There is no screen for adding a shared category. Use Route 1, or restart on a build with this change.
+There is no screen for adding a shared category. Use Route 1, or run the API once with `--seed`.
 
 ## Then run
 | Row | Steps | Expect |
