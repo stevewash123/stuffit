@@ -60,6 +60,14 @@ All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My It
 | 49 | Scenario 49 - Phone insurance | n/a (browser plan) | DEFERRED (S3.4.19). Monthly phone insurance, deductibles by loss, claim cap, bill photo, upgrade moves the plan |
 | 50 | Scenario 50 - Home appliance plan | n/a (browser plan) | DEFERRED (S3.4.20). One plan on several appliances, per-appliance age and limit, offer on a new item, replacement, request history |
 | 51 | Scenario 51 - Cancel a plan and record the refund | n/a (browser plan) | Stop renewal, cancel now with undo, record and replace a refund, re-open (S3.4.15) |
+| 52 | Scenario 52 - Component and labor terms | n/a (browser plan) | One warranty, several parts: whole product vs sealed system vs compressor, parts vs labor end dates, from a document, from shared data, mismatch, reminders per part |
+| 53 | Scenario 53 - Policy for a model or a purchase window | n/a (browser plan) | Samsung 2-year addendum for 65 listed models in a date window (inclusive edges, suffixes, normalising, brand/model contradiction); Penn line and size tree; Milwaukee line ambiguity |
+| 54 | Scenario 54 - When the clock starts | n/a (browser plan) | Installation start (Sub-Zero, Wolf, Cove: to-do and notification), registration-dependent term, start from the serial number (not built, safe failure), delivery date and DD/MM/YYYY |
+| 55 | Scenario 55 - Lifetime and who can use it | n/a (browser plan) | Lifetime with no end date, whose lifetime, not transferable, "can end", yearly check-in, given away, "not stated" fields (S3.1.8, build state unknown) |
+| 56 | Scenario 56 - Conditions, exclusions and two-level terms | n/a (browser plan) | Residential vs commercial and voiding conditions, a used item (30 days then as-is), tool vs battery, a four-product kitchen suite document with full + limited terms (known gap) |
+| 57 | Scenario 57 - Documents that are not an item warranty | n/a (browser plan) | Store return policy + store warranty, a card benefit guide, a three-item plan certificate (known gap): what each is, and none shown as a maker warranty |
+| 58 | Scenario 58 - Free year license from sign-up | n/a (browser plan) | New normal-flow account gets a one-year Stripe trial: Plan & billing line and date, disabled monthly/yearly options, second account, DB Stager accounts |
+| 59 | Scenario 59 - Manage membership in Stripe | n/a (browser plan) | Manage membership opens the Stripe portal, Return and Back, cancel keeps the date, errors for accounts with no Stripe customer, no cross-account access |
 
 Scenarios 22 to 42 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
