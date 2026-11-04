@@ -19,3 +19,4 @@ Settings has a **Plan & billing** tab (it was a placeholder). Where you can go d
 ## Decided, do not report
 - The monthly and yearly options are placeholders and cannot be chosen; buying is not built (S1.2.1).
 - No Founders option yet; it will be a database flag later.
+- Behind the scenes (not for grading): a new account's free year is now a one-year Stripe **trial** on the sandbox price, so its status reads trialing and the license line still says "Free 1-year license". Nothing on screen changes.
