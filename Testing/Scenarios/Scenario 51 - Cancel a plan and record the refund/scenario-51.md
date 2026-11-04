@@ -7,7 +7,7 @@
 
 | # | Persona | Action | Expected |
 |---|---|---|---|
-| 1 | Alice | Add a protection plan on UAT Phone: company typed in, yearly $120, starts 10 days ago, 12 months, **renews automatically**, contract number, claim phone | Plan card on the item; Protection plans lists it Active |
+| 1 | Alice | Add a protection plan on UAT Phone **with the full form (`/plans/new?item=...`); the quick drawer on the item page has no renewal or length fields**: company typed in, yearly $120, starts 10 days ago, 12 months, **renews automatically**, contract number, claim phone | Plan card on the item; Protection plans lists it Active |
 | 2 | Alice | Plan page: look at the buttons | **Cancel this plan** is separate from **End this plan** |
 | 3 | Alice | Cancel this plan | "What do you want to do?": **Stop it renewing**, **Cancel it now**, **It already ended or I cancelled it** |
 | 4 | Alice | Choose Stop it renewing | Shows what is saved: the plan's cancellation terms if any, or "No cancellation terms saved for this plan."; contract number with Copy; claim phone and website; "Check your contract for any cancel-for-refund window." Nothing says what Alice is entitled to |
