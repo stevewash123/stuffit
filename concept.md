@@ -1,4 +1,4 @@
-# StuffIt (working name): concept notes (2026-09-30)
+# WarrantyCat (working name): concept notes (2026-09-30)
 
 ## Goal
 Consumer SaaS (Stripe membership) to track warranties and return windows on things you buy, with expiry reminders. MVP = stand it up and see who comes; minimal marketing; keep the option to sell or drive it later. Future: business memberships.
@@ -51,7 +51,7 @@ When many users enter the same value for (manufacturer, category), suggest it as
 User adds a card: nickname ("Chase Sapphire"), issuer + card product (picked from reference), last 4 (never full number). Card benefits are user-CONFIRMED: reference card_benefit rows are proposed, user confirms/edits per card (tier and issuer terms vary, benefits change), stored as payment_method_benefit (term, cap, claim window, confirmed_at, source). Reissued cards: keep multiple last4 values with valid ranges on one method so email matching still works. Coverage from a card snapshots the confirmed benefit at purchase time.
 
 ## Name (2026-09-30)
-Working name "StuffIt". Known: Smith Micro owns the old StuffIt (compression) mark, product EOL 2019-2020; registration status unchecked. Punctuation variants (Stuff-It / Stuff It!) don't reduce risk. Decision: keep the name while this is an experiment; run USPTO search + domain check before spending on brand/logo, and before any sale. Fallback: distinctive add-on ("StuffIt Vault") or new name. "WarrantyKeeper" is an existing competitor (do not use as a name).
+Working name "WarrantyCat". Known: Smith Micro owns the old WarrantyCat (compression) mark, product EOL 2019-2020; registration status unchecked. Punctuation variants (Stuff-It / Stuff It!) don't reduce risk. Decision: keep the name while this is an experiment; run USPTO search + domain check before spending on brand/logo, and before any sale. Fallback: distinctive add-on ("WarrantyCat Vault") or new name. "WarrantyKeeper" is an existing competitor (do not use as a name).
 
 
 ## AI curation add-on (v2, 2026-09-30)

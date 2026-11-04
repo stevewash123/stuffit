@@ -1,9 +1,11 @@
-# StuffIt: handoff for a fresh thread (first written 2026-10-01, current-state section updated 2026-10-27)
+# WarrantyCat (formerly StuffIt, WarrantyBank): handoff for a fresh thread (first written 2026-10-01, current-state section updated 2026-10-27)
+
+**Renamed 2026-11-04: the product is now WarrantyCat** (mascot Rocky, a Norwegian Forest Cat; `C:\Projects\Screenshots\WarrantyCat.jpg`). Only user-facing and prose text was renamed. Folders, repos (`StuffIt_API`, `StuffIt_UI`), namespaces (`StuffIt.*`), the `stuffit.*` browser storage keys, the databases, the Render service and the sender domain `stuff.microsaasbuilders.com` still say StuffIt; rename those separately and deliberately. Rocky logo not yet in the app.
 
 Read this first, then `concept.md`, `PLAN.md`, `docs/api-conventions.md`. Full transcript of the thread that produced this is archived as `StuffIt-warranty-tracker-M0-to-M3_*.md` in `C:\Users\steve\claude-threadlogs` (use the resumeLog skill only if the details below are not enough).
 
 ## What it is
-StuffIt (working name): consumer SaaS that tracks warranties, return windows and card benefits on things people buy. Stripe membership later. Single customer role; one administrator exception. Crowd-powered shared data (policies, official warranty documents); personal data (purchases, receipts, cards) is never shared.
+WarrantyCat (working name): consumer SaaS that tracks warranties, return windows and card benefits on things people buy. Stripe membership later. Single customer role; one administrator exception. Crowd-powered shared data (policies, official warranty documents); personal data (purchases, receipts, cards) is never shared.
 
 ## Where things are
 - `C:\Projects\StuffIt\` planning root (its own git repo since 2026-10-27, local only; `StuffIt_API` and `StuffIt_UI` inside it are separate repos and ignored by it): `concept.md` (decisions), `PLAN.md` (milestones M0 to M8 with dependencies), `Stories\` (E1 to E9 > features > stories, each with Milestone and Depends on), `docs\` (`api-conventions.md`, `consignmentgenie-lessons.md`, `security.md` pointers only).

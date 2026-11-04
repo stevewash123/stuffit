@@ -2,7 +2,7 @@
 
 No secrets in this file or anywhere under C:\Projects. See also `C:\Projects\GITHUB-SETUP.md`.
 
-## Database (Neon, StuffIt)
+## Database (Neon, WarrantyCat)
 - The connection string is stored in **dotnet user-secrets** for `StuffIt.Api` (UserSecretsId `826661e7-f2c8-407b-a300-826f73d39705`), at `%APPDATA%\Microsoft\UserSecrets\<id>\secrets.json`, outside every repo.
 - Key: `ConnectionStrings:Default` (Npgsql keyword format).
 - Staging/production: environment variable `ConnectionStrings__Default` on the host.

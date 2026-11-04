@@ -1,4 +1,4 @@
-# StuffIt Stories
+# WarrantyCat Stories
 
 Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, future.
 

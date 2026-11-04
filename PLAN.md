@@ -1,4 +1,4 @@
-# StuffIt Development Plan
+# WarrantyCat Development Plan
 
 Generated from the story dependencies. Milestones are ordered; every story's dependencies are in the same or an earlier milestone.
 

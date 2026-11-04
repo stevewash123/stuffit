@@ -1,4 +1,4 @@
-# StuffIt testing list (2026-10-06)
+# WarrantyCat testing list (2026-10-06)
 
 Automated tests pass (API unit 264, integration 354, UI 688). This is what they cannot tell us. Nothing built since 2026-10-03 has been checked in a real browser, and nothing has run against the real model.
 

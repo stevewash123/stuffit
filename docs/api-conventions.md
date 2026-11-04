@@ -1,4 +1,4 @@
-﻿# StuffIt API conventions (confirmed 2026-09-30, implemented in M1 auth)
+﻿# WarrantyCat API conventions (confirmed 2026-09-30, implemented in M1 auth)
 
 Drafted 2026-09-30 from a review of ConsignmentGenie_API. Status: **confirmed** and implemented in `StuffIt_API` (branch `m1-auth`). Every story follows it. Covered by tests in `AuthApiTests`.
 
@@ -22,7 +22,7 @@ Drafted 2026-09-30 from a review of ConsignmentGenie_API. Status: **confirmed** 
 - JSON: camelCase properties, enums as camelCase strings (configured in Program.cs).
 - Routes: `api/[controller]` mostly, some role-prefixed (`api/owner`, `api/consignor`), plural and singular mixed.
 
-## The StuffIt conventions
+## The WarrantyCat conventions
 
 ### 1. Token claims
 - Use the registered JWT names, lowercase, and turn off the default claim remapping (`MapInboundClaims = false`): `sub` (user id), `email`, `jti`, `iat`, `exp`, `iss`, `aud`.

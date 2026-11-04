@@ -75,11 +75,11 @@ Source: `C:\Projects\ConsignmentGenie\ConsignmentGenie_UI` (Angular, UI repo onl
 
 Source: `C:\Projects\ConsignmentGenie\ConsignmentGenie_API`. Read 2026-09-30. Reference only.
 
-**Security note.** The API repo `CLAUDE.md` contains live credentials (an email-provider API key and database host, user and password) in plain text, and the file itself says secrets have been committed twice. Treat them as exposed: rotate them, and keep secrets in environment configuration. Values are deliberately not copied anywhere in StuffIt.
+**Security note.** The API repo `CLAUDE.md` contains live credentials (an email-provider API key and database host, user and password) in plain text, and the file itself says secrets have been committed twice. Treat them as exposed: rotate them, and keep secrets in environment configuration. Values are deliberately not copied anywhere in WarrantyCat.
 
 ## Single role simplifies everything
 
-ConsignmentGenie has owner, consignor, admin and customer roles, and role shows up in preference keys (user, role), API paths (/api/owner/notifications), duplicate screens, and the notification entity (ToType). StuffIt MVP has one customer role, so none of that exists. A membership role column (default member) is reserved for family and business features; operators use a separate flag (S7.5.2).
+ConsignmentGenie has owner, consignor, admin and customer roles, and role shows up in preference keys (user, role), API paths (/api/owner/notifications), duplicate screens, and the notification entity (ToType). WarrantyCat MVP has one customer role, so none of that exists. A membership role column (default member) is reserved for family and business features; operators use a separate flag (S7.5.2).
 
 ## Notifications backend: what exists
 
