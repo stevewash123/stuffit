@@ -94,7 +94,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S3.1.9 What proof of purchase a warranty asks for (v2)
   - S3.1.10 New Items are processed, not computed on every look (v2)
   - S3.1.12 Every date and "days left" comes from the app's clock (open)
-  - S3.1.13 A warranty with a condition is split into a base coverage and an optional one (v2, draft)
+  - S3.1.13 A warranty with a condition is split into a base coverage and an optional one (v2, built)
 - F3.2 Reference data & versioned policies (MVP)
   - S3.2.1 Party and versioned policy tables
   - S3.2.2 Pick a known manufacturer policy or add a new one

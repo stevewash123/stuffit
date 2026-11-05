@@ -24,18 +24,21 @@
 | 12 | Test1 | Move the clock to 2026-11-17 (the quick-added Sub-Zero item from step 11 is still undated; its to-do is due 2026-11-18) | One nudge the day before the due date. Not before. Not twice. Items already dated, dismissed or deleted get none |
 | 13 | Test2 | Open Test1's notification or item addresses | Not found |
 
-**Part B: a term that depends on registering (known gap)**
+**Part B: a term that depends on registering (built 2026-11-05, S3.1.13: split into a base coverage and an optional one)**
 
 Item: Trailblaze TB-350 portable power station, bought **2026-10-20** (the 30-day registration deadline is **2026-11-19**, still open). Document: `edge-registration-required.pdf`.
 
 | # | Persona | Action | Expected |
 |---|---|---|---|
-| 14 | Test1 | Add the item by hand, upload the document to it | Two possible terms are read: **90 days** unregistered (ends **2027-01-18**), or **3 years** if registered within 30 days of purchase (ends **2029-10-20**) |
-| 15 | Test1 | Look at what is proposed | The app **asks** "Did you register it?" and does not assume the 3 years. Until answered, only the 90-day term counts as covered. Record the wording |
-| 16 | Test1 | Answer **No** | 90 days, ends 2027-01-18; the 3-year term is not shown as active |
-| 17 | Test1 | Change the answer to **Yes** and give a registration date 2026-11-01 | 3 years, ends 2029-10-20 |
-| 18 | Test1 | Change the answer to **Not sure** | Neither term asserted; a to-do or reminder to check before **2026-11-19**. Record whether the deadline is mentioned. (If not built, mark Not built; it is the reminder that makes the question useful) |
-| 19 | Test1 | Repeat with a purchase date of 2026-09-01 (deadline 2026-10-01, already past) | The app does not offer to register; says the registration window has passed. Record what it offers |
+| 14 | Test1 | Add the item by hand (purchase 2026-10-20), upload the document to it | A choice panel with **two coverages**: the 90-day term **ticked**, and "3 years if you register within 30 days" **not ticked**, with the document's condition quoted. The 90 days read as 3 months, so the base term ends **2027-01-20** (the key's 2027-01-18 is two days off: record which you see; either is acceptable if consistent) |
+| 15 | Test1 | Accept with only the base ticked, then look at the item page | 90 days active. The 3-year term is listed as **"3 years if you register by 2026-11-19. Not counted yet."** (not active). Days left, the item status and Home count only the 90 days. A to-do **"Register <item> by 2026-11-19 to extend the warranty to 3 years"** exists. If you did not tick the optional coverage, nothing was created for it: skip to step 16b |
+| 16 | Test1 | Remove the item and repeat, this time with the 3-year coverage **ticked** at the panel | Both coverages are created; the 3-year one still reads **Not counted yet** until you say you registered. The to-do exists once |
+| 16b | Test1 | Remove the item and repeat with the optional coverage **unticked**; then re-read the stored document from the item page (Read it) | Only the base coverage and no to-do after the first accept. After re-reading, the optional coverage and its to-do can be added beside the base one, with nothing doubled |
+| 17 | Test1 | On the item with the optional coverage, press **I registered** and give the date 2026-11-01 | The 3-year term becomes active (counted from the purchase date, ends **2029-10-20**); it **replaces** the 90 days for days left, status and Home; the 90-day coverage stays listed as **replaced by the 3-year coverage**; the to-do is finished; an **Undo** is offered |
+| 18 | Test1 | Press **Undo** (same visit) | The 90 days is active again, the 3-year coverage reads "Not counted yet", and the to-do is back. (The old "Not sure" answer is not built: the to-do and its deadline do that job.) |
+| 19 | Test1 | Move the clock (T1) to 2026-11-25, after the deadline of 2026-11-19, with the optional coverage never marked registered | It reads **"Not earned: the registration window ended 2026-11-19"**; the to-do is closed as missed (kept, not deleted); the 90 days still counts |
+| 19b | Test1 | Press **I registered** on it, and give a date 2026-11-10 (before the deadline), then try 2026-11-22 (after) | It asks the person to **confirm they registered in time**; the earlier date is accepted and activates the coverage, the later date is refused with a plain message. Reset the clock to offset 0 afterwards |
+| 19c | Test1 | Add a second item from `standard-lifetime-limited-reel.pdf` or any document that gives a longer term **without** a condition | Nothing is split: one coverage, no optional line, no to-do |
 
 **Part C: a start derived from the serial number (not built; tests the safe failure)**
 
