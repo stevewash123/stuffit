@@ -66,4 +66,5 @@ On the Render API service set `Clock__Simulated=true` and `Maintenance__Key` (16
 - `POST /api/maintenance/clock/advance?days=N` moves forward (forward only)
 - `POST /api/maintenance/clock/reset` returns to real time
 - `POST /api/maintenance/run-reminders` and `/run-retention` run those jobs as of the app's date
+- Also `run-digest`, `run-export-expiry`, `run-new-items` (each takes an optional `?accountId=` so only that account is touched: always pass it) and `run-email-retry`, `run-signup-purge` (no account: whole database, clone only). API-only scripts that use them are in `Testing/Scenarios/Sweeps/`.
 Design and limits: `Stories/TESTING/T1-simulating-time.md`.

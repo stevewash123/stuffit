@@ -4,6 +4,8 @@ Whole purchases to run through the app by hand: documents in the order to use th
 
 All scenarios use the **test client** (`stevewash123.test@gmail.com`, with My Items and New Items empty) and its **Chase Freedom Unlimited** card (ending 1111), except where a scenario changes that. Scenario 1 is the happy path; each of 2 to 14 changes one thing about it. Emails are sent to the test mailbox with `Testing\TestEmails\send_scenario.py N` (it asks for the Gmail app password; `--list` shows what each scenario sends), then run Check Emails.
 
+API-only checks of the scheduled jobs (move the clock, run a sweep, read the result back) are in `Sweeps/`, with their own README. They are not numbered scenarios.
+
 | # | Folder | Store / item | What is different from the happy path |
 |---|---|---|---|
 | 1 | Scenario 1 | Home Depot / Milwaukee hammer drill | Nothing: the happy path |
