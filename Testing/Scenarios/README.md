@@ -70,6 +70,7 @@ API-only checks of the scheduled jobs (move the clock, run a sweep, read the res
 | 57 | Scenario 57 - Documents that are not an item warranty | n/a (browser plan) | Store return policy + store warranty, a card benefit guide, a three-item plan certificate (known gap): what each is, and none shown as a maker warranty |
 | 58 | Scenario 58 - Free year license from sign-up | n/a (browser plan) | New normal-flow account gets a one-year Stripe trial: Plan & billing line and date, disabled monthly/yearly options, second account, DB Stager accounts |
 | 59 | Scenario 59 - Manage membership in Stripe | n/a (browser plan) | Manage membership opens the Stripe portal, Return and Back, cancel keeps the date, errors for accounts with no Stripe customer, no cross-account access |
+| 61 | Scenario 61 - Vehicles slice 1 | n/a (browser plan) | Add a vehicle (any age, seeded makers), odometer readings and pace, time-and-miles coverage (whichever comes first, estimates never end a coverage), Private sale seller, export and isolation |
 
 Scenarios 22 to 42 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
