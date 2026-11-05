@@ -22,3 +22,6 @@ Test triggers for the scheduled jobs are on staging since API `747025c` (they ar
 3. Report each step Pass or Fail on the answer alone, in a result file named for the script. If every trigger answers 404 the simulated clock or maintenance key is not set on that API service: report **Blocked** with the first call that returned 404, and do not retry.
 4. Do **not** run `run-email-retry` or `run-signup-purge` on staging: they have no account filter and act on everyone's data. Their scripts are not written yet.
 5. Scenario 54 step 19 (a missed registration to-do) now passes either by opening the to-do list or by `run-reminders?accountId=...`; you may use either.
+
+## Known, do not report
+- The verification email on Register still comes from "StuffIt", not "WarrantyCat". It is the sender name setting on the API service (Email__FromName), not code. It will change when that setting is set.
