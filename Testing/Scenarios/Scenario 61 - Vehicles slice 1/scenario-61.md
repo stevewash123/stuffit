@@ -30,7 +30,7 @@
 | 11 | Test1 | Truck page: Add reading 14,000, date left as today | Saved. Newest first. "14,000 miles on Nov 5, 2026" (never without its date). Pace line says "Add another reading a month or more later..." and no estimate is shown |
 | 12 | Test1 | Add 7,000 dated 2026-01-01, then 12,500 dated 2026-07-01 | Pace "About N miles a year, from your readings of ..." and an **estimated** "today" figure labelled estimated, smaller than the entered one. Estimated figure is not in the list of readings |
 | 13 | Test1 | Add 500 dated 2026-08-01 | Asks once: "This is lower than the reading on Jul 1, 2026. Save it anyway?" Cancel saves nothing. Save it anyway keeps it flagged "lower than an earlier reading"; latest reading and pace ignore it |
-| 14 | Test1 | Press "This reading is correct" on it | It now counts as the latest |
+| 14 | Test1 | Press "This reading is correct" on it | It now counts in the pace and the miles figures. It is the latest reading only if its date is the newest |
 | 15 | Test1 | Try a reading dated tomorrow | Refused |
 | 16 | Test1 | Edit one reading's value and date; delete one | Both work; the odometer lines follow |
 | 17 | Test1 | Set the clock forward 14 months (offset) and look at the page | "last reading 14 months ago" beside the latest reading and beside every miles figure |
