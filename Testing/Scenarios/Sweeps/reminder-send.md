@@ -4,13 +4,13 @@
 
 ## Setup
 1. Read each account id from the `account_id` claim of their access token: `A` (Alice), `B` (Bob).
-2. As each, add a purchase with a warranty that ends 25 days from today (any seeded store; set the warranty end by hand if the document has none). Email on for warranty reminders in notification preferences.
+2. As each, add a purchase with a warranty that ends 25 days from today (the reminder goes out 7 days before the end, so the clock is advanced 18 days below) (any seeded store; set the warranty end by hand if the document has none). Email on for warranty reminders in notification preferences.
 3. `GET /api/maintenance/clock` and note the offset.
 
 ## Steps
 | # | Call | Expected |
 |---|---|---|
-| 1 | `POST /api/maintenance/clock/advance?days=10` | clock moved (the warranty now ends in about 15 days) |
+| 1 | `POST /api/maintenance/clock/advance?days=18` | clock moved (the warranty now ends in 7 days; the app sends the warranty-ending reminder 7 days before the end date) |
 | 2 | `POST /api/maintenance/run-reminders?accountId=A` | `Failed = 0`, and `Sent` is 1 or more |
 | 3 | Alice: `GET /api/notifications` | a warranty-ending reminder for the item, unread |
 | 4 | Bob: `GET /api/notifications` | **no** reminder for his item: Bob was not run |
