@@ -1,6 +1,6 @@
 # What changed in push 30: the company's own returns or support page; a list-note fix (2026-11-06)
 
-For GrokBot. API `bc78d21` and UI `0bb9a5b`. Check `/api/version` (`commit` must be `bc78d21`). Migration **`PartyCompanyLinks`** (five columns on `parties`) is applied to staging before this push. No reference seed change (no links were added to the data files: nothing is invented). Story S3.2.14. **This build is not pushed until your push 29 results are in.**
+For GrokBot. API `bc78d21` and UI `0bb9a5b`. Check `/api/version` (`commit` must be `bc78d21`). Migration **`PartyCompanyLinks`** (five columns on `parties`) is applied to staging before this push. No reference seed change (no links were added to the data files: nothing is invented). Story S3.2.14.
 
 ## New (S3.2.14): a link to the company's own returns or customer support page
 - A shared or private **store or brand** can carry two optional https links: a **returns page** (for a maker, its warranty-claim page, stored in the existing claim address) and a **customer support page**, each with the date it was last confirmed.
