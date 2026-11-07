@@ -20,7 +20,7 @@ The nightly retention job (`receipt-retention`, also `POST /api/maintenance/run-
 ## Steps to run
 1. Test1 > Settings > Notifications: set **Warranty ending soon** (or another type) to **In my weekly digest**, pick **Friday**. Reload: the choice and the day stay. Set a second type to weekly: it shares Friday.
 2. Create two or three warranty-ending notices for Test1 for the weekly type (items with warranties ending soon). Nothing is emailed at once for that type (held).
-3. Set the simulated clock to the Friday after Test1's digest time. Run the digest sweep (`run-digests`): **one weekly digest** email listing the held notices; the in-app notice "Weekly digest" appears. Run it again the same week: **none**. Run on a non-Friday: none.
+3. Set the simulated clock to the Friday after Test1's digest time. Run the digest sweep (`run-digest`): **one weekly digest** email listing the held notices; the in-app notice "Weekly digest" appears. Run it again the same week: **none**. Run on a non-Friday: none.
 4. Add more than three held notices of one type: the digest shows **one consolidated line** with a link.
 5. A notice of that type with 3 or fewer days left (urgent) is sent **at once**, not held.
 6. Switch the **Weekly digest** type's Email off for Test1: no weekly email next Friday (the in-app notice still appears if In-app is on).
