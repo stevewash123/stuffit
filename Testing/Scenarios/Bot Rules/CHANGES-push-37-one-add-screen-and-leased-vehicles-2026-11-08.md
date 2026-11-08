@@ -1,6 +1,6 @@
 # What changed in push 37: one Add screen (retail or vehicle), vehicle payment, and leased vehicles (2026-11-08)
 
-For GrokBot. Check `/api/version` against the pushed API commit. Migrations **`PurchasePaidBy`**, **`VehicleLease`** and **`PartyVehicleMaker`** (applied on startup if `Database:MigrateOnStart` is on). **Run `--seed` on staging after deploy**: it loads about 180 vehicle models (category Vehicles) for Ford, Toyota, Honda, Chevrolet, GMC, Dodge, Ram, Jeep, Subaru, Nissan, Hyundai, Kia, Mazda, Volkswagen, BMW, Tesla and Harley-Davidson; the model checks below do nothing without them. Stories S3.5.7 and S3.5.8.
+For GrokBot. Check `/api/version` against the pushed API commit. Migrations **`PurchasePaidBy`**, **`VehicleLease`** and **`PartyVehicleMaker`**, **`PartyDealer`** (applied on startup if `Database:MigrateOnStart` is on). **Run `--seed` on staging after deploy**: it loads about 180 vehicle models (category Vehicles) for Ford, Toyota, Honda, Chevrolet, GMC, Dodge, Ram, Jeep, Subaru, Nissan, Hyundai, Kia, Mazda, Volkswagen, BMW, Tesla and Harley-Davidson; the model checks below do nothing without them. Stories S3.5.7 and S3.5.8.
 
 ## New: one Add screen (S3.5.7)
 - The My Items header now has one **Add** button (the separate "Add a vehicle" button is gone). `/add/new` and `/add/vehicle` both show two tiles at the top: **Retail purchase** and **Vehicle** (radio-group behaviour). Choosing the other tile switches forms and carries over brand/make, model, price, date and seller.
@@ -10,6 +10,9 @@ For GrokBot. Check `/api/version` against the pushed API commit. Migrations **`P
 
 ## Changed: the Make list on the vehicle form is vehicle makers only
 - The vehicle form's Make no longer offers every brand (no more Abu Garcia). Parties have a new **vehicle maker** flag (`isVehicleMaker`); `--seed` tags about 78 makers (cars, trucks, motorcycles, boats, RVs, snowmobiles). A make the person types that is not on the list is added as their own vehicle maker. The `--seed` run on staging sets the flags (it only adds roles). The Add screen's two choices are now real buttons (the chosen one filled).
+
+## Changed: the Dealer list on the vehicle form is dealers only
+- "Dealer or seller" no longer offers ordinary stores (no Best Buy, Home Depot). Parties have a **dealer** flag (`isDealer`). A dealer is also a store (it appears in the retail Store list); a store is not a dealer. Seeded dealers: CarMax, Carvana, AutoNation, Camping World, and **Private sale** (a person selling a vehicle). A dealer the person types is saved as their own dealer. The vehicle form's model year now starts as this year.
 
 ## New: leased vehicles (S3.5.8)
 - **You have it: Bought / Leased** on Add a vehicle and in the vehicle's details (pencil). Leased asks for **Lease ends**, **Allowed per year** and an optional **Fee per mile over**. A lease cannot end before the date the vehicle was got (400, `leaseEndDate`). Choosing Bought clears the lease fields.
