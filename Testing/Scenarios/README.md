@@ -1,4 +1,4 @@
-# Scenarios
+﻿# Scenarios
 
 Whole purchases to run through the app by hand: documents in the order to use them, and an answer key for what the app should show. Each folder has a `scenario-N.md` (the answer key, steps and expected coverage) and every file it needs (`.eml`, `.pdf`, and a `.jpg` twin of each PDF; scenario 14 also has the images that come with its email).
 
@@ -75,6 +75,8 @@ API-only checks of the scheduled jobs (move the clock, run a sweep, read the res
 | 64 | Scenario 64 - Certified used car and service contract | UAT dealer / 2024 Toyota RAV4 | A dealer-certified used vehicle: certified warranty with its own clocks, plus a paid service contract added as a protection plan on the vehicle |
 | 65 | Scenario 65 - Boat with hull and outboard warranties | UAT Bluewater Marine / 2026 Tracker Pro Team 175 TXW + Mercury 60 outboard | A boat: purchase agreement, hull and equipment warranty, and a separate engine warranty on the outboard as its own part; HIN plate photo. No boat makers are seeded, so the maker and model are typed |
 | 66 | Scenario 66 - Private-sale motorcycle with transferred warranty | Private sale / 2025 Harley-Davidson Softail | A private-party sale: phone photo of a typed bill of sale and the remaining factory warranty transferred to the new owner |
+| 67 | Scenario 67 - Snowmobile with separate engine warranty | UAT Northwoods Power Sports / 2026 Ski-Doo Renegade Adrenaline 900 ACE + Rotax 900 ACE | A snowmobile: purchase agreement, machine/chassis warranty, and a separate engine warranty on the Rotax as its own part; VIN plate photo. Ski-Doo is a seeded maker; the model is typed |
+| 68 | Scenario 68 - Backdated car with service records | UAT Riverbend Honda / 2025 Honda CR-V (bought 2024-11-08) | A car added with a past purchase date: buyer's order, still-active factory bumper-to-bumper and powertrain terms, plus four dated dealer service ROs (oil, inspection, transmission fluid, $0 warranty water pump). No clock change; ROs upload as item documents |
 
 Scenarios 22 to 42 are browser plans for the test bot (Grok). The bot rules and the report format are in `Bot Rules\README.md` and `Bot Rules\_template.md`. The accounts are Alice stevewash123.test@gmail.com, Bob stevewash123.tester2@gmail.com, Carol stevewash123.tester3@gmail.com and Ops stevewash123.tester4@gmail.com (administrator).
 
