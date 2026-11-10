@@ -10,7 +10,7 @@ Render > the UI service (StuffIt_UI) > Environment:
 | `WARRANTYCAT_CONTACT_EMAIL` | `support@warrantycat.com` |
 | `WARRANTYCAT_BUSINESS_NAME` | `WarrantyCat` |
 
-They are read at BUILD time (a prebuild script writes them into `environment.ts`), so the UI must be rebuilt/redeployed after they are set. If they are not set, the footer shows `© 2026 [Business name]` and the contact address defaults to `support@warrantycat.com`. Values with quotes, backslashes, `$`, `<` or `>` make the build fail on purpose.
+They are read at BUILD time (a prebuild script writes them into `environment.ts`), so the UI must be rebuilt/redeployed after they are set. If they are not set, the footer shows `© 2026 WarrantyCat` and the contact address defaults to `support@warrantycat.com`. Values with quotes, backslashes, `$`, `<` or `>` make the build fail on purpose.
 
 ## What changed
 | Change | What to check |

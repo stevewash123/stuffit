@@ -62,3 +62,12 @@ Plus **2 Low** notes (1 Needs CC on card wording).
 - `/workspace/uat/push47/p47-ui-findings.md`
 - `/workspace/uat/push47/CHANGES-push-47-keep-added-by-you-2026-11-09.md`
 - Screenshots: `push47/p47-01-card.png`, `p47-02-after-add-ticked.png`, `p47-03-after-readd-none.png`, `p47-04-after-retick.png`, `p47-05-no-odo-card.png`
+
+## Addendum — fixtures filed (2026-11-09 8:29 PM ET)
+
+Per the updated CHANGES note, the two QA-made PDFs were copied into the Scenario 68 folder (no first-page JPG twins were made):
+
+- `Testing\Scenarios\Scenario 68 - Backdated car with service records\07-service-tires-wipers-2026-10.pdf` (from `P46-01-service-tires-wipers-2026-10.pdf`; SHA256 `139966540b541b22115286e611fa2a740fc58c2c1541eb97adf54176709247d2`)
+- `Testing\Scenarios\Scenario 68 - Backdated car with service records\08-counter-tires-wipers-only-2026-11.pdf` (from `P46-02-counter-tires-wipers-only-2026-11.pdf`; SHA256 `2429bc24a9e828894c7e4dc873fb1427c4f2dde2795785af3b5fd66dc15e28e5`)
+
+`Testing\SampleData\` exists and was not used for these (they belong with Scenario 68). Going forward, new fixtures will be saved in the matching `Testing/Scenarios/Scenario N - .../` folder, or in `Testing/SampleData/` for general ones, and named in the report. Claude Code can now add the steps to `scenario-68.md`.
