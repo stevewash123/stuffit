@@ -1,6 +1,6 @@
-# Push 49: About page, login blurb, public footer, configurable contact values (2026-11-10)
+# Push 49: About page, login blurb, public footer, configurable contact values, repair-order picker (2026-11-10)
 
-UI only. No API change, no migration. Not pushed yet: waiting for your Scenario 69 run to finish.
+UI plus a small API change (picker coverage names). No migration.
 
 ## Action for QA, before testing this build: set two Render variables on the UI static site
 Render > the UI service (StuffIt_UI) > Environment:
@@ -20,6 +20,14 @@ They are read at BUILD time (a prebuild script writes them into `environment.ts`
 | Same footer under the legal pages | Terms, Privacy, Disclaimer, Text reminders and About all end with it |
 | New public page `/about` (no login) | What it is, private beta, email reminders and optional text reminders (1 to 5 a month, Msg & data rates may apply, STOP/HELP), contact with business name and email |
 | Terms/Privacy/Text reminders contact line | Now shows support@warrantycat.com (was support@microsaasbuilders.com) |
+
+## Repair-order card (push 46 Lows)
+| Change | What to check |
+|---|---|
+| The coverage picker names a factory pair "Bumper-to-bumper (to <date>)" and "Powertrain (to <date>)" | A vehicle with two whole-vehicle factory coverages and no part named (the Honda, Camry, F-150): the picker and the "covered by" text in the service history use those names, not "Manufacturer warranty (to ...)" |
+| Unticking and re-ticking a left-out job keeps its picked coverage | Tick Tires, pick Powertrain, untick, tick again: Powertrain is still picked |
+
+Note: because the powertrain coverage now carries "Powertrain" in its name, a job that is not an engine or drive part no longer matches it just because it was running. Check that a non-powertrain job (A/C, brake fluid) is left out once the bumper-to-bumper has ended.
 
 ## Not changed / not built yet (do not report)
 - The mobile number field and the unchecked text-reminder consent box in notification settings, and the sms-optin.png screenshot: not built yet.
