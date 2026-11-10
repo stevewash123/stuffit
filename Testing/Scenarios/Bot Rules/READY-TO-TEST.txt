@@ -2,7 +2,7 @@ READY-TO-TEST
 Push: 53
 API commit: 76099ca
 UI commit: 72da5d6
-Pushed: 2026-11-10 07:26 (local time, ET)
+Pushed: 2026-11-10 07:26 (this machine's clock, not ET)
 Release note: CHANGES-push-53-scenario69-leftovers-2026-11-10.md
 Retest source: Results\UAT-retest-2026-11-10-push52-75b770d-readd-merge-and-zero-amounts.md (the push 52 Medium)
 
