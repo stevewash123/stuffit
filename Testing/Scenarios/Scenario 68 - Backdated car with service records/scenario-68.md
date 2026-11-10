@@ -33,6 +33,8 @@
 | 4 | `04-service-oil-inspection-2025-08.pdf` | RO 2025-08-15 oil + inspection @ 9,800 mi; customer pay | Vehicle documents / receipts |
 | 5 | `05-service-transmission-2026-03.pdf` | RO 2026-03-20 CVT fluid service @ 16,400 mi; customer pay on covered assembly | Vehicle documents / receipts |
 | 6 | `06-warranty-water-pump-2026-09.pdf` | RO 2026-09-12 water pump warranty repair @ 20,800 mi; **$0 customer pay** | Vehicle documents / receipts |
+| 7 | `07-service-tires-wipers-2026-10.pdf` | RO 2026-10-20 oil change kept; tires, wiper blades and shop supplies are NOT on a covered part; 22,900 mi | Vehicle documents / receipts |
+| 8 | `08-counter-tires-wipers-only-2026-11.pdf` | RO 2026-11-02 tire, rear wiper and shop supplies only; no odometer | Vehicle documents / receipts |
 
 ### Steps and what should happen
 
@@ -47,6 +49,9 @@
 | 7 | Test1 | Open the vehicle documents list and coverage details; reload | Buyer's order, warranty schedule and four ROs all present. Active bumper-to-bumper and powertrain remain Honda with original end dates. Uploaded-paper source/quotes kept where Read it was used |
 | 8 | Test1 | Inspect To do / Notifications without changing time | No overdue registration invented. No expiry reminder due at clock 0 (bumper ends 2027-11-08; powertrain 2029-11-08). Reminder lead time is **verify**, not clock-tested here |
 | 9 | Test2 | Optional direct link from Bob's personal account | Car and files not accessible; do not perform in the shared business |
+| 10 | Test1 | Upload RO 7 and Read it. Under "other jobs were left out" tick Tires (leave "No coverage (history only)") and Wiper blades (pick a Manufacturer warranty), leave Shop supplies unticked. Add | Oil kept as usual; Tires and Wipers added and marked **added by you**; Shop supplies not added; odometer 22,900 added; coverage end dates unchanged. The Add button counts the ticked jobs |
+| 11 | Test1 | Read RO 7 again and Add with nothing ticked | Oil replaced; Tires and Wipers stay **added by you**. The card says jobs added by hand stay. Tires and Wipers read "already added by you" with no tick box; Shop supplies is still tickable; the count is 1 |
+| 12 | Test1 | Upload RO 8 and Read it | The card still appears (no odometer, only left-out jobs) with no odometer line; tick Tire, Add: one Tire entry on Nov 2, **added by you**, no reading added |
 
 ## Checked when this was made
 
