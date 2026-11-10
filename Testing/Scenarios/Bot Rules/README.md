@@ -68,8 +68,3 @@ On the Render API service set `Clock__Simulated=true` and `Maintenance__Key` (16
 - `POST /api/maintenance/run-reminders` and `/run-retention` run those jobs as of the app's date
 - Also `run-digest`, `run-export-expiry`, `run-new-items` (each takes an optional `?accountId=` so only that account is touched: always pass it) and `run-email-retry`, `run-signup-purge` (no account: whole database, clone only). API-only scripts that use them are in `Testing/Scenarios/Sweeps/`.
 Design and limits: `Stories/TESTING/T1-simulating-time.md`.
-
-## Signals between Claude Code and this bot
-- `READY-TO-TEST.txt` (written by Claude Code): a build has been pushed and its release note is in this folder. It names the push, the API and UI commits and the note. Start the retest when `/api/version` shows that API commit. If its Push number is already in `TESTING-DONE.txt`, there is nothing new.
-- `TESTING-IN-PROGRESS.txt` (written by you): created when a run starts. Claude Code does not push or deploy while it exists.
-- `TESTING-DONE.txt` (written by you): written when a run ends, naming the push, commit and report. Claude Code reads that report before the next push.
