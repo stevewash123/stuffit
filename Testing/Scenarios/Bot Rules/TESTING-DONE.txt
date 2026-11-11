@@ -1,8 +1,8 @@
 ﻿TESTING-DONE
 Status: idle (no QA run in progress). Safe to push.
-Last tested: push 60, API f16f620
-Finished: 2026-11-10 6:56 PM ET
-Report: ..\Results\UAT-retest-2026-11-10-push60-f16f620-plan-offers-and-type-lines.md
+Last tested: push 61, API 94f58ac
+Finished: 2026-11-10 8:45 PM ET
+Report: ..\Results\UAT-retest-2026-11-10-push61-94f58ac-push-60-fixes.md
 
 Protocol (QA Controller writes these):
 - While a QA run is going, this folder has TESTING-IN-PROGRESS.txt (push, commit, start time). Do NOT push or deploy while it exists.
