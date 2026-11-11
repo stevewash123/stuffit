@@ -14,4 +14,4 @@ A simple interface that works equally well on phone and desktop for a non-techni
 - [F9.7 Cards screen](F9.7-cards-ui/F9.7-cards-ui.md) (MVP)
 - [F9.8 Settings & user configuration](F9.8-settings-ui/F9.8-settings-ui.md) (MVP)
 - [F9.9 New Items inbox](F9.9-new-items-inbox/F9.9-new-items-inbox.md) (v2)
-
+- [F9.10 UI structure and honesty](F9.10-ui-structure-and-honesty/F9.10-ui-structure-and-honesty.md) (MVP / v2)

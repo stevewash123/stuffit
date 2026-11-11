@@ -67,6 +67,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S2.6.2 Strip location data and shrink photos on upload
   - S2.6.3 Fair-use storage cap
 - F2.7 Partial data and uncertain facts (v2)
+- F2.8 Matching and confidence (v2 / future)
   - S2.7.1 A purchase date can be approximate
   - S2.7.2 Evidence behind a fact
   - S2.7.3 Add something I already own (no purchase)
@@ -347,6 +348,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S9.8.4 Setup checklist and dismissals
   - S9.8.5 Choose what is worth tracking
 - F9.9 New Items inbox (v2)
+- F9.10 UI structure and honesty (MVP / v2)
   - S9.9.1 New Items list
   - S9.9.2 Add Details opens the prefilled form
   - S9.9.3 Accept into My Items

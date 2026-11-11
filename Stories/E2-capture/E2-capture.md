@@ -13,3 +13,4 @@ Getting a purchase into the system must take seconds, not minutes.
 
 - [F2.6 Receipt retention & upload processing](F2.6-receipt-retention-processing/F2.6-receipt-retention-processing.md) (MVP (before launch))
 - [F2.7 Partial data and uncertain facts](F2.7-partial-data/F2.7-partial-data.md) (v2)
+- [F2.8 Matching and confidence](F2.8-matching-and-confidence/F2.8-matching-and-confidence.md) (v2 / future)
