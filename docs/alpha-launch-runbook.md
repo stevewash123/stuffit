@@ -18,11 +18,22 @@ Source for the deployment steps: `StuffIt_API/docs/render-setup.md`. Gates and d
 - [ ] **Do NOT set** `Maintenance__Key` or `Clock__Simulated` on this deployment (they move the app's date and can make accounts administrators).
 - [ ] UI Static Site (repo `StuffIt_UI`, `npm ci && npm run build`, publish `dist/stuffit-ui/browser`), rewrites in order: `/api/*` to the alpha API, then `/*` to `/index.html`. Custom domain if wanted.
 - [ ] Let the API start once so migrations run (check the log for "Applied migration ... AccountSharingOnByDefault").
-- [ ] Load reference data from your PC against the alpha branch: `dotnet run --project src/StuffIt.Api -- --import-reference reference-data` (stores, brands, cards, policies, the ski names).
+- [ ] Load reference data from your PC against the alpha branch, **in this order** (the researched files refer to the brands the base seed creates, so `--seed` must come first; `render-setup.md` leaves it out): `dotnet run --project src/StuffIt.Api -- --seed`, then `dotnet run --project src/StuffIt.Api -- --import-reference reference-data` (stores, brands, cards, policies, the ski data in `entities-ski.json` and `ski-round1.json`). Never run `--seed-placeholders`: it makes FAKE policies. A test (`ReferenceImportRehearsalTests`) runs this exact sequence inside a rolled-back transaction, so a broken file is caught before you load a real database.
 - [ ] Storage check: `dotnet run --project src/StuffIt.Api -- --storage-check` with the alpha Cloudinary values.
 - [ ] Sign up your own account on it, then `--make-operator <your email>`; set up two-step sign-in on that account.
 - [ ] CC, with the URL: `/api/version` shows the current `main` commits and environment is not Staging-by-accident; `/health` is green; UI Last-Modified matches.
 - [ ] Tell Grok's tooling and the DB stager that this site and database are off limits (until the planned pre-launch smoke, section D).
+
+## B2. Make Dev look like launch (the plan: improve the ski data, then reset Dev)
+Dev (Neon database `stuffit`) is also what the Staging site and Grok's QA use. Resetting it removes every account and all test data, which is the intent. Accounts are recreated as needed.
+- [ ] **Ski data reviewed.** Round 1 is in `reference-data/ski-round1.json` and `entities-ski.json`: sourced terms for Rossignol, K2 and Smith helmets, returns for evo and Christy Sports, unconfirmed Backcountry and L.L.Bean, websites for the ski entities. What was left out, and why, is in the file's `note`. Read the "unconfirmed" ones on the stores' own pages and confirm them in Admin > Companies after the load.
+- [ ] **Safety net (Steve):** make a Neon branch of the current `stuffit` database (or note the restore point). Name it so it is obvious, e.g. `stuffit-before-reset-2026-11`.
+- [ ] **Stop writers:** tell Grok not to start a run (leave a TESTING-IN-PROGRESS note), and expect the Staging site to error for a minute.
+- [ ] **Empty the database.** Neon will not let you drop the database you are in, so empty it instead: run `DROP SCHEMA public CASCADE; CREATE SCHEMA public;` and `DROP SCHEMA IF EXISTS hangfire CASCADE;` in the Neon SQL editor against `stuffit`. (Hangfire recreates its own tables on the API's next start.)
+- [ ] **Rebuild the tables:** `dotnet ef database update -p src/StuffIt.Infrastructure -s src/StuffIt.Api` with `ConnectionStrings__Default` set to the dev string. This applies every migration from the first, including AccountSharing and AccountSharingOnByDefault.
+- [ ] **Load the reference data:** `--seed`, then `--import-reference reference-data` (see section B). Do not run `--seed-placeholders`.
+- [ ] **Check:** sign up an account on the Staging site, `--make-operator <email>`; the new account has the sharing box ticked; `/api/version` shows the current commits; Admin > Companies shows Rossignol, K2 and Smith with their policies, evo and Christy Sports with their returns, and no policy mentioning "[placeholder]".
+- [ ] Tell Grok the database is fresh: its test accounts (Alice, Bob, Ops) must be recreated, and its fixtures that depend on placeholder terms (for example the Vizio "not the real terms" lines) will no longer exist.
 
 ## C. Email that reaches people (Steve, CC verifies)
 Staging's sign-up email landed in Spam and linked to the wrong host. For the tester that means he may never see it.
