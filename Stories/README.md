@@ -278,6 +278,7 @@ Hierarchy: **Epic (E)** > **Feature (F)** > **Story (S)**. Phases: MVP, v2, futu
   - S7.5.4 DDL: curation and learning schema
   - S7.5.5 Migration tooling and seed scripts
   - S7.5.6 DDL: notification and messaging schema
+  - S7.5.7 Shared reference database and versioned snapshots
 - F7.6 Technical foundation (MVP)
   - S7.6.1 Environments and deployment
   - S7.6.2 Background job scheduler
