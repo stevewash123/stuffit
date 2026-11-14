@@ -68,3 +68,6 @@ On the Render API service set `Clock__Simulated=true` and `Maintenance__Key` (16
 - `POST /api/maintenance/run-reminders` and `/run-retention` run those jobs as of the app's date
 - Also `run-digest`, `run-export-expiry`, `run-new-items` (each takes an optional `?accountId=` so only that account is touched: always pass it) and `run-email-retry`, `run-signup-purge` (no account: whole database, clone only). API-only scripts that use them are in `Testing/Scenarios/Sweeps/`.
 Design and limits: `Stories/TESTING/T1-simulating-time.md`.
+
+## When a push does not deploy
+A push can fail Render's production build (the unit tests build more loosely than Render does). The site then keeps serving the previous good build, so the push is **never live** and cannot be tested. The fix is a new push with the next number (numbers are never reused), and its CHANGES note starts with a "Replaces Push N (never deployed)" paragraph that says what failed and what to test, so the report names the build that was really running. Always record the build you tested from `/api/version` (API) and the UI's Last-Modified, not from the push number alone. Example: Push 88 failed its build; Push 89 (commit 4bd2d11) is the fix plus the next step of the same change, and covers both.
